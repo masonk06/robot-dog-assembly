@@ -1,0 +1,30 @@
+ROBOT DOG CONCEPT ASSEMBLY - KNEE V2
+
+Contains 18 placed mesh parts: frame, cover, and four legs each containing
+Hip Roll V3, Hip Pitch L, Hip Pitch R, and Knee Pitch v2.
+
+Open robot_dog_layout.obj with its .mtl file to retain named parts and colours.
+robot_dog_layout.stl is a combined reference mesh, not a fused printable solid.
+positioned_parts contains all 18 separately placed STL meshes.
+source contains unmodified input meshes.
+placements.json records each source-to-assembly 4x4 transform.
+build_assembly.py regenerates exports (Python, NumPy, Matplotlib required).
+
+PLACEMENT ASSUMPTIONS / LIMITATIONS
+STL units assumed millimetres. Source frame and cover positions retained.
+Bracket reference targets: X +/-75, Y +/-85, Z 50.
+Right-side leg groups rotated 180 degrees about Z; no mesh reflections used.
+Knee V2 translated +35 along source Z as an approximate visual joint placement.
+This offset is not derived from a verified joint axis or motor dimension.
+All transforms are editable in build_assembly.py.
+
+This is a concept layout, not a mechanically constrained or fabrication-ready
+assembly. Mounting holes, motor shafts, motor envelopes, fasteners, bearings,
+physical connections, collisions and motion clearances have NOT been verified.
+Visible joint gaps require real actuator/interface dimensions before final fitting.
+No actuators, electronics, gait controller or load analysis are included.
+
+NEXT INPUTS FOR MECHANICAL FITTING
+Motor/servo model or dimensioned drawing; shaft/horn interface; intended joint
+axes and travel; fastener sizes; confirmation of millimetres. Native CAD or STEP
+would allow more reliable mating and modifications than these triangulated STLs.

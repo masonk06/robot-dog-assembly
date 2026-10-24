@@ -1,0 +1,99 @@
+{
+  "description": "Initial RoboDog software-only motion envelope. Do not write these values to servo EEPROM. Every command is relative to the user-confirmed neutral pose in neutral_pose.json.",
+  "units": "degrees",
+  "tick_resolution_degrees": 0.087890625,
+  "goal_mapping": "raw_goal_ticks = (neutral_ticks + round(command_degrees / tick_resolution_degrees)) mod 4096",
+  "initial_command_limits_degrees": {
+    "min": -5.0,
+    "max": 5.0
+  },
+  "notes": [
+    "The 5-degree envelope is temporary and intentionally conservative.",
+    "Servo EEPROM angle limits remain unchanged.",
+    "The servos were subsequently centered at physical neutral (nominal raw 2048); see neutral_pose.json and servo_centering_log.json.",
+    "Observed 2026-10-24: front-left hip roll at +25 degrees with hip pitch and knee held near neutral causes the hip-pitch links to contact the frame and lifts the knee. This is a coupled-pose collision, so broad independent joint limits are unsafe."
+  ],
+  "pose_dependent_contact_limits": [
+    {
+      "joint_id": 1,
+      "joint": "front_left_hip_roll",
+      "direction": "positive_robot_right",
+      "first_contact_ticks": 2270,
+      "first_contact_degrees_from_neutral": 19.51171875,
+      "tested_pose_ticks": {"front_left_hip_pitch_id_2": 1918, "front_left_knee_pitch_id_3": 1962},
+      "temporary_software_max_ticks": 2247,
+      "temporary_software_max_degrees": 17.490234375,
+      "safety_margin_degrees": 2.021484375,
+      "scope": "Only for the tested front-left hip-pitch/knee pose; do not apply as a universal hardware limit."
+    }
+  ],
+  "temporary_joint_limit_overrides_degrees": [
+    {
+      "joint_id": 1,
+      "joint": "front_left_hip_roll",
+      "min": -5.0,
+      "max": 17.490234375,
+      "max_ticks": 2247,
+      "basis": "Measured first contact at +19.5 degrees; 2-degree safety margin applied."
+    },
+    {
+      "joint_id": 4,
+      "joint": "front_right_hip_roll",
+      "min": -17.490234375,
+      "min_ticks": 1849,
+      "max": 90.0,
+      "max_ticks": 3072,
+      "basis": "Collision direction is negative raw motion. User reports the positive/raw-right direction has 90 degrees of clear manual travel; powered validation remains pending."
+    },
+    {
+      "joint_id": 2,
+      "joint": "front_left_hip_pitch",
+      "min": -5.0,
+      "max": 127.705078125,
+      "max_ticks": 3501,
+      "basis": "Measured frame contact at +129.7 degrees / 3524 ticks; 2-degree inward safety margin applied. A powered return toward 2048 on 2026-10-24 entered overload protection (status 32) at 3372 ticks. A user-authorized forced-direction return using goal-position bit 15 also entered overload protection at 3374 ticks. A later direct move from 1879 to 2048 instead moved to 1570 without an overload flag, confirming that the physical direction is not consistent with the current absolute-position mapping. Direct ID 2 commands are disabled pending a reviewed coordinated trajectory."
+    },
+    {
+      "joint_id": 5,
+      "joint": "front_right_hip_pitch",
+      "min": -95.44921875,
+      "min_ticks": 962,
+      "max": 5.0,
+      "basis": "Measured cable tension at -100.5 degrees / 905 ticks; 5-degree inward cable-strain margin applied."
+    }
+  ],
+  "manual_limit_observations": [
+    {
+      "joint_id": 2,
+      "joint": "front_left_hip_pitch",
+      "raw_ticks": 3524,
+      "degrees_from_centered_neutral": 129.7265625,
+      "direction": "positive_backward",
+      "associated_front_leg_pose_ticks": {"hip_roll_id_1": 2108, "knee_pitch_id_3": 1984},
+      "status": "Frame contact; temporary enforced maximum is +127.7 degrees / 3501 ticks."
+    },
+    {
+      "joint_id": 5,
+      "joint": "front_right_hip_pitch",
+      "raw_ticks": 905,
+      "degrees_from_centered_neutral": -100.458984375,
+      "direction": "negative_forward",
+      "associated_front_leg_pose_ticks": {"hip_roll_id_4": 2068, "knee_pitch_id_6": 1853},
+      "status": "Cable tension; temporary enforced minimum is -95.45 degrees / 962 ticks."
+    }
+  ],
+  "joints": [
+    {"id": 1, "name": "front_left_hip_roll", "neutral_ticks": 2048, "positive_direction": "robot_right"},
+    {"id": 2, "name": "front_left_hip_pitch", "neutral_ticks": 2048, "positive_direction": "backward"},
+    {"id": 3, "name": "front_left_knee_pitch", "neutral_ticks": 2048, "positive_direction": "away_from_body"},
+    {"id": 4, "name": "front_right_hip_roll", "neutral_ticks": 2048, "positive_direction": "robot_right"},
+    {"id": 5, "name": "front_right_hip_pitch", "neutral_ticks": 2048, "positive_direction": "backward"},
+    {"id": 6, "name": "front_right_knee_pitch", "neutral_ticks": 2048, "positive_direction": "away_from_body"},
+    {"id": 7, "name": "rear_left_hip_roll", "neutral_ticks": 2048, "positive_direction": "robot_left"},
+    {"id": 8, "name": "rear_left_hip_pitch", "neutral_ticks": 2048, "positive_direction": "backward"},
+    {"id": 9, "name": "rear_left_knee_pitch", "neutral_ticks": 2048, "positive_direction": "toward_body"},
+    {"id": 10, "name": "rear_right_hip_pitch", "neutral_ticks": 2048, "positive_direction": "backward"},
+    {"id": 11, "name": "rear_right_hip_roll", "neutral_ticks": 2048, "positive_direction": "robot_left"},
+    {"id": 12, "name": "rear_right_knee_pitch", "neutral_ticks": 2048, "positive_direction": "toward_body"}
+  ]
+}

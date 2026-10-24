@@ -1,0 +1,82 @@
+{
+  "assembly": "RoboDog.f3d",
+  "frame_units": "mm; unscaled source",
+  "frame_dimensions_mm": [
+    170,
+    180,
+    50.099884
+  ],
+  "frame_xy_center_mm": [
+    15,
+    0
+  ],
+  "grounded_frame": true,
+  "revolute_joints": 12,
+  "joint_limits": "disabled/unset",
+  "printed_assumptions": {
+    "material": "PETG",
+    "hip_roll_infill_percent": 35,
+    "other_printed_infill_percent": 20,
+    "effective_material_properties": "NOT specified; infill metadata is not an FEA material law"
+  },
+  "payload": {
+    "requested_mass_kg": 0.75,
+    "static_equivalent_force_N": 7.3549875,
+    "static_application": "Total force uniformly distributed on centered frame floor face, downward normal",
+    "cad_mass_representation": "750 g user parameter and component metadata; no physical inertia surrogate solid",
+    "modal_point_mass_applied": false,
+    "cg_height_mm": null,
+    "replaces_prior_electronics_estimate": null
+  },
+  "native_static_stress": {
+    "created": true,
+    "solved": false,
+    "load_applied": true,
+    "supports_and_contacts": "Pending physical support and servo load-transfer assumptions",
+    "materials": "Uncalibrated; do not solve as printed PETG"
+  },
+  "native_modal_frequencies": {
+    "created": true,
+    "solved": false,
+    "payload_inertia": "Pending CG height and attachment footprint",
+    "supports_contacts_and_joint_stiffness": "Pending"
+  },
+  "motion_range_setup": {
+    "joints_ready": 12,
+    "small_angle_check_radians": 0.01,
+    "rated_travel_limits": null,
+    "saved_motion_curve": "Not verified; no rated ROM sweep claimed",
+    "all_12_small_angle_checks_passed": true
+  },
+  "fit": [
+    {
+      "part": "front_left_servo_hip_roll",
+      "frame_overlap_mm3": 0.039477779340012814
+    },
+    {
+      "part": "front_right_servo_hip_roll",
+      "frame_overlap_mm3": 0.038154325686643106
+    },
+    {
+      "part": "rear_left_servo_hip_roll",
+      "frame_overlap_mm3": 0.04016975309228277
+    },
+    {
+      "part": "rear_right_servo_hip_roll",
+      "frame_overlap_mm3": 0.04016975305312229
+    },
+    {
+      "part": "boot_and_knee_native_fit",
+      "overlap_mm3": 53.9943447834442
+    }
+  ],
+  "required_inputs": [
+    "Payload CG height and mounting footprint; whether 0.75 kg replaces or adds to previous battery/electronics mass",
+    "PETG filament datasheet and printed/tested effective stiffness, strength, density; walls/layers/orientations/infill pattern",
+    "Boot fit acceptance: source meshes overlap about 54 mm3 at their native mating position",
+    "Physical support/contact model, servo joint holding stiffness and load-transfer idealization",
+    "Requested joint travel ranges and real hard stops; boot mass and revised-frame printed mass for dynamics"
+  ],
+  "native_archive_verified": true,
+  "original_stls_unchanged": true
+}

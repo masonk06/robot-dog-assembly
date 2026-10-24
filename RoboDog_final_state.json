@@ -1,0 +1,95 @@
+{
+  "products": [
+    "adsk::fusion::Design"
+  ],
+  "joints": [
+    {
+      "name": "front_left HIP ROLL: FRAME to U BRACKET",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "front_left HIP PITCH: U BRACKET to LINKS",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "front_left KNEE: LINKS to FOOT",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "front_right HIP ROLL: FRAME to U BRACKET",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "front_right HIP PITCH: U BRACKET to LINKS",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "front_right KNEE: LINKS to FOOT",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "rear_left HIP ROLL: FRAME to U BRACKET",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "rear_left HIP PITCH: U BRACKET to LINKS",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "rear_left KNEE: LINKS to FOOT",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "rear_right HIP ROLL: FRAME to U BRACKET",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "rear_right HIP PITCH: U BRACKET to LINKS",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    },
+    {
+      "name": "rear_right KNEE: LINKS to FOOT",
+      "min_limit_enabled": false,
+      "max_limit_enabled": false
+    }
+  ],
+  "materials": [
+    {
+      "component": "Part Studio 1 - Hip Pitch R",
+      "material": "Not assigned: printed PETG effective properties pending"
+    },
+    {
+      "component": "FRAME V2",
+      "material": "Not assigned: printed PETG effective properties pending"
+    },
+    {
+      "component": "Part Studio 1 - Knee Pitch v2",
+      "material": "Not assigned: printed PETG effective properties pending"
+    },
+    {
+      "component": "Part Studio 1 - Hip Pitch L",
+      "material": "Not assigned: printed PETG effective properties pending"
+    },
+    {
+      "component": "Part Studio 1 - Hip Roll V3",
+      "material": "Not assigned: printed PETG effective properties pending"
+    },
+    {
+      "component": "boots",
+      "material": "Not assigned: printed PETG effective properties pending"
+    }
+  ],
+  "grounded_frame": true,
+  "exported": "C:\\Users\\mmbec\\Downloads\\Robot Dog Assembly\\RoboDog.f3d"
+}

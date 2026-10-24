@@ -1,0 +1,22 @@
+[
+  {
+    "part": "front_left_servo_hip_roll",
+    "frame_overlap_mm3": 0.039477779340012814
+  },
+  {
+    "part": "front_right_servo_hip_roll",
+    "frame_overlap_mm3": 0.038154325686643106
+  },
+  {
+    "part": "rear_left_servo_hip_roll",
+    "frame_overlap_mm3": 0.04016975309228277
+  },
+  {
+    "part": "rear_right_servo_hip_roll",
+    "frame_overlap_mm3": 0.04016975305312229
+  },
+  {
+    "part": "boot_and_knee_native_fit",
+    "overlap_mm3": 53.9943447834442
+  }
+]

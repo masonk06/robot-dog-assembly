@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-24",
+  "method": "STS3215 documented middle-position calibration: write 128 to register 40 with torque disabled",
+  "result": "All servos verified near raw encoder position 2048 after calibration, with torque disabled.",
+  "before_ticks": {"1": 3761, "2": 692, "3": 334, "4": 3953, "5": 560, "6": 448, "7": 219, "8": 2268, "9": 1389, "10": 4058, "11": 2300, "12": 4063},
+  "verified_after_ticks": {"1": 2048, "2": 2048, "3": 2048, "4": 2048, "5": 2048, "6": 2048, "7": 2048, "8": 2048, "9": 2047, "10": 2048, "11": 2047, "12": 2048}
+}

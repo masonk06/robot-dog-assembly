@@ -1,0 +1,18 @@
+{
+  "description": "User-confirmed physical neutral standing pose, centered on 2026-10-24 using the documented STS3215 middle-position calibration. Neutral is now nominally 2048 ticks for every joint. See servo_centering_log.json for pre-centering readings and verification.",
+  "tick_resolution_degrees": 0.087890625,
+  "positions": [
+    {"id": 1, "joint": "front_left_hip_roll", "neutral_ticks": 2048},
+    {"id": 2, "joint": "front_left_hip_pitch", "neutral_ticks": 2048},
+    {"id": 3, "joint": "front_left_knee_pitch", "neutral_ticks": 2048},
+    {"id": 4, "joint": "front_right_hip_roll", "neutral_ticks": 2048},
+    {"id": 5, "joint": "front_right_hip_pitch", "neutral_ticks": 2048},
+    {"id": 6, "joint": "front_right_knee_pitch", "neutral_ticks": 2048},
+    {"id": 7, "joint": "rear_left_hip_roll", "neutral_ticks": 2048},
+    {"id": 8, "joint": "rear_left_hip_pitch", "neutral_ticks": 2048},
+    {"id": 9, "joint": "rear_left_knee_pitch", "neutral_ticks": 2048},
+    {"id": 10, "joint": "rear_right_hip_pitch", "neutral_ticks": 2048},
+    {"id": 11, "joint": "rear_right_hip_roll", "neutral_ticks": 2048},
+    {"id": 12, "joint": "rear_right_knee_pitch", "neutral_ticks": 2048}
+  ]
+}

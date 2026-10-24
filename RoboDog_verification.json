@@ -1,0 +1,177 @@
+{
+  "top_level_rigid_links": 13,
+  "revolute_joints": 12,
+  "servo_part_assignments": [
+    {
+      "role": "HIP ROLL case FIXED TO FRAME",
+      "part": "fixed case",
+      "parent": "00 FRAME - fixed chassis + FOUR HIP ROLL CASES",
+      "servo": "front_left_servo_hip_roll"
+    },
+    {
+      "role": "HIP ROLL silver discs DRIVE U BRACKET",
+      "part": "output discs",
+      "parent": "front_left 01 ROLL OUTPUT - U bracket + HIP PITCH CASE",
+      "servo": "front_left_servo_hip_roll"
+    },
+    {
+      "role": "HIP PITCH case FIXED TO MOVING U BRACKET",
+      "part": "fixed case",
+      "parent": "front_left 01 ROLL OUTPUT - U bracket + HIP PITCH CASE",
+      "servo": "front_left_servo_hip_pitch"
+    },
+    {
+      "role": "HIP PITCH silver discs DRIVE PAIRED LINKS",
+      "part": "output discs",
+      "parent": "front_left 02 PITCH OUTPUT - paired links + KNEE CASE",
+      "servo": "front_left_servo_hip_pitch"
+    },
+    {
+      "role": "KNEE case FIXED TO UPPER LINKS",
+      "part": "fixed case",
+      "parent": "front_left 02 PITCH OUTPUT - paired links + KNEE CASE",
+      "servo": "front_left_servo_knee_pitch"
+    },
+    {
+      "role": "KNEE silver discs DRIVE FOOT",
+      "part": "output discs",
+      "parent": "front_left 03 KNEE OUTPUT - foot",
+      "servo": "front_left_servo_knee_pitch"
+    },
+    {
+      "role": "HIP ROLL case FIXED TO FRAME",
+      "part": "fixed case",
+      "parent": "00 FRAME - fixed chassis + FOUR HIP ROLL CASES",
+      "servo": "front_right_servo_hip_roll"
+    },
+    {
+      "role": "HIP ROLL silver discs DRIVE U BRACKET",
+      "part": "output discs",
+      "parent": "front_right 01 ROLL OUTPUT - U bracket + HIP PITCH CASE",
+      "servo": "front_right_servo_hip_roll"
+    },
+    {
+      "role": "HIP PITCH case FIXED TO MOVING U BRACKET",
+      "part": "fixed case",
+      "parent": "front_right 01 ROLL OUTPUT - U bracket + HIP PITCH CASE",
+      "servo": "front_right_servo_hip_pitch"
+    },
+    {
+      "role": "HIP PITCH silver discs DRIVE PAIRED LINKS",
+      "part": "output discs",
+      "parent": "front_right 02 PITCH OUTPUT - paired links + KNEE CASE",
+      "servo": "front_right_servo_hip_pitch"
+    },
+    {
+      "role": "KNEE case FIXED TO UPPER LINKS",
+      "part": "fixed case",
+      "parent": "front_right 02 PITCH OUTPUT - paired links + KNEE CASE",
+      "servo": "front_right_servo_knee_pitch"
+    },
+    {
+      "role": "KNEE silver discs DRIVE FOOT",
+      "part": "output discs",
+      "parent": "front_right 03 KNEE OUTPUT - foot",
+      "servo": "front_right_servo_knee_pitch"
+    },
+    {
+      "role": "HIP ROLL case FIXED TO FRAME",
+      "part": "fixed case",
+      "parent": "00 FRAME - fixed chassis + FOUR HIP ROLL CASES",
+      "servo": "rear_left_servo_hip_roll"
+    },
+    {
+      "role": "HIP ROLL silver discs DRIVE U BRACKET",
+      "part": "output discs",
+      "parent": "rear_left 01 ROLL OUTPUT - U bracket + HIP PITCH CASE",
+      "servo": "rear_left_servo_hip_roll"
+    },
+    {
+      "role": "HIP PITCH case FIXED TO MOVING U BRACKET",
+      "part": "fixed case",
+      "parent": "rear_left 01 ROLL OUTPUT - U bracket + HIP PITCH CASE",
+      "servo": "rear_left_servo_hip_pitch"
+    },
+    {
+      "role": "HIP PITCH silver discs DRIVE PAIRED LINKS",
+      "part": "output discs",
+      "parent": "rear_left 02 PITCH OUTPUT - paired links + KNEE CASE",
+      "servo": "rear_left_servo_hip_pitch"
+    },
+    {
+      "role": "KNEE case FIXED TO UPPER LINKS",
+      "part": "fixed case",
+      "parent": "rear_left 02 PITCH OUTPUT - paired links + KNEE CASE",
+      "servo": "rear_left_servo_knee_pitch"
+    },
+    {
+      "role": "KNEE silver discs DRIVE FOOT",
+      "part": "output discs",
+      "parent": "rear_left 03 KNEE OUTPUT - foot",
+      "servo": "rear_left_servo_knee_pitch"
+    },
+    {
+      "role": "HIP ROLL case FIXED TO FRAME",
+      "part": "fixed case",
+      "parent": "00 FRAME - fixed chassis + FOUR HIP ROLL CASES",
+      "servo": "rear_right_servo_hip_roll"
+    },
+    {
+      "role": "HIP ROLL silver discs DRIVE U BRACKET",
+      "part": "output discs",
+      "parent": "rear_right 01 ROLL OUTPUT - U bracket + HIP PITCH CASE",
+      "servo": "rear_right_servo_hip_roll"
+    },
+    {
+      "role": "HIP PITCH case FIXED TO MOVING U BRACKET",
+      "part": "fixed case",
+      "parent": "rear_right 01 ROLL OUTPUT - U bracket + HIP PITCH CASE",
+      "servo": "rear_right_servo_hip_pitch"
+    },
+    {
+      "role": "HIP PITCH silver discs DRIVE PAIRED LINKS",
+      "part": "output discs",
+      "parent": "rear_right 02 PITCH OUTPUT - paired links + KNEE CASE",
+      "servo": "rear_right_servo_hip_pitch"
+    },
+    {
+      "role": "KNEE case FIXED TO UPPER LINKS",
+      "part": "fixed case",
+      "parent": "rear_right 02 PITCH OUTPUT - paired links + KNEE CASE",
+      "servo": "rear_right_servo_knee_pitch"
+    },
+    {
+      "role": "KNEE silver discs DRIVE FOOT",
+      "part": "output discs",
+      "parent": "rear_right 03 KNEE OUTPUT - foot",
+      "servo": "rear_right_servo_knee_pitch"
+    }
+  ],
+  "motion_checks": [
+    {
+      "leg": "front_left",
+      "roll_test_radians": 0.04,
+      "carrier_transform_change": 0.3097968727012983,
+      "frame_fixed": true
+    },
+    {
+      "leg": "front_right",
+      "roll_test_radians": 0.04,
+      "carrier_transform_change": 0.312245911553382,
+      "frame_fixed": true
+    },
+    {
+      "leg": "rear_left",
+      "roll_test_radians": 0.04,
+      "carrier_transform_change": 0.3097968727012983,
+      "frame_fixed": true
+    },
+    {
+      "leg": "rear_right",
+      "roll_test_radians": 0.04,
+      "carrier_transform_change": 0.312245911553382,
+      "frame_fixed": true
+    }
+  ],
+  "archive": "C:\\Users\\mmbec\\Downloads\\Robot Dog Assembly\\RoboDog.f3d"
+}

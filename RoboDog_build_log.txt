@@ -1,0 +1,6 @@
+Starting connected mechanical assembly
+Built front_left: FRAME -> ROLL CASE -> ROLL DISCS/U BRACKET -> PITCH CASE -> LINKS -> KNEE/FOOT
+Built front_right: FRAME -> ROLL CASE -> ROLL DISCS/U BRACKET -> PITCH CASE -> LINKS -> KNEE/FOOT
+Built rear_left: FRAME -> ROLL CASE -> ROLL DISCS/U BRACKET -> PITCH CASE -> LINKS -> KNEE/FOOT
+Built rear_right: FRAME -> ROLL CASE -> ROLL DISCS/U BRACKET -> PITCH CASE -> LINKS -> KNEE/FOOT
+SUCCESS: 13 links, 12 revolute joints, 12 case+disc pairs. C:\Users\mmbec\Downloads\Robot Dog Assembly\RoboDog.f3d

@@ -1,0 +1,32 @@
+[
+  {
+    "source": "boots.stl",
+    "valid_solid": true,
+    "conversion": "Faceted solid; original STL unchanged"
+  },
+  {
+    "source": "FRAME V2.stl",
+    "valid_solid": true,
+    "conversion": "Faceted solid; original STL unchanged"
+  },
+  {
+    "source": "Part Studio 1 - Hip Pitch L.stl",
+    "valid_solid": true,
+    "conversion": "Faceted solid; original STL unchanged"
+  },
+  {
+    "source": "Part Studio 1 - Hip Pitch R.stl",
+    "valid_solid": true,
+    "conversion": "Faceted solid; original STL unchanged"
+  },
+  {
+    "source": "Part Studio 1 - Hip Roll V3.stl",
+    "valid_solid": true,
+    "conversion": "Faceted solid; original STL unchanged"
+  },
+  {
+    "source": "Part Studio 1 - Knee Pitch v2.stl",
+    "valid_solid": true,
+    "conversion": "Faceted solid; original STL unchanged"
+  }
+]

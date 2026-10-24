@@ -1,0 +1,98 @@
+[
+  {
+    "joint": "front_left HIP ROLL: FRAME to U BRACKET",
+    "test_radians": 0.01,
+    "child_transform_change": 0.08107298433647436,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "front_left HIP PITCH: U BRACKET to LINKS",
+    "test_radians": 0.01,
+    "child_transform_change": 0.10051709466931946,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "front_left KNEE: LINKS to FOOT",
+    "test_radians": 0.01,
+    "child_transform_change": 0.06805547012739854,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "front_right HIP ROLL: FRAME to U BRACKET",
+    "test_radians": 0.01,
+    "child_transform_change": 0.0812396694653188,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "front_right HIP PITCH: U BRACKET to LINKS",
+    "test_radians": 0.01,
+    "child_transform_change": 0.10051709466931946,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "front_right KNEE: LINKS to FOOT",
+    "test_radians": 0.01,
+    "child_transform_change": 0.06805547012739854,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "rear_left HIP ROLL: FRAME to U BRACKET",
+    "test_radians": 0.01,
+    "child_transform_change": 0.08107298433647436,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "rear_left HIP PITCH: U BRACKET to LINKS",
+    "test_radians": 0.01,
+    "child_transform_change": 0.131908321560811,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "rear_left KNEE: LINKS to FOOT",
+    "test_radians": 0.01,
+    "child_transform_change": 0.16436994610273192,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "rear_right HIP ROLL: FRAME to U BRACKET",
+    "test_radians": 0.01,
+    "child_transform_change": 0.08123966946531969,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "rear_right HIP PITCH: U BRACKET to LINKS",
+    "test_radians": 0.01,
+    "child_transform_change": 0.131908321560811,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  },
+  {
+    "joint": "rear_right KNEE: LINKS to FOOT",
+    "test_radians": 0.01,
+    "child_transform_change": 0.16436994610273192,
+    "returned_to_neutral": true,
+    "min_limit_enabled": false,
+    "max_limit_enabled": false
+  }
+]

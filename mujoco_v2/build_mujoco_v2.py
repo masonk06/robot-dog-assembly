@@ -1,9 +1,10 @@
 """Build a conservative MuJoCo model from the saved RoboDog V2 placements.
 
-Visual meshes remain the original supplied STLs.  Boots are fixed in each
-lower-leg body because they are glued to the knees.  Collision uses simple
-foot spheres; printed meshes are visual-only until a deliberate collision
-mesh review is done.
+Visual meshes remain the original supplied STLs.  Each knee-servo housing,
+Knee Pitch V2 part, and its glued boot form one rigid lower-foot assembly. The
+hip-pitch bracket is mounted to the rotating knee-servo output circle, which
+forms the knee hinge. Collision uses simple foot spheres; printed meshes are
+visual-only until a deliberate collision mesh review is done.
 """
 from pathlib import Path
 import json
@@ -78,6 +79,11 @@ for leg in legs:
     R = np.array(PART[f"{leg}_servo_hip_roll"]["axis_point"], dtype=float) / 1000
     H = np.array(PART[f"{leg}_servo_hip_pitch"]["axis_point"], dtype=float) / 1000
     K = np.array(PART[f"{leg}_servo_knee_pitch"]["axis_point"], dtype=float) / 1000
+    if leg.startswith("front_"):
+        # The front placements' recorded axis point is 30 mm inward from the
+        # knee-servo output disc.  Shift only the front hinge origin so its
+        # lower assembly rotates at the same disc-local origin as the rear.
+        K += np.array([.03, 0, 0])
     roll = add(base, "body", name=f"{leg}_roll_link", pos=text(R))
     add(roll, "joint", name=f"{leg}_hip_roll", type="hinge", axis="1 0 0", range="-.5 .5", damping=".025", armature=".00002")
     add(roll, "inertial", mass=".066", pos=text(H - R), diaginertia=".0000176 .0000176 .0000176")
@@ -88,14 +94,15 @@ for leg in legs:
     upper = add(roll, "body", name=f"{leg}_upper_link", pos=text(H - R))
     add(upper, "joint", name=f"{leg}_hip_pitch", type="hinge", axis="0 -1 0", range="-1.2 1.2", damping=".025", armature=".00002")
     add(upper, "inertial", mass=".073625", pos=text((K-H)*.45), diaginertia=".0000298 .0000298 .00000767")
-    for n in ("hip_pitch_L", "hip_pitch_R", "servo_knee_pitch"):
+    for n in ("hip_pitch_L", "hip_pitch_R"):
         visual(upper, f"{leg}_{n}", H)
 
     lower = add(upper, "body", name=f"{leg}_lower_link", pos=text(K - H))
     add(lower, "joint", name=f"{leg}_knee_pitch", type="hinge", axis="0 -1 0", range="-1.5 1.5", damping=".025", armature=".00002")
     add(lower, "inertial", mass=".015625", pos="-.025 0 -.04", diaginertia=".0000102 .0000102 .00000163")
+    visual(lower, f"{leg}_servo_knee_pitch", K)
     visual(lower, f"{leg}_knee_v2", K)
-    visual(lower, f"{leg}_boot", K)  # bonded to the lower leg: no joint
+    visual(lower, f"{leg}_boot", K)  # glued to Knee Pitch V2: no relative joint
     # Measured TPU-95 boot mass: 5 g each. This is a fixed child, so the
     # adhesive bond cannot introduce another degree of freedom.
     boot_mass = add(lower, "body", name=f"{leg}_boot_mass", pos="-.0131 0 -.0656")
@@ -116,10 +123,10 @@ data = mujoco.MjData(model); mujoco.mj_forward(model, data)
 summary = {
     "model": xml_path.name, "mujoco_version": mujoco.__version__, "actuators": int(model.nu),
     "joints": 12, "total_model_mass_kg": float(model.body_mass.sum()),
-    "frame": "FRAME V2.stl", "boots": "TPU 95, fixed visual geometry on each lower leg; no relative joint; soft sole contact proxy",
+    "frame": "FRAME V2.stl", "boots": "TPU 95, glued beneath Knee Pitch V2; knee-servo housing, Knee Pitch V2, and boot form each rigid lower-foot assembly",
     "actuator_limit_Nm": 1.0,
     "joint_limits_rad": {"hip_roll": [-.5,.5], "hip_pitch": [-1.2,1.2], "knee_pitch": [-1.5,1.5]},
-    "known_limitations": ["Each TPU-95 boot is a measured 5 g lumped mass at its mesh-center approximation.", "Foot contact uses 3 mm TPU-95 spherical sole proxies with provisional softness and friction.", "Mesh geometry is visual-only; no printed-part self-collision."],
+    "known_limitations": ["Knee-servo housing, Knee Pitch V2, and its glued boot are rigid lower-foot parts; the hip-pitch bracket is attached to the rotating knee-servo output circle.", "Each TPU-95 boot is a measured 5 g lumped mass at its mesh-center approximation.", "Foot contact uses 3 mm TPU-95 spherical sole proxies with provisional softness and friction.", "Mesh geometry is visual-only; no printed-part self-collision."],
 }
 (OUT / "import_validation.json").write_text(json.dumps(summary, indent=2))
 print(json.dumps(summary, indent=2))

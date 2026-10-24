@@ -1,15 +1,26 @@
-# RoboDog V2 MuJoCo package
+# RoboDog MuJoCo walk preview
 
-This is the current `FRAME V2` assembly exported for simulation. It retains the supplied leg meshes and includes the four TPU-95 boot meshes as rigid parts of the corresponding lower legs. The boot-to-knee bond has no joint, so it cannot flex independently.
+This is the current MuJoCo package for RoboDog. It uses the corrected CAD
+attachment hierarchy:
 
-Run this once after moving the folder:
+- Knee-servo housing, `Knee Pitch V2`, and its glued boot are one rigid lower-leg assembly.
+- The hip-pitch bracket is attached to the knee servo's rotating output disc.
+- There is no sliding at screw-connected interfaces.
+
+Run:
 
 ```powershell
 python build_mujoco_v2.py
 python check_model.py
-python view_model.py
+python view_dog_walk.py --viewer --lift-mm 10
 ```
 
-The model has a floating body, twelve position actuators, a 1 N·m nominal actuator cap, and conservative provisional joint limits. The mesh parts are visual-only. Four 3 mm spherical TPU-95 contact points approximate the boot soles, with soft contact settings and friction 1.0; printed geometry has no self-collision model yet.
+`view_dog_walk.py` is a slow four-beat, kinematic dog-walk preview. Its swing
+order is front-right, rear-left, front-left, rear-right. It is used to validate
+the CAD connections, inverse-kinematics foot paths, and gait sequencing before
+any new hardware commands.
 
-The model has 1.923 kg total mass: the earlier 1.903 kg listed mass budget plus four measured 5 g TPU-95 boots. Each boot mass is placed at an approximate mesh center. This is ready for the first PPO exercise—learning to hold a neutral pose—but not yet a trustworthy hardware controller.
+This is not yet a dynamic walking validator: the base is fixed during the
+preview, and the contact/friction, inertia, cable behavior, self-collision, and
+measured hard stops still need validation before force-based walking simulation
+or untethered hardware use.

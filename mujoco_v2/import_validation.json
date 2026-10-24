@@ -5,7 +5,7 @@
   "joints": 12,
   "total_model_mass_kg": 1.9229999999999998,
   "frame": "FRAME V2.stl",
-  "boots": "TPU 95, fixed visual geometry on each lower leg; no relative joint; soft sole contact proxy",
+  "boots": "TPU 95, glued beneath Knee Pitch V2; knee-servo housing, Knee Pitch V2, and boot form each rigid lower-foot assembly",
   "actuator_limit_Nm": 1.0,
   "joint_limits_rad": {
     "hip_roll": [
@@ -22,6 +22,7 @@
     ]
   },
   "known_limitations": [
+    "Knee-servo housing, Knee Pitch V2, and its glued boot are rigid lower-foot parts; the hip-pitch bracket is attached to the rotating knee-servo output circle.",
     "Each TPU-95 boot is a measured 5 g lumped mass at its mesh-center approximation.",
     "Foot contact uses 3 mm TPU-95 spherical sole proxies with provisional softness and friction.",
     "Mesh geometry is visual-only; no printed-part self-collision."

@@ -3,7 +3,7 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent / '.servo_tools'))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / '.servo_tools'))
 import serial
 
 

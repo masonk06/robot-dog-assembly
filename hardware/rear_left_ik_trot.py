@@ -39,13 +39,18 @@ LEG_CONFIG = {
     # The rear-left physical/model sign relationship was validated against the
     # MuJoCo 10 mm lift preview on hardware.
     "rear-left": {"hip": 8, "knee": 9, "hip_sign": +1, "knee_sign": -1, "status": "validated"},
-    # Rear-right has the same physical directions as rear-left; IDs are 10/12.
-    "rear-right": {"hip": 10, "knee": 12, "hip_sign": +1, "knee_sign": -1, "status": "candidate"},
-    # Front-right directions were individually observed; its model transfer
-    # remains a candidate until a one-leg test confirms it.
-    "front-right": {"hip": 5, "knee": 6, "hip_sign": +1, "knee_sign": +1, "status": "candidate"},
+    # Rear-right matched the rear-left in-air forward-then-back trajectory at
+    # 6 mm lift on 2026-10-24; IDs are 10/12.
+    "rear-right": {"hip": 10, "knee": 12, "hip_sign": +1, "knee_sign": -1, "status": "validated"},
+    # Front-right matched the intended in-air lift/forward/back path at 6 mm
+    # lift on 2026-10-24.
+    "front-right": {"hip": 5, "knee": 6, "hip_sign": +1, "knee_sign": +1, "status": "validated"},
 }
-CYCLE_SECONDS = 8.0
+# At an 8-second cycle, many consecutive encoder targets differ by only one
+# tick, which looks and feels like stuttering.  A 2-second cycle is the
+# current in-air-test minimum; its calculated target speed remains below the
+# temporary 120-tick/s profile limit for this small trajectory.
+CYCLE_SECONDS = 4.0
 UPDATE_SECONDS = 0.05
 SWING_FRACTION = 0.40
 STRIDE_M = 0.015
@@ -178,16 +183,18 @@ def main():
     parser.add_argument("--run", action="store_true", help="execute one in-air IK cycle")
     parser.add_argument("--leg", choices=LEG_CONFIG, default="rear-left", help="leg to preview or test (default: rear-left)")
     parser.add_argument("--lift-mm", type=float, default=6.0, help="swing lift in millimetres (default: 6; maximum: 10)")
+    parser.add_argument("--cycle-seconds", type=float, default=CYCLE_SECONDS, help="cycle duration in seconds (default: 4; allowed: 2..8)")
     args = parser.parse_args()
-    if not 0 < args.lift_mm <= 10:
-        raise SystemExit("--lift-mm must be greater than 0 and no more than 10 for the current hardware test")
+    if not 0 < args.lift_mm <= 10 or not 2 <= args.cycle_seconds <= 8:
+        raise SystemExit("--lift-mm must be 0..10 and --cycle-seconds must be 2..8 for the current hardware test")
     SWING_HEIGHT_M = args.lift_mm / 1000
     neutral = load_neutral()
     config = LEG_CONFIG[args.leg]
     hip_id, knee_id = config["hip"], config["knee"]
-    path = trajectory(round(CYCLE_SECONDS / UPDATE_SECONDS))
+    path = trajectory(round(args.cycle_seconds / UPDATE_SECONDS))
     print(f"Leg: {args.leg} ({config['status']} physical-to-model mapping)")
     describe(path, neutral[hip_id], neutral[knee_id], config)
+    print(f"  cycle duration:  {args.cycle_seconds:.1f} s")
     if not args.run:
         print("Preview only. Use --run only with the robot secured on the stand.")
         return

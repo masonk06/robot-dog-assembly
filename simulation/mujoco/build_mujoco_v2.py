@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 import numpy as np
 import mujoco
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2] / "cad"
 OUT = Path(__file__).resolve().parent
 ASSETS = OUT / "assets"
 ASSETS.mkdir(parents=True, exist_ok=True)
@@ -29,7 +29,7 @@ def quat(R):
 # Supplied source meshes.  STS3215 STL is reused from the earlier validated
 # package because the original supplied servo is STEP, not STL.
 source_dir = ROOT / "revision_sources"
-old_assets = ROOT.parent / "Robot Dog Servo Assembly" / "mujoco" / "assets"
+old_assets = ROOT / "source"
 needed = {
     "FRAME V2.stl": source_dir / "FRAME V2.stl",
     "Part Studio 1 - Hip Roll V3.stl": source_dir / "Part Studio 1 - Hip Roll V3.stl",

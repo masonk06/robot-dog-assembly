@@ -9,3 +9,21 @@ __pycache__/
 .idea/
 Thumbs.db
 Desktop.ini
+
+# Local environments, credentials, and generated training output.
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+wandb/
+runs/
+checkpoints/
+*.sif
+.apptainer/
+.pytest_cache/
+
+# Original recovery directory can remain open in Fusion; archived under cad/.
+/Recovered Fusion/

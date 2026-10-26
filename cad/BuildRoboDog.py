@@ -1,6 +1,6 @@
 import adsk.core,adsk.fusion,json,traceback,math
 from pathlib import Path
-ROOT=Path(r"C:\Users\mmbec\Downloads\Robot Dog Assembly")
+ROOT=Path(__file__).resolve().parent
 def run(context):
  app=adsk.core.Application.get();log=ROOT/'RoboDog_build_log.txt';log.write_text('Starting connected mechanical assembly\n')
  def status(text):

@@ -1,6 +1,6 @@
 import adsk.core,adsk.fusion,json,traceback
 from pathlib import Path
-P=Path(r'C:\Users\mmbec\Downloads\Robot Dog Assembly')
+P=Path(__file__).resolve().parent
 def run(context):
  try:
   app=adsk.core.Application.get();doc=app.activeDocument;design=adsk.fusion.Design.cast(app.activeProduct);products=[app.activeProduct.objectType]

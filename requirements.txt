@@ -1,0 +1,5 @@
+# MuJoCo previews and shared hardware calculations.
+mujoco>=3,<4
+numpy>=1.26,<3
+pyserial>=3.5,<4
+matplotlib>=3.8,<4

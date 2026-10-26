@@ -1,0 +1,198 @@
+{
+  "description": "Manual safe endpoints. Each reading was captured torque-off after backing away from first contact/cable tension.",
+  "units": "raw STS3215 encoder ticks (0..4095)",
+  "records": {
+    "front-left-hip-roll": {
+      "minimum": {
+        "id": 1,
+        "ticks": 1033,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:06:12-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 1,
+        "ticks": 2077,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:05:49-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "front-left-hip-pitch": {
+      "minimum": {
+        "id": 2,
+        "ticks": 1880,
+        "temperature_c": 30,
+        "captured_local": "2026-10-24T22:06:39-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 2,
+        "ticks": 3850,
+        "temperature_c": 30,
+        "captured_local": "2026-10-24T22:06:24-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "front-left-knee": {
+      "minimum": {
+        "id": 3,
+        "ticks": 129,
+        "temperature_c": 32,
+        "captured_local": "2026-10-24T22:06:56-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 3,
+        "ticks": 2666,
+        "temperature_c": 32,
+        "captured_local": "2026-10-24T22:06:47-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "front-right-hip-roll": {
+      "minimum": {
+        "id": 4,
+        "ticks": 1676,
+        "temperature_c": 30,
+        "captured_local": "2026-10-24T22:10:36-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 4,
+        "ticks": 4028,
+        "temperature_c": 30,
+        "captured_local": "2026-10-24T22:10:26-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "front-right-hip-pitch": {
+      "minimum": {
+        "id": 5,
+        "ticks": 1183,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:11:11-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 5,
+        "ticks": 1904,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:11:04-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "front-right-knee": {
+      "minimum": {
+        "id": 6,
+        "ticks": 2789,
+        "temperature_c": 30,
+        "captured_local": "2026-10-24T22:11:19-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 6,
+        "ticks": 4037,
+        "temperature_c": 30,
+        "captured_local": "2026-10-24T22:11:26-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "rear-left-hip-roll": {
+      "minimum": {
+        "id": 7,
+        "ticks": 81,
+        "temperature_c": 29,
+        "captured_local": "2026-10-24T22:11:55-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 7,
+        "ticks": 1338,
+        "temperature_c": 30,
+        "captured_local": "2026-10-24T22:11:50-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "rear-left-hip-pitch": {
+      "minimum": {
+        "id": 8,
+        "ticks": 707,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:12:06-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 8,
+        "ticks": 3343,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:12:02-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "rear-left-knee": {
+      "minimum": {
+        "id": 9,
+        "ticks": 2202,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:12:18-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 9,
+        "ticks": 3592,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:12:23-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "rear-right-hip-roll": {
+      "minimum": {
+        "id": 11,
+        "ticks": 1371,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:12:39-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 11,
+        "ticks": 2566,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:12:45-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "rear-right-hip-pitch": {
+      "minimum": {
+        "id": 10,
+        "ticks": 933,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:12:56-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 10,
+        "ticks": 3466,
+        "temperature_c": 31,
+        "captured_local": "2026-10-24T22:13:01-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    },
+    "rear-right-knee": {
+      "minimum": {
+        "id": 12,
+        "ticks": 2323,
+        "temperature_c": 30,
+        "captured_local": "2026-10-24T22:13:07-07:00",
+        "note": "manual safe endpoint; smaller raw encoder value"
+      },
+      "maximum": {
+        "id": 12,
+        "ticks": 3693,
+        "temperature_c": 30,
+        "captured_local": "2026-10-24T22:13:13-07:00",
+        "note": "manual safe endpoint; larger raw encoder value"
+      }
+    }
+  }
+}

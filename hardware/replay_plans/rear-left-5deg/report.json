@@ -1,0 +1,80 @@
+{
+  "mode": "OFFLINE PREVIEW ONLY \u2014 no serial port opened",
+  "policy_sha256": "5e65ecd3cf056db3bfe6e5e198c69c8fea94bc19d96b63af7a0485b9590d94f9",
+  "source_checkpoint": "policies/best-distance",
+  "task": {
+    "reward_version": 7,
+    "target_speed": 0.01,
+    "tracking_reward_weight": 1.25,
+    "control_dt": 0.02,
+    "episode_seconds": 20.0,
+    "action_scale": 0.035,
+    "residual_time_constant": 0.12,
+    "max_target_rate": 1.5,
+    "min_height": 0.06,
+    "max_tilt_degrees": 45.0,
+    "reset_noise": 0.015,
+    "min_airtime": 0.12,
+    "min_clearance": 0.004,
+    "min_step_distance": 0.004,
+    "leg_use_window": 12.0,
+    "soft_landing_speed": 0.15,
+    "lift_clearance": 0.008,
+    "slip_distance": 0.004,
+    "slip_speed": 0.04,
+    "slip_duration": 0.08,
+    "slip_grace": 0.3,
+    "gait_cycle_seconds": 3.0,
+    "severe_slip_distance": 0.02,
+    "severe_slip_speed": 0.08,
+    "severe_slip_duration": 0.5,
+    "reference_stride": 0.02,
+    "reference_lift": 0.025,
+    "reference_ramp_seconds": 1.0,
+    "reference_sway": 0.06,
+    "reference_weight_shift": 0.01,
+    "reference_rear_lift_multiplier": 1.5
+  },
+  "leg": "rear_left",
+  "controlled_ids": [
+    8,
+    9
+  ],
+  "hip_roll": "not commanded",
+  "calibration_file": "hardware/calibrations/rear-left-current.json",
+  "maximum_model_excursion_degrees": 5.0,
+  "amplitude_scale": 0.13963070150027285,
+  "duration_seconds": 13.86,
+  "checks": [
+    {
+      "id": 8,
+      "neutral_ticks": 1677,
+      "planned_ticks": [
+        1658,
+        1728
+      ],
+      "recorded_safe_ticks_with_margin": [
+        722,
+        2846
+      ],
+      "inside_recorded_limits": true
+    },
+    {
+      "id": 9,
+      "neutral_ticks": 1572,
+      "planned_ticks": [
+        1561,
+        1629
+      ],
+      "recorded_safe_ticks_with_margin": [
+        26,
+        2443
+      ],
+      "inside_recorded_limits": true
+    }
+  ],
+  "within_recorded_limits": true,
+  "ready_for_powered_replay": false,
+  "remaining_preflight": "Live starting pose, mode/torque, temperature, support and operator start still required; bounds alone do not authorize motion.",
+  "note": "Scaled/slowed sample of simulated policy targets; not closed-loop policy deployment. Bounds must agree with current calibration."
+}

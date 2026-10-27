@@ -1,0 +1,124 @@
+{
+  "task": {
+    "reward_version": 7,
+    "target_speed": 0.01,
+    "tracking_reward_weight": 1.25,
+    "control_dt": 0.02,
+    "episode_seconds": 20.0,
+    "action_scale": 0.035,
+    "residual_time_constant": 0.12,
+    "max_target_rate": 1.5,
+    "min_height": 0.06,
+    "max_tilt_degrees": 45.0,
+    "reset_noise": 0.015,
+    "min_airtime": 0.12,
+    "min_clearance": 0.004,
+    "min_step_distance": 0.004,
+    "leg_use_window": 12.0,
+    "soft_landing_speed": 0.15,
+    "lift_clearance": 0.008,
+    "slip_distance": 0.004,
+    "slip_speed": 0.04,
+    "slip_duration": 0.08,
+    "slip_grace": 0.3,
+    "gait_cycle_seconds": 3.0,
+    "severe_slip_distance": 0.02,
+    "severe_slip_speed": 0.08,
+    "severe_slip_duration": 0.5,
+    "reference_stride": 0.02,
+    "reference_lift": 0.025,
+    "reference_ramp_seconds": 1.0,
+    "reference_sway": 0.06,
+    "reference_weight_shift": 0.01,
+    "reference_rear_lift_multiplier": 1.5
+  },
+  "joint_order": [
+    "front_left_hip_roll",
+    "front_left_hip_pitch",
+    "front_left_knee_pitch",
+    "front_right_hip_roll",
+    "front_right_hip_pitch",
+    "front_right_knee_pitch",
+    "rear_left_hip_roll",
+    "rear_left_hip_pitch",
+    "rear_left_knee_pitch",
+    "rear_right_hip_roll",
+    "rear_right_hip_pitch",
+    "rear_right_knee_pitch"
+  ],
+  "joint_limits_radians": [
+    [
+      -0.5,
+      0.5
+    ],
+    [
+      -1.2,
+      1.2
+    ],
+    [
+      -1.5,
+      1.5
+    ],
+    [
+      -0.5,
+      0.5
+    ],
+    [
+      -1.2,
+      1.2
+    ],
+    [
+      -1.5,
+      1.5
+    ],
+    [
+      -0.5,
+      0.5
+    ],
+    [
+      -1.2,
+      1.2
+    ],
+    [
+      -1.5,
+      1.5
+    ],
+    [
+      -0.5,
+      0.5
+    ],
+    [
+      -1.2,
+      1.2
+    ],
+    [
+      -1.5,
+      1.5
+    ]
+  ],
+  "neutral_radians": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "xml_sha256": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+  "observation_size": 60,
+  "action_size": 12,
+  "forward_axis": "negative local X",
+  "observation_note": "Body linear velocity is simulator state; deployment requires an estimator.",
+  "physics_backend": "newton-batch",
+  "evaluation_episodes": 3,
+  "evaluation_seconds_override": null,
+  "training_implementation": "newton-cuda-resident",
+  "additional_steps": 262144,
+  "normalization": "saved GPU running moments"
+}

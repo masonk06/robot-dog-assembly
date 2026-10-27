@@ -1,0 +1,6 @@
+-r requirements.txt
+gymnasium>=1.2,<2
+stable-baselines3>=2.7,<3
+wandb>=0.19,<1
+tensorboard>=2.19,<3
+pytest>=8,<10

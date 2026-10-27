@@ -1,0 +1,17 @@
+{
+  "frames": 300,
+  "finite": true,
+  "newton_final_base_xyz": [
+    -0.0268595889210701,
+    0.002338373800739646,
+    0.11626075953245163
+  ],
+  "mujoco_final_base_xyz": [
+    -0.026769995599878294,
+    0.0023561264399967964,
+    0.11624075064210934
+  ],
+  "base_position_rmse_m": 5.19781268643166e-05,
+  "newton_min_height_m": 0.11200742423534393,
+  "status": "reference_comparison_not_policy_validation"
+}

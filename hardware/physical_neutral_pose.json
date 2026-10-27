@@ -1,5 +1,5 @@
 {
-  "description": "User-confirmed MuJoCo-like physical neutral pose captured 2026-10-24. This is a controller waypoint only; it does not alter the servos' centered 2048 calibration.",
+  "description": "Physical neutral waypoints. Rear-left IDs 8/9 updated from user-confirmed 2026-10-26 calibration; other joints retain historical 2026-10-24 captures.",
   "units": "raw STS3215 encoder ticks",
   "positions": {
     "1": 2079,
@@ -9,11 +9,12 @@
     "5": 1840,
     "6": 1928,
     "7": 2047,
-    "8": 1749,
-    "9": 1698,
+    "8": 1677,
+    "9": 1572,
     "10": 1874,
     "11": 2048,
     "12": 1778
   },
-  "torque_state_at_capture": "off for all servos"
+  "torque_state_at_capture": "off for all servos",
+  "rear_left_calibration": "calibrations/rear-left-current.json"
 }

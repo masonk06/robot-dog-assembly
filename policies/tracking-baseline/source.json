@@ -1,0 +1,5 @@
+{
+  "path": "simulation/mujoco",
+  "wandb_source_artifact": "marsdenm-oregon-state-university/robot-dog-rl/robodog-source-qfwutfdb:v0",
+  "frozen_source_archive": "policies/sources/qfwutfdb.zip"
+}

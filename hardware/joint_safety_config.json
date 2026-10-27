@@ -85,15 +85,15 @@
   "joints": [
     {"id": 1, "name": "front_left_hip_roll", "neutral_ticks": 2048, "positive_direction": "robot_right"},
     {"id": 2, "name": "front_left_hip_pitch", "neutral_ticks": 2048, "positive_direction": "backward"},
-    {"id": 3, "name": "front_left_knee_pitch", "neutral_ticks": 2048, "positive_direction": "away_from_body"},
+    {"id": 3, "name": "front_left_knee_pitch", "neutral_ticks": 2048, "positive_direction": "away_from_body", "model_to_servo_sign": -1},
     {"id": 4, "name": "front_right_hip_roll", "neutral_ticks": 2048, "positive_direction": "robot_right"},
     {"id": 5, "name": "front_right_hip_pitch", "neutral_ticks": 2048, "positive_direction": "backward"},
-    {"id": 6, "name": "front_right_knee_pitch", "neutral_ticks": 2048, "positive_direction": "away_from_body"},
+    {"id": 6, "name": "front_right_knee_pitch", "neutral_ticks": 2048, "positive_direction": "away_from_body", "model_to_servo_sign": -1},
     {"id": 7, "name": "rear_left_hip_roll", "neutral_ticks": 2048, "positive_direction": "robot_left"},
     {"id": 8, "name": "rear_left_hip_pitch", "neutral_ticks": 2048, "positive_direction": "backward"},
-    {"id": 9, "name": "rear_left_knee_pitch", "neutral_ticks": 2048, "positive_direction": "toward_body"},
+    {"id": 9, "name": "rear_left_knee_pitch", "neutral_ticks": 2048, "positive_direction": "toward_body", "model_to_servo_sign": -1},
     {"id": 10, "name": "rear_right_hip_pitch", "neutral_ticks": 2048, "positive_direction": "backward"},
     {"id": 11, "name": "rear_right_hip_roll", "neutral_ticks": 2048, "positive_direction": "robot_left"},
-    {"id": 12, "name": "rear_right_knee_pitch", "neutral_ticks": 2048, "positive_direction": "toward_body"}
+    {"id": 12, "name": "rear_right_knee_pitch", "neutral_ticks": 2048, "positive_direction": "toward_body", "model_to_servo_sign": -1}
   ]
 }

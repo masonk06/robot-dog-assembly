@@ -23,3 +23,9 @@ The latest export is a work in progress: the front-left motion test showed the h
 Fusion scripts run inside Fusion's Python environment. Conversion tools require OpenCascade Python bindings (`OCP`), separate from simulator dependencies. `RoboDog_original_import_script.py` is archival and retains paths to an older workspace.
 
 JSON reports, logs, and images describe the revisions that generated them; they do not certify the latest assembly.
+# Frame V3 packaging
+
+The newer [frame_v3](frame_v3/README.md) folder contains a separate printable
+electronics-packaging revision, build source, previews and validation results.
+It does not replace the existing simulation's joint geometry or the preserved
+Fusion knee-housing assembly.

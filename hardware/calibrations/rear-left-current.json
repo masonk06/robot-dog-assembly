@@ -1,0 +1,92 @@
+{
+  "status": "user_reviewed_capture",
+  "recorded_local": "2026-10-26T20:16:40.244414-07:00",
+  "source_capture": "rear-left-20261026-201131.json",
+  "neutral": {
+    "captured_local": "2026-10-26T20:11:31.155194-07:00",
+    "positions": {
+      "rear_left_hip_pitch": {
+        "ticks": 1677,
+        "voltage": 12.2,
+        "temperature": 31,
+        "timestamp": 27222.656,
+        "torque": 0,
+        "mode": 0
+      },
+      "rear_left_knee_pitch": {
+        "ticks": 1572,
+        "voltage": 12.1,
+        "temperature": 31,
+        "timestamp": 27222.656,
+        "torque": 0,
+        "mode": 0
+      }
+    }
+  },
+  "margin_ticks": 25,
+  "scope": "Supported first replay only; no powered validation yet",
+  "joints": {
+    "rear_left_hip_pitch": {
+      "id": 8,
+      "neutral_ticks": 1677,
+      "minimum_ticks": 697,
+      "maximum_ticks": 2871,
+      "minimum_capture": {
+        "captured_local": "2026-10-26T20:12:03.378967-07:00",
+        "positions": {
+          "rear_left_hip_pitch": {
+            "ticks": 697,
+            "voltage": 12.2,
+            "temperature": 31,
+            "timestamp": 27254.906,
+            "torque": 0,
+            "mode": 0
+          },
+          "rear_left_knee_pitch": {
+            "ticks": 1571,
+            "voltage": 12.1,
+            "temperature": 31,
+            "timestamp": 27254.906,
+            "torque": 0,
+            "mode": 0
+          }
+        }
+      },
+      "maximum_capture": {
+        "captured_local": "2026-10-26T20:11:52.489349-07:00",
+        "positions": {
+          "rear_left_hip_pitch": {
+            "ticks": 2871,
+            "voltage": 12.2,
+            "temperature": 31,
+            "timestamp": 27244.0,
+            "torque": 0,
+            "mode": 0
+          },
+          "rear_left_knee_pitch": {
+            "ticks": 1572,
+            "voltage": 12.1,
+            "temperature": 31,
+            "timestamp": 27244.0,
+            "torque": 0,
+            "mode": 0
+          }
+        }
+      }
+    },
+    "rear_left_knee_pitch": {
+      "id": 9,
+      "neutral_ticks": 1572,
+      "minimum_ticks": 1,
+      "maximum_ticks": 2468,
+      "bounds_source": "User-reported conservative interval avoiding encoder wrap; lower bound 1 is a software choice, not a measured physical stop.",
+      "supersedes": "Earlier 3289-tick sample crossed zero; not used as an endpoint for this no-wrap interval."
+    }
+  },
+  "user_confirmation": {
+    "date": "2026-10-26",
+    "statement": "Rear-left leg calibrated; user confirmed supported motion",
+    "scope": "Supported open-loop pitch-joint replay, not full-body policy deployment",
+    "successful_log": "reports/sim2real/20261026-220232.csv"
+  }
+}

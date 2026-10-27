@@ -9,6 +9,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from joint_mapping import KNEE_MODEL_TO_SERVO_SIGN
 
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT.parent / "simulation" / "mujoco"))
@@ -22,10 +23,10 @@ from single_leg_trot import TICKS_PER_DEGREE, load_neutral  # noqa: E402
 # deliberately blocked because ID 2 has a known frame-contact/direction issue.
 # Other legs remain candidates until their one-leg, in-air tests are completed.
 TRANSFER_STATUS = {
-    "rear_left": {"hip": 8, "knee": 9, "hip_sign": +1, "knee_sign": -1, "status": "validated"},
+    "rear_left": {"hip": 8, "knee": 9, "hip_sign": +1, "knee_sign": KNEE_MODEL_TO_SERVO_SIGN["rear_left"], "status": "validated"},
     "front_left": {"status": "BLOCKED: front-left hip-pitch ID 2 has unresolved direction/frame-contact risk"},
-    "rear_right": {"hip": 10, "knee": 12, "hip_sign": +1, "knee_sign": -1, "status": "validated: matched rear-left in-air path on 2026-10-24"},
-    "front_right": {"hip": 5, "knee": 6, "hip_sign": +1, "knee_sign": +1, "status": "validated: matched intended in-air path on 2026-10-24"},
+    "rear_right": {"hip": 10, "knee": 12, "hip_sign": +1, "knee_sign": KNEE_MODEL_TO_SERVO_SIGN["rear_right"], "status": "validated: matched rear-left in-air path on 2026-10-24"},
+    "front_right": {"hip": 5, "knee": 6, "hip_sign": +1, "knee_sign": KNEE_MODEL_TO_SERVO_SIGN["front_right"], "status": "direction corrected by live comparison 2026-10-26"},
 }
 MANUAL_LIMITS_PATH = ROOT / "manual_range_of_motion.json"
 MANUAL_MARGIN_TICKS = 25  # roughly 2.2 degrees, applied inside every endpoint

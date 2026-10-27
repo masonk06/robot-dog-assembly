@@ -21,7 +21,28 @@ Verified assignments as of 2026-10-23. All assignments were made with each servo
 
 Rear-right hip pitch intentionally keeps ID 10. IDs are arbitrary on the serial bus, so no reassignment was needed.
 
-## Motion-test observations
+## Current model-to-servo knee mapping
+
+Corrected by the user's live comparison on 2026-10-26: front-left knee ID 3
+and front-right knee ID 6 both use **-1**, matching the existing rear-knee
+conversion. The shared source is `joint_mapping.py`.
+
+| Model joint | Servo ID | Model angle → encoder delta sign |
+| --- | ---: | ---: |
+| Front-left knee pitch | 3 | -1 |
+| Front-right knee pitch | 6 | -1 |
+| Rear-left knee pitch | 9 | -1 |
+| Rear-right knee pitch | 12 | -1 |
+
+`ticks = physical_neutral_ticks + sign × model_degrees × 4096 / 360`.
+Viewer inversion uses the same sign. This maps hardware to the existing model;
+simulation joint axes and learned policies retain their original coordinates.
+
+## Historical raw-encoder motion observations
+
+The following records describe increasing **raw ticks**, not increasing model
+angles. They are retained as observations; use the conversion above for model
+commands. The older front-knee model-sign +1 assumption is superseded.
 
 | Servo ID | Joint | Positive-command direction | Test result |
 | ---: | --- | --- | --- |

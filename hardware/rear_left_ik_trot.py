@@ -14,6 +14,7 @@ knee axis: model-positive knee angle is written as a negative raw-tick change.
 import argparse
 import math
 import time
+from joint_mapping import KNEE_MODEL_TO_SERVO_SIGN
 
 from single_leg_trot import (
     ACCELERATION,
@@ -38,13 +39,13 @@ from single_leg_trot import (
 LEG_CONFIG = {
     # The rear-left physical/model sign relationship was validated against the
     # MuJoCo 10 mm lift preview on hardware.
-    "rear-left": {"hip": 8, "knee": 9, "hip_sign": +1, "knee_sign": -1, "status": "validated"},
+    "rear-left": {"hip": 8, "knee": 9, "hip_sign": +1, "knee_sign": KNEE_MODEL_TO_SERVO_SIGN["rear_left"], "status": "validated"},
     # Rear-right matched the rear-left in-air forward-then-back trajectory at
     # 6 mm lift on 2026-10-24; IDs are 10/12.
-    "rear-right": {"hip": 10, "knee": 12, "hip_sign": +1, "knee_sign": -1, "status": "validated"},
-    # Front-right matched the intended in-air lift/forward/back path at 6 mm
-    # lift on 2026-10-24.
-    "front-right": {"hip": 5, "knee": 6, "hip_sign": +1, "knee_sign": +1, "status": "validated"},
+    "rear-right": {"hip": 10, "knee": 12, "hip_sign": +1, "knee_sign": KNEE_MODEL_TO_SERVO_SIGN["rear_right"], "status": "validated"},
+    # User corrected the front knee/model correspondence in the live viewer
+    # on 2026-10-26. This supersedes the older +1 assumption.
+    "front-right": {"hip": 5, "knee": 6, "hip_sign": +1, "knee_sign": KNEE_MODEL_TO_SERVO_SIGN["front_right"], "status": "direction corrected by live comparison 2026-10-26"},
 }
 # At an 8-second cycle, many consecutive encoder targets differ by only one
 # tick, which looks and feels like stuttering.  A 2-second cycle is the

@@ -1,0 +1,18 @@
+{
+  "eval/forward_distance_m": 0.16016782820224762,
+  "eval/forward_speed_m_s": 0.008029140532016754,
+  "eval/four_leg_cycles": 6.0,
+  "eval/foot_lifts": 26.0,
+  "eval/fall_fraction": 0.0,
+  "eval/slide_reset_fraction": 0.0,
+  "eval/episode_seconds": 20.000822067260742,
+  "eval/foot_slip_m2_s2": 0.00013977711205370724,
+  "eval/peak_foot_force_n": 13.605055809020996,
+  "eval/peak_landing_speed_m_s": 0.15097209811210632,
+  "eval/steps/front_left": 6.0,
+  "eval/steps/front_right": 6.0,
+  "eval/steps/rear_left": 6.0,
+  "eval/steps/rear_right": 6.0,
+  "implementation": "CUDA-resident task, frozen policy and normalization",
+  "episodes": 3
+}

@@ -1,0 +1,89 @@
+{
+  "status": "incomplete",
+  "captures": {
+    "neutral": {
+      "captured_local": "2026-10-26T20:11:31.155194-07:00",
+      "positions": {
+        "rear_left_hip_pitch": {
+          "ticks": 1677,
+          "voltage": 12.2,
+          "temperature": 31,
+          "timestamp": 27222.656,
+          "torque": 0,
+          "mode": 0
+        },
+        "rear_left_knee_pitch": {
+          "ticks": 1572,
+          "voltage": 12.1,
+          "temperature": 31,
+          "timestamp": 27222.656,
+          "torque": 0,
+          "mode": 0
+        }
+      }
+    },
+    "rear_left_hip_pitch:A": {
+      "captured_local": "2026-10-26T20:11:52.489349-07:00",
+      "positions": {
+        "rear_left_hip_pitch": {
+          "ticks": 2871,
+          "voltage": 12.2,
+          "temperature": 31,
+          "timestamp": 27244.0,
+          "torque": 0,
+          "mode": 0
+        },
+        "rear_left_knee_pitch": {
+          "ticks": 1572,
+          "voltage": 12.1,
+          "temperature": 31,
+          "timestamp": 27244.0,
+          "torque": 0,
+          "mode": 0
+        }
+      }
+    },
+    "rear_left_hip_pitch:B": {
+      "captured_local": "2026-10-26T20:12:03.378967-07:00",
+      "positions": {
+        "rear_left_hip_pitch": {
+          "ticks": 697,
+          "voltage": 12.2,
+          "temperature": 31,
+          "timestamp": 27254.906,
+          "torque": 0,
+          "mode": 0
+        },
+        "rear_left_knee_pitch": {
+          "ticks": 1571,
+          "voltage": 12.1,
+          "temperature": 31,
+          "timestamp": 27254.906,
+          "torque": 0,
+          "mode": 0
+        }
+      }
+    },
+    "rear_left_knee_pitch:A": {
+      "captured_local": "2026-10-26T20:12:17.271116-07:00",
+      "positions": {
+        "rear_left_hip_pitch": {
+          "ticks": 1674,
+          "voltage": 12.2,
+          "temperature": 31,
+          "timestamp": 27268.781,
+          "torque": 0,
+          "mode": 0
+        },
+        "rear_left_knee_pitch": {
+          "ticks": 3289,
+          "voltage": 12.1,
+          "temperature": 31,
+          "timestamp": 27268.781,
+          "torque": 0,
+          "mode": 0
+        }
+      }
+    }
+  }
+}

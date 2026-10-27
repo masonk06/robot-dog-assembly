@@ -1,0 +1,8 @@
+{
+  "motion_error": null,
+  "release_verified": true,
+  "release_errors": [],
+  "plan_folder": "generated locally: runs/sim2real-rear-left-full-faster",
+  "controller_revision": "acknowledged-release-v2",
+  "profile_speed_ticks_per_second": 120
+}

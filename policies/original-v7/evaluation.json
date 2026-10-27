@@ -1,0 +1,18 @@
+{
+  "eval/forward_distance_m": 0.10203821606699875,
+  "eval/forward_speed_m_s": 0.005180134817616603,
+  "eval/fall_fraction": 0.0,
+  "eval/slide_reset_fraction": 0.0,
+  "eval/episode_seconds": 20.019999999999783,
+  "eval/peak_foot_force_n": 15.946060968402632,
+  "eval/peak_landing_speed_m_s": 0.11708172878970491,
+  "eval/foot_slip_m2_s2": 0.00033481565564516145,
+  "eval/four_leg_cycles": 6.0,
+  "eval/foot_lifts": 26.0,
+  "eval/gait_contact_match": 0.91510989010989,
+  "eval/gait_clearance_match": 0.1922045789687952,
+  "eval/steps/front_left": 6.0,
+  "eval/steps/front_right": 6.0,
+  "eval/steps/rear_left": 6.0,
+  "eval/steps/rear_right": 6.0
+}

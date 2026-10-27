@@ -12,6 +12,8 @@ Desktop.ini
 
 # Local environments, credentials, and generated training output.
 .venv/
+.venv-newton/
+.venv-cuda/
 venv/
 .env
 .env.*

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "original-v7",
+    "run": "i95lccut",
+    "steps": 8192,
+    "path": "policies/original-v7",
+    "policy_sha256": "40cb7d61c8f3e78df7f2d02aa3b803a7038dd11793232ab79074a2233c2a0e5e",
+    "model_sha256": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+    "run_url": "https://forge.coreweave.com/wandb/marsdenm-oregon-state-university/robot-dog-rl/runs/i95lccut",
+    "model_lf_sha256": "5d3d50f046f1503ecbeaefb672839a13416b5d9078f43dd2bda0c3e2a864a54a"
+  },
+  {
+    "name": "tracking-baseline",
+    "run": "qfwutfdb",
+    "steps": 448352,
+    "path": "policies/tracking-baseline",
+    "policy_sha256": "a16520711e468275bc5961be8afeffe29bf9043acd46c4e157fbd6f55bd75b7b",
+    "model_sha256": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+    "run_url": "https://forge.coreweave.com/wandb/marsdenm-oregon-state-university/robot-dog-rl/runs/qfwutfdb",
+    "model_lf_sha256": "5d3d50f046f1503ecbeaefb672839a13416b5d9078f43dd2bda0c3e2a864a54a"
+  },
+  {
+    "name": "best-distance",
+    "run": "58cjy6ku",
+    "steps": 9516896,
+    "path": "policies/best-distance",
+    "policy_sha256": "5e65ecd3cf056db3bfe6e5e198c69c8fea94bc19d96b63af7a0485b9590d94f9",
+    "model_sha256": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+    "run_url": "https://forge.coreweave.com/wandb/marsdenm-oregon-state-university/robot-dog-rl/runs/58cjy6ku",
+    "model_lf_sha256": "5d3d50f046f1503ecbeaefb672839a13416b5d9078f43dd2bda0c3e2a864a54a"
+  },
+  {
+    "name": "latest-long-run",
+    "run": "58cjy6ku",
+    "steps": 16570208,
+    "path": "policies/latest-long-run",
+    "policy_sha256": "c213bbaff7d835539e95962eb368b252e7a320d77f0f87731efa6130f71a8e51",
+    "model_sha256": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+    "run_url": "https://forge.coreweave.com/wandb/marsdenm-oregon-state-university/robot-dog-rl/runs/58cjy6ku",
+    "model_lf_sha256": "5d3d50f046f1503ecbeaefb672839a13416b5d9078f43dd2bda0c3e2a864a54a"
+  }
+]

@@ -1,0 +1,126 @@
+{
+  "units": "mm",
+  "base_source": "solid_sources\\FRAME V2.step",
+  "source_status": "saved FRAME V2 STEP; live unsaved Fusion geometry not re-exported",
+  "battery_user_dimensions": [
+    75,
+    34,
+    25
+  ],
+  "battery_cavity_xy": [
+    79,
+    38
+  ],
+  "jetson_complete_kit_envelope": [
+    103,
+    90.5,
+    34.77
+  ],
+  "waveshare_pcb": [
+    42,
+    33
+  ],
+  "waveshare_hole_spacing": [
+    37,
+    28
+  ],
+  "jetson_mount": "adjustable slots; native hole positions require physical fit check",
+  "parts": {
+    "Frame_V3": {
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        [
+          -70.0,
+          -90.0,
+          -0.0
+        ],
+        [
+          100.0,
+          90.0,
+          50.0999
+        ]
+      ],
+      "solid_volume_mm3": 222181.56704394042
+    },
+    "Jetson_Tray": {
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        [
+          -47.0,
+          -53.0,
+          37.0
+        ],
+        [
+          77.0,
+          53.0,
+          40.0
+        ]
+      ],
+      "solid_volume_mm3": 25108.179836837888
+    },
+    "Waveshare_Sled": {
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        [
+          -9.0,
+          22.0,
+          5.0
+        ],
+        [
+          39.0,
+          61.0,
+          13.0
+        ]
+      ],
+      "solid_volume_mm3": 6020.2052662412725
+    }
+  },
+  "protected_mount_zones": [
+    {
+      "y_range": [
+        -100,
+        -60
+      ],
+      "symmetric_difference_mm3": 0.0
+    },
+    {
+      "y_range": [
+        60,
+        100
+      ],
+      "symmetric_difference_mm3": 0.0
+    }
+  ],
+  "reference_collisions_mm3": {
+    "Battery_75x34x25_REFERENCE vs Frame_V3": 0.0,
+    "Battery_75x34x25_REFERENCE vs Jetson_Tray": 0.0,
+    "Battery_75x34x25_REFERENCE vs Waveshare_Sled": 0.0,
+    "Jetson_103x90p5x34p77_REFERENCE vs Frame_V3": 0.0,
+    "Jetson_103x90p5x34p77_REFERENCE vs Jetson_Tray": 0.0,
+    "Jetson_103x90p5x34p77_REFERENCE vs Waveshare_Sled": 0.0,
+    "Waveshare_42x33_REFERENCE vs Frame_V3": 0.0,
+    "Waveshare_42x33_REFERENCE vs Jetson_Tray": 0.0,
+    "Waveshare_42x33_REFERENCE vs Waveshare_Sled": 0.0
+  },
+  "limitations": [
+    "Not structurally load-tested or FEA validated.",
+    "Servo and cable clearances use saved placements; no swept joint-motion validation.",
+    "Connector plug sizes/bend radii vary; side corridors are reserved, not vendor cable CAD.",
+    "Jetson reference is the whole dev-kit packaging envelope, not exact board geometry.",
+    "Mount posts use 2.6 mm pilot holes for suitable M3 plastic-fastening hardware; confirm printed fit.",
+    "Waveshare uses 2.2 mm pilot holes for M2 hardware into printed bosses; PCB holes are 2.5 mm."
+  ],
+  "printed_part_intersections_mm3": {
+    "Frame_V3 vs Jetson_Tray": 0.0,
+    "Frame_V3 vs Waveshare_Sled": 0.0,
+    "Jetson_Tray vs Waveshare_Sled": 0.0
+  },
+  "open_side_corridors": {
+    "front_IO": 0.0,
+    "rear_cables": 0.0
+  },
+  "added_frame_volume_mm3": 23090.85825311308
+}

@@ -1,15 +1,17 @@
 # RoboDog STS3215 Servo IDs
 
-Verified assignments as of 2026-10-23. All assignments were made with each servo isolated on COM5 at 1 Mbps; no motion commands were sent.
+Current physical labels corrected by the user on 2026-10-28: the front-left
+and front-right assemblies are exchanged on the new frame. Existing servo
+EEPROM IDs stay unchanged. The original IDs were assigned on 2026-10-23.
 
 | Position | Joint | Servo ID | Status |
 | --- | --- | ---: | --- |
-| Front-left | Hip roll | 1 | Previously verified |
-| Front-left | Hip pitch | 2 | Previously verified |
-| Front-left | Knee pitch | 3 | Previously verified |
-| Front-right | Hip roll | 4 | Verified |
-| Front-right | Hip pitch | 5 | Verified |
-| Front-right | Knee pitch | 6 | Verified |
+| Front-left | Hip roll | 4 | User-corrected new-frame label |
+| Front-left | Hip pitch | 5 | User-corrected new-frame label |
+| Front-left | Knee pitch | 6 | User-corrected new-frame label |
+| Front-right | Hip roll | 1 | User-corrected new-frame label |
+| Front-right | Hip pitch | 2 | User-corrected new-frame label |
+| Front-right | Knee pitch | 3 | User-corrected new-frame label |
 | Rear-left | Hip roll | 7 | Verified |
 | Rear-left | Hip pitch | 8 | Verified |
 | Rear-left | Knee pitch | 9 | Verified |
@@ -23,14 +25,14 @@ Rear-right hip pitch intentionally keeps ID 10. IDs are arbitrary on the serial 
 
 ## Current model-to-servo knee mapping
 
-Corrected by the user's live comparison on 2026-10-26: front-left knee ID 3
-and front-right knee ID 6 both use **-1**, matching the existing rear-knee
+Corrected by the user's live comparison on 2026-10-26: front knees IDs 3
+and 6 both use **-1**, matching the existing rear-knee
 conversion. The shared source is `joint_mapping.py`.
 
 | Model joint | Servo ID | Model angle → encoder delta sign |
 | --- | ---: | ---: |
-| Front-left knee pitch | 3 | -1 |
-| Front-right knee pitch | 6 | -1 |
+| Front-left knee pitch | 6 | -1 historical; current direction check pending |
+| Front-right knee pitch | 3 | -1 historical; current direction check pending |
 | Rear-left knee pitch | 9 | -1 |
 | Rear-right knee pitch | 12 | -1 |
 
@@ -43,6 +45,9 @@ simulation joint axes and learned policies retain their original coordinates.
 The following records describe increasing **raw ticks**, not increasing model
 angles. They are retained as observations; use the conversion above for model
 commands. The older front-knee model-sign +1 assumption is superseded.
+Front leg names in this historical table describe the old assembly. On the
+current frame IDs 1/2/3 are front-right and IDs 4/5/6 are front-left. Historical
+motion scripts and pose-dependent limits are not current calibration authority.
 
 | Servo ID | Joint | Positive-command direction | Test result |
 | ---: | --- | --- | --- |

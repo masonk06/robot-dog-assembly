@@ -1,0 +1,60 @@
+{
+  "model": "simulation/mujoco/robot_dog_v2.xml",
+  "mode": "kinematic_neutral_no_hardware_io",
+  "joint_order": [
+    "front_left_hip_roll",
+    "front_left_hip_pitch",
+    "front_left_knee_pitch",
+    "front_right_hip_roll",
+    "front_right_hip_pitch",
+    "front_right_knee_pitch",
+    "rear_left_hip_roll",
+    "rear_left_hip_pitch",
+    "rear_left_knee_pitch",
+    "rear_right_hip_roll",
+    "rear_right_hip_pitch",
+    "rear_right_knee_pitch"
+  ],
+  "angles_radians": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "base_world_xyz_m": [
+    0.0,
+    0.0,
+    0.12
+  ],
+  "foot_sites_world_xyz_m": {
+    "front_left": [
+      -0.11022443899999998,
+      -0.0775,
+      0.0039064280000000035
+    ],
+    "front_right": [
+      -0.11022443899999998,
+      0.0775,
+      0.0039064280000000035
+    ],
+    "rear_left": [
+      0.11172954099999997,
+      -0.0775,
+      0.0039064280000000035
+    ],
+    "rear_right": [
+      0.11172954099999997,
+      0.0775,
+      0.0039064280000000035
+    ]
+  },
+  "note": "Model joint zero is defined by CAD transforms; servo encoder zeros must be physically matched and measured."
+}

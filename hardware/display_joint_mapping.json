@@ -1,39 +1,39 @@
 {
   "front_left_hip_roll": {
-    "id": 1,
-    "zero": 2079,
-    "sign": 1,
-    "note": "Editable display mapping; does not change servo EEPROM/calibration."
-  },
-  "front_left_hip_pitch": {
-    "id": 2,
-    "zero": 1782,
-    "sign": 1,
-    "note": "Editable display mapping; does not change servo EEPROM/calibration."
-  },
-  "front_left_knee_pitch": {
-    "id": 3,
-    "zero": 1855,
-    "sign": -1,
-    "note": "Front knee display direction corrected by user, 2026-10-26."
-  },
-  "front_right_hip_roll": {
     "id": 4,
     "zero": 2101,
     "sign": 1,
-    "note": "Editable display mapping; does not change servo EEPROM/calibration."
+    "note": "Editable display mapping; does not change servo EEPROM/calibration. Front assembly label corrected by user 2026-10-28; historical zero, not new-frame motion calibration."
   },
-  "front_right_hip_pitch": {
+  "front_left_hip_pitch": {
     "id": 5,
     "zero": 1840,
     "sign": 1,
-    "note": "Editable display mapping; does not change servo EEPROM/calibration."
+    "note": "Editable display mapping; does not change servo EEPROM/calibration. Front assembly label corrected by user 2026-10-28; historical zero, not new-frame motion calibration."
   },
-  "front_right_knee_pitch": {
+  "front_left_knee_pitch": {
     "id": 6,
     "zero": 1928,
     "sign": -1,
-    "note": "Front knee display direction corrected by user, 2026-10-26."
+    "note": "Front knee display direction corrected by user, 2026-10-26. Front assembly label corrected by user 2026-10-28; historical zero, not new-frame motion calibration."
+  },
+  "front_right_hip_roll": {
+    "id": 1,
+    "zero": 2079,
+    "sign": 1,
+    "note": "Editable display mapping; does not change servo EEPROM/calibration. Front assembly label corrected by user 2026-10-28; historical zero, not new-frame motion calibration."
+  },
+  "front_right_hip_pitch": {
+    "id": 2,
+    "zero": 1782,
+    "sign": 1,
+    "note": "Editable display mapping; does not change servo EEPROM/calibration. Front assembly label corrected by user 2026-10-28; historical zero, not new-frame motion calibration."
+  },
+  "front_right_knee_pitch": {
+    "id": 3,
+    "zero": 1855,
+    "sign": -1,
+    "note": "Front knee display direction corrected by user, 2026-10-26. Front assembly label corrected by user 2026-10-28; historical zero, not new-frame motion calibration."
   },
   "rear_left_hip_roll": {
     "id": 7,

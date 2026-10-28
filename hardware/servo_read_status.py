@@ -20,12 +20,12 @@ def read(bus, sid, address, count):
 
 
 SERVOS = [
-    (1, 'Front-left hip roll'),
-    (2, 'Front-left hip pitch'),
-    (3, 'Front-left knee pitch'),
-    (4, 'Front-right hip roll'),
-    (5, 'Front-right hip pitch'),
-    (6, 'Front-right knee pitch'),
+    (1, 'Front-right hip roll'),
+    (2, 'Front-right hip pitch'),
+    (3, 'Front-right knee pitch'),
+    (4, 'Front-left hip roll'),
+    (5, 'Front-left hip pitch'),
+    (6, 'Front-left knee pitch'),
     (7, 'Rear-left hip roll'),
     (8, 'Rear-left hip pitch'),
     (9, 'Rear-left knee pitch'),

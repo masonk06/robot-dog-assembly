@@ -30,6 +30,8 @@ def test_telemetry_with_noise_and_echo_sends_only_read():
 
 def test_display_mapping_has_correct_rear_right_ids_and_invertible_signs():
     mapping=default_mapping({str(i):2048 for i in range(1,13)})
+    assert [mapping['front_left_'+joint]['id'] for joint in ('hip_roll','hip_pitch','knee_pitch')]==[4,5,6]
+    assert [mapping['front_right_'+joint]['id'] for joint in ('hip_roll','hip_pitch','knee_pitch')]==[1,2,3]
     assert mapping['rear_right_hip_roll']['id']==11
     assert mapping['rear_right_hip_pitch']['id']==10
     assert mapping['rear_left_knee_pitch']['sign']==-1

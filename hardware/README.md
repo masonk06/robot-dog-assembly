@@ -4,6 +4,20 @@ STS3215 servos connect through a Waveshare Bus Servo Adapter (A) with a 12 V sup
 
 ## Current workflow
 
+October 28 new-frame update: the user corrected the front assembly labels.
+Current physical IDs are FL **4/5/6**, FR **1/2/3**, RL **7/8/9**, RR
+**11/10/12** (roll/pitch/knee). Use `calibration_io.JOINT_IDS` and the new
+`calibrations/zero-points-current.json` for current read-only calibration.
+The ESP32 [direction/limit checker](ESP32_DIRECTIONS_LIMITS.md) receives CSV
+through COM7. Historical front-motion scripts, old neutral files, and the
+October 26 rear-left replay below are retained records, not current-frame
+motion calibration. No servo IDs were reprogrammed.
+
+For the current step-by-step path from calibration to a supported first test,
+start with [GETTING_DOG_RUNNING.md](GETTING_DOG_RUNNING.md). The
+[read-only live mirror](READ_ONLY_LIVE_MIRROR.md) visualizes ESP32 encoder
+telemetry beside the MuJoCo zero pose and never commands servos.
+
 Rear-left calibration and supported transfer were confirmed on 2026-10-26.
 Use [rear-left-current.json](calibrations/rear-left-current.json): IDs 8/9 have
 neutral ticks 1677/1572. The physical neutral file and viewer defaults reflect

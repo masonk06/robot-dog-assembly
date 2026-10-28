@@ -1,0 +1,43 @@
+{
+  "samples": 622,
+  "errors": [],
+  "startup": [
+    "# MPU6xxx sensor-only test v3; SDA=GPIO21 SCL=GPIO22",
+    "# Idle bus levels: SDA=1 SCL=1 (normally both 1)",
+    "# Probe 0x68: status=0 (0=ACK, 2=no address response)",
+    "# WHO_AM_I at 0x68 = 0x70",
+    "# Profile=MPU6500-compatible address=0x68; accel includes gravity; gyro is uncalibrated",
+    "# imu,t_us,seq,ax_m_s2,ay_m_s2,az_m_s2,gx_rad_s,gy_rad_s,gz_rad_s,temp_c"
+  ],
+  "sensor_profile": "MPU6500-compatible",
+  "hardware_calibrated": false,
+  "sample_rate_hz": 99.99840582251588,
+  "mean_accel_norm_m_s2": 9.373526716073002,
+  "mean_gyro_rad_s": [
+    0.019003667202572346,
+    0.006044657556270096,
+    -0.030279030546623793
+  ],
+  "last_sample": [
+    7851932,
+    621,
+    -0.4429,
+    0.2478,
+    -9.3781,
+    0.017853,
+    0.003464,
+    -0.03011,
+    26.88
+  ],
+  "board": "NodeMCU-32S / ESP32-D0WD-V3",
+  "port": "COM7",
+  "baud": 115200,
+  "sda_gpio": 21,
+  "scl_gpio": 22,
+  "i2c_address": "0x68",
+  "who_am_i": "0x70",
+  "firmware": "mpu6xxx sensor-only v3",
+  "mounting_orientation_verified": false,
+  "stationary_condition_verified": false,
+  "note": "Observed accelerometer/gyro output only. Bias, acceleration scale, robot-axis mapping and estimator integration remain unverified."
+}

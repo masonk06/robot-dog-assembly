@@ -1,0 +1,99 @@
+{
+  "status": "zero_points_record_checks_passed",
+  "verified_local": "2026-10-28T12:50:10.091218-07:00",
+  "source_capture": "hardware/calibrations/zeros-20261028-124732-40500f.json",
+  "canonical_zero_only_record": "hardware/calibrations/zero-points-current.json",
+  "hardware_io_performed_during_validation": false,
+  "joints": [
+    {
+      "joint": "front_left_hip_roll",
+      "id": 1,
+      "new_zero_ticks": 2105,
+      "old_zero_ticks": 2079,
+      "change_ticks": 26
+    },
+    {
+      "joint": "front_left_hip_pitch",
+      "id": 2,
+      "new_zero_ticks": 1830,
+      "old_zero_ticks": 1782,
+      "change_ticks": 48
+    },
+    {
+      "joint": "front_left_knee_pitch",
+      "id": 3,
+      "new_zero_ticks": 1836,
+      "old_zero_ticks": 1855,
+      "change_ticks": -19
+    },
+    {
+      "joint": "front_right_hip_roll",
+      "id": 4,
+      "new_zero_ticks": 2130,
+      "old_zero_ticks": 2101,
+      "change_ticks": 29
+    },
+    {
+      "joint": "front_right_hip_pitch",
+      "id": 5,
+      "new_zero_ticks": 1788,
+      "old_zero_ticks": 1840,
+      "change_ticks": -52
+    },
+    {
+      "joint": "front_right_knee_pitch",
+      "id": 6,
+      "new_zero_ticks": 1861,
+      "old_zero_ticks": 1928,
+      "change_ticks": -67
+    },
+    {
+      "joint": "rear_left_hip_roll",
+      "id": 7,
+      "new_zero_ticks": 2065,
+      "old_zero_ticks": 2047,
+      "change_ticks": 18
+    },
+    {
+      "joint": "rear_left_hip_pitch",
+      "id": 8,
+      "new_zero_ticks": 1707,
+      "old_zero_ticks": 1677,
+      "change_ticks": 30
+    },
+    {
+      "joint": "rear_left_knee_pitch",
+      "id": 9,
+      "new_zero_ticks": 1708,
+      "old_zero_ticks": 1572,
+      "change_ticks": 136
+    },
+    {
+      "joint": "rear_right_hip_roll",
+      "id": 11,
+      "new_zero_ticks": 1999,
+      "old_zero_ticks": 2048,
+      "change_ticks": -49
+    },
+    {
+      "joint": "rear_right_hip_pitch",
+      "id": 10,
+      "new_zero_ticks": 1881,
+      "old_zero_ticks": 1874,
+      "change_ticks": 7
+    },
+    {
+      "joint": "rear_right_knee_pitch",
+      "id": 12,
+      "new_zero_ticks": 1759,
+      "old_zero_ticks": 1778,
+      "change_ticks": -19
+    }
+  ],
+  "ready_for_motion": false,
+  "remaining": [
+    "model-to-servo direction checks",
+    "current-frame no-wrap limits and coupled-pose clearance",
+    "compatible command transport before powered replay"
+  ]
+}

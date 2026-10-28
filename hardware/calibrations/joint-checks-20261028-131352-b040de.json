@@ -1,0 +1,108 @@
+{
+  "status": "manual_joint_checks_incomplete",
+  "recorded_local": "2026-10-28T13:19:24.085489-07:00",
+  "zero_source": "hardware/calibrations/zero-points-current.json",
+  "zero_source_sha256": "35f9e93e2fcc962d44b729ff4900cf10281e21fa224fa4d1f7168b7efe4c1ea8",
+  "model_sha256": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+  "transport": "ESP32 CSV 115200, receive only",
+  "joints": {
+    "front_left_hip_roll": {
+      "id": 4,
+      "neutral_ticks": 2130,
+      "baseline": {
+        "id": 4,
+        "sample_ticks": [
+          2130,
+          2129,
+          2129
+        ],
+        "sample_device_us": [
+          1731077330,
+          1732277369,
+          1733477369
+        ],
+        "captured_local": "2026-10-28T13:18:20.519278-07:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2129,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "front_left_hip_pitch": {
+      "id": 5,
+      "neutral_ticks": 1788,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "front_left_knee_pitch": {
+      "id": 6,
+      "neutral_ticks": 1861,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "front_right_hip_roll": {
+      "id": 1,
+      "neutral_ticks": 2105,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "front_right_hip_pitch": {
+      "id": 2,
+      "neutral_ticks": 1830,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "front_right_knee_pitch": {
+      "id": 3,
+      "neutral_ticks": 1836,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "rear_left_hip_roll": {
+      "id": 7,
+      "neutral_ticks": 2065,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "rear_left_hip_pitch": {
+      "id": 8,
+      "neutral_ticks": 1707,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "rear_left_knee_pitch": {
+      "id": 9,
+      "neutral_ticks": 1708,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "rear_right_hip_roll": {
+      "id": 11,
+      "neutral_ticks": 1999,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "rear_right_hip_pitch": {
+      "id": 10,
+      "neutral_ticks": 1881,
+      "direction_verified": false,
+      "limits_verified": false
+    },
+    "rear_right_knee_pitch": {
+      "id": 12,
+      "neutral_ticks": 1759,
+      "direction_verified": false,
+      "limits_verified": false
+    }
+  },
+  "margin_ticks": 25,
+  "direction_calibration_complete": false,
+  "travel_limit_calibration_complete": false,
+  "ready_for_motion": false,
+  "scope": "Operator-confirmed manual directions and static endpoints with other joints near neutral; no powered or coupled-pose validation"
+}

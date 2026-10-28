@@ -3,8 +3,10 @@ import time
 from joint_mapping import KNEE_MODEL_TO_SERVO_SIGN
 
 JOINT_IDS = [
-    ('front_left_hip_roll',1),('front_left_hip_pitch',2),('front_left_knee_pitch',3),
-    ('front_right_hip_roll',4),('front_right_hip_pitch',5),('front_right_knee_pitch',6),
+    # Physical front assemblies were swapped on the new frame; user corrected
+    # the labels 2026-10-28. Servo EEPROM IDs remain unchanged.
+    ('front_left_hip_roll',4),('front_left_hip_pitch',5),('front_left_knee_pitch',6),
+    ('front_right_hip_roll',1),('front_right_hip_pitch',2),('front_right_knee_pitch',3),
     ('rear_left_hip_roll',7),('rear_left_hip_pitch',8),('rear_left_knee_pitch',9),
     ('rear_right_hip_roll',11),('rear_right_hip_pitch',10),('rear_right_knee_pitch',12)]
 TICKS_PER_DEGREE = 4096/360

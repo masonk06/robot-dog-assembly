@@ -1,0 +1,491 @@
+{
+  "status": "offline_contract_and_plan_checks_only",
+  "date": "2026-10-28",
+  "hardware_io_performed": false,
+  "policies": {
+    "latest_simulation": {
+      "checkpoint": "runs/hpc-review-j6ett8qi/checkpoint",
+      "source": "runs/hpc-review-j6ett8qi/source",
+      "cumulative_steps": 36943712,
+      "hashes": {
+        "environment.json": "27e4b99c58592ebf40eda64308af25ea9631683e211902f0298c9b2431249e85",
+        "evaluation.json": "cfebccdb2982299dbb7a0b02648ab41460fe642f18bf78c39e4a6fb670a383c9",
+        "normalize.pkl": "1181b5ea649abb71c9e96dfe31210c881de1fbd147ce0a110b9736be1622b0a6",
+        "policy.zip": "3f9c60c6aeb4d31aca4618b72cba4d82360e81574898bb626f4ed68c136b3688",
+        "source.json": "95f598c86f7dcfebc05e9d3919e859db597c276b5b5cc8d9b78f1fa9e93c4dbe"
+      },
+      "source_model_sha256": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+      "source_file_hashes": {
+        "baseline-evaluation.json": "9342850898fe47fa1821f989d9c808cedfe465ee58f7a087eb882f6b6199c0c1",
+        "baseline-heldout-local.json": "c75151da5238ece086102e585f7ebf176cfe3a227f7e9f028909d2cc0ba6d3b5",
+        "cuda_runner.py": "dc0e4349d368f885d3ac0e581a8bb59f58c995d7b63268836a951be5d711bd0b",
+        "cuda_task.py": "0a0d7af6f448a5e2bb13cc41603323c48287f4cd71109b958a66286016ed10d0",
+        "env.py": "25a6611b0b1b1370f919a5f4fa89281bb88894ffac3b768679d05a678d77e616",
+        "environment.json": "01f457b3763781c1b0e84e0e2bdac51bf6e380709f11ddc6df66735f1575909b",
+        "evaluate_cuda.py": "dafed6a6d34d5938ef2269c9cf1237f2f7a2bfc8f0f09c4f9b4621e41ead3a26",
+        "newton_batch.py": "68db703628264e948589d2017ba840356eb047b6d49becd9956641c119186281",
+        "newton_env.py": "4e121f23e2483753e5cacb574d379eb23fae068155bc24b076b6a4a877d49428",
+        "play.py": "de076aa6ac239908935b203e4993604a555aa761be07a0846dd3020e626167e6",
+        "robot_dog_v2.xml": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+        "train_cuda.py": "1b2fc1c5c73065f65d2b0cad1e6fd4b3daa0210a076e5afba57ebd353037fc16",
+        "assets/boots.stl": "14dbbadf23753bba2d7a7d060fd58a839ddbb38395294d3e752e5a7f4d10388a",
+        "assets/FRAME V2.stl": "1d08d7e286b80969d3f6ca5993083c4e40a0e452c026708e55fe671f43b1e4a2",
+        "assets/Part Studio 1 - Hip Pitch L.stl": "c01f74579454e238a905b73299757040bc6b72f20e61ab3817cb3f12fe89bdf8",
+        "assets/Part Studio 1 - Hip Pitch R.stl": "0eff9da6e1a60634f1270f82eb240ad538cdff68ba981e2485adecdc900eb3e5",
+        "assets/Part Studio 1 - Hip Roll V3.stl": "769a7ddd81d4bca7201f6aebdd3cd0b5d5bd6a6010d06559e6e9105db2adb293",
+        "assets/Part Studio 1 - Knee Pitch v2.stl": "af006374efc799df011fc1bd45b697d51ae0c108d1cae79533a241432d39cccd",
+        "assets/STS3215.stl": "11a99be1fda5c90a439b368d9e22fa9011c637d6a3ef10928ef36c197aae10e3"
+      },
+      "task": {
+        "reward_version": 7,
+        "target_speed": 0.01,
+        "tracking_reward_weight": 1.25,
+        "control_dt": 0.02,
+        "episode_seconds": 20.0,
+        "action_scale": 0.035,
+        "residual_time_constant": 0.12,
+        "max_target_rate": 1.5,
+        "min_height": 0.06,
+        "max_tilt_degrees": 45.0,
+        "reset_noise": 0.015,
+        "min_airtime": 0.12,
+        "min_clearance": 0.004,
+        "min_step_distance": 0.004,
+        "leg_use_window": 12.0,
+        "soft_landing_speed": 0.15,
+        "lift_clearance": 0.008,
+        "slip_distance": 0.004,
+        "slip_speed": 0.04,
+        "slip_duration": 0.08,
+        "slip_grace": 0.3,
+        "gait_cycle_seconds": 3.0,
+        "severe_slip_distance": 0.02,
+        "severe_slip_speed": 0.08,
+        "severe_slip_duration": 0.5,
+        "reference_stride": 0.0315,
+        "reference_lift": 0.025,
+        "reference_ramp_seconds": 1.0,
+        "reference_sway": 0.06,
+        "reference_weight_shift": 0.01,
+        "reference_rear_lift_multiplier": 1.5
+      },
+      "joint_order": [
+        "front_left_hip_roll",
+        "front_left_hip_pitch",
+        "front_left_knee_pitch",
+        "front_right_hip_roll",
+        "front_right_hip_pitch",
+        "front_right_knee_pitch",
+        "rear_left_hip_roll",
+        "rear_left_hip_pitch",
+        "rear_left_knee_pitch",
+        "rear_right_hip_roll",
+        "rear_right_hip_pitch",
+        "rear_right_knee_pitch"
+      ],
+      "model_joint_limits_rad": [
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -1.2,
+          1.2
+        ],
+        [
+          -1.5,
+          1.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -1.2,
+          1.2
+        ],
+        [
+          -1.5,
+          1.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -1.2,
+          1.2
+        ],
+        [
+          -1.5,
+          1.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -1.2,
+          1.2
+        ],
+        [
+          -1.5,
+          1.5
+        ]
+      ],
+      "normalization": {
+        "observation_shape": [
+          60
+        ],
+        "clip_obs": 10.0,
+        "epsilon": 1e-08,
+        "norm_obs": true,
+        "deployment_update_statistics": false
+      },
+      "validated_reference_phases": 601,
+      "simulator_dt_s": 0.002,
+      "control_dt_s": 0.02,
+      "neutral_is_model_zero": true,
+      "wandb_policy_artifact": "marsdenm-oregon-state-university/robot-dog-rl/robodog-policy-j6ett8qi:v17",
+      "wandb_source_artifact": "marsdenm-oregon-state-university/robot-dog-rl/robodog-source-j6ett8qi:v0",
+      "artifact_state_verified": "COMMITTED",
+      "source_hash_scope": "Local snapshot, including locally added evaluation reports; not a W&B manifest export"
+    },
+    "supported_replay_origin": {
+      "checkpoint": "policies/best-distance",
+      "source": "simulation/mujoco",
+      "cumulative_steps": 9516896,
+      "hashes": {
+        "environment.json": "877d90c60f49552af33e1463da4528f8ac082b14bfe54c35b83e5adc32524d1a",
+        "evaluation.json": "0d6d761b8a82877a823961559ddbf5e6593612542d7b71a72a32904b5786a053",
+        "normalize.pkl": "69fecd589f40668da7a9ff5a23bbf08cd6e9477d1c341dfd047d200fecc92b10",
+        "policy.zip": "5e65ecd3cf056db3bfe6e5e198c69c8fea94bc19d96b63af7a0485b9590d94f9",
+        "source.json": "6b873e0f25e62baaf60bcc205e3f26ebe8309e619987176c78d2f9c97d7245b7"
+      },
+      "source_model_sha256": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+      "source_file_hashes": {
+        "build_mujoco_v2.py": "683b502d01bc1c5e0cb2467c28d8c1ce58b31a1541adf88c17cb14129f8b7e18",
+        "check_model.py": "a7f5ead964ad4b9305561b25672c878286c180f98a6fcae81530e76b80fb76b1",
+        "import_validation.json": "ddf8fc4cc9d783a34ee70c242be74d40b0e2a74c9c8df2394a67e2264c51f29d",
+        "README.md": "0c6eb4ed862cb218733b92c2cb5f30ed55e177fdde1bdeaca69c7aad1d1cbc6c",
+        "robot_dog_v2.xml": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
+        "simulate_dog_walk.py": "bc43400a4f9d3e2c074c4d8d929a6d57c20042db623f6726c19bc3ac8a1a9422",
+        "view_dog_walk.py": "7d248e27d6851c4c186d08e3dd5bf33a34a167716470120d768f78299c150d4d",
+        "assets/boots.stl": "14dbbadf23753bba2d7a7d060fd58a839ddbb38395294d3e752e5a7f4d10388a",
+        "assets/FRAME V2.stl": "1d08d7e286b80969d3f6ca5993083c4e40a0e452c026708e55fe671f43b1e4a2",
+        "assets/Part Studio 1 - Hip Pitch L.stl": "c01f74579454e238a905b73299757040bc6b72f20e61ab3817cb3f12fe89bdf8",
+        "assets/Part Studio 1 - Hip Pitch R.stl": "0eff9da6e1a60634f1270f82eb240ad538cdff68ba981e2485adecdc900eb3e5",
+        "assets/Part Studio 1 - Hip Roll V3.stl": "769a7ddd81d4bca7201f6aebdd3cd0b5d5bd6a6010d06559e6e9105db2adb293",
+        "assets/Part Studio 1 - Knee Pitch v2.stl": "af006374efc799df011fc1bd45b697d51ae0c108d1cae79533a241432d39cccd",
+        "assets/STS3215.stl": "11a99be1fda5c90a439b368d9e22fa9011c637d6a3ef10928ef36c197aae10e3",
+        "__pycache__/simulate_dog_walk.cpython-314.pyc": "c259112b5b73c99da7a94aecf2d54e2f012f300c687528d4a8a68dc03ec88f2a",
+        "__pycache__/view_diagonal_trot.cpython-314.pyc": "2f6b4a1de42695a67509f2b6c9b771563969aa9e8bb7d14f834ec547349a6c77",
+        "__pycache__/view_dog_walk.cpython-314.pyc": "b53d82bb8873ef53fce88c44ecbce768428a5b238e84054e3b7c18be4d7b0a04",
+        "__pycache__/view_rear_left_ik_trot.cpython-314.pyc": "e9b953e26463a4aeaa13e5a2f1700de31f9d0c1cfb40fdd6c5ed8cec32b26e3b"
+      },
+      "task": {
+        "reward_version": 7,
+        "target_speed": 0.01,
+        "tracking_reward_weight": 1.25,
+        "control_dt": 0.02,
+        "episode_seconds": 20.0,
+        "action_scale": 0.035,
+        "residual_time_constant": 0.12,
+        "max_target_rate": 1.5,
+        "min_height": 0.06,
+        "max_tilt_degrees": 45.0,
+        "reset_noise": 0.015,
+        "min_airtime": 0.12,
+        "min_clearance": 0.004,
+        "min_step_distance": 0.004,
+        "leg_use_window": 12.0,
+        "soft_landing_speed": 0.15,
+        "lift_clearance": 0.008,
+        "slip_distance": 0.004,
+        "slip_speed": 0.04,
+        "slip_duration": 0.08,
+        "slip_grace": 0.3,
+        "gait_cycle_seconds": 3.0,
+        "severe_slip_distance": 0.02,
+        "severe_slip_speed": 0.08,
+        "severe_slip_duration": 0.5,
+        "reference_stride": 0.02,
+        "reference_lift": 0.025,
+        "reference_ramp_seconds": 1.0,
+        "reference_sway": 0.06,
+        "reference_weight_shift": 0.01,
+        "reference_rear_lift_multiplier": 1.5
+      },
+      "joint_order": [
+        "front_left_hip_roll",
+        "front_left_hip_pitch",
+        "front_left_knee_pitch",
+        "front_right_hip_roll",
+        "front_right_hip_pitch",
+        "front_right_knee_pitch",
+        "rear_left_hip_roll",
+        "rear_left_hip_pitch",
+        "rear_left_knee_pitch",
+        "rear_right_hip_roll",
+        "rear_right_hip_pitch",
+        "rear_right_knee_pitch"
+      ],
+      "model_joint_limits_rad": [
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -1.2,
+          1.2
+        ],
+        [
+          -1.5,
+          1.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -1.2,
+          1.2
+        ],
+        [
+          -1.5,
+          1.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -1.2,
+          1.2
+        ],
+        [
+          -1.5,
+          1.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -1.2,
+          1.2
+        ],
+        [
+          -1.5,
+          1.5
+        ]
+      ],
+      "normalization": {
+        "observation_shape": [
+          60
+        ],
+        "clip_obs": 10.0,
+        "epsilon": 1e-08,
+        "norm_obs": true,
+        "deployment_update_statistics": false
+      },
+      "validated_reference_phases": 601,
+      "simulator_dt_s": 0.002,
+      "control_dt_s": 0.02,
+      "neutral_is_model_zero": true,
+      "historical_source_archive": "policies/sources/58cjy6ku.zip",
+      "historical_source_archive_sha256": "09a56e0efb704a1d1f59b67e9afa49e267cd2f22af55a7f0d2680cfce2415e6f"
+    }
+  },
+  "plans": {
+    "rear-left-3deg": {
+      "report_sha256": "efc52c5e51a3d2b027996f7edd530776c57cfc90dcadc08c7730fabb09024184",
+      "csv_sha256": "64d3f1b55f143b64a7771c299f862f0b9bb66714aa33b0235da2b76bcdac25d9",
+      "origin_policy_sha256": "5e65ecd3cf056db3bfe6e5e198c69c8fea94bc19d96b63af7a0485b9590d94f9",
+      "duration_s": 9.24,
+      "maximum_excursion_deg": 3,
+      "controlled_ids": [
+        8,
+        9
+      ],
+      "neutral_ticks": [
+        1677,
+        1572
+      ],
+      "guarded_limits_ticks": [
+        [
+          722,
+          2846
+        ],
+        [
+          26,
+          2443
+        ]
+      ],
+      "target_ticks_min": [
+        1666,
+        1565
+      ],
+      "target_ticks_max": [
+        1708,
+        1606
+      ],
+      "sample_dt_s_min": 0.03999999999999915,
+      "sample_dt_s_max": 0.040000000000000924,
+      "profile_speed_ticks_s": 60,
+      "profile_acceleration_register_value": 10,
+      "portable_plan_static_validation": "passed",
+      "current_frame_calibration_verified": false
+    },
+    "rear-left-5deg": {
+      "report_sha256": "58b91aaeb9063dfe129baf14e8d62eb80805f609b687e58761592816c4118fe0",
+      "csv_sha256": "0e6aa79cb0f195bd644512b8f3eda3a6a309020d074ec42c97843f9e0835c3b7",
+      "origin_policy_sha256": "5e65ecd3cf056db3bfe6e5e198c69c8fea94bc19d96b63af7a0485b9590d94f9",
+      "duration_s": 13.86,
+      "maximum_excursion_deg": 5.0,
+      "controlled_ids": [
+        8,
+        9
+      ],
+      "neutral_ticks": [
+        1677,
+        1572
+      ],
+      "guarded_limits_ticks": [
+        [
+          722,
+          2846
+        ],
+        [
+          26,
+          2443
+        ]
+      ],
+      "target_ticks_min": [
+        1658,
+        1561
+      ],
+      "target_ticks_max": [
+        1728,
+        1629
+      ],
+      "sample_dt_s_min": 0.05999999999999872,
+      "sample_dt_s_max": 0.0600000000000005,
+      "profile_speed_ticks_s": 60,
+      "profile_acceleration_register_value": 10,
+      "portable_plan_static_validation": "passed",
+      "current_frame_calibration_verified": false
+    },
+    "rear-left-full-46s": {
+      "report_sha256": "0e0a073250777649caab39c4d43746802ac4ca22f81790af86e5e30c1dff1d89",
+      "csv_sha256": "31a5adf8a0920d2e34852d09300d5bc32aa365de0ff656a88006feadaa073bcf",
+      "origin_policy_sha256": "5e65ecd3cf056db3bfe6e5e198c69c8fea94bc19d96b63af7a0485b9590d94f9",
+      "duration_s": 46.199999999999996,
+      "maximum_excursion_deg": 35.808742790040675,
+      "controlled_ids": [
+        8,
+        9
+      ],
+      "neutral_ticks": [
+        1677,
+        1572
+      ],
+      "guarded_limits_ticks": [
+        [
+          722,
+          2846
+        ],
+        [
+          26,
+          2443
+        ]
+      ],
+      "target_ticks_min": [
+        1544,
+        1494
+      ],
+      "target_ticks_max": [
+        2044,
+        1979
+      ],
+      "sample_dt_s_min": 0.04999999999999716,
+      "sample_dt_s_max": 0.05000000000000426,
+      "profile_speed_ticks_s": 120,
+      "profile_acceleration_register_value": 20,
+      "portable_plan_static_validation": "passed",
+      "current_frame_calibration_verified": false
+    }
+  },
+  "current_frame_calibration_verified": false,
+  "reported_current_positions_not_neutral": {
+    "1": 2009,
+    "2": 1775,
+    "3": 1707,
+    "4": 2083,
+    "5": 2066,
+    "6": 2072,
+    "7": 2112,
+    "8": 1897,
+    "9": 1832,
+    "10": 1874,
+    "11": 2062,
+    "12": 1771
+  },
+  "reported_position_freshness": "No timestamp supplied; not a live reading or neutral calibration",
+  "operator_zero_capture": {
+    "path": "hardware/calibrations/zero-points-current.json",
+    "source_capture": "hardware/calibrations/zeros-20261028-124732-40500f.json",
+    "source_capture_sha256": "9db360b517a641606b34f25555cc136cab3fb6542e67ea90653514112956ff12",
+    "record_checks_passed": true,
+    "joint_count": 12,
+    "unique_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "zero_pose_confirmed_by_operator": true,
+    "direction_calibration_complete": false,
+    "travel_limit_calibration_complete": false,
+    "ready_for_motion": false,
+    "current_zero_record_sha256": "35f9e93e2fcc962d44b729ff4900cf10281e21fa224fa4d1f7168b7efe4c1ea8",
+    "front_label_correction": {
+      "source": "Direct user correction: front left and front right need switching",
+      "recorded_local": "2026-10-28T13:05:36.137930-07:00",
+      "front_left_ids": [
+        4,
+        5,
+        6
+      ],
+      "front_right_ids": [
+        1,
+        2,
+        3
+      ],
+      "servo_ids_reprogrammed": false,
+      "zero_values_preserved_by_physical_servo_id": true
+    }
+  },
+  "current_physical_joint_ids": {
+    "front_left_hip_roll": 4,
+    "front_left_hip_pitch": 5,
+    "front_left_knee_pitch": 6,
+    "front_right_hip_roll": 1,
+    "front_right_hip_pitch": 2,
+    "front_right_knee_pitch": 3,
+    "rear_left_hip_roll": 7,
+    "rear_left_hip_pitch": 8,
+    "rear_left_knee_pitch": 9,
+    "rear_right_hip_roll": 11,
+    "rear_right_hip_pitch": 10,
+    "rear_right_knee_pitch": 12
+  }
+}

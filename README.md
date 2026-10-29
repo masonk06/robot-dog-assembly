@@ -5,6 +5,16 @@ hardware tools, MuJoCo/Newton simulation and GPU-resident PPO training.
 
 ![RoboDog CAD assembly](cad/RoboDog_preview.png)
 
+## Simulation vs. real robot
+
+![Animated side-by-side comparison: simulated joint targets on the left and the supported robot on the right](docs/sim-to-real/simulation-vs-real.gif)
+
+[Watch the full MP4](docs/sim-to-real/simulation-vs-real.mp4) · [Comparison notes](docs/sim-to-real/README.md)
+
+The simulated body is fixed and the physical robot is supported. The clips are
+not phase-synchronized; this illustrates joint movement rather than measured
+tracking or unsupported walking.
+
 ## Current progress
 
 - Slow simulated walking with a four-beat reference and learned residuals.

@@ -32,6 +32,7 @@ class WalkConfig:
     reward_version: int = 7
     target_speed: float = 0.01
     tracking_reward_weight: float = 1.0
+    slip_penalty_weight: float = 2.0
     control_dt: float = 0.02
     episode_seconds: float = 20.0
     action_scale: float = 0.035
@@ -60,6 +61,10 @@ class WalkConfig:
     reference_sway: float = 0.06
     reference_weight_shift: float = 0.01
     reference_rear_lift_multiplier: float = 1.5
+    # Keep swing below one quarter-cycle for the crawl preset: at least three
+    # feet are scheduled to remain in stance.  The default preserves the
+    # existing walking-policy behavior exactly.
+    swing_fraction: float = 0.20
 
 
 class SlidingMonitor:
@@ -257,14 +262,14 @@ class DogWalkEnv(gym.Env):
         ramp = ramp * ramp * (3 - 2 * ramp)
         for i, leg in enumerate(LEGS):
             local = (phase - SWING_OFFSETS[i]) % 1.
-            if local < .2:
-                t = local / .2
+            if local < cfg.swing_fraction:
+                t = local / cfg.swing_fraction
                 x_offset = cfg.reference_stride * (.5 - t * t * (3 - 2 * t))
                 lift = cfg.reference_lift * np.sin(np.pi * t) ** 2
                 if leg.startswith("rear"):
                     lift *= cfg.reference_rear_lift_multiplier
             else:
-                t = (local - .2) / .8
+                t = (local - cfg.swing_fraction) / (1. - cfg.swing_fraction)
                 x_offset = cfg.reference_stride * (-.5 + t * t * (3 - 2 * t))
                 lift = 0.
             lower_body = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_BODY, f"{leg}_lower_link")
@@ -284,7 +289,7 @@ class DogWalkEnv(gym.Env):
             for joint, value in ((f"{leg}_hip_pitch", hip), (f"{leg}_knee_pitch", knee)):
                 index = self.names.index(joint)
                 targets[index] = ramp * value
-        swing, curve = gait_pattern(phase)
+        swing, curve = gait_pattern(phase, cfg.swing_fraction)
         sway = sum((-1 if LEGS[i].endswith("left") else 1) * curve[i]
                    for i in range(4) if swing[i]) * cfg.reference_sway * ramp
         for i, name in enumerate(self.names):
@@ -354,7 +359,7 @@ class DogWalkEnv(gym.Env):
             useful_steps += count
             foot_lifts += self.cycles.new_lifts
             if self.config.reward_version >= 4:
-                swing, lift_curve = gait_pattern(self.phase())
+                swing, lift_curve = gait_pattern(self.phase(), self.config.swing_fraction)
                 pattern_score += float(np.mean(contacts == ~swing)) / self.frame_skip
                 # Site centers coincide with the existing 3 mm foot spheres.
                 clearance = np.maximum(0., self.data.site_xpos[self.feet, 2] - .003)
@@ -396,7 +401,7 @@ class DogWalkEnv(gym.Env):
         if self.config.reward_version >= 2:
             stale = np.clip((self.data.time - self.cycles.last_step) / self.config.leg_use_window, 0, 1)
             terms.update({"stomp": -2 * impact - .1 * force_cost,
-                          "foot_slip": -2 * slip_cost,
+                          "foot_slip": -self.config.slip_penalty_weight * slip_cost,
                           "useful_steps": .2 * useful_steps,
                           "all_four_legs": .8 * four_cycles,
                           "unused_legs": -.1 * float(stale.mean()) if self.data.time > 4 else 0.})
@@ -406,7 +411,7 @@ class DogWalkEnv(gym.Env):
             if sliding:
                 terms["tracking"] = terms["progress"] = 0.
         if self.config.reward_version >= 4:
-            terms.update({"foot_slip": slip_penalty(slip_cost),
+            terms.update({"foot_slip": slip_penalty(slip_cost, weight=self.config.slip_penalty_weight),
                           "foot_lift": .75 * foot_lifts,
                           "scheduled_lift": .25 * scheduled_lifts,
                           "gait_contacts": .2 * pattern_score,

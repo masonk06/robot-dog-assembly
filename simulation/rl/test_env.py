@@ -74,6 +74,50 @@ def test_tracking_weight_changes_only_tracking_reward():
         original.close(); weighted.close()
 
 
+def test_slip_weight_changes_reward_without_changing_motion():
+    from dataclasses import replace
+    cfg = WalkConfig()
+    original = DogWalkEnv(cfg)
+    weighted = DogWalkEnv(replace(cfg, slip_penalty_weight=2.2))
+    total_slip = 0.
+    try:
+        original.reset(seed=19)
+        weighted.reset(seed=19)
+        for _ in range(40):
+            o1,r1,t1,u1,i1 = original.step(np.zeros(12))
+            o2,r2,t2,u2,i2 = weighted.step(np.zeros(12))
+            np.testing.assert_array_equal(o1,o2)
+            assert (t1,u1)==(t2,u2)
+            np.testing.assert_allclose(i2['reward/foot_slip'],1.1*i1['reward/foot_slip'])
+            np.testing.assert_allclose(r2-r1,.1*i1['reward/foot_slip'],atol=1e-10)
+            total_slip += i1['reward/foot_slip']
+            for key in i1:
+                if key.startswith('reward/') and key!='reward/foot_slip':
+                    assert i1[key]==i2[key]
+        assert total_slip<0  # Exercise moving/contacting feet, rather than a zero-cost case.
+    finally:
+        original.close();weighted.close()
+
+
+def test_speed_command_observation_and_reward_stay_consistent():
+    from dataclasses import replace
+    original = DogWalkEnv(WalkConfig(target_speed=.01))
+    faster = DogWalkEnv(replace(original.config,target_speed=.012))
+    try:
+        a,_=original.reset(seed=19)
+        b,_=faster.reset(seed=19)
+        assert a.shape==b.shape==(60,)
+        np.testing.assert_allclose(a[9],.01)
+        np.testing.assert_allclose(b[9],.012)
+        np.testing.assert_array_equal(np.delete(a,9),np.delete(b,9))
+        for env in (original,faster):
+            _,_,_,_,info=env.step(np.zeros(12))
+            expected=env.config.tracking_reward_weight*np.exp(-((info['forward_speed']-env.config.target_speed)/.03)**2)
+            np.testing.assert_allclose(info['reward/tracking'],expected)
+    finally:
+        original.close();faster.close()
+
+
 def test_residual_filter_limits_changes_and_resets():
     env = DogWalkEnv(WalkConfig(reward_version=7))
     try:

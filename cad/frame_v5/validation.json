@@ -1,0 +1,62 @@
+{
+  "units": "mm",
+  "source": "frame_v4/Frame_V4_Reinforced.step",
+  "valid_solid": true,
+  "dimensions_mm": [
+    177.0,
+    180.0,
+    56.5
+  ],
+  "roof_thickness_mm": 4,
+  "roof_underside_z_mm": 52.5,
+  "inner_panel_thickness_mm": 4,
+  "wire_service_windows_mm": [
+    24,
+    29
+  ],
+  "added_volume_mm3": 25672.85850212039,
+  "static_saved_geometry_overlap_delta_mm3": {
+    "front_left_hip_roll": 0.0,
+    "front_left_servo_hip_roll_case": -0.0,
+    "front_left_servo_hip_roll_disc": 0.0,
+    "front_left_servo_hip_pitch_case": 0.0,
+    "front_left_servo_hip_pitch_disc": 0.0,
+    "front_left_servo_knee_pitch_case": 0.0,
+    "front_left_servo_knee_pitch_disc": 0.0,
+    "front_right_hip_roll": 0.0,
+    "front_right_servo_hip_roll_case": -0.0,
+    "front_right_servo_hip_roll_disc": 0.0,
+    "front_right_servo_hip_pitch_case": 0.0,
+    "front_right_servo_hip_pitch_disc": 0.0,
+    "front_right_servo_knee_pitch_case": 0.0,
+    "front_right_servo_knee_pitch_disc": 0.0,
+    "rear_left_hip_roll": 0.0,
+    "rear_left_servo_hip_roll_case": 0.0,
+    "rear_left_servo_hip_roll_disc": 0.0,
+    "rear_left_servo_hip_pitch_case": 0.0,
+    "rear_left_servo_hip_pitch_disc": 0.0,
+    "rear_left_servo_knee_pitch_case": 0.0,
+    "rear_left_servo_knee_pitch_disc": 0.0,
+    "rear_right_hip_roll": 0.0,
+    "rear_right_servo_hip_roll_case": 0.0,
+    "rear_right_servo_hip_roll_disc": 0.0,
+    "rear_right_servo_hip_pitch_case": 0.0,
+    "rear_right_servo_hip_pitch_disc": 0.0,
+    "rear_right_servo_knee_pitch_case": 0.0,
+    "rear_right_servo_knee_pitch_disc": 0.0
+  },
+  "electronics_intersections_mm3": {
+    "Battery_75x34x25_REFERENCE": 0.0,
+    "Jetson_103x90p5x34p77_REFERENCE": 0.0,
+    "Waveshare_42x33_REFERENCE": 0.0,
+    "Jetson_Tray": 0.0,
+    "Waveshare_Sled": 0.0
+  },
+  "limitations": [
+    "No FEA, fatigue test, or print-strength validation.",
+    "Checks use saved CAD placements; full articulated sweeps and actual cable/plug fit remain unverified.",
+    "Roofs partially cover each fixed case; outer noses and outside faces remain open.",
+    "Do not add a brim outside the 180 mm usable bed width.",
+    "Print roof undersides need slicer bridge/support review; remove support before servo installation."
+  ]
+}

@@ -1,0 +1,1060 @@
+{
+  "study": {
+    "source_model": "C:\\Users\\mmbec\\Downloads\\Robot Dog Assembly\\runs\\overnight-3cms-review\\best\\source\\robot_dog_v2.xml",
+    "checkpoint": "C:\\Users\\mmbec\\Downloads\\Robot Dog Assembly\\runs\\overnight-3cms-review\\best\\checkpoint",
+    "episodes": 3,
+    "seconds": 20.0,
+    "same_seeds": [
+      10000,
+      10001,
+      10002
+    ],
+    "forward_axis": "negative local X",
+    "payload_note": "payload_forward_example is not the user's actual temporary weight unless its mass/location equal the passed values."
+  },
+  "cases": {
+    "baseline": {
+      "spec": {
+        "com_offset_x_m": 0.0
+      },
+      "model": {
+        "total_mass_kg": 1.9229999999999998,
+        "world_com_m": [
+          0.004167156671229854,
+          -1.3813288208993688e-18,
+          0.12975179606279252
+        ],
+        "body_frame_com_m": [
+          0.004167156671229854,
+          -1.3813288208993688e-18,
+          0.009751796062792528
+        ],
+        "bodies": [
+          {
+            "name": "base",
+            "mass_kg": 1.282,
+            "world_com_m": [
+              0.0,
+              0.0,
+              0.145
+            ]
+          },
+          {
+            "name": "front_left_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              -0.12597698999999998,
+              -0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "front_left_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              -0.09863834204999998,
+              -0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "front_left_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              -0.09022443899999999,
+              -0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "front_left_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              -0.07832443899999998,
+              -0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "front_right_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              -0.12597698999999998,
+              0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "front_right_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              -0.09863834204999998,
+              0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "front_right_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              -0.09022443899999999,
+              0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "front_right_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              -0.07832443899999998,
+              0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "rear_left_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              0.12597698999999998,
+              -0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "rear_left_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              0.13981563795,
+              -0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "rear_left_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              0.13172954099999998,
+              -0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "rear_left_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              0.14362954099999997,
+              -0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "rear_right_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              0.12597698999999998,
+              0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "rear_right_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              0.13981563795,
+              0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "rear_right_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              0.13172954099999998,
+              0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "rear_right_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              0.14362954099999997,
+              0.0775,
+              0.008306428000000005
+            ]
+          }
+        ]
+      },
+      "aggregate": {
+        "completed": 1.0,
+        "seconds": 20.02,
+        "forward_displacement_m": 0.3607494389660351,
+        "forward_speed_m_s": 0.018019452495805947,
+        "fallen": 0.0,
+        "sliding": 0.0,
+        "front_stance_duration_s": 1.4713194444444453,
+        "rear_stance_duration_s": 1.0620535714285722,
+        "front_normal_force_n": 9.325400689516593,
+        "rear_normal_force_n": 9.879140259448535,
+        "front_peak_force_n": 19.650399926475277,
+        "rear_peak_force_n": 15.015576724180761,
+        "mean_contact_slip_m_s": 0.01417852182278892,
+        "max_abs_pitch_deg": 1.7300513767329537,
+        "mean_pitch_deg": 0.21336311615329073,
+        "joint_tracking_error_rad": 0.010792956515643501,
+        "policy_action_magnitude": 0.8061886215821291,
+        "fall_fraction": 0.0,
+        "slide_fraction": 0.0
+      },
+      "trials": [
+        {
+          "seed": 10000,
+          "completed": true,
+          "seconds": 20.02,
+          "forward_displacement_m": 0.3613782780294708,
+          "forward_speed_m_s": 0.018050863038435106,
+          "fallen": false,
+          "sliding": false,
+          "front_stance_duration_s": 1.4713194444444453,
+          "rear_stance_duration_s": 1.0620535714285722,
+          "front_normal_force_n": 9.325904275833935,
+          "rear_normal_force_n": 9.878783715080274,
+          "front_peak_force_n": 19.459923573066533,
+          "rear_peak_force_n": 14.862807328817588,
+          "mean_contact_slip_m_s": 0.014171393377549114,
+          "max_abs_pitch_deg": 1.7302639687314207,
+          "mean_pitch_deg": 0.21309854557424893,
+          "joint_tracking_error_rad": 0.010791969474752985,
+          "policy_action_magnitude": 0.8063433893791565
+        },
+        {
+          "seed": 10001,
+          "completed": true,
+          "seconds": 20.02,
+          "forward_displacement_m": 0.3602003265730022,
+          "forward_speed_m_s": 0.017992024304345766,
+          "fallen": false,
+          "sliding": false,
+          "front_stance_duration_s": 1.4713194444444453,
+          "rear_stance_duration_s": 1.0620535714285722,
+          "front_normal_force_n": 9.324890783688103,
+          "rear_normal_force_n": 9.878711706401988,
+          "front_peak_force_n": 19.636880101212753,
+          "rear_peak_force_n": 15.014863596028377,
+          "mean_contact_slip_m_s": 0.014193128592622157,
+          "max_abs_pitch_deg": 1.729957648795837,
+          "mean_pitch_deg": 0.21343221533048615,
+          "joint_tracking_error_rad": 0.010793973380209593,
+          "policy_action_magnitude": 0.8060877447004442
+        },
+        {
+          "seed": 10002,
+          "completed": true,
+          "seconds": 20.02,
+          "forward_displacement_m": 0.3606697122956323,
+          "forward_speed_m_s": 0.018015470144636978,
+          "fallen": false,
+          "sliding": false,
+          "front_stance_duration_s": 1.4713194444444453,
+          "rear_stance_duration_s": 1.0620535714285722,
+          "front_normal_force_n": 9.325407009027744,
+          "rear_normal_force_n": 9.879925356863344,
+          "front_peak_force_n": 19.85439610514655,
+          "rear_peak_force_n": 15.169059247696314,
+          "mean_contact_slip_m_s": 0.014171043498195488,
+          "max_abs_pitch_deg": 1.729932512671604,
+          "mean_pitch_deg": 0.21355858755513707,
+          "joint_tracking_error_rad": 0.01079292669196793,
+          "policy_action_magnitude": 0.8061347306667865
+        }
+      ]
+    },
+    "com_forward_30mm": {
+      "spec": {
+        "com_offset_x_m": -0.03
+      },
+      "model": {
+        "total_mass_kg": 1.9229999999999998,
+        "world_com_m": [
+          -0.01583284332877015,
+          -1.3813288208993688e-18,
+          0.12975179606279252
+        ],
+        "body_frame_com_m": [
+          -0.01583284332877015,
+          -1.3813288208993688e-18,
+          0.009751796062792528
+        ],
+        "bodies": [
+          {
+            "name": "base",
+            "mass_kg": 1.282,
+            "world_com_m": [
+              -0.03,
+              0.0,
+              0.145
+            ]
+          },
+          {
+            "name": "front_left_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              -0.12597698999999998,
+              -0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "front_left_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              -0.09863834204999998,
+              -0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "front_left_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              -0.09022443899999999,
+              -0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "front_left_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              -0.07832443899999998,
+              -0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "front_right_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              -0.12597698999999998,
+              0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "front_right_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              -0.09863834204999998,
+              0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "front_right_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              -0.09022443899999999,
+              0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "front_right_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              -0.07832443899999998,
+              0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "rear_left_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              0.12597698999999998,
+              -0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "rear_left_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              0.13981563795,
+              -0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "rear_left_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              0.13172954099999998,
+              -0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "rear_left_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              0.14362954099999997,
+              -0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "rear_right_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              0.12597698999999998,
+              0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "rear_right_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              0.13981563795,
+              0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "rear_right_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              0.13172954099999998,
+              0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "rear_right_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              0.14362954099999997,
+              0.0775,
+              0.008306428000000005
+            ]
+          }
+        ]
+      },
+      "aggregate": {
+        "completed": 1.0,
+        "seconds": 20.02,
+        "forward_displacement_m": 0.3465781216872432,
+        "forward_speed_m_s": 0.017311594489872288,
+        "fallen": 0.0,
+        "sliding": 0.0,
+        "front_stance_duration_s": 1.1321666666666672,
+        "rear_stance_duration_s": 0.5871555555555559,
+        "front_normal_force_n": 11.049669438197448,
+        "rear_normal_force_n": 8.062724562794513,
+        "front_peak_force_n": 21.413776450122683,
+        "rear_peak_force_n": 12.243251776651164,
+        "mean_contact_slip_m_s": 0.01686850421437516,
+        "max_abs_pitch_deg": 2.0669603478364893,
+        "mean_pitch_deg": -0.3622563068282687,
+        "joint_tracking_error_rad": 0.010857069090994162,
+        "policy_action_magnitude": 0.8089320110830117,
+        "fall_fraction": 0.0,
+        "slide_fraction": 0.0
+      },
+      "trials": [
+        {
+          "seed": 10000,
+          "completed": true,
+          "seconds": 20.02,
+          "forward_displacement_m": 0.34674018790070055,
+          "forward_speed_m_s": 0.017319689705329697,
+          "fallen": false,
+          "sliding": false,
+          "front_stance_duration_s": 1.1317500000000007,
+          "rear_stance_duration_s": 0.5802166666666669,
+          "front_normal_force_n": 11.04941560302895,
+          "rear_normal_force_n": 8.065583550046627,
+          "front_peak_force_n": 21.376958318148233,
+          "rear_peak_force_n": 12.216517493423535,
+          "mean_contact_slip_m_s": 0.0168813076480539,
+          "max_abs_pitch_deg": 2.059389550489632,
+          "mean_pitch_deg": -0.36237769425452865,
+          "joint_tracking_error_rad": 0.010856603552298574,
+          "policy_action_magnitude": 0.8088966536593366
+        },
+        {
+          "seed": 10001,
+          "completed": true,
+          "seconds": 20.02,
+          "forward_displacement_m": 0.3464049639243512,
+          "forward_speed_m_s": 0.017302945250966595,
+          "fallen": false,
+          "sliding": false,
+          "front_stance_duration_s": 1.1323750000000006,
+          "rear_stance_duration_s": 0.590416666666667,
+          "front_normal_force_n": 11.049558668079964,
+          "rear_normal_force_n": 8.060353175580216,
+          "front_peak_force_n": 21.190746513147012,
+          "rear_peak_force_n": 12.296383076087135,
+          "mean_contact_slip_m_s": 0.01687914794692872,
+          "max_abs_pitch_deg": 2.071063249652748,
+          "mean_pitch_deg": -0.3623211650785684,
+          "joint_tracking_error_rad": 0.010858070106654724,
+          "policy_action_magnitude": 0.8088529739346537
+        },
+        {
+          "seed": 10002,
+          "completed": true,
+          "seconds": 20.02,
+          "forward_displacement_m": 0.34658921323667785,
+          "forward_speed_m_s": 0.017312148513320573,
+          "fallen": false,
+          "sliding": false,
+          "front_stance_duration_s": 1.1323750000000006,
+          "rear_stance_duration_s": 0.5908333333333337,
+          "front_normal_force_n": 11.05003404348343,
+          "rear_normal_force_n": 8.062236962756694,
+          "front_peak_force_n": 21.673624519072803,
+          "rear_peak_force_n": 12.216854760442821,
+          "mean_contact_slip_m_s": 0.01684505704814285,
+          "max_abs_pitch_deg": 2.070428243367088,
+          "mean_pitch_deg": -0.3620700611517092,
+          "joint_tracking_error_rad": 0.01085653361402919,
+          "policy_action_magnitude": 0.8090464056550444
+        }
+      ]
+    },
+    "com_rear_30mm": {
+      "spec": {
+        "com_offset_x_m": 0.03
+      },
+      "model": {
+        "total_mass_kg": 1.9229999999999998,
+        "world_com_m": [
+          0.024167156671229848,
+          -1.3813288208993688e-18,
+          0.12975179606279252
+        ],
+        "body_frame_com_m": [
+          0.024167156671229848,
+          -1.3813288208993688e-18,
+          0.009751796062792528
+        ],
+        "bodies": [
+          {
+            "name": "base",
+            "mass_kg": 1.282,
+            "world_com_m": [
+              0.03,
+              0.0,
+              0.145
+            ]
+          },
+          {
+            "name": "front_left_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              -0.12597698999999998,
+              -0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "front_left_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              -0.09863834204999998,
+              -0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "front_left_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              -0.09022443899999999,
+              -0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "front_left_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              -0.07832443899999998,
+              -0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "front_right_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              -0.12597698999999998,
+              0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "front_right_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              -0.09863834204999998,
+              0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "front_right_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              -0.09022443899999999,
+              0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "front_right_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              -0.07832443899999998,
+              0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "rear_left_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              0.12597698999999998,
+              -0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "rear_left_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              0.13981563795,
+              -0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "rear_left_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              0.13172954099999998,
+              -0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "rear_left_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              0.14362954099999997,
+              -0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "rear_right_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              0.12597698999999998,
+              0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "rear_right_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              0.13981563795,
+              0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "rear_right_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              0.13172954099999998,
+              0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "rear_right_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              0.14362954099999997,
+              0.0775,
+              0.008306428000000005
+            ]
+          }
+        ]
+      },
+      "aggregate": {
+        "completed": 1.0,
+        "seconds": 1.633333333333333,
+        "forward_displacement_m": 0.020053053764776802,
+        "forward_speed_m_s": 0.012269189579614292,
+        "fallen": 0.0,
+        "sliding": 1.0,
+        "front_stance_duration_s": 0.5172222222222224,
+        "rear_stance_duration_s": 0.6744444444444447,
+        "front_normal_force_n": 7.233964684311055,
+        "rear_normal_force_n": 12.099696322029589,
+        "front_peak_force_n": 17.05916939141671,
+        "rear_peak_force_n": 17.932198372465468,
+        "mean_contact_slip_m_s": 0.019303440266949596,
+        "max_abs_pitch_deg": 4.054045858153258,
+        "mean_pitch_deg": 0.6761061989878944,
+        "joint_tracking_error_rad": 0.01048160062066202,
+        "policy_action_magnitude": 0.7819562690684635,
+        "fall_fraction": 0.0,
+        "slide_fraction": 1.0
+      },
+      "trials": [
+        {
+          "seed": 10000,
+          "completed": true,
+          "seconds": 1.68,
+          "forward_displacement_m": 0.021200380799562643,
+          "forward_speed_m_s": 0.012619274285453955,
+          "fallen": false,
+          "sliding": true,
+          "front_stance_duration_s": 0.4883333333333335,
+          "rear_stance_duration_s": 0.5166666666666668,
+          "front_normal_force_n": 7.235812336244597,
+          "rear_normal_force_n": 12.07459954968732,
+          "front_peak_force_n": 16.835009505129836,
+          "rear_peak_force_n": 17.78915950190477,
+          "mean_contact_slip_m_s": 0.019455704836193837,
+          "max_abs_pitch_deg": 5.092596796824522,
+          "mean_pitch_deg": 0.773502271751252,
+          "joint_tracking_error_rad": 0.010500891212754394,
+          "policy_action_magnitude": 0.7768424972891808
+        },
+        {
+          "seed": 10001,
+          "completed": true,
+          "seconds": 1.54,
+          "forward_displacement_m": 0.018453096056181766,
+          "forward_speed_m_s": 0.011982529906611536,
+          "fallen": false,
+          "sliding": true,
+          "front_stance_duration_s": 0.5750000000000002,
+          "rear_stance_duration_s": 0.9833333333333338,
+          "front_normal_force_n": 7.235952174648315,
+          "rear_normal_force_n": 12.136133847794554,
+          "front_peak_force_n": 17.37426864178408,
+          "rear_peak_force_n": 17.94857604061322,
+          "mean_contact_slip_m_s": 0.018315837560886894,
+          "max_abs_pitch_deg": 2.34477644135107,
+          "mean_pitch_deg": 0.4816551243763463,
+          "joint_tracking_error_rad": 0.010343965293728274,
+          "policy_action_magnitude": 0.7912786061113531
+        },
+        {
+          "seed": 10002,
+          "completed": true,
+          "seconds": 1.68,
+          "forward_displacement_m": 0.020505684438585994,
+          "forward_speed_m_s": 0.012205764546777378,
+          "fallen": false,
+          "sliding": true,
+          "front_stance_duration_s": 0.4883333333333335,
+          "rear_stance_duration_s": 0.5233333333333337,
+          "front_normal_force_n": 7.230129542040257,
+          "rear_normal_force_n": 12.088355568606893,
+          "front_peak_force_n": 16.96823002733621,
+          "rear_peak_force_n": 18.05885957487842,
+          "mean_contact_slip_m_s": 0.02013877840376805,
+          "max_abs_pitch_deg": 4.724764336284182,
+          "mean_pitch_deg": 0.7731612008360845,
+          "joint_tracking_error_rad": 0.010599945355503392,
+          "policy_action_magnitude": 0.7777477038048562
+        }
+      ]
+    },
+    "payload_forward_example": {
+      "spec": {
+        "com_offset_x_m": 0.0,
+        "payload": {
+          "name": "declared_forward_payload",
+          "mass_kg": 0.1,
+          "pos": [
+            -0.03,
+            0.0,
+            0.04
+          ],
+          "cube_side_m": 0.02
+        }
+      },
+      "model": {
+        "total_mass_kg": 2.0229999999999997,
+        "world_com_m": [
+          0.0024782215910899696,
+          -1.3130476137367703e-18,
+          0.13124701128460212
+        ],
+        "body_frame_com_m": [
+          0.0024782215910899696,
+          -1.3130476137367703e-18,
+          0.01124701128460212
+        ],
+        "bodies": [
+          {
+            "name": "base",
+            "mass_kg": 1.282,
+            "world_com_m": [
+              0.0,
+              0.0,
+              0.145
+            ]
+          },
+          {
+            "name": "front_left_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              -0.12597698999999998,
+              -0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "front_left_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              -0.09863834204999998,
+              -0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "front_left_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              -0.09022443899999999,
+              -0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "front_left_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              -0.07832443899999998,
+              -0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "front_right_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              -0.12597698999999998,
+              0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "front_right_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              -0.09863834204999998,
+              0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "front_right_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              -0.09022443899999999,
+              0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "front_right_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              -0.07832443899999998,
+              0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "rear_left_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              0.12597698999999998,
+              -0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "rear_left_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              0.13981563795,
+              -0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "rear_left_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              0.13172954099999998,
+              -0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "rear_left_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              0.14362954099999997,
+              -0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "rear_right_roll_link",
+            "mass_kg": 0.066,
+            "world_com_m": [
+              0.12597698999999998,
+              0.0775,
+              0.12099999800000001
+            ]
+          },
+          {
+            "name": "rear_right_upper_link",
+            "mass_kg": 0.073625,
+            "world_com_m": [
+              0.13981563795,
+              0.0775,
+              0.09980789150000001
+            ]
+          },
+          {
+            "name": "rear_right_lower_link",
+            "mass_kg": 0.015625,
+            "world_com_m": [
+              0.13172954099999998,
+              0.0775,
+              0.03390642800000001
+            ]
+          },
+          {
+            "name": "rear_right_boot_mass",
+            "mass_kg": 0.005,
+            "world_com_m": [
+              0.14362954099999997,
+              0.0775,
+              0.008306428000000005
+            ]
+          },
+          {
+            "name": "declared_forward_payload",
+            "mass_kg": 0.1,
+            "world_com_m": [
+              -0.03,
+              0.0,
+              0.16
+            ]
+          }
+        ]
+      },
+      "aggregate": {
+        "completed": 1.0,
+        "seconds": 20.02,
+        "forward_displacement_m": 0.35138975445263226,
+        "forward_speed_m_s": 0.01755193578684477,
+        "fallen": 0.0,
+        "sliding": 0.0,
+        "front_stance_duration_s": 1.4840277777777786,
+        "rear_stance_duration_s": 0.9730269607843143,
+        "front_normal_force_n": 9.911941054020426,
+        "rear_normal_force_n": 10.181571334852977,
+        "front_peak_force_n": 20.640501912696383,
+        "rear_peak_force_n": 15.40249784194206,
+        "mean_contact_slip_m_s": 0.014826267991034791,
+        "max_abs_pitch_deg": 1.6922931416674283,
+        "mean_pitch_deg": 0.1764839509685202,
+        "joint_tracking_error_rad": 0.011292183308452655,
+        "policy_action_magnitude": 0.8013349391601898,
+        "fall_fraction": 0.0,
+        "slide_fraction": 0.0
+      },
+      "trials": [
+        {
+          "seed": 10000,
+          "completed": true,
+          "seconds": 20.02,
+          "forward_displacement_m": 0.35167534907699827,
+          "forward_speed_m_s": 0.017566201252597318,
+          "fallen": false,
+          "sliding": false,
+          "front_stance_duration_s": 1.4840277777777788,
+          "rear_stance_duration_s": 0.9931250000000007,
+          "front_normal_force_n": 9.912342148616956,
+          "rear_normal_force_n": 10.183934408017784,
+          "front_peak_force_n": 20.510818708393675,
+          "rear_peak_force_n": 15.276095834257514,
+          "mean_contact_slip_m_s": 0.01482550901339508,
+          "max_abs_pitch_deg": 1.6922883817985315,
+          "mean_pitch_deg": 0.17614985338282665,
+          "joint_tracking_error_rad": 0.01129036173485772,
+          "policy_action_magnitude": 0.8015060827329561
+        },
+        {
+          "seed": 10001,
+          "completed": true,
+          "seconds": 20.02,
+          "forward_displacement_m": 0.35102910137498616,
+          "forward_speed_m_s": 0.017533921147601706,
+          "fallen": false,
+          "sliding": false,
+          "front_stance_duration_s": 1.4840277777777788,
+          "rear_stance_duration_s": 0.9629779411764712,
+          "front_normal_force_n": 9.911500175789689,
+          "rear_normal_force_n": 10.180221043578067,
+          "front_peak_force_n": 20.550541020254858,
+          "rear_peak_force_n": 15.371371085714216,
+          "mean_contact_slip_m_s": 0.014840650950774803,
+          "max_abs_pitch_deg": 1.6922954005419049,
+          "mean_pitch_deg": 0.17658082573798145,
+          "joint_tracking_error_rad": 0.011293680177721995,
+          "policy_action_magnitude": 0.8011995572429318
+        },
+        {
+          "seed": 10002,
+          "completed": true,
+          "seconds": 20.02,
+          "forward_displacement_m": 0.35146481290591236,
+          "forward_speed_m_s": 0.017555684960335282,
+          "fallen": false,
+          "sliding": false,
+          "front_stance_duration_s": 1.4840277777777788,
+          "rear_stance_duration_s": 0.9629779411764712,
+          "front_normal_force_n": 9.911980837654633,
+          "rear_normal_force_n": 10.180558552963086,
+          "front_peak_force_n": 20.860146009440616,
+          "rear_peak_force_n": 15.560026605854446,
+          "mean_contact_slip_m_s": 0.01481264400893449,
+          "max_abs_pitch_deg": 1.692295642661849,
+          "mean_pitch_deg": 0.17672117378475247,
+          "joint_tracking_error_rad": 0.011292508012778243,
+          "policy_action_magnitude": 0.8012991775046815
+        }
+      ]
+    }
+  }
+}

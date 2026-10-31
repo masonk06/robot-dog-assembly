@@ -1,0 +1,68 @@
+{
+  "status": "proposed_simulation_zero_capture_not_applied",
+  "captured_local": "2026-10-30T11:52:24.600847-07:00",
+  "port": "COM7",
+  "operator_instruction": "Capture only after manually aligning physical robot to the simulation zero reference images.",
+  "servos": {
+    "1": {
+      "ticks": 2117,
+      "voltage_v": 12.2,
+      "temperature_c": 32
+    },
+    "2": {
+      "ticks": 1753,
+      "voltage_v": 12.3,
+      "temperature_c": 30
+    },
+    "3": {
+      "ticks": 1757,
+      "voltage_v": 12.3,
+      "temperature_c": 31
+    },
+    "4": {
+      "ticks": 2072,
+      "voltage_v": 12.2,
+      "temperature_c": 31
+    },
+    "5": {
+      "ticks": 1823,
+      "voltage_v": 12.2,
+      "temperature_c": 32
+    },
+    "6": {
+      "ticks": 1841,
+      "voltage_v": 12.2,
+      "temperature_c": 34
+    },
+    "7": {
+      "ticks": 2067,
+      "voltage_v": 12.4,
+      "temperature_c": 30
+    },
+    "8": {
+      "ticks": 1701,
+      "voltage_v": 12.2,
+      "temperature_c": 31
+    },
+    "9": {
+      "ticks": 1585,
+      "voltage_v": 12.2,
+      "temperature_c": 31
+    },
+    "10": {
+      "ticks": 1904,
+      "voltage_v": 12.2,
+      "temperature_c": 31
+    },
+    "11": {
+      "ticks": 1997,
+      "voltage_v": 12.2,
+      "temperature_c": 32
+    },
+    "12": {
+      "ticks": 1761,
+      "voltage_v": 12.3,
+      "temperature_c": 30
+    }
+  }
+}

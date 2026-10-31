@@ -1,0 +1,18 @@
+{
+  "status": "operator_reported_unverified",
+  "note": "Operator-reported endpoints; zero is a conservative no-wrap boundary for IDs 3 and 9. No clearance margin applied. Neutral and coupled-pose clearance require review.",
+  "joints": {
+    "front_left_hip_roll": {"id": 4, "minimum_ticks": 1051, "maximum_ticks": 2340, "reported_endpoints": [2340, 1051]},
+    "front_left_hip_pitch": {"id": 5, "minimum_ticks": 404, "maximum_ticks": 2182, "reported_endpoints": [404, 2182]},
+    "front_left_knee_pitch": {"id": 6, "minimum_ticks": 341, "maximum_ticks": 2600, "reported_endpoints": [2600, 341]},
+    "front_right_hip_roll": {"id": 1, "minimum_ticks": 1737, "maximum_ticks": 3039, "reported_endpoints": [1737, 3039]},
+    "front_right_hip_pitch": {"id": 2, "minimum_ticks": 1059, "maximum_ticks": 1983, "reported_endpoints": [1059, 1889], "updated_endpoint": 1983, "note": "Operator reports physical clearance 20 ticks beyond simulated maximum 1963."},
+    "front_right_knee_pitch": {"id": 3, "minimum_ticks": 0, "maximum_ticks": 2592, "reported_endpoints": [2592, 4078], "note": "Operator corrected the usable no-wrap range to 0–2592."},
+    "rear_left_hip_roll": {"id": 7, "minimum_ticks": 1704, "maximum_ticks": 3134, "reported_endpoints": [1704, 3134]},
+    "rear_left_hip_pitch": {"id": 8, "minimum_ticks": 866, "maximum_ticks": 2191, "reported_endpoints": [866, 2191]},
+    "rear_left_knee_pitch": {"id": 9, "minimum_ticks": 0, "maximum_ticks": 2409, "reported_endpoints": [2409, 4006], "note": "Operator corrected the usable no-wrap range to 0–2409."},
+    "rear_right_hip_roll": {"id": 11, "minimum_ticks": 1841, "maximum_ticks": 2319, "reported_endpoints": [2319, 1963], "updated_endpoint": 1841, "note": "Operator reports physical clearance 100 ticks beyond simulated minimum 1941."},
+    "rear_right_hip_pitch": {"id": 10, "minimum_ticks": 1189, "maximum_ticks": 2407, "reported_endpoints": [1189, 2407]},
+    "rear_right_knee_pitch": {"id": 12, "minimum_ticks": 650, "maximum_ticks": 2548, "reported_endpoints": [2548, 650]}
+  }
+}

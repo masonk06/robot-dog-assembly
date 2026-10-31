@@ -1,6 +1,6 @@
 {
-  "status": "operator_verified_zero_points_only",
-  "recorded_local": "2026-10-28T12:48:51.192020-07:00",
+  "status": "operator_aligned_simulation_zero_applied",
+  "recorded_local": "2026-10-30T11:53:49.048400-07:00",
   "transport": "ESP32 read-only CSV 115200",
   "port": "COM7",
   "model_sha256": "655de7d1bd9f1cb8185680aa6c5e2c8e846268323d4fc74e74635f2d1beb3fca",
@@ -21,7 +21,7 @@
   "joints": {
     "front_left_hip_roll": {
       "id": 4,
-      "neutral_ticks": 2130,
+      "neutral_ticks": 2072,
       "sample_ticks": [
         2130,
         2130,
@@ -38,11 +38,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 2072,
+        "voltage_v": 12.2,
+        "temperature_c": 31
+      }
     },
     "front_left_hip_pitch": {
       "id": 5,
-      "neutral_ticks": 1788,
+      "neutral_ticks": 1823,
       "sample_ticks": [
         1788,
         1788,
@@ -59,11 +64,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 1823,
+        "voltage_v": 12.2,
+        "temperature_c": 32
+      }
     },
     "front_left_knee_pitch": {
       "id": 6,
-      "neutral_ticks": 1861,
+      "neutral_ticks": 1841,
       "sample_ticks": [
         1861,
         1861,
@@ -80,11 +90,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 1841,
+        "voltage_v": 12.2,
+        "temperature_c": 34
+      }
     },
     "front_right_hip_roll": {
       "id": 1,
-      "neutral_ticks": 2105,
+      "neutral_ticks": 2117,
       "sample_ticks": [
         2105,
         2105,
@@ -101,11 +116,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 2117,
+        "voltage_v": 12.2,
+        "temperature_c": 32
+      }
     },
     "front_right_hip_pitch": {
       "id": 2,
-      "neutral_ticks": 1830,
+      "neutral_ticks": 1753,
       "sample_ticks": [
         1830,
         1830,
@@ -122,11 +142,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 1753,
+        "voltage_v": 12.3,
+        "temperature_c": 30
+      }
     },
     "front_right_knee_pitch": {
       "id": 3,
-      "neutral_ticks": 1836,
+      "neutral_ticks": 1757,
       "sample_ticks": [
         1836,
         1836,
@@ -143,11 +168,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 1757,
+        "voltage_v": 12.3,
+        "temperature_c": 31
+      }
     },
     "rear_left_hip_roll": {
       "id": 7,
-      "neutral_ticks": 2065,
+      "neutral_ticks": 2067,
       "sample_ticks": [
         2065,
         2065,
@@ -164,11 +194,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 2067,
+        "voltage_v": 12.4,
+        "temperature_c": 30
+      }
     },
     "rear_left_hip_pitch": {
       "id": 8,
-      "neutral_ticks": 1707,
+      "neutral_ticks": 1701,
       "sample_ticks": [
         1707,
         1707,
@@ -185,11 +220,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 1701,
+        "voltage_v": 12.2,
+        "temperature_c": 31
+      }
     },
     "rear_left_knee_pitch": {
       "id": 9,
-      "neutral_ticks": 1708,
+      "neutral_ticks": 1585,
       "sample_ticks": [
         1708,
         1708,
@@ -206,11 +246,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 1585,
+        "voltage_v": 12.2,
+        "temperature_c": 31
+      }
     },
     "rear_right_hip_roll": {
       "id": 11,
-      "neutral_ticks": 1999,
+      "neutral_ticks": 1997,
       "sample_ticks": [
         1999,
         1999,
@@ -227,11 +272,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 1997,
+        "voltage_v": 12.2,
+        "temperature_c": 32
+      }
     },
     "rear_right_hip_pitch": {
       "id": 10,
-      "neutral_ticks": 1881,
+      "neutral_ticks": 1904,
       "sample_ticks": [
         1881,
         1881,
@@ -248,11 +298,16 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 1904,
+        "voltage_v": 12.2,
+        "temperature_c": 31
+      }
     },
     "rear_right_knee_pitch": {
       "id": 12,
-      "neutral_ticks": 1759,
+      "neutral_ticks": 1761,
       "sample_ticks": [
         1759,
         1759,
@@ -269,7 +324,12 @@
       "position_mode": true,
       "servo_status": 0,
       "direction_verified": false,
-      "limits_verified": false
+      "limits_verified": false,
+      "simulation_zero_capture": {
+        "ticks": 1761,
+        "voltage_v": 12.3,
+        "temperature_c": 30
+      }
     }
   },
   "ready_for_motion": false,
@@ -296,5 +356,11 @@
     "servo_ids_reprogrammed": false,
     "zero_values_preserved_by_physical_servo_id": true
   },
-  "ui_warning_clarification": "1830 ticks belongs to servo ID2 (now front-right hip pitch). The screenshot warning named a different joint, rear-left hip pitch ID8 at saved 1707 ticks. No numeric zero was changed from this clarification."
+  "ui_warning_clarification": "1830 ticks belongs to servo ID2 (now front-right hip pitch). The screenshot warning named a different joint, rear-left hip pitch ID8 at saved 1707 ticks. No numeric zero was changed from this clarification.",
+  "simulation_alignment": {
+    "proposal": "hardware\\calibrations\\proposed-simulation-zero.json",
+    "method": "Operator manually matched physical robot to rendered MuJoCo model-zero side references; serial READ capture was torque-off.",
+    "previous_calibration": "hardware\\calibrations\\zero-points-before-simulation-alignment-20261030.json",
+    "not_servo_eeprom": true
+  }
 }

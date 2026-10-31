@@ -122,8 +122,9 @@ class CudaTask:
         c = self.cfg
         phase = (self.time/c.gait_cycle_seconds)%1
         local = (phase[:,None]-self.offsets)%1
-        swing = local<.2
-        t = torch.where(swing,local/.2,(local-.2)/.8)
+        swing = local<c.swing_fraction
+        t = torch.where(swing,local/c.swing_fraction,
+                        (local-c.swing_fraction)/(1.-c.swing_fraction))
         smooth = t*t*(3-2*t)
         xoff = c.reference_stride*torch.where(swing,.5-smooth,-.5+smooth)
         lift = c.reference_lift*torch.sin(math.pi*t).square()*swing
@@ -141,7 +142,7 @@ class CudaTask:
         result = torch.zeros_like(self.targets)
         result[:,self.hip_indices] = hip*ramp[:,None]
         result[:,self.knee_indices] = knee*ramp[:,None]
-        curve = torch.sin(math.pi*(local/.2).clamp(0,1))*swing
+        curve = torch.sin(math.pi*(local/c.swing_fraction).clamp(0,1))*swing
         sway = (curve*self.sway_sign).sum(1)*c.reference_sway*ramp
         result[:,self.roll_indices] = sway[:,None]
         return result
@@ -278,8 +279,8 @@ class CudaTask:
             self.air.masked_fill_(contact,0)
             self.previous.copy_(contact)
             local=(self.time[:,None]/c.gait_cycle_seconds-self.offsets)%1
-            swing=local<.2
-            curve=torch.sin(math.pi*(local/.2).clamp(0,1))*swing
+            swing=local<c.swing_fraction
+            curve=torch.sin(math.pi*(local/c.swing_fraction).clamp(0,1))*swing
             pattern=(contact==~swing).float().mean(1)/self.probe.frame_skip
             clearance=(self.fpos[:,:,2]-.003).clamp_min(0)
             score=torch.exp(-((clearance-c.lift_clearance*curve)/.004).square())*(~contact)*curve
@@ -311,7 +312,7 @@ class CudaTask:
             'tilt':-self.gravity[:,:2].square().sum(1),'rotation':-.05*self.angular.square().sum(1),
             'effort':-.002*self.actuator.square().mean(1),
             'smoothness':-.02*(action-self.last_action).square().mean(1),'fall':-5*fallen.float(),
-            'stomp':-2*accum[:,0]-.1*accum[:,1], 'foot_slip':-2*(accum[:,2]/.03**2).clamp(0,10),
+            'stomp':-2*accum[:,0]-.1*accum[:,1], 'foot_slip':-c.slip_penalty_weight*(accum[:,2]/.03**2).clamp(0,10),
             'useful_steps':.2*accum[:,3],'all_four_legs':.8*accum[:,4],
             'unused_legs':-.1*stale*(self.time>4), 'foot_lift':.75*accum[:,5],
             'slide_reset':-5*sliding.float(),'scheduled_lift':.25*accum[:,6],

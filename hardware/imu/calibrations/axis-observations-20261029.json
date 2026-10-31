@@ -1,0 +1,18 @@
+{
+  "status": "operator_pose_observations_mapping_not_yet_validated",
+  "sensor_frame": "MPU6500-compatible raw axes; acceleration m/s^2 includes gravity, gyro rad/s",
+  "method": "ESP32 IMU on-demand readings, body held by operator; tilt angle approximate",
+  "poses": {
+    "level": {"samples": 30, "mean": [-0.67358, -1.67609, -9.40450, 0.02325, 0.00600, -0.03411], "std": [0.01069, 0.00984, 0.02286, 0.00066, 0.00069, 0.00080]},
+    "nose_down": {"samples": 25, "mean": [-0.59596, -3.99477, -8.69708, 0.02476, 0.00569, -0.03381], "std": [0.03575, 0.04350, 0.03649, 0.02560, 0.01070, 0.00354]},
+    "left_side_down": {"samples": 25, "mean": [-3.75722, -2.26347, -8.37696, 0.02256, 0.00467, -0.03160], "std": [0.03386, 0.05110, 0.04375, 0.01451, 0.01250, 0.00631]}
+  },
+  "display_verification": {
+    "nose_down_tilt": "pitch negative",
+    "left_side_down_tilt": "roll positive",
+    "nose_down_rotation": "pitch rate negative (operator preliminary)",
+    "left_side_down_rotation": "roll rate positive",
+    "nose_turns_left": "yaw rate positive"
+  },
+  "limitations": "Operator checked display signs with the body supported; pitch-rate sign was preliminary. Mounting transform accuracy, fused orientation, yaw heading and body velocity remain unverified. Do not use as a control-ready orientation estimate."
+}

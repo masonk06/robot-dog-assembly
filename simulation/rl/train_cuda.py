@@ -8,6 +8,7 @@ import json
 import math
 from pathlib import Path
 import shutil
+import signal
 import time
 import numpy as np
 import torch
@@ -101,20 +102,39 @@ def main():
     p.add_argument('--minibatch',type=int,default=256)
     p.add_argument('--epochs',type=int,default=5)
     p.add_argument('--eval-episodes',type=int,default=3,help='0 only for pipeline smoke tests')
+    p.add_argument('--eval-seconds',type=float,default=None,help='Evaluation duration; training episode length stays unchanged')
     p.add_argument('--save-every',type=int,default=32768)
     p.add_argument('--max-seconds',type=float,default=None,help='Stop at a rollout boundary and save a time-limit checkpoint')
     p.add_argument('--seed',type=int,default=42)
     p.add_argument('--tracking-weight',type=float,default=None)
+    p.add_argument('--slip-weight',type=float,default=None)
+    p.add_argument('--target-speed',type=float,default=None,help='Commanded forward speed in meters per second')
+    p.add_argument('--cycle-seconds',type=float,default=None,help='Explicit reference-cadence experiment; saved in the task manifest')
+    p.add_argument('--stride-m',type=float,default=None,help='Reference foot sweep in meters; saved in the task manifest')
+    p.add_argument('--quasistatic-crawl',action='store_true',help='Use the separate slow three-leg-stance crawl preset; preserves the input/output dimensions')
+    p.add_argument('--crawl-response-scale',type=float,default=1.0,help='Simulation-only quasi-static response proxy; replace range with measured servo data')
     p.add_argument('--mode',choices=['online','offline','disabled'],default='online')
     p.add_argument('--output',type=Path,default=Path('runs/cuda'))
     args=p.parse_args()
     if min(args.envs,args.steps,args.rollout,args.minibatch,args.epochs,args.save_every)<1:
         p.error('Counts must be positive')
     if args.eval_episodes<0: p.error('eval-episodes must be nonnegative')
+    if args.eval_seconds is not None and (not math.isfinite(args.eval_seconds) or args.eval_seconds<=0):
+        p.error('eval-seconds must be finite and positive')
     if args.max_seconds is not None and (not math.isfinite(args.max_seconds) or args.max_seconds<=0):
         p.error('max-seconds must be finite and positive')
     if args.tracking_weight is not None and (not math.isfinite(args.tracking_weight) or args.tracking_weight<=0):
         p.error('tracking-weight must be finite and positive')
+    if args.slip_weight is not None and (not math.isfinite(args.slip_weight) or args.slip_weight<=0):
+        p.error('slip-weight must be finite and positive')
+    if args.target_speed is not None and (not math.isfinite(args.target_speed) or args.target_speed<=0):
+        p.error('target-speed must be finite and positive')
+    if args.cycle_seconds is not None and (not math.isfinite(args.cycle_seconds) or args.cycle_seconds<=0):
+        p.error('cycle-seconds must be finite and positive')
+    if args.stride_m is not None and (not math.isfinite(args.stride_m) or args.stride_m<=0):
+        p.error('stride-m must be finite and positive')
+    if not math.isfinite(args.crawl_response_scale) or args.crawl_response_scale<=0:
+        p.error('crawl-response-scale must be finite and positive')
     if not torch.cuda.is_available(): raise RuntimeError('Install CUDA-enabled PyTorch first')
     torch.set_num_threads(2)
     torch.distributions.Distribution.set_default_validate_args(False)
@@ -123,6 +143,25 @@ def main():
     cfg=WalkConfig(**manifest['task'])
     if args.tracking_weight is not None:
         cfg=replace(cfg,tracking_reward_weight=args.tracking_weight)
+    if args.slip_weight is not None:
+        cfg=replace(cfg,slip_penalty_weight=args.slip_weight)
+    if args.target_speed is not None:
+        cfg=replace(cfg,target_speed=args.target_speed)
+    if args.cycle_seconds is not None:
+        cfg=replace(cfg,gait_cycle_seconds=args.cycle_seconds)
+    if args.stride_m is not None:
+        cfg=replace(cfg,reference_stride=args.stride_m)
+    if args.quasistatic_crawl:
+        # Conservative reference and command-filter settings.  This is a new
+        # training task, not a modification of the saved walking policy.
+        cfg=replace(cfg, target_speed=.005, gait_cycle_seconds=5.0,
+                    reference_stride=.010, reference_lift=.012,
+                    reference_rear_lift_multiplier=1.0,
+                    reference_weight_shift=.008, reference_sway=.035,
+                    swing_fraction=.16, action_scale=.025,
+                    residual_time_constant=.18*args.crawl_response_scale,
+                    max_target_rate=.45/args.crawl_response_scale,
+                    slip_penalty_weight=max(cfg.slip_penalty_weight,3.0))
     env=CudaTask(args.envs,cfg,args.source/'robot_dog_v2.xml',seed=args.seed)
     runner=CudaRunner(env)
     template=VecNormalize.load(str(args.resume/'normalize.pkl'),DummyVecEnv([
@@ -159,6 +198,8 @@ def main():
         norm.save(template,path/'normalize.pkl')
         metadata={**manifest,'task':vars(cfg),'physics_backend':'newton-batch',
                   'training_implementation':'newton-cuda-resident',
+                  'adaptation':'ppo_continuation','new_training_steps':completed,
+                  'evaluation_episodes':args.eval_episodes,'evaluation_seconds_override':args.eval_seconds,
                   'additional_steps':completed,'normalization':'saved GPU running moments'}
         (path/'environment.json').write_text(json.dumps(metadata,indent=2))
         (path/'source.json').write_text(json.dumps({'path':str(source.resolve()),
@@ -166,15 +207,22 @@ def main():
         if args.eval_episodes:
             from evaluate_cuda import evaluate
             with torch.random.fork_rng(devices=[0]):
-                report=evaluate(path,source,args.eval_episodes)
+                report=evaluate(path,source,args.eval_episodes,seconds=args.eval_seconds)
             (path/'evaluation.json').write_text(json.dumps(report,indent=2))
-            run.log({'global_step':model.num_timesteps,**report})
+            run.log({'global_step':model.num_timesteps,**{key:value for key,value in report.items() if key!='per_episode'}})
         artifact=wandb.Artifact(f'robodog-policy-{run.id}',type='model',metadata={'timesteps':model.num_timesteps})
         artifact.add_dir(str(path));run.log_artifact(artifact,aliases=['latest',label])
         print(f'Saved {path}',flush=True)
     time_limited=False
+    stop_requested=False
+    def request_stop(signum,frame):
+        nonlocal stop_requested
+        stop_requested=True
+    signal.signal(signal.SIGTERM,request_stop)
+    signal.signal(signal.SIGINT,request_stop)
     try:
         while completed<args.steps:
+            if stop_requested:break
             if args.max_seconds is not None and time.perf_counter()-start>=args.max_seconds:
                 time_limited=True
                 break
@@ -245,7 +293,7 @@ def main():
             run.log(summary);print(json.dumps(summary),flush=True)
             if completed>=next_save:
                 save(f'step-{initial+completed}');next_save=completed+args.save_every
-        save('time-limit' if time_limited else 'final')
+        save('interrupted' if stop_requested else 'time-limit' if time_limited else 'final')
     except KeyboardInterrupt:
         save('interrupted')
     finally:

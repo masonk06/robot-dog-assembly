@@ -1,0 +1,106 @@
+{
+  "units": "mm",
+  "source_frame": "frame_v3/Frame_V3.step",
+  "failure_report": "User reports cracks initiating at outside screw holes",
+  "flanges": [
+    {
+      "side": "rear",
+      "face_bounds": [
+        [
+          68.9774,
+          64.5019,
+          5.0
+        ],
+        [
+          68.9774,
+          89.8485,
+          50.0999
+        ]
+      ],
+      "added_thickness_mm": 5.0,
+      "method": "exact original face extrusion, retaining bore and aperture wires"
+    },
+    {
+      "side": "rear",
+      "face_bounds": [
+        [
+          68.9774,
+          -89.8485,
+          5.0
+        ],
+        [
+          68.9774,
+          -64.5019,
+          50.0999
+        ]
+      ],
+      "added_thickness_mm": 5.0,
+      "method": "exact original face extrusion, retaining bore and aperture wires"
+    },
+    {
+      "side": "front",
+      "face_bounds": [
+        [
+          -38.9774,
+          64.5019,
+          5.0
+        ],
+        [
+          -38.9774,
+          89.8485,
+          50.0999
+        ]
+      ],
+      "added_thickness_mm": 5.0,
+      "method": "exact original face extrusion, retaining bore and aperture wires"
+    },
+    {
+      "side": "front",
+      "face_bounds": [
+        [
+          -38.9774,
+          -89.8485,
+          5.0
+        ],
+        [
+          -38.9774,
+          -64.5019,
+          50.0999
+        ]
+      ],
+      "added_thickness_mm": 5.0,
+      "method": "exact original face extrusion, retaining bore and aperture wires"
+    }
+  ],
+  "frame_dimensions": [
+    170.0,
+    180.0,
+    50.0999
+  ],
+  "valid_solid": true,
+  "bed_limit": [
+    180,
+    180
+  ],
+  "added_volume_mm3": 16551.41898017921,
+  "case_overlap_delta_mm3": {
+    "front_left_servo_hip_roll": 1.504352198367087e-14,
+    "front_right_servo_hip_roll": 1.0658141036401503e-14,
+    "rear_left_servo_hip_roll": -4.6351811278100286e-15,
+    "rear_right_servo_hip_roll": 1.5404344466674047e-14
+  },
+  "reference_overlap_mm3": {
+    "Battery_75x34x25_REFERENCE": 0.0,
+    "Jetson_103x90p5x34p77_REFERENCE": 0.0,
+    "Waveshare_42x33_REFERENCE": 0.0,
+    "Jetson_Tray": 0.0,
+    "Waveshare_Sled": 0.0
+  },
+  "limitations": [
+    "No structural test/FEA; strength improvement is a design hypothesis.",
+    "Static saved servo geometry checked; full joint sweeps and actual cable bends remain to check.",
+    "Frame reaches 180 mm in Y: a brim/skirt must not extend outside the usable bed.",
+    "Screw holes and servo-side mount faces retain their original size and location.",
+    "Original screw-hole edge distances are retained; added thickness spreads load in depth."
+  ]
+}

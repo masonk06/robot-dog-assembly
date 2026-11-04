@@ -62,6 +62,13 @@ def commit(path,a,c,n,w):
      r.tracks.append(((aa[0]+dx,aa[1]+dy),(aa[0]+dx,aa[1]+dy),n,diameter,layer))
 def pad(ref,num):return next(q for q in r.pads if q.GetParentFootprint().GetReference()==ref and q.GetNumber()==num)
 unresolved=[]
+def connected_to(root):
+ conn=r.b.GetConnectivity();todo=[root];seen=set()
+ while todo:
+  item=todo.pop();key=item.m_Uuid.AsString()
+  if key in seen:continue
+  seen.add(key);todo.extend(conn.GetConnectedItems(item))
+ return seen
 for name in ['/SERVO_V+','/VBAT_RAW','/VBAT_FUSED','/FL_V+','/FR_V+','/RL_V+','/RR_V+','/SERVO','Net-(J7-Pin_1)','Net-(J10-Pin_1)','Net-(J5-Pin_1)','Net-(J10-Pin_3)','GND']:
  n=r.b.FindNet(name).GetNetCode();pp=[q for q in r.pads if q.GetNetCode()==n]
  pp.sort(key=lambda q:(q.GetAttribute()==p.PAD_ATTRIB_SMD,q.GetParentFootprint().GetReference().startswith('C')))
@@ -69,9 +76,9 @@ for name in ['/SERVO_V+','/VBAT_RAW','/VBAT_FUSED','/FL_V+','/FR_V+','/RL_V+','/
  root=pp[0]
  for q in pp[1:]:
   if q.GetParentFootprint().GetReference()=='C2':continue
-  r.b.BuildConnectivity();connected=r.b.GetConnectivity().GetConnectedPads(root)
+  r.b.BuildConnectivity();connected=connected_to(root)
   # Ground is explicitly re-checked with wide paths regardless of thin C2.
-  if name!='GND' and any(x.m_Uuid==q.m_Uuid for x in connected):continue
+  if q.m_Uuid.AsString() in connected:continue
   wide=name in ['GND','/SERVO_V+','/VBAT_RAW','/VBAT_FUSED','/FL_V+','/FR_V+','/RL_V+','/RR_V+']
   w=3 if wide else 1
   a,c=r.xy(q),r.xy(root);sl=tuple(l for l in (0,2) if q.IsOnLayer(l));el=tuple(l for l in (0,2) if root.IsOnLayer(l))

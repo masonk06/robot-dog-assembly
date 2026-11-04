@@ -21,16 +21,15 @@ def net(name):
  return n
 def fuse(ref,x,y,n1,n2,value):
  old=next((f for f in b.GetFootprints() if f.GetReference()==ref),None)
- f=p.FOOTPRINT(b);f.SetReference(ref);f.SetValue(value);f.SetFPID(p.LIB_ID('Luca_Review','Bel_0680H_2410_Engineering'))
+ f=p.FOOTPRINT(b);f.SetReference(ref);f.SetValue(value);f.SetFPID(p.LIB_ID('Luca_Review','Bel_0680H_2410_Recommended'))
  if old:b.Remove(old)
  f.SetPosition(pos(x,y));f.SetAttributes(p.FP_SMD)
- # Engineering hand-solder land pattern; exact manufacturer land drawing gate
- # remains recorded in the review, rather than pretending a generic 2410 is approved.
+ # Bel 0680H February 2025, page 4: 1.96 x 3.15mm lands, 2.95mm gap.
  for num,dx,nn in [('1',-2.455,n1),('2',2.455,n2)]:
-  q=p.PAD(f);q.SetNumber(num);q.SetAttribute(p.PAD_ATTRIB_SMD);q.SetShape(p.PAD_SHAPE_ROUNDRECT);q.SetRoundRectRadiusRatio(.15)
+  q=p.PAD(f);q.SetNumber(num);q.SetAttribute(p.PAD_ATTRIB_SMD);q.SetShape(p.PAD_SHAPE_RECT)
   layers=p.LSET()
   for layer in (p.F_Cu,p.F_Paste,p.F_Mask):layers.AddLayer(layer)
-  q.SetSize(pos(2.3,3.5));q.SetPosition(pos(x+dx,y));q.SetLayerSet(layers);q.SetNet(net(nn));f.Add(q)
+  q.SetSize(pos(1.96,3.15));q.SetPosition(pos(x+dx,y));q.SetLayerSet(layers);q.SetNet(net(nn));f.Add(q)
  for layer,w,h in [(p.F_Fab,6.1,2.54),(p.F_CrtYd,8.2,4.0)]:
   s=p.PCB_SHAPE(f);s.SetShape(p.SHAPE_T_RECT);s.SetStart(pos(x-w/2,y-h/2));s.SetEnd(pos(x+w/2,y+h/2));s.SetLayer(layer);s.SetWidth(mm(.05 if layer==p.F_CrtYd else .1));f.Add(s)
  f.Reference().SetPosition(pos(x,y-2.7));f.Reference().SetTextSize(pos(.8,.8));f.Value().SetVisible(False);b.Add(f);f.thisown=False;return f
@@ -38,7 +37,7 @@ def label(text,x,y):
  t=p.PCB_TEXT(b);t.SetText(text);t.SetPosition(pos(x,y));t.SetTextSize(pos(.8,.8));t.SetTextThickness(mm(.12));t.SetLayer(p.F_SilkS);b.Add(t)
 # Retain battery input, main fuse, switch loop and existing aux/Pi interfaces.
 # Replacing the three bulky branch holders creates local room for the leg bank.
-fuse('F2',116,83,'/SERVO_V+','/SERVO','5A_T_PROVISIONAL_ADAPTER')
+fuse('F2',143.5,86,'/SERVO_V+','/SERVO','5A_T_PROVISIONAL_ADAPTER')
 f5=fuse('F5',140,110,'/SERVO_V+','Net-(J7-Pin_1)','5A_T_PROVISIONAL_AUX');f5.Flip(f5.GetPosition(),False)
 f7=fuse('F7',140,124,'/VBAT_FUSED','Net-(J10-Pin_1)','5A_T_PROVISIONAL_PI');f7.Flip(f7.GetPosition(),False)
 for i,leg in enumerate(('FL','FR','RL','RR')):
@@ -46,9 +45,9 @@ for i,leg in enumerate(('FL','FR','RL','RR')):
  fuse('F'+str(8+i),178,y+1.5,'/SERVO_V+',f'/{leg}_V+','0680H5000-05_PROVISIONAL')
  f=p.FootprintLoad(str(LIB/'Connector_AMASS.pretty'),'AMASS_XT30UPB-M_1x02_P5.0mm_Vertical')
  f.SetReference('J'+str(12+i));f.SetValue('XT30UPB-M_'+leg);f.SetPosition(pos(188,y));f.SetFPID(p.LIB_ID('Connector_AMASS','AMASS_XT30UPB-M_1x02_P5.0mm_Vertical'))
- for q in f.Pads():q.SetNet(net(f'/{leg}_V+' if q.GetNumber()=='1' else 'GND'))
+ for q in f.Pads():q.SetNet(net(f'/{leg}_V+' if q.GetNumber()=='2' else 'GND'))
  f.Reference().SetPosition(pos(190.5,y-3.3));f.Value().SetVisible(False);b.Add(f);f.thisown=False
- label(leg+' +   GND',190.5,y+3.3)
+ label(leg+' GND   +',190.5,y+3.3)
 for f in b.GetFootprints():
  if f.GetReference()=='F1':f.SetValue('MAIN_FUSE_TBD_NOT_5A')
 # Preserve geometrical source and its outline; reroute only in derived revision.

@@ -1314,14 +1314,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "3f42deca-62a5-472b-b033-8e56b68e946e"))
+		(uuid "d085659b-7830-4661-b4fe-3d898a49a662"))
 	(global_label "GND"
 		(shape input)
 		(at 35.56 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "91f6fad4-95e4-4078-9ab2-06659ab6dc9a"))
+		(uuid "2ae20173-986b-4c0c-b6ff-e45d729aac32"))
 	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 35.56 30.48 0)
@@ -1359,9 +1359,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "9f328a6c-210f-482b-a613-4511cf431305"))
+			(uuid "f74c7315-948e-4438-964b-0c33f5121608"))
 		(pin "2"
-			(uuid "e1402fca-bab6-4ddc-b9f8-35e53794d539"))
+			(uuid "e646fdc1-70de-4eb4-8f84-40b570a20cb4"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1372,14 +1372,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "c5163bbb-ce41-4ad9-b04e-fecf80c4c2e4"))
+		(uuid "cbf2743d-01f6-4841-a4d2-3e01abe927b0"))
 	(global_label "GND"
 		(shape input)
 		(at 86.36 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "5fcf2acc-1a97-480b-8e83-8a546e5871b8"))
+		(uuid "aed6bfeb-8770-4532-8ff2-f86cf9ee8e79"))
 	(symbol
 		(lib_id "Device:C")
 		(at 86.36 30.48 0)
@@ -1417,9 +1417,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "1bdbf455-ffb3-4577-b785-13f60da37bba"))
+			(uuid "4ee2ffd3-5847-4ebf-a060-696ba6aa3f82"))
 		(pin "2"
-			(uuid "4c9fdd55-6549-49b6-afff-fc032e0cc7e2"))
+			(uuid "83f4ed9e-be71-45f8-a123-9e6c26dbed85"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1430,13 +1430,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "8f06542a-9960-444d-8b19-fc8ff6d0605d"))
+		(uuid "312a7a72-37a2-4c85-82d5-fb004d1b0cab"))
 	(label "VBAT_FUSED"
 		(at 137.16 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "cd795658-83f5-42e7-8bf0-77971d7bd208"))
+		(uuid "9e66fbc0-4e35-4a6f-bcd2-f637da11aa90"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 137.16 30.48 0)
@@ -1474,9 +1474,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "68abba47-4f22-4c05-9c4c-9cb0a16fa596"))
+			(uuid "2b7e5d04-6a9c-4d7e-ba25-585ad0dc6e3a"))
 		(pin "2"
-			(uuid "d138bd0e-f9ed-49de-9cb4-53ec6117742a"))
+			(uuid "fcb1e786-0144-4dc1-b603-edf154936c42"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1487,13 +1487,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "03398afe-5da8-4ccd-ad9a-d365c3a924dd"))
+		(uuid "cd313a23-8c8f-4298-bc1d-7f3d6c012140"))
 	(label "SERVO"
 		(at 187.95999999999998 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "06859bf3-dc58-4784-a68f-5fdd0b34caec"))
+		(uuid "19dda4f3-d74b-468d-a6be-71300a0759e6"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 187.95999999999998 30.48 0)
@@ -1512,7 +1512,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Recommended"
 			(at 187.95999999999998 30.48 0)
 			(effects
 				(font
@@ -1531,9 +1531,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "54b558a2-f382-44f6-b1be-db54a05ebf46"))
+			(uuid "a030ff69-a7fc-439c-ba46-7309b769f41e"))
 		(pin "2"
-			(uuid "c219d12b-378b-454d-a12c-930703db9cd7"))
+			(uuid "cf5fca9e-9a6e-4980-b117-58ed0847e70f"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1544,14 +1544,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "af972424-e4f5-4747-ba82-8078e87e602a"))
+		(uuid "1ea44afa-95d0-4b30-aaf7-6f8ed73a6ddf"))
 	(global_label "Net-(J7-Pin_1)"
 		(shape input)
 		(at 238.76 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "a2416297-a975-45d7-a7de-87ecb13591f0"))
+		(uuid "9257ad4f-f7d8-4673-b41c-2d2d994562ce"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 238.76 30.48 0)
@@ -1570,7 +1570,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Recommended"
 			(at 238.76 30.48 0)
 			(effects
 				(font
@@ -1589,9 +1589,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "ac66db9f-cafd-4a92-a1f2-c187ec843804"))
+			(uuid "559c3b0c-050d-411c-ae83-52e262f4960d"))
 		(pin "2"
-			(uuid "958f3609-84b9-4827-ae60-373358184c35"))
+			(uuid "0b8c406e-a77a-40e3-bdbe-88d66e8ff231"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1602,14 +1602,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "fb9d506e-1c14-4977-b86f-2b7319f8bc9d"))
+		(uuid "38af3567-9ac3-40a8-bca4-5ebae9b8b981"))
 	(global_label "Net-(J10-Pin_1)"
 		(shape input)
 		(at 35.56 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "801d47f0-754a-4bfc-bc64-c3bceb17aa03"))
+		(uuid "937243f1-4b0d-4548-9842-43650f539ce0"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 35.56 62.230000000000004 0)
@@ -1617,7 +1617,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d16e0f48-5570-4742-97a1-1066c09d6eb4")
+		(uuid "7ade3aeb-433e-4378-806b-e3a017dfd8ca")
 		(property "Reference" "F7"
 			(at 39.56 56.230000000000004 0)
 			(effects
@@ -1628,7 +1628,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Recommended"
 			(at 35.56 62.230000000000004 0)
 			(effects
 				(font
@@ -1647,9 +1647,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "12529331-df1b-4703-9867-50af0b28fc5d"))
+			(uuid "9203a0ee-05e7-4be5-b889-731d0290c0f8"))
 		(pin "2"
-			(uuid "09fa5a27-c044-4195-8f04-ca70f1d0391a"))
+			(uuid "bb9b4d84-938b-46bf-8164-c318ae8f0bc1"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1660,13 +1660,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "8dfd7baa-61b6-43ab-b9d0-ad8e3a9c31d8"))
+		(uuid "0ce161f4-a794-481a-b1fc-8e165f8c0426"))
 	(label "FL_V+"
 		(at 86.36 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "6542f1d9-2ec6-42b3-a2fc-09cd7c5c77a9"))
+		(uuid "403d3b06-9f88-4b66-abbb-7a14a1836ade"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 86.36 62.230000000000004 0)
@@ -1674,7 +1674,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "60631b28-b87a-4221-a222-7728c104f459")
+		(uuid "fee3ad6f-b3f4-4d47-aeab-43ed58ed208e")
 		(property "Reference" "F8"
 			(at 90.36 56.230000000000004 0)
 			(effects
@@ -1685,7 +1685,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Recommended"
 			(at 86.36 62.230000000000004 0)
 			(effects
 				(font
@@ -1704,9 +1704,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "0686a23b-b4e2-4c7f-857a-da78a36d98dd"))
+			(uuid "fdd7559a-4b58-4656-a22a-c0dc2b4e7cad"))
 		(pin "2"
-			(uuid "bdc0030d-7f0a-4223-8b44-510309465285"))
+			(uuid "5926bf62-ef77-4952-87ac-9304b3e80fbd"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1717,13 +1717,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "9839838b-c881-4dee-8d93-1800c1e4bcb9"))
+		(uuid "49632406-03f2-49ad-a0f1-185c7e245e4c"))
 	(label "FR_V+"
 		(at 137.16 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "e43d449e-7aeb-4063-a410-3915ccec272b"))
+		(uuid "f84e8060-a59b-4e80-b592-303e85761656"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 137.16 62.230000000000004 0)
@@ -1731,7 +1731,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0384b784-a3bc-46e7-8a25-45859f325b72")
+		(uuid "c197bbde-f3fb-41eb-8ffc-15d6ed08c7f6")
 		(property "Reference" "F9"
 			(at 141.16 56.230000000000004 0)
 			(effects
@@ -1742,7 +1742,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Recommended"
 			(at 137.16 62.230000000000004 0)
 			(effects
 				(font
@@ -1761,9 +1761,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "158c775c-a8cf-42b3-bb43-710b5cdbab02"))
+			(uuid "0c67ac52-c7d1-4f40-8000-03ebd73f5b51"))
 		(pin "2"
-			(uuid "b977b315-1544-4b45-9dc1-b23d88dee9e7"))
+			(uuid "cca1a424-c134-4755-9080-829f6f180c41"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1774,13 +1774,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "5cce7eff-c4c3-47cd-88bb-6970bebb11da"))
+		(uuid "25bc74c1-8714-4890-a939-f47e00a9f81d"))
 	(label "RL_V+"
 		(at 187.95999999999998 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "5153d803-dae0-4dce-abe8-980d6e605c55"))
+		(uuid "31cd59c4-11f5-43f3-8fe5-d63111f5fa8e"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 187.95999999999998 62.230000000000004 0)
@@ -1788,7 +1788,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e731ef76-d99f-492f-9f79-72351537cc1e")
+		(uuid "a61d4c1a-c9ad-4874-8a82-7b63c77088be")
 		(property "Reference" "F10"
 			(at 191.95999999999998 56.230000000000004 0)
 			(effects
@@ -1799,7 +1799,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Recommended"
 			(at 187.95999999999998 62.230000000000004 0)
 			(effects
 				(font
@@ -1818,9 +1818,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "a020a2ac-e632-44c7-a9c1-6a076442b5b2"))
+			(uuid "1f804476-c44a-40d6-8896-7df7f4fcc25e"))
 		(pin "2"
-			(uuid "f731b468-a365-486d-89ea-08a64b14438b"))
+			(uuid "4afb72f3-b757-4ec8-9435-a6bfd9c52167"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1831,13 +1831,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "f7a0cd0e-aec6-4b35-a7ac-0ce3b25d94fe"))
+		(uuid "0c3b2ae3-1853-4c24-82ac-8f900ff45644"))
 	(label "RR_V+"
 		(at 238.76 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "237a16fe-6fff-4ca1-b4a2-02b1e89b7e1e"))
+		(uuid "edd3a490-e7e9-40f8-a3a6-bc3496be14e7"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 238.76 62.230000000000004 0)
@@ -1845,7 +1845,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "9e193e85-e7e4-4b49-aa1a-dd119c8f23b2")
+		(uuid "aea93fa9-d5bd-4073-9223-020ca0d7074e")
 		(property "Reference" "F11"
 			(at 242.76 56.230000000000004 0)
 			(effects
@@ -1856,7 +1856,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Recommended"
 			(at 238.76 62.230000000000004 0)
 			(effects
 				(font
@@ -1875,9 +1875,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "5711bf7a-61f7-4e41-926c-8373aaf66b2a"))
+			(uuid "d6c7f73a-8a51-4728-bb19-b0b7e046895f"))
 		(pin "2"
-			(uuid "7043c7c7-ce7b-438c-b437-2b2a07fce1da"))
+			(uuid "a1c2ccf2-69a8-4108-800a-9df64249e3a3"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1890,7 +1890,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "cc736075-3090-4d5d-8147-f53c3bb6c87c")
+		(uuid "f06fa583-1298-466d-a7bb-883cefde437d")
 		(property "Reference" "H1"
 			(at 39.56 87.98 0)
 			(effects
@@ -1931,7 +1931,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "623baf84-3631-4056-9b57-592dabe20d41")
+		(uuid "a58f8641-407b-48fa-a09e-dcd0fbea36a3")
 		(property "Reference" "H2"
 			(at 90.36 87.98 0)
 			(effects
@@ -1972,7 +1972,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "aa9589c0-fcc8-403e-a6c7-a586120c42a2")
+		(uuid "3543be50-56f9-4071-b590-aa7255d4de97")
 		(property "Reference" "H3"
 			(at 141.16 87.98 0)
 			(effects
@@ -2013,7 +2013,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "ed7b967e-98fa-4e3e-b350-cf9164292fa9")
+		(uuid "899daa1d-18f7-4f33-b65d-af69183904b7")
 		(property "Reference" "H4"
 			(at 191.95999999999998 87.98 0)
 			(effects
@@ -2052,14 +2052,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "44cf8f85-7e34-45a6-81f5-6da9afcb979d"))
+		(uuid "c844a4f7-23c7-4682-a36d-fdeadb3dafa2"))
 	(global_label "GND"
 		(shape input)
 		(at 233.67999999999998 96.52000000000001 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "70ca0d79-259f-463a-ac04-87f129a212cd"))
+		(uuid "55f27c85-be2a-49c9-af0c-3c1fc756fb5a"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 238.76 93.98 0)
@@ -2097,9 +2097,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "cd8a9b68-dacb-4c85-80b2-8632c934d276"))
+			(uuid "4515a752-b20a-4ecb-bf10-3403c83ad3b0"))
 		(pin "2"
-			(uuid "3470fd7f-6bf2-4813-9a83-5f1ccfc91438"))
+			(uuid "2107900c-ca1f-455d-bf05-e2f88d3eeb38"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2110,14 +2110,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "0a07a363-eb4f-461c-886d-71e531583c7f"))
+		(uuid "15b08f20-d790-410a-8f37-a84035a0c0d3"))
 	(global_label "GND"
 		(shape input)
 		(at 30.480000000000004 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "959d4198-2feb-4d09-a460-eb8fef529a16"))
+		(uuid "1bfe1c05-f8c6-4cac-907e-220c0ff4de58"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 35.56 125.73 0)
@@ -2155,9 +2155,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "61a0651e-67cf-46f7-a2d6-ff14c5a763f3"))
+			(uuid "8f4edad5-d719-44dd-af80-26810091002e"))
 		(pin "2"
-			(uuid "be2bbd03-5e35-4ada-9e44-ced10dc01f7b"))
+			(uuid "9a4e13e5-6363-4f70-82ac-e679cfac345d"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2168,13 +2168,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "04e68d30-97e7-43c5-9d4b-bf32d858a659"))
+		(uuid "8f1b55c8-48de-4917-a995-66f04ebbcda8"))
 	(label "SERVO_V+"
 		(at 81.28 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "4e59e995-ad00-4a54-9cf2-58e773ad7fd0"))
+		(uuid "70757301-3d78-4241-bce6-41622ea3a530"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 86.36 125.73 0)
@@ -2188,12 +2188,12 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "Conn_01x02"
+		(property "Value" "Phoenix_1868076_MKDS5_2_7.62"
 			(at 90.36 122.73 0)
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+		(property "Footprint" "Luca_Review:Phoenix_MKDS5_2_7.62_1868076"
 			(at 86.36 125.73 0)
 			(effects
 				(font
@@ -2205,16 +2205,16 @@
 				(font
 					(size 1.27 1.27))
 				(hide yes)))
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" ""
 			(at 86.36 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "2480a8d8-f0bc-4d1a-9d9a-0433116805cc"))
+			(uuid "adbab6ea-b10f-44db-8ad1-dd2d5abc4b71"))
 		(pin "2"
-			(uuid "5f549fb0-d1cc-4eaa-a8ad-2b792b31afe8"))
+			(uuid "edad3661-b421-44e4-a291-d592433131cd"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2226,14 +2226,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "b67df0d7-e862-4dde-ac1a-0a9d6d888b44"))
+		(uuid "6075c62a-72f3-46eb-ace8-8d740f75a6d5"))
 	(global_label "GND"
 		(shape input)
 		(at 132.07999999999998 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "d3c2aa41-1310-43be-8d7d-4dce52f52670"))
+		(uuid "0433bcb1-6854-4649-9b08-7bf2e6efac46"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 137.16 125.73 0)
@@ -2271,9 +2271,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "24e6fc33-738f-4aa0-bcc8-a68f51d1c3e0"))
+			(uuid "1396f2f7-dff9-4781-97d5-aca14283eff0"))
 		(pin "2"
-			(uuid "66333486-1c8a-48fa-8173-706fb39b7512"))
+			(uuid "d7734b64-d7de-4f85-859c-3d60a975b26f"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2285,28 +2285,28 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "bc38c233-dbfd-4c18-996a-f2b1017aae38"))
+		(uuid "805daa2a-f28f-4a78-8cd0-04c8b568ebcf"))
 	(global_label "GND"
 		(shape input)
 		(at 182.87999999999997 125.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "4b5cdf4c-c980-4773-9c72-43a2c3b87563"))
+		(uuid "aac32051-ca22-4a11-9e4b-15788b6c2186"))
 	(global_label "Net-(J5-Pin_1)"
 		(shape input)
 		(at 182.87999999999997 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "d4ed2c99-4f17-4ac1-8e58-a3f3c1e978f7"))
+		(uuid "134ce0e2-a165-4f90-9a40-492e4fb1bf8b"))
 	(global_label "GND"
 		(shape input)
 		(at 182.87999999999997 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "7808f453-7b2f-4778-92a4-a8d00075b817"))
+		(uuid "0ccfd5c7-46f5-4d68-9aee-a261450173a2"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
 		(at 187.95999999999998 125.73 0)
@@ -2314,7 +2314,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "aebda447-0f52-412f-870e-06afb8aa178e")
+		(uuid "79818b66-fe20-4ac3-a3f7-faa32de2b755")
 		(property "Reference" "J7"
 			(at 191.95999999999998 119.73 0)
 			(effects
@@ -2344,13 +2344,13 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "19b0cd7e-9be2-4ab0-9d85-9b7f95c0976a"))
+			(uuid "2f7e6a5b-e895-45bd-85ee-ebb32a9ef54a"))
 		(pin "2"
-			(uuid "e3243cda-dbc6-48e2-b6c3-6ea243dd7d78"))
+			(uuid "da74a38a-e394-4e6d-9a57-de87a125e36f"))
 		(pin "3"
-			(uuid "7289fcde-cfbf-46c5-b578-213d8dfeb5dc"))
+			(uuid "c516bfef-aac5-4130-ae36-d5bd0548f1d4"))
 		(pin "4"
-			(uuid "aebea68e-526a-4c15-8cfb-2718ba263abf"))
+			(uuid "0dd29d36-953e-471d-bb11-a9ba8d7c1cdf"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2362,28 +2362,28 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "18eeb78c-63d6-400d-8b82-fd3119e34f20"))
+		(uuid "81661750-1d54-4080-b662-0301ba043d44"))
 	(global_label "GND"
 		(shape input)
 		(at 233.67999999999998 125.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "9341f4e7-0486-4796-8b8c-8817b3018822"))
+		(uuid "16b652eb-fdbd-40f5-949e-a6a850b685a9"))
 	(global_label "Net-(J10-Pin_3)"
 		(shape input)
 		(at 233.67999999999998 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "ce09acfe-0df2-4de1-afe1-9e504ea51de5"))
+		(uuid "f208c185-152f-43c9-94b6-909a092e7960"))
 	(global_label "GND"
 		(shape input)
 		(at 233.67999999999998 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "761b1adb-2103-462a-8b8e-ecf07c55b145"))
+		(uuid "42f5f104-25e8-4c5c-8f69-169037271921"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
 		(at 238.76 125.73 0)
@@ -2391,7 +2391,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "fc138659-179a-4c37-a878-f0ec389f5f3e")
+		(uuid "b0381b59-3300-4c8c-b1ae-999f537a3092")
 		(property "Reference" "J10"
 			(at 242.76 119.73 0)
 			(effects
@@ -2421,13 +2421,13 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "74c2b98a-79b9-4f11-9854-6698c0af3f64"))
+			(uuid "7295d33c-f742-423d-b108-dbef0637ac2c"))
 		(pin "2"
-			(uuid "7db15831-3ef3-4492-9053-f90fa7fa41c9"))
+			(uuid "d38e94d5-2e5d-4ae5-9589-e9ec554f4e62"))
 		(pin "3"
-			(uuid "a0e2908a-1843-4d75-8bb2-5b5cb1e1d16a"))
+			(uuid "03953025-ab8c-480b-8f62-b9bf4222ed70"))
 		(pin "4"
-			(uuid "1e4bdd4d-168f-403c-b7bd-386e101e1e4b"))
+			(uuid "593d33a0-f4ac-4ce6-8748-3a6fa9361090"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2439,14 +2439,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "58707880-3808-4adc-abae-0e0f832232e4"))
+		(uuid "4fab8ce8-362f-483d-bd13-ad5195c28e9b"))
 	(global_label "GND"
 		(shape input)
 		(at 30.480000000000004 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "2354f7e2-f1d9-491e-9637-78bd11aa08aa"))
+		(uuid "c92da714-2090-4107-9496-3a8c090b19fe"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 35.56 157.48 0)
@@ -2454,7 +2454,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "44ef9278-565b-4251-9ffc-c45618d1b601")
+		(uuid "e508c91f-7b36-4e0c-a473-4454f7235341")
 		(property "Reference" "J11"
 			(at 39.56 151.48 0)
 			(effects
@@ -2484,27 +2484,27 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "0ac04bce-d31d-4f43-bdad-9405cd6fab6f"))
+			(uuid "fe4c8b61-f271-4274-aefa-e3ef6e147860"))
 		(pin "2"
-			(uuid "8ce11554-8a73-435d-b9b7-3c643f751797"))
+			(uuid "29c2d797-9a0f-4aed-a130-e01cf7c28b79"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
 					(reference "J11")
 					(unit 1)))))
-	(label "FL_V+"
+	(global_label "GND"
+		(shape input)
 		(at 81.28 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "a4fefefc-9ee0-42d5-984e-49fc719ee11c"))
-	(global_label "GND"
-		(shape input)
+		(uuid "dfc6c0a9-327a-49af-8a8f-dbaf6c3f91cc"))
+	(label "FL_V+"
 		(at 81.28 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "538af693-8276-4e04-8a1d-5ec1064e9384"))
+		(uuid "a5810b3b-c518-4aeb-b13f-2b0e66500d53"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 86.36 157.48 0)
@@ -2512,7 +2512,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e783dea1-8a36-4db9-93ed-7c3429b3dbae")
+		(uuid "d5942119-9213-4c55-b91e-f5da312e4281")
 		(property "Reference" "J12"
 			(at 90.36 151.48 0)
 			(effects
@@ -2542,27 +2542,27 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "b498e85c-1148-4c42-aafc-4bc5c71afd0a"))
+			(uuid "0fc6a498-b1f3-4f6c-a246-eb96e90120a7"))
 		(pin "2"
-			(uuid "a9ee0b9d-485c-499a-84eb-d3500dbe2d4c"))
+			(uuid "131ebb57-5f13-479e-b172-7bc313bf817e"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
 					(reference "J12")
 					(unit 1)))))
-	(label "FR_V+"
+	(global_label "GND"
+		(shape input)
 		(at 132.07999999999998 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "ce64c964-d82c-48a3-9bcb-5825e4b82f5e"))
-	(global_label "GND"
-		(shape input)
+		(uuid "c2f678a5-a9a4-4da5-8124-eb47db8126a3"))
+	(label "FR_V+"
 		(at 132.07999999999998 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "44b4e66f-9176-42f3-bd0c-1e31aff68604"))
+		(uuid "d2890c24-982c-4e62-bff8-c71f43100463"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 137.16 157.48 0)
@@ -2570,7 +2570,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d2d78aea-52ee-4d38-affc-c23c500bf842")
+		(uuid "720b7b27-8855-4673-8ab4-4f21975a9a2b")
 		(property "Reference" "J13"
 			(at 141.16 151.48 0)
 			(effects
@@ -2600,27 +2600,27 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "8fde092b-1548-49d9-94f5-04b049fec8fd"))
+			(uuid "a8d085e3-4b2b-4a3b-a670-e8c6e7ec0f8c"))
 		(pin "2"
-			(uuid "eaa38aa1-b6bb-46cd-839a-a6e531bd72b4"))
+			(uuid "c25ba270-db5e-44e5-99b2-8aed9ac46a3a"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
 					(reference "J13")
 					(unit 1)))))
-	(label "RL_V+"
+	(global_label "GND"
+		(shape input)
 		(at 182.87999999999997 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "a7ccfb71-70e9-4215-9796-be1e00d93e80"))
-	(global_label "GND"
-		(shape input)
+		(uuid "8f1747b0-dd4f-4bf3-8806-4a4e5b6b515b"))
+	(label "RL_V+"
 		(at 182.87999999999997 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "cd90f0a7-7224-4bd7-97cb-34fcfd668f04"))
+		(uuid "2704c36f-355e-40c0-b359-86912dc73817"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 187.95999999999998 157.48 0)
@@ -2628,7 +2628,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "72204b17-e066-42e0-838a-5f21d5448f4f")
+		(uuid "9ced7806-a3cd-49d3-8598-944543a43f3a")
 		(property "Reference" "J14"
 			(at 191.95999999999998 151.48 0)
 			(effects
@@ -2658,27 +2658,27 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "26714140-5bc0-4600-8736-92c71d3579d3"))
+			(uuid "037c13be-9e35-4e6d-a9f8-f97367ec38f1"))
 		(pin "2"
-			(uuid "68a462bc-84a7-4ace-b956-6250e33b0b22"))
+			(uuid "de219792-66f2-4bdc-8d1a-b15ed79d9d15"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
 					(reference "J14")
 					(unit 1)))))
-	(label "RR_V+"
+	(global_label "GND"
+		(shape input)
 		(at 233.67999999999998 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "88bf1748-86e9-404c-a171-7f7aec45f7ff"))
-	(global_label "GND"
-		(shape input)
+		(uuid "ec879a18-d267-42bf-8f6b-9ac6998815ca"))
+	(label "RR_V+"
 		(at 233.67999999999998 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "63f9312d-3325-4fb1-8713-4a02eb83ee9f"))
+		(uuid "0e56b5ca-a3e1-4c3f-bb32-1e877dee0a71"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 238.76 157.48 0)
@@ -2686,7 +2686,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2a7708bb-b027-42b6-ac19-98cf114ea354")
+		(uuid "6645417c-07ef-453c-b276-264499a09ae4")
 		(property "Reference" "J15"
 			(at 242.76 151.48 0)
 			(effects
@@ -2716,9 +2716,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "848d395b-00f0-49d3-8ea9-6f0e9ebaae5f"))
+			(uuid "fd98cab1-d4c8-4411-923b-4823d439d95b"))
 		(pin "2"
-			(uuid "de240256-38c5-4304-956f-b84ee8342250"))
+			(uuid "99b81a10-d77c-445e-af65-640349f0728b"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2729,4 +2729,4 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "3aac10c6-de62-4191-8f66-bf8a98fdd33f")))
+		(uuid "2a0a66ee-99d2-4eac-a00b-a4cc00f08c64")))

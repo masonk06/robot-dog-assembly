@@ -1,0 +1,39 @@
+** Drc report for Luca_power_distribution_four_leg.kicad_pcb **
+** Created on 2026-11-04T10:34:21 **
+** Report includes: Errors, Warnings **
+
+** Found 7 DRC violations **
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Luca_Review'
+    Local override; warning
+    @(178.0000 mm, 105.5000 mm): Footprint F10
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Luca_Review'
+    Local override; warning
+    @(178.0000 mm, 87.5000 mm): Footprint F8
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Luca_Review'
+    Local override; warning
+    @(178.0000 mm, 96.5000 mm): Footprint F9
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Luca_Review'
+    Local override; warning
+    @(143.5000 mm, 86.0000 mm): Footprint F2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Luca_Review'
+    Local override; warning
+    @(178.0000 mm, 114.5000 mm): Footprint F11
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Luca_Review'
+    Local override; warning
+    @(140.0000 mm, 124.0000 mm): Footprint F7
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Luca_Review'
+    Local override; warning
+    @(140.0000 mm, 110.0000 mm): Footprint F5
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

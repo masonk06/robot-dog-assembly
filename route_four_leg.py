@@ -25,6 +25,9 @@ for n in order:
   found=None
   for _,i,j in choices:
    a,c=connected[i],pp[j];w=3 if n in wide else 1
+   # Keep wide supply trunks off B.Cu. Bottom SMD input pads receive a local
+   # via transition in the second routing stage instead of a long B.Cu trunk.
+   if n in wide and name!='GND' and any(q.GetAttribute()==p.PAD_ATTRIB_SMD and q.IsOnLayer(p.B_Cu) for q in (a,c)):continue
    if a.GetParentFootprint().GetReference()=='C2' or c.GetParentFootprint().GetReference()=='C2':w=.5
    candidate_layers=(p.B_Cu,p.F_Cu) if name=='GND' else (p.F_Cu,)
    if a.GetAttribute()==p.PAD_ATTRIB_SMD and a.IsOnLayer(p.B_Cu) or c.GetAttribute()==p.PAD_ATTRIB_SMD and c.IsOnLayer(p.B_Cu):candidate_layers=(p.B_Cu,)

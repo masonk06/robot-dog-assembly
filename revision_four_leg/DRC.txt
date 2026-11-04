@@ -1,18 +1,10 @@
 ** Drc report for Luca_power_distribution_four_leg.kicad_pcb **
-** Created on 2026-11-03T18:14:57 **
+** Created on 2026-11-04T10:38:14 **
 ** Report includes: Errors, Warnings **
 
 ** Found 0 DRC violations **
 
-** Found 2 unconnected pads **
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(138.9200 mm, 104.0000 mm): PTH pad 2 [GND] of J7
-    @(127.0000 mm, 103.2500 mm): Track [GND] on F.Cu, length 0.3536 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(138.9600 mm, 118.6725 mm): Track [GND] on F.Cu, length 0.0872 mm
-    @(126.5000 mm, 118.5000 mm): PTH pad 2 [GND] of J11
+** Found 0 unconnected pads **
 
 ** Found 0 Footprint errors **
 

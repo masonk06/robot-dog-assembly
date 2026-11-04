@@ -26,6 +26,7 @@ def make_mask(net,w,layer):
  blocked=(xx<110.55+w/2)|(xx>xmax-.55-w/2)|(yy<70.55+w/2)|(yy>129.45-w/2)
  for pad in pads:
   if pad.GetNetCode()==net: continue
+  if pad.GetAttribute()==__import__('pcbnew').PAD_ATTRIB_SMD and not pad.IsOnLayer(layer):continue
   x,y=xy(pad); rad=max(pad.GetSize().x,pad.GetSize().y)/2e6
   if pad.GetShape()==p.PAD_SHAPE_CIRCLE:
    blocked |= np.hypot(xx-x,yy-y)<rad+w/2+margin

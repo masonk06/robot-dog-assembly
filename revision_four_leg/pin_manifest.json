@@ -33,7 +33,7 @@
       "1": "/SERVO_V+",
       "2": "/SERVO"
     },
-    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+    "footprint": "Luca_Review:Bel_0680H_2410_Recommended"
   },
   {
     "ref": "F5",
@@ -42,7 +42,7 @@
       "1": "/SERVO_V+",
       "2": "Net-(J7-Pin_1)"
     },
-    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+    "footprint": "Luca_Review:Bel_0680H_2410_Recommended"
   },
   {
     "ref": "F7",
@@ -51,7 +51,7 @@
       "1": "/VBAT_FUSED",
       "2": "Net-(J10-Pin_1)"
     },
-    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+    "footprint": "Luca_Review:Bel_0680H_2410_Recommended"
   },
   {
     "ref": "F8",
@@ -60,7 +60,7 @@
       "1": "/SERVO_V+",
       "2": "/FL_V+"
     },
-    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+    "footprint": "Luca_Review:Bel_0680H_2410_Recommended"
   },
   {
     "ref": "F9",
@@ -69,7 +69,7 @@
       "1": "/SERVO_V+",
       "2": "/FR_V+"
     },
-    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+    "footprint": "Luca_Review:Bel_0680H_2410_Recommended"
   },
   {
     "ref": "F10",
@@ -78,7 +78,7 @@
       "1": "/SERVO_V+",
       "2": "/RL_V+"
     },
-    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+    "footprint": "Luca_Review:Bel_0680H_2410_Recommended"
   },
   {
     "ref": "F11",
@@ -87,7 +87,7 @@
       "1": "/SERVO_V+",
       "2": "/RR_V+"
     },
-    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+    "footprint": "Luca_Review:Bel_0680H_2410_Recommended"
   },
   {
     "ref": "H1",
@@ -133,12 +133,12 @@
   },
   {
     "ref": "J3",
-    "value": "Conn_01x02",
+    "value": "Phoenix_1868076_MKDS5_2_7.62",
     "pins": {
       "1": "/VBAT_FUSED",
       "2": "/SERVO_V+"
     },
-    "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+    "footprint": "Luca_Review:Phoenix_MKDS5_2_7.62_1868076"
   },
   {
     "ref": "J5",
@@ -184,8 +184,8 @@
     "ref": "J12",
     "value": "XT30UPB-M_FL",
     "pins": {
-      "1": "/FL_V+",
-      "2": "GND"
+      "1": "GND",
+      "2": "/FL_V+"
     },
     "footprint": "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
   },
@@ -193,8 +193,8 @@
     "ref": "J13",
     "value": "XT30UPB-M_FR",
     "pins": {
-      "1": "/FR_V+",
-      "2": "GND"
+      "1": "GND",
+      "2": "/FR_V+"
     },
     "footprint": "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
   },
@@ -202,8 +202,8 @@
     "ref": "J14",
     "value": "XT30UPB-M_RL",
     "pins": {
-      "1": "/RL_V+",
-      "2": "GND"
+      "1": "GND",
+      "2": "/RL_V+"
     },
     "footprint": "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
   },
@@ -211,8 +211,8 @@
     "ref": "J15",
     "value": "XT30UPB-M_RR",
     "pins": {
-      "1": "/RR_V+",
-      "2": "GND"
+      "1": "GND",
+      "2": "/RR_V+"
     },
     "footprint": "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
   }

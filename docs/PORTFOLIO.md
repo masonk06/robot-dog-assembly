@@ -14,6 +14,9 @@ Suggested GitHub topics: `robotics`, `quadruped`, `reinforcement-learning`,
 `ppo`, `mujoco`, `newton-physics`, `esp32`, `embedded-systems`, `simulation`,
 `sim-to-real`, `cad`, `kicad`.
 
+See the [interactive GitHub-rendered policy diagram](POLICY_ARCHITECTURE.md)
+for the 60 observations, actor/critic MLPs, and 12 action outputs.
+
 ## LinkedIn project entry
 
 **Luca — Sim-to-Real Quadruped Robotics Project**  

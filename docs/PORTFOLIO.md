@@ -21,10 +21,11 @@ Suggested GitHub topics: `robotics`, `quadruped`, `reinforcement-learning`,
 
 Designed and built a custom 3D-printed quadruped with 12 STS3215 bus servos,
 then developed the software and experimental workflow needed to transfer
-simulation results toward hardware. Built MuJoCo/Newton simulation models and
-a CUDA-resident PPO training pipeline; the preserved simulated benchmark moved
-16.02 cm in 20 s with six steps per leg and no falls or slide resets in three
-recorded trials. Implemented ESP32 servo control, joint-ID mapping, calibrated
+simulation results toward hardware. Built and trained Luca's own policy/value
+neural networks with Proximal Policy Optimization (PPO) in MuJoCo/Newton,
+including a CUDA-resident rollout and learning pipeline; the preserved
+simulated benchmark moved 16.02 cm in 20 s with six steps per leg and no falls
+or slide resets in three recorded trials. Implemented ESP32 servo control, joint-ID mapping, calibrated
 zero/direction/limit records, live telemetry, IMU bring-up, and supported
 sim-to-real replay. Identified temporary rear-biased mass distribution as a
 contact issue using front-ballast experiments and controlled COM simulations,
@@ -40,9 +41,10 @@ ground walking is still under development.
 - Designed and iterated a 3D-printed quadruped platform with **12 STS3215
   serial servos**, including V6/V7 chassis packaging, Raspberry Pi/camera
   provisions, and KiCad power-distribution design reviews.
-- Built a MuJoCo/Newton locomotion stack and CUDA PPO training workflow with a
-  **60-value observation contract**, 12-action residual controller, saved
-  normalization/checkpoints, and experiment tracking on an OSU H100 GPU.
+- Built and trained custom policy/value neural networks for locomotion using a
+  MuJoCo/Newton CUDA PPO workflow, a **60-value observation contract**, a
+  12-action residual controller, saved normalization/checkpoints, and experiment
+  tracking on an OSU H100 GPU.
 - Produced a preserved simulation benchmark of **16.02 cm forward travel in
   20 s**, six steps per leg, and no falls/sliding resets across three recorded
   trials; documented limitations rather than presenting it as hardware walking.
@@ -63,9 +65,9 @@ CUDA, technical experimentation, data logging, and system identification.
 ## Interview-ready 30-second explanation
 
 “I am building Luca, a 12-servo printed quadruped as an end-to-end sim-to-real
-robotics project. I created the CAD and embedded control path, trained a PPO
-residual locomotion controller in MuJoCo/Newton on GPU infrastructure, and
-developed calibration and telemetry tools to compare simulation with hardware.
+robotics project. I created the CAD and embedded control path, trained my own
+policy and value neural networks with PPO in MuJoCo/Newton on GPU infrastructure,
+and developed calibration and telemetry tools to compare simulation with hardware.
 When ground tests showed front-foot contact problems, I measured a rear-biased
 mass distribution and used COM sweeps instead of just tuning the policy. The
 next phase is to model the final battery and compute hardware, identify the

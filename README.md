@@ -58,6 +58,24 @@ python -m pytest -q
 pytest.ini lists only the safe unit-test modules. Hardware motion tools are not
 run as tests. Read the [hardware guide](hardware/README.md) before connecting.
 
+## Clone on another laptop / Codex
+
+```powershell
+git clone https://github.com/masonk06/robot-dog-assembly.git
+cd robot-dog-assembly
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements-rl.txt
+python -m pytest -q
+```
+
+Start by reading [docs/STATUS.md](docs/STATUS.md), then the relevant folder's
+README. Simulation and code review are safe laptop tasks. Hardware scripts only
+connect or move servos when supplied an explicit serial port and `--execute`;
+do not run them merely to inspect the repository. The current four-leg power
+distribution revision is **not approved for fabrication**; see
+[revision_four_leg/README.md](revision_four_leg/README.md).
+
 In a Newton-capable environment, play the preserved best-distance checkpoint:
 
 ```bash

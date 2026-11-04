@@ -1,0 +1,150 @@
+{
+  "baseline": "../frame_v6/validation.json",
+  "units": "mm",
+  "parts": {
+    "Pi5_Electronics_Deck": {
+      "valid": true,
+      "solids": 1,
+      "dimensions_mm": [
+        124.0,
+        112.0,
+        9.0
+      ],
+      "bounds_mm": [
+        [
+          -47.0,
+          -53.0,
+          37.0
+        ],
+        [
+          77.0,
+          59.0,
+          46.0
+        ]
+      ]
+    },
+    "Power_Distribution_Sled": {
+      "valid": true,
+      "solids": 1,
+      "dimensions_mm": [
+        86.0,
+        26.0,
+        3.0
+      ],
+      "bounds_mm": [
+        [
+          -28.0,
+          -49.0,
+          13.0
+        ],
+        [
+          58.0,
+          -23.0,
+          16.0
+        ]
+      ]
+    },
+    "Waveshare_Sled": {
+      "valid": true,
+      "solids": 1,
+      "dimensions_mm": [
+        48.0,
+        39.0,
+        8.0
+      ],
+      "bounds_mm": [
+        [
+          -9.0,
+          22.0,
+          5.0
+        ],
+        [
+          39.0,
+          61.0,
+          13.0
+        ]
+      ]
+    },
+    "Frame_V7": {
+      "valid": true,
+      "solids": 1,
+      "dimensions_mm": [
+        177.0,
+        179.8,
+        56.5
+      ],
+      "bounds_mm": [
+        [
+          -73.5,
+          -89.9,
+          -0.0
+        ],
+        [
+          103.5,
+          89.9,
+          56.5
+        ]
+      ]
+    },
+    "Camera_Mast": {
+      "valid": true,
+      "solids": 1,
+      "dimensions_mm": [
+        18.0,
+        32.0,
+        55.0
+      ],
+      "bounds_mm": [
+        [
+          -46.0,
+          -16.0,
+          40.0
+        ],
+        [
+          -28.0,
+          16.0,
+          95.0
+        ]
+      ]
+    }
+  },
+  "delta_intersections_mm3": {
+    "Pi5_Electronics_Deck vs Power_Distribution_Sled": 0.0,
+    "Pi5_Electronics_Deck vs Waveshare_Sled": 0.0,
+    "Pi5_Electronics_Deck vs Frame_V7": 0.0,
+    "Pi5_Electronics_Deck vs Camera_Mast": 0.0,
+    "Pi5_Electronics_Deck vs Pi5_and_Cooler_REFERENCE": 0.0,
+    "Pi5_Electronics_Deck vs Battery_75x34x25_REFERENCE": 0.0,
+    "Pi5_Electronics_Deck vs Waveshare_42x33_REFERENCE": 0.0,
+    "Pi5_Electronics_Deck vs Regulator_RESERVED": 0.0,
+    "Pi5_Electronics_Deck vs Camera3_Wide_ENVELOPE": 0.0,
+    "Camera_Mast vs Pi5_Electronics_Deck": 0.0,
+    "Camera_Mast vs Power_Distribution_Sled": 0.0,
+    "Camera_Mast vs Waveshare_Sled": 0.0,
+    "Camera_Mast vs Frame_V7": 0.0,
+    "Camera_Mast vs Pi5_and_Cooler_REFERENCE": 0.0,
+    "Camera_Mast vs Battery_75x34x25_REFERENCE": 0.0,
+    "Camera_Mast vs Waveshare_42x33_REFERENCE": 0.0,
+    "Camera_Mast vs Regulator_RESERVED": 0.0,
+    "Camera_Mast vs Camera3_Wide_ENVELOPE": 0.0,
+    "Camera_Mast vs front_left_servo_hip_roll": 0.0,
+    "Camera_Mast vs front_left_servo_hip_pitch": 0.0,
+    "Camera_Mast vs front_left_servo_knee_pitch": 0.0,
+    "Camera_Mast vs front_right_servo_hip_roll": 0.0,
+    "Camera_Mast vs front_right_servo_hip_pitch": 0.0,
+    "Camera_Mast vs front_right_servo_knee_pitch": 0.0,
+    "Camera_Mast vs rear_left_servo_hip_roll": 0.0,
+    "Camera_Mast vs rear_left_servo_hip_pitch": 0.0,
+    "Camera_Mast vs rear_left_servo_knee_pitch": 0.0,
+    "Camera_Mast vs rear_right_servo_hip_roll": 0.0,
+    "Camera_Mast vs rear_right_servo_hip_pitch": 0.0,
+    "Camera_Mast vs rear_right_servo_knee_pitch": 0.0
+  },
+  "camera": "Raspberry Pi Camera Module 3 Wide (visible light)",
+  "camera_mount": "Forward is -X; four M2 screws, 4 mm spacers and washers; adjustable vertical slots.",
+  "limitations": [
+    "Camera is a conservative bounding envelope, not vendor detailed CAD.",
+    "Static packaging checked; cable bends, lens view, vibration and full leg sweeps need physical verification.",
+    "V6 unchanged geometry and checks inherited; generic power electronics reservations remain provisional."
+  ]
+}

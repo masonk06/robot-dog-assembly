@@ -1,0 +1,6 @@
+(version 1)
+(rule "Fabrication clearance" (constraint clearance (min 0.2mm)))
+(rule "Fabrication trace width" (constraint track_width (min 0.5mm)))
+(rule "Fabrication drill minimum" (constraint hole_size (min 0.3mm)))
+(rule "2oz plated annular ring" (constraint annular_width (min 0.254mm)))
+(rule "Copper to board edge" (constraint edge_clearance (min 0.5mm)))

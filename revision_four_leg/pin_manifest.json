@@ -1,0 +1,219 @@
+[
+  {
+    "ref": "C1",
+    "value": "470uF",
+    "pins": {
+      "1": "/SERVO_V+",
+      "2": "GND"
+    },
+    "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
+  },
+  {
+    "ref": "C2",
+    "value": "100nF",
+    "pins": {
+      "1": "/SERVO_V+",
+      "2": "GND"
+    },
+    "footprint": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
+  },
+  {
+    "ref": "F1",
+    "value": "MAIN_FUSE_TBD_NOT_5A",
+    "pins": {
+      "1": "/VBAT_RAW",
+      "2": "/VBAT_FUSED"
+    },
+    "footprint": "Fuse:Fuseholder_Blade_Mini_Keystone_3568"
+  },
+  {
+    "ref": "F2",
+    "value": "5A_T_PROVISIONAL_ADAPTER",
+    "pins": {
+      "1": "/SERVO_V+",
+      "2": "/SERVO"
+    },
+    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+  },
+  {
+    "ref": "F5",
+    "value": "5A_T_PROVISIONAL_AUX",
+    "pins": {
+      "1": "/SERVO_V+",
+      "2": "Net-(J7-Pin_1)"
+    },
+    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+  },
+  {
+    "ref": "F7",
+    "value": "5A_T_PROVISIONAL_PI",
+    "pins": {
+      "1": "/VBAT_FUSED",
+      "2": "Net-(J10-Pin_1)"
+    },
+    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+  },
+  {
+    "ref": "F8",
+    "value": "0680H5000-05_PROVISIONAL",
+    "pins": {
+      "1": "/SERVO_V+",
+      "2": "/FL_V+"
+    },
+    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+  },
+  {
+    "ref": "F9",
+    "value": "0680H5000-05_PROVISIONAL",
+    "pins": {
+      "1": "/SERVO_V+",
+      "2": "/FR_V+"
+    },
+    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+  },
+  {
+    "ref": "F10",
+    "value": "0680H5000-05_PROVISIONAL",
+    "pins": {
+      "1": "/SERVO_V+",
+      "2": "/RL_V+"
+    },
+    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+  },
+  {
+    "ref": "F11",
+    "value": "0680H5000-05_PROVISIONAL",
+    "pins": {
+      "1": "/SERVO_V+",
+      "2": "/RR_V+"
+    },
+    "footprint": "Luca_Review:Bel_0680H_2410_Engineering"
+  },
+  {
+    "ref": "H1",
+    "value": "MountingHole_3.2mm_M3",
+    "pins": {},
+    "footprint": "MountingHole:MountingHole_3.2mm_M3"
+  },
+  {
+    "ref": "H2",
+    "value": "MountingHole_3.2mm_M3",
+    "pins": {},
+    "footprint": "MountingHole:MountingHole_3.2mm_M3"
+  },
+  {
+    "ref": "H3",
+    "value": "MountingHole_3.2mm_M3",
+    "pins": {},
+    "footprint": "MountingHole:MountingHole_3.2mm_M3"
+  },
+  {
+    "ref": "H4",
+    "value": "MountingHole_3.2mm_M3",
+    "pins": {},
+    "footprint": "MountingHole:MountingHole_3.2mm_M3"
+  },
+  {
+    "ref": "J1",
+    "value": "XT60",
+    "pins": {
+      "1": "/VBAT_RAW",
+      "2": "GND"
+    },
+    "footprint": "Connector_AMASS:AMASS_XT60-M_1x02_P7.20mm_Vertical"
+  },
+  {
+    "ref": "J2",
+    "value": "Conn_01x02",
+    "pins": {
+      "1": "/SERVO",
+      "2": "GND"
+    },
+    "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+  },
+  {
+    "ref": "J3",
+    "value": "Conn_01x02",
+    "pins": {
+      "1": "/VBAT_FUSED",
+      "2": "/SERVO_V+"
+    },
+    "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+  },
+  {
+    "ref": "J5",
+    "value": "Conn_01x02",
+    "pins": {
+      "1": "Net-(J5-Pin_1)",
+      "2": "GND"
+    },
+    "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+  },
+  {
+    "ref": "J7",
+    "value": "AUX_BUCK",
+    "pins": {
+      "1": "Net-(J7-Pin_1)",
+      "2": "GND",
+      "3": "Net-(J5-Pin_1)",
+      "4": "GND"
+    },
+    "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal"
+  },
+  {
+    "ref": "J10",
+    "value": "PI_BUCK_INTERFACE",
+    "pins": {
+      "1": "Net-(J10-Pin_1)",
+      "2": "GND",
+      "3": "Net-(J10-Pin_3)",
+      "4": "GND"
+    },
+    "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal"
+  },
+  {
+    "ref": "J11",
+    "value": "Conn_01x02",
+    "pins": {
+      "1": "Net-(J10-Pin_3)",
+      "2": "GND"
+    },
+    "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+  },
+  {
+    "ref": "J12",
+    "value": "XT30UPB-M_FL",
+    "pins": {
+      "1": "/FL_V+",
+      "2": "GND"
+    },
+    "footprint": "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
+  },
+  {
+    "ref": "J13",
+    "value": "XT30UPB-M_FR",
+    "pins": {
+      "1": "/FR_V+",
+      "2": "GND"
+    },
+    "footprint": "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
+  },
+  {
+    "ref": "J14",
+    "value": "XT30UPB-M_RL",
+    "pins": {
+      "1": "/RL_V+",
+      "2": "GND"
+    },
+    "footprint": "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
+  },
+  {
+    "ref": "J15",
+    "value": "XT30UPB-M_RR",
+    "pins": {
+      "1": "/RR_V+",
+      "2": "GND"
+    },
+    "footprint": "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
+  }
+]

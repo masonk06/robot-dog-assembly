@@ -29,3 +29,8 @@ checkpoints/
 
 # Original recovery directory can remain open in Fusion; archived under cad/.
 /Recovered Fusion/
+
+# Disposable local serial-viewer diagnostics. Calibration and source files are
+# versioned; these console captures are not portable project artifacts.
+hardware/*_stdout.log
+hardware/*_stderr.log

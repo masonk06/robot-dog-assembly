@@ -1,0 +1,2732 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "ca74617c-2248-49c8-bb05-fbb62ad7d0d2")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type background)))
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default))
+					(fill
+						(type none)))
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default))
+					(fill
+						(type none)))
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes))
+			(pin_names
+				(offset 0.254))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))
+					(justify left)))
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))
+					(justify left)))
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762)
+						(xy 2.032 0.762))
+					(stroke
+						(width 0.508)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy -2.032 -0.762)
+						(xy 2.032 -0.762))
+					(stroke
+						(width 0.508)
+						(type default))
+					(fill
+						(type none))))
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "Device:C_Polarized"
+			(pin_numbers
+				(hide yes))
+			(pin_names
+				(offset 0.254))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))
+					(justify left)))
+			(property "Value" "C_Polarized"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))
+					(justify left)))
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Polarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy -1.778 2.286)
+						(xy -0.762 2.286))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy -1.27 2.794)
+						(xy -1.27 1.778))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type outline))))
+			(symbol "C_Polarized_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "Device:D_Zener"
+			(pin_numbers
+				(hide yes))
+			(pin_names
+				(offset 1.016)
+				(hide yes))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Value" "D_Zener"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Zener diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "D_Zener_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27)
+						(xy -1.27 1.27)
+						(xy -0.762 1.27))
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 1.27 0)
+						(xy -1.27 0))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 1.27 -1.27)
+						(xy 1.27 1.27)
+						(xy -1.27 0)
+						(xy 1.27 -1.27))
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type none))))
+			(symbol "D_Zener_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "Device:Fuse"
+			(pin_numbers
+				(hide yes))
+			(pin_names
+				(offset 0))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 0 2.54)
+						(xy 0 -2.54))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none))))
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes))
+			(pin_names
+				(offset 0))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type none))))
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "Switch:SW_SPST"
+			(pin_names
+				(offset 0)
+				(hide yes))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Value" "SW_SPST"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Single Pole Single Throw (SPST) switch"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "switch lever"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "SW_SPST_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy -1.524 0.254)
+						(xy 1.524 1.778))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none))))
+			(symbol "SW_SPST_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "Transistor_FET:Q_PMOS_GDS"
+			(pin_names
+				(offset 0)
+				(hide yes))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))
+					(justify left)))
+			(property "Value" "Q_PMOS_GDS"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))
+					(justify left)))
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "P-MOSFET transistor, gate/drain/source"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "transistor PMOS P-MOS P-MOSFET"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "Q_PMOS_GDS_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905)
+						(xy 0.254 -1.905))
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 0.254 0)
+						(xy -2.54 0))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 0.762 2.286)
+						(xy 0.762 1.27))
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 0.762 1.778)
+						(xy 3.302 1.778)
+						(xy 3.302 -1.778)
+						(xy 0.762 -1.778))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 0.762 0.508)
+						(xy 0.762 -0.508))
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 0.762 -1.27)
+						(xy 0.762 -2.286))
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type none)))
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 2.286 0)
+						(xy 1.27 0.381)
+						(xy 1.27 -0.381)
+						(xy 2.286 0))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type outline)))
+				(polyline
+					(pts
+						(xy 2.54 2.54)
+						(xy 2.54 1.778))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type outline)))
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type outline)))
+				(polyline
+					(pts
+						(xy 2.54 -2.54)
+						(xy 2.54 0)
+						(xy 0.762 0))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 2.921 -0.381)
+						(xy 3.683 -0.381))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none)))
+				(polyline
+					(pts
+						(xy 3.302 -0.381)
+						(xy 2.921 0.254)
+						(xy 3.683 0.254)
+						(xy 3.302 -0.381))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none))))
+			(symbol "Q_PMOS_GDS_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes))
+			(pin_names
+				(offset 0)
+				(hide yes))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0)
+						(xy 0 -1.27)
+						(xy 1.27 -1.27)
+						(xy 0 -2.54)
+						(xy -1.27 -1.27)
+						(xy 0 -1.27))
+					(stroke
+						(width 0)
+						(type default))
+					(fill
+						(type none))))
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "Connector_Generic:Conn_01x04"
+			(pin_names
+				(offset 1.016)
+				(hide yes))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default))
+					(fill
+						(type background)))
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default))
+					(fill
+						(type none)))
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default))
+					(fill
+						(type none)))
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default))
+					(fill
+						(type none)))
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default))
+					(fill
+						(type none)))
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)))))
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27))))
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27))))))
+			(embedded_fonts no))
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016))
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27))))
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default))
+					(fill
+						(type none))))
+			(embedded_fonts no)))
+	(embedded_fonts no)
+	(label "SERVO_V+"
+		(at 35.56 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "3f42deca-62a5-472b-b033-8e56b68e946e"))
+	(global_label "GND"
+		(shape input)
+		(at 35.56 34.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "91f6fad4-95e4-4078-9ab2-06659ab6dc9a"))
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 35.56 30.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2229a24f-f26a-41b6-9ea0-f83d7b1e9fa9")
+		(property "Reference" "C1"
+			(at 39.56 24.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "470uF"
+			(at 39.56 27.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
+			(at 35.56 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 35.56 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Polarized capacitor"
+			(at 35.56 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "9f328a6c-210f-482b-a613-4511cf431305"))
+		(pin "2"
+			(uuid "e1402fca-bab6-4ddc-b9f8-35e53794d539"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "C1")
+					(unit 1)))))
+	(label "SERVO_V+"
+		(at 86.36 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "c5163bbb-ce41-4ad9-b04e-fecf80c4c2e4"))
+	(global_label "GND"
+		(shape input)
+		(at 86.36 34.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "5fcf2acc-1a97-480b-8e83-8a546e5871b8"))
+	(symbol
+		(lib_id "Device:C")
+		(at 86.36 30.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1acae225-5454-4505-847e-541362a6c50b")
+		(property "Reference" "C2"
+			(at 90.36 24.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "100nF"
+			(at 90.36 27.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
+			(at 86.36 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 86.36 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Unpolarized capacitor"
+			(at 86.36 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "1bdbf455-ffb3-4577-b785-13f60da37bba"))
+		(pin "2"
+			(uuid "4c9fdd55-6549-49b6-afff-fc032e0cc7e2"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "C2")
+					(unit 1)))))
+	(label "VBAT_RAW"
+		(at 137.16 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "8f06542a-9960-444d-8b19-fc8ff6d0605d"))
+	(label "VBAT_FUSED"
+		(at 137.16 34.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "cd795658-83f5-42e7-8bf0-77971d7bd208"))
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 137.16 30.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a960005f-9542-4e53-9774-96ebc5c227c4")
+		(property "Reference" "F1"
+			(at 141.16 24.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "MAIN_FUSE_TBD_NOT_5A"
+			(at 141.16 27.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Fuse:Fuseholder_Blade_Mini_Keystone_3568"
+			(at 137.16 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 137.16 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Fuse"
+			(at 137.16 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "68abba47-4f22-4c05-9c4c-9cb0a16fa596"))
+		(pin "2"
+			(uuid "d138bd0e-f9ed-49de-9cb4-53ec6117742a"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "F1")
+					(unit 1)))))
+	(label "SERVO_V+"
+		(at 187.95999999999998 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "03398afe-5da8-4ccd-ad9a-d365c3a924dd"))
+	(label "SERVO"
+		(at 187.95999999999998 34.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "06859bf3-dc58-4784-a68f-5fdd0b34caec"))
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 187.95999999999998 30.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "546d82ac-0b02-439c-90fd-a7a4d1315147")
+		(property "Reference" "F2"
+			(at 191.95999999999998 24.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "5A_T_PROVISIONAL_ADAPTER"
+			(at 191.95999999999998 27.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+			(at 187.95999999999998 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 187.95999999999998 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 187.95999999999998 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "54b558a2-f382-44f6-b1be-db54a05ebf46"))
+		(pin "2"
+			(uuid "c219d12b-378b-454d-a12c-930703db9cd7"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "F2")
+					(unit 1)))))
+	(label "SERVO_V+"
+		(at 238.76 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "af972424-e4f5-4747-ba82-8078e87e602a"))
+	(global_label "Net-(J7-Pin_1)"
+		(shape input)
+		(at 238.76 34.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "a2416297-a975-45d7-a7de-87ecb13591f0"))
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 238.76 30.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "13a269fd-8f49-4a07-83a8-0ee3161a61a3")
+		(property "Reference" "F5"
+			(at 242.76 24.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "5A_T_PROVISIONAL_AUX"
+			(at 242.76 27.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+			(at 238.76 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 238.76 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 238.76 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "ac66db9f-cafd-4a92-a1f2-c187ec843804"))
+		(pin "2"
+			(uuid "958f3609-84b9-4827-ae60-373358184c35"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "F5")
+					(unit 1)))))
+	(label "VBAT_FUSED"
+		(at 35.56 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "fb9d506e-1c14-4977-b86f-2b7319f8bc9d"))
+	(global_label "Net-(J10-Pin_1)"
+		(shape input)
+		(at 35.56 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "801d47f0-754a-4bfc-bc64-c3bceb17aa03"))
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 35.56 62.230000000000004 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d16e0f48-5570-4742-97a1-1066c09d6eb4")
+		(property "Reference" "F7"
+			(at 39.56 56.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "5A_T_PROVISIONAL_PI"
+			(at 39.56 59.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+			(at 35.56 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 35.56 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 35.56 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "12529331-df1b-4703-9867-50af0b28fc5d"))
+		(pin "2"
+			(uuid "09fa5a27-c044-4195-8f04-ca70f1d0391a"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "F7")
+					(unit 1)))))
+	(label "SERVO_V+"
+		(at 86.36 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "8dfd7baa-61b6-43ab-b9d0-ad8e3a9c31d8"))
+	(label "FL_V+"
+		(at 86.36 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "6542f1d9-2ec6-42b3-a2fc-09cd7c5c77a9"))
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 86.36 62.230000000000004 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "60631b28-b87a-4221-a222-7728c104f459")
+		(property "Reference" "F8"
+			(at 90.36 56.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "0680H5000-05_PROVISIONAL"
+			(at 90.36 59.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+			(at 86.36 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 86.36 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 86.36 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "0686a23b-b4e2-4c7f-857a-da78a36d98dd"))
+		(pin "2"
+			(uuid "bdc0030d-7f0a-4223-8b44-510309465285"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "F8")
+					(unit 1)))))
+	(label "SERVO_V+"
+		(at 137.16 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "9839838b-c881-4dee-8d93-1800c1e4bcb9"))
+	(label "FR_V+"
+		(at 137.16 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "e43d449e-7aeb-4063-a410-3915ccec272b"))
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 137.16 62.230000000000004 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0384b784-a3bc-46e7-8a25-45859f325b72")
+		(property "Reference" "F9"
+			(at 141.16 56.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "0680H5000-05_PROVISIONAL"
+			(at 141.16 59.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+			(at 137.16 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 137.16 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 137.16 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "158c775c-a8cf-42b3-bb43-710b5cdbab02"))
+		(pin "2"
+			(uuid "b977b315-1544-4b45-9dc1-b23d88dee9e7"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "F9")
+					(unit 1)))))
+	(label "SERVO_V+"
+		(at 187.95999999999998 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "5cce7eff-c4c3-47cd-88bb-6970bebb11da"))
+	(label "RL_V+"
+		(at 187.95999999999998 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "5153d803-dae0-4dce-abe8-980d6e605c55"))
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 187.95999999999998 62.230000000000004 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e731ef76-d99f-492f-9f79-72351537cc1e")
+		(property "Reference" "F10"
+			(at 191.95999999999998 56.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "0680H5000-05_PROVISIONAL"
+			(at 191.95999999999998 59.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+			(at 187.95999999999998 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 187.95999999999998 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 187.95999999999998 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "a020a2ac-e632-44c7-a9c1-6a076442b5b2"))
+		(pin "2"
+			(uuid "f731b468-a365-486d-89ea-08a64b14438b"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "F10")
+					(unit 1)))))
+	(label "SERVO_V+"
+		(at 238.76 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "f7a0cd0e-aec6-4b35-a7ac-0ce3b25d94fe"))
+	(label "RR_V+"
+		(at 238.76 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "237a16fe-6fff-4ca1-b4a2-02b1e89b7e1e"))
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 238.76 62.230000000000004 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9e193e85-e7e4-4b49-aa1a-dd119c8f23b2")
+		(property "Reference" "F11"
+			(at 242.76 56.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "0680H5000-05_PROVISIONAL"
+			(at 242.76 59.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Luca_Review:Bel_0680H_2410_Engineering"
+			(at 238.76 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 238.76 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 238.76 62.230000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "5711bf7a-61f7-4e41-926c-8373aaf66b2a"))
+		(pin "2"
+			(uuid "7043c7c7-ce7b-438c-b437-2b2a07fce1da"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "F11")
+					(unit 1)))))
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 35.56 93.98 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc736075-3090-4d5d-8147-f53c3bb6c87c")
+		(property "Reference" "H1"
+			(at 39.56 87.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "MountingHole_3.2mm_M3"
+			(at 39.56 90.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 35.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 35.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 35.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "H1")
+					(unit 1)))))
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 86.36 93.98 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "623baf84-3631-4056-9b57-592dabe20d41")
+		(property "Reference" "H2"
+			(at 90.36 87.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "MountingHole_3.2mm_M3"
+			(at 90.36 90.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "H2")
+					(unit 1)))))
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 137.16 93.98 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "aa9589c0-fcc8-403e-a6c7-a586120c42a2")
+		(property "Reference" "H3"
+			(at 141.16 87.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "MountingHole_3.2mm_M3"
+			(at 141.16 90.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 137.16 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 137.16 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 137.16 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "H3")
+					(unit 1)))))
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 187.95999999999998 93.98 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "ed7b967e-98fa-4e3e-b350-cf9164292fa9")
+		(property "Reference" "H4"
+			(at 191.95999999999998 87.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "MountingHole_3.2mm_M3"
+			(at 191.95999999999998 90.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 187.95999999999998 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 187.95999999999998 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 187.95999999999998 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "H4")
+					(unit 1)))))
+	(label "VBAT_RAW"
+		(at 233.67999999999998 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "44cf8f85-7e34-45a6-81f5-6da9afcb979d"))
+	(global_label "GND"
+		(shape input)
+		(at 233.67999999999998 96.52000000000001 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "70ca0d79-259f-463a-ac04-87f129a212cd"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 238.76 93.98 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aef3f7db-0165-467e-a2cf-9ed4983e437a")
+		(property "Reference" "J1"
+			(at 242.76 87.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "XT60"
+			(at 242.76 90.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Connector_AMASS:AMASS_XT60-M_1x02_P7.20mm_Vertical"
+			(at 238.76 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 238.76 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 238.76 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "cd8a9b68-dacb-4c85-80b2-8632c934d276"))
+		(pin "2"
+			(uuid "3470fd7f-6bf2-4813-9a83-5f1ccfc91438"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J1")
+					(unit 1)))))
+	(label "SERVO"
+		(at 30.480000000000004 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "0a07a363-eb4f-461c-886d-71e531583c7f"))
+	(global_label "GND"
+		(shape input)
+		(at 30.480000000000004 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "959d4198-2feb-4d09-a460-eb8fef529a16"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 35.56 125.73 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aedde9f2-0272-41f8-8367-f13df2bfe478")
+		(property "Reference" "J2"
+			(at 39.56 119.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "Conn_01x02"
+			(at 39.56 122.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+			(at 35.56 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 35.56 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 35.56 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "61a0651e-67cf-46f7-a2d6-ff14c5a763f3"))
+		(pin "2"
+			(uuid "be2bbd03-5e35-4ada-9e44-ced10dc01f7b"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J2")
+					(unit 1)))))
+	(label "VBAT_FUSED"
+		(at 81.28 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "04e68d30-97e7-43c5-9d4b-bf32d858a659"))
+	(label "SERVO_V+"
+		(at 81.28 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "4e59e995-ad00-4a54-9cf2-58e773ad7fd0"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 86.36 125.73 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5a950fff-62d0-4efe-b953-186b6576cda1")
+		(property "Reference" "J3"
+			(at 90.36 119.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "Conn_01x02"
+			(at 90.36 122.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+			(at 86.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 86.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 86.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "2480a8d8-f0bc-4d1a-9d9a-0433116805cc"))
+		(pin "2"
+			(uuid "5f549fb0-d1cc-4eaa-a8ad-2b792b31afe8"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J3")
+					(unit 1)))))
+	(global_label "Net-(J5-Pin_1)"
+		(shape input)
+		(at 132.07999999999998 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "b67df0d7-e862-4dde-ac1a-0a9d6d888b44"))
+	(global_label "GND"
+		(shape input)
+		(at 132.07999999999998 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "d3c2aa41-1310-43be-8d7d-4dce52f52670"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 137.16 125.73 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5bae3340-7449-4f4b-9ec4-ded5c21d217e")
+		(property "Reference" "J5"
+			(at 141.16 119.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "Conn_01x02"
+			(at 141.16 122.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+			(at 137.16 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 137.16 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 137.16 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "24e6fc33-738f-4aa0-bcc8-a68f51d1c3e0"))
+		(pin "2"
+			(uuid "66333486-1c8a-48fa-8173-706fb39b7512"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J5")
+					(unit 1)))))
+	(global_label "Net-(J7-Pin_1)"
+		(shape input)
+		(at 182.87999999999997 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "bc38c233-dbfd-4c18-996a-f2b1017aae38"))
+	(global_label "GND"
+		(shape input)
+		(at 182.87999999999997 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "4b5cdf4c-c980-4773-9c72-43a2c3b87563"))
+	(global_label "Net-(J5-Pin_1)"
+		(shape input)
+		(at 182.87999999999997 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "d4ed2c99-4f17-4ac1-8e58-a3f3c1e978f7"))
+	(global_label "GND"
+		(shape input)
+		(at 182.87999999999997 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "7808f453-7b2f-4778-92a4-a8d00075b817"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 187.95999999999998 125.73 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aebda447-0f52-412f-870e-06afb8aa178e")
+		(property "Reference" "J7"
+			(at 191.95999999999998 119.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "AUX_BUCK"
+			(at 191.95999999999998 122.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal"
+			(at 187.95999999999998 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 187.95999999999998 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 187.95999999999998 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "19b0cd7e-9be2-4ab0-9d85-9b7f95c0976a"))
+		(pin "2"
+			(uuid "e3243cda-dbc6-48e2-b6c3-6ea243dd7d78"))
+		(pin "3"
+			(uuid "7289fcde-cfbf-46c5-b578-213d8dfeb5dc"))
+		(pin "4"
+			(uuid "aebea68e-526a-4c15-8cfb-2718ba263abf"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J7")
+					(unit 1)))))
+	(global_label "Net-(J10-Pin_1)"
+		(shape input)
+		(at 233.67999999999998 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "18eeb78c-63d6-400d-8b82-fd3119e34f20"))
+	(global_label "GND"
+		(shape input)
+		(at 233.67999999999998 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "9341f4e7-0486-4796-8b8c-8817b3018822"))
+	(global_label "Net-(J10-Pin_3)"
+		(shape input)
+		(at 233.67999999999998 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "ce09acfe-0df2-4de1-afe1-9e504ea51de5"))
+	(global_label "GND"
+		(shape input)
+		(at 233.67999999999998 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "761b1adb-2103-462a-8b8e-ecf07c55b145"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 238.76 125.73 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fc138659-179a-4c37-a878-f0ec389f5f3e")
+		(property "Reference" "J10"
+			(at 242.76 119.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "PI_BUCK_INTERFACE"
+			(at 242.76 122.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal"
+			(at 238.76 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 238.76 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 238.76 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "74c2b98a-79b9-4f11-9854-6698c0af3f64"))
+		(pin "2"
+			(uuid "7db15831-3ef3-4492-9053-f90fa7fa41c9"))
+		(pin "3"
+			(uuid "a0e2908a-1843-4d75-8bb2-5b5cb1e1d16a"))
+		(pin "4"
+			(uuid "1e4bdd4d-168f-403c-b7bd-386e101e1e4b"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J10")
+					(unit 1)))))
+	(global_label "Net-(J10-Pin_3)"
+		(shape input)
+		(at 30.480000000000004 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "58707880-3808-4adc-abae-0e0f832232e4"))
+	(global_label "GND"
+		(shape input)
+		(at 30.480000000000004 160.01999999999998 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "2354f7e2-f1d9-491e-9637-78bd11aa08aa"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 35.56 157.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "44ef9278-565b-4251-9ffc-c45618d1b601")
+		(property "Reference" "J11"
+			(at 39.56 151.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "Conn_01x02"
+			(at 39.56 154.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+			(at 35.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 35.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 35.56 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "0ac04bce-d31d-4f43-bdad-9405cd6fab6f"))
+		(pin "2"
+			(uuid "8ce11554-8a73-435d-b9b7-3c643f751797"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J11")
+					(unit 1)))))
+	(label "FL_V+"
+		(at 81.28 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "a4fefefc-9ee0-42d5-984e-49fc719ee11c"))
+	(global_label "GND"
+		(shape input)
+		(at 81.28 160.01999999999998 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "538af693-8276-4e04-8a1d-5ec1064e9384"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 86.36 157.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e783dea1-8a36-4db9-93ed-7c3429b3dbae")
+		(property "Reference" "J12"
+			(at 90.36 151.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "XT30UPB-M_FL"
+			(at 90.36 154.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
+			(at 86.36 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 86.36 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 86.36 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "b498e85c-1148-4c42-aafc-4bc5c71afd0a"))
+		(pin "2"
+			(uuid "a9ee0b9d-485c-499a-84eb-d3500dbe2d4c"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J12")
+					(unit 1)))))
+	(label "FR_V+"
+		(at 132.07999999999998 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "ce64c964-d82c-48a3-9bcb-5825e4b82f5e"))
+	(global_label "GND"
+		(shape input)
+		(at 132.07999999999998 160.01999999999998 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "44b4e66f-9176-42f3-bd0c-1e31aff68604"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 137.16 157.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d2d78aea-52ee-4d38-affc-c23c500bf842")
+		(property "Reference" "J13"
+			(at 141.16 151.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "XT30UPB-M_FR"
+			(at 141.16 154.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
+			(at 137.16 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 137.16 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 137.16 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "8fde092b-1548-49d9-94f5-04b049fec8fd"))
+		(pin "2"
+			(uuid "eaa38aa1-b6bb-46cd-839a-a6e531bd72b4"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J13")
+					(unit 1)))))
+	(label "RL_V+"
+		(at 182.87999999999997 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "a7ccfb71-70e9-4215-9796-be1e00d93e80"))
+	(global_label "GND"
+		(shape input)
+		(at 182.87999999999997 160.01999999999998 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "cd90f0a7-7224-4bd7-97cb-34fcfd668f04"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 187.95999999999998 157.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72204b17-e066-42e0-838a-5f21d5448f4f")
+		(property "Reference" "J14"
+			(at 191.95999999999998 151.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "XT30UPB-M_RL"
+			(at 191.95999999999998 154.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
+			(at 187.95999999999998 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 187.95999999999998 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 187.95999999999998 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "26714140-5bc0-4600-8736-92c71d3579d3"))
+		(pin "2"
+			(uuid "68a462bc-84a7-4ace-b956-6250e33b0b22"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J14")
+					(unit 1)))))
+	(label "RR_V+"
+		(at 233.67999999999998 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "88bf1748-86e9-404c-a171-7f7aec45f7ff"))
+	(global_label "GND"
+		(shape input)
+		(at 233.67999999999998 160.01999999999998 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "63f9312d-3325-4fb1-8713-4a02eb83ee9f"))
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 238.76 157.48 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2a7708bb-b027-42b6-ac19-98cf114ea354")
+		(property "Reference" "J15"
+			(at 242.76 151.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Value" "XT30UPB-M_RR"
+			(at 242.76 154.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))))
+		(property "Footprint" "Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
+			(at 238.76 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Datasheet" ""
+			(at 238.76 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(property "Description" ""
+			(at 238.76 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27))
+				(hide yes)))
+		(pin "1"
+			(uuid "848d395b-00f0-49d3-8ea9-6f0e9ebaae5f"))
+		(pin "2"
+			(uuid "de240256-38c5-4304-956f-b84ee8342250"))
+		(instances
+			(project "Luca_power_distribution_four_leg"
+				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
+					(reference "J15")
+					(unit 1)))))
+	(text "ENGINEERING REVISION - NOT FOR FABRICATION\nJ3 = SERIES SWITCH LOOP; J12-J15 = INDIVIDUAL LEG POWER\n5A leg fuses provisional. Adapter V+ must not join leg positives."
+		(at 145 193 0)
+		(effects
+			(font
+				(size 1.27 1.27)))
+		(uuid "3aac10c6-de62-4191-8f66-bf8a98fdd33f")))

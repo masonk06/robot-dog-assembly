@@ -12,7 +12,8 @@ policy deployment are not yet validated.
 [Sim-to-real comparison](#sim-to-real-evidence) ·
 [Hardware and software](#hardware-and-software-stack) ·
 [Calibration workflow](#calibration-and-hardware-workflow) ·
-[Next steps](#next-engineering-milestones)
+[Next steps](#next-engineering-milestones) ·
+[Portfolio summary](docs/PORTFOLIO.md)
 
 ## Ground-contact diagnostic — October 30, 2026
 

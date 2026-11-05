@@ -1,0 +1,130 @@
+{
+  "pcb_sha256": "acfee817ec17145ef2280d3d5900889b217c752501364a71d6f13e7c2988632f",
+  "model": "Shortest resistance along explicit track centerlines; 0.070mm copper, 20C. Pad spreading, via barrels, solder, fuse, contacts and harness excluded. Parallel touching copper not merged except endpoints/pads. Screening only; not a current or temperature approval.",
+  "paths": [
+    {
+      "net": "/VBAT_RAW",
+      "from": "J1.2",
+      "to": "F1.1",
+      "track_length_mm": 52.792,
+      "minimum_track_width_mm": 3.0,
+      "track_resistance_milliohm_20C": 4.053
+    },
+    {
+      "net": "/VBAT_FUSED",
+      "from": "F1.2",
+      "to": "J3.1",
+      "track_length_mm": 130.356,
+      "minimum_track_width_mm": 1.2,
+      "track_resistance_milliohm_20C": 9.647
+    },
+    {
+      "leg": "FL",
+      "net": "/SERVO_V+",
+      "from": "J3.2",
+      "to": "F8.1",
+      "track_length_mm": 54.466,
+      "minimum_track_width_mm": 1.2,
+      "track_resistance_milliohm_20C": 3.982
+    },
+    {
+      "leg": "FL",
+      "net": "/FL_V+",
+      "from": "F8.2",
+      "to": "J12.2",
+      "track_length_mm": 14.51,
+      "minimum_track_width_mm": 3.0,
+      "track_resistance_milliohm_20C": 1.191
+    },
+    {
+      "leg": "FL",
+      "net": "GND",
+      "from": "J12.1",
+      "to": "J1.1",
+      "track_length_mm": 53.435,
+      "minimum_track_width_mm": 3.0,
+      "track_resistance_milliohm_20C": 3.594
+    },
+    {
+      "leg": "FR",
+      "net": "/SERVO_V+",
+      "from": "J3.2",
+      "to": "F9.1",
+      "track_length_mm": 58.194,
+      "minimum_track_width_mm": 1.2,
+      "track_resistance_milliohm_20C": 4.15
+    },
+    {
+      "leg": "FR",
+      "net": "/FR_V+",
+      "from": "F9.2",
+      "to": "J13.2",
+      "track_length_mm": 14.51,
+      "minimum_track_width_mm": 3.0,
+      "track_resistance_milliohm_20C": 1.191
+    },
+    {
+      "leg": "FR",
+      "net": "GND",
+      "from": "J13.1",
+      "to": "J1.1",
+      "track_length_mm": 44.435,
+      "minimum_track_width_mm": 3.0,
+      "track_resistance_milliohm_20C": 3.04
+    },
+    {
+      "leg": "RL",
+      "net": "/SERVO_V+",
+      "from": "J3.2",
+      "to": "F10.1",
+      "track_length_mm": 61.611,
+      "minimum_track_width_mm": 1.2,
+      "track_resistance_milliohm_20C": 4.36
+    },
+    {
+      "leg": "RL",
+      "net": "/RL_V+",
+      "from": "F10.2",
+      "to": "J14.2",
+      "track_length_mm": 14.51,
+      "minimum_track_width_mm": 3.0,
+      "track_resistance_milliohm_20C": 1.191
+    },
+    {
+      "leg": "RL",
+      "net": "GND",
+      "from": "J14.1",
+      "to": "J1.1",
+      "track_length_mm": 35.435,
+      "minimum_track_width_mm": 3.0,
+      "track_resistance_milliohm_20C": 2.486
+    },
+    {
+      "leg": "RR",
+      "net": "/SERVO_V+",
+      "from": "J3.2",
+      "to": "F11.1",
+      "track_length_mm": 63.339,
+      "minimum_track_width_mm": 1.2,
+      "track_resistance_milliohm_20C": 4.105
+    },
+    {
+      "leg": "RR",
+      "net": "/RR_V+",
+      "from": "F11.2",
+      "to": "J15.2",
+      "track_length_mm": 14.51,
+      "minimum_track_width_mm": 3.0,
+      "track_resistance_milliohm_20C": 1.191
+    },
+    {
+      "leg": "RR",
+      "net": "GND",
+      "from": "J15.1",
+      "to": "J1.1",
+      "track_length_mm": 26.435,
+      "minimum_track_width_mm": 3.0,
+      "track_resistance_milliohm_20C": 1.932
+    }
+  ]
+}

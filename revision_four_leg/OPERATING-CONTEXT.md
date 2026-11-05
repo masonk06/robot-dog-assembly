@@ -6,6 +6,9 @@ Confirmed by the user:
   Previously specified as Gens ace 3S 2200 mAh 35C, XT60; actual label and
   mating-connector identity remain the authority over a marketplace listing.
 - Servo leads are 150 mm, 22 AWG, three-pin connectors described as JST.
+  Subsequently identified as 5264-3P, 2.54 mm pitch. Manufacturer contact current
+  rating is unavailable; the user requests an assumed minimum 5 A capacity.
+  This is a design assumption, not a supplier-verified rating.
 - Three ST3215 servos may be daisy chained within each leg.
 - AUX supplies a NodeMCU ESP32S development board and MPU6050 module.
   Exact manufacturer/revision and breakout-board input-power details remain

@@ -108,7 +108,7 @@ for index,f in enumerate(footprints):
  x=35.56+(index%5)*50.8;y=30.48+(index//5)*31.75
  sid=child(oldsyms[ref],'uuid')[1] if ref in oldsyms else uid()
  fpid=str(f.GetFPID().GetLibNickname())+':'+str(f.GetFPID().GetLibItemName())
- sym=[A('symbol'),[A('lib_id'),libid],[A('at'),A(x),A(y),A(0)],[A('unit'),A(1)],[A('in_bom'),A('yes')],[A('on_board'),A('yes')],[A('dnp'),A('no')],[A('uuid'),sid],prop('Reference',ref,x+4,y-6),prop('Value',value,x+4,y-3),prop('Footprint',fpid,x,y,True),prop('Datasheet','',x,y,True)]
+ sym=[A('symbol'),[A('lib_id'),libid],[A('at'),A(x),A(y),A(0)],[A('unit'),A(1)],[A('in_bom'),A('yes')],[A('on_board'),A('yes')],[A('dnp'),A('yes' if f.IsDNP() else 'no')],[A('uuid'),sid],prop('Reference',ref,x+4,y-6),prop('Value',value,x+4,y-3),prop('Footprint',fpid,x,y,True),prop('Datasheet','',x,y,True)]
  if ref.startswith('H'):child(sym,'in_bom')[1]=A('no')
  if f.HasField('Description'):sym.append(prop('Description',f.GetFieldText('Description'),x,y,True))
  pins=[]
@@ -128,8 +128,8 @@ for index,f in enumerate(footprints):
   sym.append([A('pin'),number,[A('uuid'),uid()]])
  sym.append([A('instances'),[A('project'),'Luca_power_distribution_four_leg',[A('path'),'/'+rootid,[A('reference'),ref],[A('unit'),A(1)]]]])
  path=p.KIID_PATH();path.push_back(p.KIID(rootid));path.push_back(p.KIID(sid))
- sch.append(sym);f.SetPath(path);records.append({'ref':ref,'value':value,'pins':npins,'footprint':fpid})
-sch.append([A('text'),'ENGINEERING REVISION - NOT FOR FABRICATION\nJ3 = SERIES SWITCH LOOP; J12-J15 = INDIVIDUAL LEG POWER\n5A leg fuses provisional. Adapter V+ must not join leg positives.',[A('at'),A(145),A(193),A(0)],copy.deepcopy(fonts),[A('uuid'),uid()]])
+ sch.append(sym);f.SetPath(path);records.append({'ref':ref,'value':value,'pins':npins,'footprint':fpid,'dnp':f.IsDNP()})
+sch.append([A('text'),'REV B - VALIDATION PROTOTYPE / PCBA QUOTE\nJ3 = SERIES SWITCH LOOP; J12-J15 = 5A LEG POWER\nF2/F5 = 1A. F7/J10/J11 DNP. Adapter V+ must not join leg positives.',[A('at'),A(145),A(193),A(0)],copy.deepcopy(fonts),[A('uuid'),uid()]])
 (OUT/'Luca_power_distribution_four_leg.kicad_sch').write_text(dump(sch)+'\n',encoding='utf-8')
 p.SaveBoard(str(pcb),b)
 (OUT/'pin_manifest.json').write_text(json.dumps(records,indent=2),encoding='utf-8')

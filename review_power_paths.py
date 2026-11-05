@@ -42,10 +42,10 @@ def path(ref1,num1,ref2,num2):
         u,ll,ww=previous[u];length+=ll
         if ww is not None and ll>0:widths.append(ww)
     return {'net':a.GetNetname(),'from':ref1+'.'+num1,'to':ref2+'.'+num2,'track_length_mm':round(length,3),'minimum_track_width_mm':min(widths),'track_resistance_milliohm_20C':round(distances[end],3)}
-paths=[path('J1','1','F1','1'),path('F1','2','J3','1')]
+paths=[path('J1','2','F1','1'),path('F1','2','J3','1')]
 for i,leg in enumerate(('FL','FR','RL','RR')):
     f='F'+str(8+i);j='J'+str(12+i)
-    for args in [('J3','2',f,'1'),(f,'2',j,'2'),(j,'1','J1','2')]:paths.append(dict(leg=leg,**path(*args)))
+    for args in [('J3','2',f,'1'),(f,'2',j,'2'),(j,'1','J1','1')]:paths.append(dict(leg=leg,**path(*args)))
 result={'pcb_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'model':'Shortest resistance along explicit track centerlines; 0.070mm copper, 20C. Pad spreading, via barrels, solder, fuse, contacts and harness excluded. Parallel touching copper not merged except endpoints/pads. Screening only; not a current or temperature approval.','paths':paths}
 (root/'power-path-screen.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))

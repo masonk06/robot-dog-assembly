@@ -11,6 +11,9 @@ checks['J3_series_loop']=pad('J3','1').GetNetname()=='/VBAT_FUSED' and pad('J3',
 checks['J3_upgraded_7_62mm_pitch']=abs((pad('J3','2').GetPosition().x-pad('J3','1').GetPosition().x)/1e6-7.62)<1e-6
 checks['J3_manufacturer_1_3mm_drills']=all(pad('J3',k).GetDrillSize().x==p.FromMM(1.3) for k in ('1','2'))
 checks['all_THT_mask_openings']=all(q.IsOnLayer(p.F_Mask) and q.IsOnLayer(p.B_Mask) for q in pads if q.GetAttribute()==p.PAD_ATTRIB_PTH)
+checks['J1_PCB_XT60_polarity']=pad('J1','1').GetNetname()=='GND' and pad('J1','2').GetNetname()=='/VBAT_RAW' and pad('J1','2').GetPosition().x<pad('J1','1').GetPosition().x
+checks['J1_2025_main_drills']=all(pad('J1',k).GetDrillSize().x==p.FromMM(2.9) for k in ('1','2'))
+checks['Pi_parts_DNP']=all(next(f for f in b.GetFootprints() if f.GetReference()==ref).IsDNP() for ref in ('F7','J10','J11'))
 for i,leg in enumerate(('FL','FR','RL','RR')):
  j='J'+str(12+i);f='F'+str(8+i);name='/'+leg+'_V+'
  members=sorted((q.GetParentFootprint().GetReference(),q.GetNumber()) for q in pads if q.GetNetname()==name)
@@ -36,7 +39,8 @@ for q in pads:
  if q.GetNetname()!='GND':continue
  nodes=[v for v in adj if q.IsOnLayer(v[2]) and q.HitTest(p.VECTOR2I(v[0],v[1]))]
  for v in nodes:adj[v].update(nodes)
-q=pad('J1','2');roots=[v for v in adj if q.HitTest(p.VECTOR2I(v[0],v[1]))];todo=roots[:];seen=set()
+q=next(q for q in pads if q.GetParentFootprint().GetReference()=='J1' and q.GetNetname()=='GND')
+roots=[v for v in adj if q.IsOnLayer(v[2]) and q.HitTest(p.VECTOR2I(v[0],v[1]))];todo=roots[:];seen=set()
 while todo:
  v=todo.pop()
  if v in seen:continue
@@ -47,7 +51,7 @@ for q in pads:
  if not ref.startswith('J') or q.GetNetname()!='GND':continue
  ground_results[ref+'.'+q.GetNumber()]=any(q.IsOnLayer(v[2]) and q.HitTest(p.VECTOR2I(v[0],v[1])) for v in seen)
 checks['all_connector_returns_without_thin_traces']=bool(ground_results) and all(ground_results.values())
-result={'status':'ENGINEERING REVIEW - FABRICATION HOLD','checks':checks,'ground_returns_min_track_mm':2.6,'ground_results':ground_results,'pcb_sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
+result={'status':'REV B PROTOTYPE PCBA QUOTE - POWERED-USE VALIDATION OPEN','checks':checks,'ground_returns_min_track_mm':2.6,'ground_results':ground_results,'pcb_sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
 (root/'topology-and-ground-audit.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))
 if not all(checks.values()):raise SystemExit(1)

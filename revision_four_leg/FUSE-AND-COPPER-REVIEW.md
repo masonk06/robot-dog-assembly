@@ -31,7 +31,8 @@ Source: https://www.belfuse.com/media/datasheets/products/circuit-protection/ds-
 | Four legs simultaneously at 5 A | 20 A | Add adapter, AUX and relay current; exceeds a 20 A total budget |
 | Twelve simultaneous 2.7 A stalls | 32.4 A | Fault/transient case, not intended continuous operation |
 
-The proposed 20 A main fuse remains a target pending coordination; it cannot
+Revision B selects a 20 A Littelfuse 0297020.WXNV for prototype procurement,
+with coordination still unverified; it cannot
 promise uninterrupted operation with all four legs near 5 A plus electronics.
 Do not automatically increase it. Branch/main time-current selectivity is not
 established. The supplied sequential servo telemetry does not settle this budget.

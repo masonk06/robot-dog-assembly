@@ -1314,14 +1314,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "d085659b-7830-4661-b4fe-3d898a49a662"))
+		(uuid "f083cff5-d623-4679-aa7e-34bfceb292ef"))
 	(global_label "GND"
 		(shape input)
 		(at 35.56 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "2ae20173-986b-4c0c-b6ff-e45d729aac32"))
+		(uuid "4d517ec0-b39a-4111-9c3d-81ada510ce4c"))
 	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 35.56 30.48 0)
@@ -1335,7 +1335,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "470uF"
+		(property "Value" "470uF_25V_UPW1E471MPD"
 			(at 39.56 27.48 0)
 			(effects
 				(font
@@ -1359,9 +1359,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "f74c7315-948e-4438-964b-0c33f5121608"))
+			(uuid "f35a9132-7b85-42b8-b137-740e4cb3d9d6"))
 		(pin "2"
-			(uuid "e646fdc1-70de-4eb4-8f84-40b570a20cb4"))
+			(uuid "577c1738-8f00-435c-8284-58a5bbdbb86a"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1372,14 +1372,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "cbf2743d-01f6-4841-a4d2-3e01abe927b0"))
+		(uuid "cd7e34eb-6b38-461c-9216-4be003eba36d"))
 	(global_label "GND"
 		(shape input)
 		(at 86.36 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "aed6bfeb-8770-4532-8ff2-f86cf9ee8e79"))
+		(uuid "7f4eb057-6d36-440e-a056-e13117dc20e0"))
 	(symbol
 		(lib_id "Device:C")
 		(at 86.36 30.48 0)
@@ -1393,12 +1393,12 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "100nF"
+		(property "Value" "100nF_50V_X7R"
 			(at 90.36 27.48 0)
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 86.36 30.48 0)
 			(effects
 				(font
@@ -1410,16 +1410,16 @@
 				(font
 					(size 1.27 1.27))
 				(hide yes)))
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 86.36 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "4ee2ffd3-5847-4ebf-a060-696ba6aa3f82"))
+			(uuid "c189fafc-cb81-4389-ad5a-5a6924df3001"))
 		(pin "2"
-			(uuid "83f4ed9e-be71-45f8-a123-9e6c26dbed85"))
+			(uuid "48070b52-4895-4b00-9630-4b21a4c5f013"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1430,13 +1430,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "312a7a72-37a2-4c85-82d5-fb004d1b0cab"))
+		(uuid "0bbdb9ae-bf39-4eb2-81b9-fffaaf3aff86"))
 	(label "VBAT_FUSED"
 		(at 137.16 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "9e66fbc0-4e35-4a6f-bcd2-f637da11aa90"))
+		(uuid "22c745db-9c24-4b18-b1e8-1d03c077952d"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 137.16 30.48 0)
@@ -1450,7 +1450,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "MAIN_FUSE_TBD_NOT_5A"
+		(property "Value" "20A_MAIN_0297020.WXNV"
 			(at 141.16 27.48 0)
 			(effects
 				(font
@@ -1474,9 +1474,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "2b7e5d04-6a9c-4d7e-ba25-585ad0dc6e3a"))
+			(uuid "cb0b09c3-4ba9-4773-af00-f3a83fef97c5"))
 		(pin "2"
-			(uuid "fcb1e786-0144-4dc1-b603-edf154936c42"))
+			(uuid "8c7c79c1-9136-4645-b03b-1ba93f16f566"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1487,13 +1487,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "cd313a23-8c8f-4298-bc1d-7f3d6c012140"))
+		(uuid "7caf83be-9f82-49fa-956f-0a894128d986"))
 	(label "SERVO"
 		(at 187.95999999999998 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "19dda4f3-d74b-468d-a6be-71300a0759e6"))
+		(uuid "decc7229-92ec-431a-9da0-b442ceaa3a53"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 187.95999999999998 30.48 0)
@@ -1507,7 +1507,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "5A_T_PROVISIONAL_ADAPTER"
+		(property "Value" "1A_T_0680H1000-05"
 			(at 191.95999999999998 27.48 0)
 			(effects
 				(font
@@ -1531,9 +1531,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "a030ff69-a7fc-439c-ba46-7309b769f41e"))
+			(uuid "8b2e6a68-6972-4dde-8f14-0f63fc95e970"))
 		(pin "2"
-			(uuid "cf5fca9e-9a6e-4980-b117-58ed0847e70f"))
+			(uuid "5e16771a-24a1-48d6-96c3-c1599a89370d"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1544,14 +1544,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "1ea44afa-95d0-4b30-aaf7-6f8ed73a6ddf"))
+		(uuid "b77d5aaa-5c64-42ea-afe9-b43f9f4fea27"))
 	(global_label "Net-(J7-Pin_1)"
 		(shape input)
 		(at 238.76 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "9257ad4f-f7d8-4673-b41c-2d2d994562ce"))
+		(uuid "66306f6e-97c3-4d5e-93ae-b2a513d0e983"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 238.76 30.48 0)
@@ -1565,7 +1565,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "5A_T_PROVISIONAL_AUX"
+		(property "Value" "1A_T_0680H1000-05"
 			(at 242.76 27.48 0)
 			(effects
 				(font
@@ -1589,9 +1589,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "559c3b0c-050d-411c-ae83-52e262f4960d"))
+			(uuid "5e87584d-cbb4-4150-9347-cbd6e89f299f"))
 		(pin "2"
-			(uuid "0b8c406e-a77a-40e3-bdbe-88d66e8ff231"))
+			(uuid "07b52f54-f086-4307-99d9-bdb15b350920"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1602,28 +1602,28 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "38af3567-9ac3-40a8-bca4-5ebae9b8b981"))
+		(uuid "7e8c7147-45f3-4c28-a399-893b522ee2f0"))
 	(global_label "Net-(J10-Pin_1)"
 		(shape input)
 		(at 35.56 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "937243f1-4b0d-4548-9842-43650f539ce0"))
+		(uuid "e511e31b-d9c7-4aa1-9b13-064da823fcdf"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 35.56 62.230000000000004 0)
 		(unit 1)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "7ade3aeb-433e-4378-806b-e3a017dfd8ca")
 		(property "Reference" "F7"
 			(at 39.56 56.230000000000004 0)
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "5A_T_PROVISIONAL_PI"
+		(property "Value" "DNP_PI"
 			(at 39.56 59.230000000000004 0)
 			(effects
 				(font
@@ -1647,9 +1647,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "9203a0ee-05e7-4be5-b889-731d0290c0f8"))
+			(uuid "4664a20d-e7a2-4e24-8735-6616baf504da"))
 		(pin "2"
-			(uuid "bb9b4d84-938b-46bf-8164-c318ae8f0bc1"))
+			(uuid "ec6b1f51-d273-4b21-8d68-db65fc807b2d"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1660,13 +1660,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "0ce161f4-a794-481a-b1fc-8e165f8c0426"))
+		(uuid "264a2069-bd74-498c-9fd3-0f57ed71eb9a"))
 	(label "FL_V+"
 		(at 86.36 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "403d3b06-9f88-4b66-abbb-7a14a1836ade"))
+		(uuid "61b38280-5c3c-406f-8308-3c431d43b3b6"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 86.36 62.230000000000004 0)
@@ -1680,7 +1680,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "0680H5000-05_PROVISIONAL"
+		(property "Value" "5A_T_0680H5000-05"
 			(at 90.36 59.230000000000004 0)
 			(effects
 				(font
@@ -1704,9 +1704,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "fdd7559a-4b58-4656-a22a-c0dc2b4e7cad"))
+			(uuid "f0819361-c4b9-40da-8d0b-59c1d9956cba"))
 		(pin "2"
-			(uuid "5926bf62-ef77-4952-87ac-9304b3e80fbd"))
+			(uuid "95db1fc5-b688-45bd-8fe6-895617286c4e"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1717,13 +1717,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "49632406-03f2-49ad-a0f1-185c7e245e4c"))
+		(uuid "8d0b77fc-088c-4b0a-98bc-bc6dd614e27c"))
 	(label "FR_V+"
 		(at 137.16 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "f84e8060-a59b-4e80-b592-303e85761656"))
+		(uuid "31d7b776-d468-46a3-bed7-e267c61abbee"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 137.16 62.230000000000004 0)
@@ -1737,7 +1737,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "0680H5000-05_PROVISIONAL"
+		(property "Value" "5A_T_0680H5000-05"
 			(at 141.16 59.230000000000004 0)
 			(effects
 				(font
@@ -1761,9 +1761,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "0c67ac52-c7d1-4f40-8000-03ebd73f5b51"))
+			(uuid "53b74c63-6fbd-4c50-bd92-d5bbbe0322fb"))
 		(pin "2"
-			(uuid "cca1a424-c134-4755-9080-829f6f180c41"))
+			(uuid "adbb4609-47d1-4b4b-ac7b-c98f314d89d1"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1774,13 +1774,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "25bc74c1-8714-4890-a939-f47e00a9f81d"))
+		(uuid "9d66a78c-4960-409e-b1ff-c8241316e55a"))
 	(label "RL_V+"
 		(at 187.95999999999998 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "31cd59c4-11f5-43f3-8fe5-d63111f5fa8e"))
+		(uuid "7343fdf7-9008-45da-be98-5b9f986dd4c8"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 187.95999999999998 62.230000000000004 0)
@@ -1794,7 +1794,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "0680H5000-05_PROVISIONAL"
+		(property "Value" "5A_T_0680H5000-05"
 			(at 191.95999999999998 59.230000000000004 0)
 			(effects
 				(font
@@ -1818,9 +1818,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "1f804476-c44a-40d6-8896-7df7f4fcc25e"))
+			(uuid "d4a51e3e-2338-4464-9e10-2c08be4a9d82"))
 		(pin "2"
-			(uuid "4afb72f3-b757-4ec8-9435-a6bfd9c52167"))
+			(uuid "da5c1ab5-5047-455a-920b-da7959d1d1c2"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -1831,13 +1831,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "0c3b2ae3-1853-4c24-82ac-8f900ff45644"))
+		(uuid "4bf72f1c-1911-474d-8b19-0777852b46ce"))
 	(label "RR_V+"
 		(at 238.76 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "edd3a490-e7e9-40f8-a3a6-bc3496be14e7"))
+		(uuid "181a63d1-0d28-41a3-97b4-00f18520403e"))
 	(symbol
 		(lib_id "Device:Fuse")
 		(at 238.76 62.230000000000004 0)
@@ -1851,7 +1851,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "0680H5000-05_PROVISIONAL"
+		(property "Value" "5A_T_0680H5000-05"
 			(at 242.76 59.230000000000004 0)
 			(effects
 				(font
@@ -1875,9 +1875,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "d6c7f73a-8a51-4728-bb19-b0b7e046895f"))
+			(uuid "155acea1-5eb4-439e-bf42-963adbd3718d"))
 		(pin "2"
-			(uuid "a1c2ccf2-69a8-4108-800a-9df64249e3a3"))
+			(uuid "8c281095-b8b1-49cc-b496-fcd86fa9a1ce"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2047,19 +2047,19 @@
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
 					(reference "H4")
 					(unit 1)))))
-	(label "VBAT_RAW"
+	(global_label "GND"
+		(shape input)
 		(at 233.67999999999998 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "c844a4f7-23c7-4682-a36d-fdeadb3dafa2"))
-	(global_label "GND"
-		(shape input)
+		(uuid "e52eec5f-4f43-4df8-8b41-e06c94d3b276"))
+	(label "VBAT_RAW"
 		(at 233.67999999999998 96.52000000000001 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "55f27c85-be2a-49c9-af0c-3c1fc756fb5a"))
+		(uuid "ce6514e0-51f8-4d0c-8b7a-e957588fd36f"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 238.76 93.98 0)
@@ -2073,12 +2073,12 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "XT60"
+		(property "Value" "XT60PW-M"
 			(at 242.76 90.98 0)
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Footprint" "Connector_AMASS:AMASS_XT60-M_1x02_P7.20mm_Vertical"
+		(property "Footprint" "Luca_Review:AMASS_XT60PW_M_ReinforcedTabs"
 			(at 238.76 93.98 0)
 			(effects
 				(font
@@ -2090,16 +2090,16 @@
 				(font
 					(size 1.27 1.27))
 				(hide yes)))
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" ""
 			(at 238.76 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "4515a752-b20a-4ecb-bf10-3403c83ad3b0"))
+			(uuid "e9ebb2ce-1af8-48a1-9f2a-b9e9d6123cdb"))
 		(pin "2"
-			(uuid "2107900c-ca1f-455d-bf05-e2f88d3eeb38"))
+			(uuid "cfbd7e81-f4d2-431a-b178-042d606b5f72"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2110,14 +2110,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "15b08f20-d790-410a-8f37-a84035a0c0d3"))
+		(uuid "4fb499a6-25ce-4946-885f-6b527742baf8"))
 	(global_label "GND"
 		(shape input)
 		(at 30.480000000000004 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "1bfe1c05-f8c6-4cac-907e-220c0ff4de58"))
+		(uuid "1efd4d70-68e4-4095-9185-014a0b681b4a"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 35.56 125.73 0)
@@ -2131,7 +2131,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "Conn_01x02"
+		(property "Value" "1715721_ADAPTER"
 			(at 39.56 122.73 0)
 			(effects
 				(font
@@ -2155,9 +2155,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "8f4edad5-d719-44dd-af80-26810091002e"))
+			(uuid "266a992e-3de3-4587-b583-4441c170e5ce"))
 		(pin "2"
-			(uuid "9a4e13e5-6363-4f70-82ac-e679cfac345d"))
+			(uuid "db534ba9-5d61-4eef-9aea-3ff9786b4ccb"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2168,13 +2168,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "8f1b55c8-48de-4917-a995-66f04ebbcda8"))
+		(uuid "46f4a432-5d9d-452a-855f-4dfb19151b30"))
 	(label "SERVO_V+"
 		(at 81.28 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "70757301-3d78-4241-bce6-41622ea3a530"))
+		(uuid "08ca67dd-fa85-46e0-9d44-a4894df8b6b2"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 86.36 125.73 0)
@@ -2212,9 +2212,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "adbab6ea-b10f-44db-8ad1-dd2d5abc4b71"))
+			(uuid "b748d07c-5ee1-4202-93f7-e1305dff78db"))
 		(pin "2"
-			(uuid "edad3661-b421-44e4-a291-d592433131cd"))
+			(uuid "0acbf95f-6784-4619-a701-51ebf077f101"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2226,14 +2226,14 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "6075c62a-72f3-46eb-ace8-8d740f75a6d5"))
+		(uuid "7bf54208-20d0-473d-9115-3f51d435af64"))
 	(global_label "GND"
 		(shape input)
 		(at 132.07999999999998 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "0433bcb1-6854-4649-9b08-7bf2e6efac46"))
+		(uuid "698db870-9d2d-41d5-af44-a32d186de2ee"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 137.16 125.73 0)
@@ -2247,7 +2247,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "Conn_01x02"
+		(property "Value" "1715721_AUX_5V"
 			(at 141.16 122.73 0)
 			(effects
 				(font
@@ -2271,9 +2271,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "1396f2f7-dff9-4781-97d5-aca14283eff0"))
+			(uuid "8887d5ba-f318-4bf5-9429-64d1ee60e0e9"))
 		(pin "2"
-			(uuid "d7734b64-d7de-4f85-859c-3d60a975b26f"))
+			(uuid "c92505aa-b1db-41a8-89bc-e3edd39c441b"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2285,28 +2285,28 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "805daa2a-f28f-4a78-8cd0-04c8b568ebcf"))
+		(uuid "a2b7191b-35f5-4483-9201-21d02ef35d02"))
 	(global_label "GND"
 		(shape input)
 		(at 182.87999999999997 125.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "aac32051-ca22-4a11-9e4b-15788b6c2186"))
+		(uuid "3c7e84c2-5f59-42ed-be36-605cc09eaa34"))
 	(global_label "Net-(J5-Pin_1)"
 		(shape input)
 		(at 182.87999999999997 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "134ce0e2-a165-4f90-9a40-492e4fb1bf8b"))
+		(uuid "fac40a10-a554-4206-a903-96fd139a336c"))
 	(global_label "GND"
 		(shape input)
 		(at 182.87999999999997 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "0ccfd5c7-46f5-4d68-9aee-a261450173a2"))
+		(uuid "7f36308d-7b5b-4492-ad7e-88389ee9a277"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
 		(at 187.95999999999998 125.73 0)
@@ -2320,7 +2320,7 @@
 			(effects
 				(font
 					(size 1.27 1.27))))
-		(property "Value" "AUX_BUCK"
+		(property "Value" "1715747_AUX_BUCK"
 			(at 191.95999999999998 122.73 0)
 			(effects
 				(font
@@ -2344,13 +2344,13 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "2f7e6a5b-e895-45bd-85ee-ebb32a9ef54a"))
+			(uuid "02d7c645-e6b5-4973-994b-a70f2386a72e"))
 		(pin "2"
-			(uuid "da74a38a-e394-4e6d-9a57-de87a125e36f"))
+			(uuid "138c59bb-66d4-4cf6-a665-4298c15337fc"))
 		(pin "3"
-			(uuid "c516bfef-aac5-4130-ae36-d5bd0548f1d4"))
+			(uuid "e493fd25-d350-44c4-a1b3-1898b862d5bf"))
 		(pin "4"
-			(uuid "0dd29d36-953e-471d-bb11-a9ba8d7c1cdf"))
+			(uuid "dbbe0f0d-768c-4eb0-be7b-c93ba3a207be"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2362,35 +2362,35 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "81661750-1d54-4080-b662-0301ba043d44"))
+		(uuid "58a6c764-2087-4c79-8eee-8a98aa5914e8"))
 	(global_label "GND"
 		(shape input)
 		(at 233.67999999999998 125.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "16b652eb-fdbd-40f5-949e-a6a850b685a9"))
+		(uuid "98c7446c-754a-473a-b3c7-a8096e26bb43"))
 	(global_label "Net-(J10-Pin_3)"
 		(shape input)
 		(at 233.67999999999998 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "f208c185-152f-43c9-94b6-909a092e7960"))
+		(uuid "eb73054a-5fa6-43e7-b33f-61619738443a"))
 	(global_label "GND"
 		(shape input)
 		(at 233.67999999999998 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "42f5f104-25e8-4c5c-8f69-169037271921"))
+		(uuid "cc0c3506-5904-466a-b4a6-b20aa01d6840"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
 		(at 238.76 125.73 0)
 		(unit 1)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "b0381b59-3300-4c8c-b1ae-999f537a3092")
 		(property "Reference" "J10"
 			(at 242.76 119.73 0)
@@ -2421,13 +2421,13 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "7295d33c-f742-423d-b108-dbef0637ac2c"))
+			(uuid "83fb6e21-4aae-4f3e-a9aa-12263b967e44"))
 		(pin "2"
-			(uuid "d38e94d5-2e5d-4ae5-9589-e9ec554f4e62"))
+			(uuid "089e33cc-4cd9-4005-8627-89f15459707f"))
 		(pin "3"
-			(uuid "03953025-ab8c-480b-8f62-b9bf4222ed70"))
+			(uuid "d64930ee-d24b-431e-8e42-08319db34067"))
 		(pin "4"
-			(uuid "593d33a0-f4ac-4ce6-8748-3a6fa9361090"))
+			(uuid "79fb5b87-c083-43e0-905f-c9b66949ff9a"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2439,21 +2439,21 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "4fab8ce8-362f-483d-bd13-ad5195c28e9b"))
+		(uuid "903c4043-d00c-48d5-8d96-817405ecbbbe"))
 	(global_label "GND"
 		(shape input)
 		(at 30.480000000000004 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "c92da714-2090-4107-9496-3a8c090b19fe"))
+		(uuid "aa11af8f-9b6e-4ad3-bead-aafe351cad20"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 35.56 157.48 0)
 		(unit 1)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "e508c91f-7b36-4e0c-a473-4454f7235341")
 		(property "Reference" "J11"
 			(at 39.56 151.48 0)
@@ -2484,9 +2484,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "fe4c8b61-f271-4274-aefa-e3ef6e147860"))
+			(uuid "cc43de1c-377e-4f42-af14-492a05944d6f"))
 		(pin "2"
-			(uuid "29c2d797-9a0f-4aed-a130-e01cf7c28b79"))
+			(uuid "78a9618d-3ded-42e2-b697-c6ea4a87f026"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2498,13 +2498,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "dfc6c0a9-327a-49af-8a8f-dbaf6c3f91cc"))
+		(uuid "dcc51ff1-5035-4f5b-b8f7-15c35193e585"))
 	(label "FL_V+"
 		(at 81.28 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "a5810b3b-c518-4aeb-b13f-2b0e66500d53"))
+		(uuid "4fc32e9e-06a8-4125-9945-c7a187f86bfe"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 86.36 157.48 0)
@@ -2542,9 +2542,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "0fc6a498-b1f3-4f6c-a246-eb96e90120a7"))
+			(uuid "885b28f4-5751-4ade-9894-af47f2ec4f37"))
 		(pin "2"
-			(uuid "131ebb57-5f13-479e-b172-7bc313bf817e"))
+			(uuid "447db44b-1e09-442a-bacb-13ed4e9f8f2d"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2556,13 +2556,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "c2f678a5-a9a4-4da5-8124-eb47db8126a3"))
+		(uuid "8fe134d1-634f-42cb-964b-99db12917910"))
 	(label "FR_V+"
 		(at 132.07999999999998 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "d2890c24-982c-4e62-bff8-c71f43100463"))
+		(uuid "84006caf-e403-40e2-b35a-7828038be162"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 137.16 157.48 0)
@@ -2600,9 +2600,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "a8d085e3-4b2b-4a3b-a670-e8c6e7ec0f8c"))
+			(uuid "7215bb78-d08f-47bf-b5ba-a9f11941f00a"))
 		(pin "2"
-			(uuid "c25ba270-db5e-44e5-99b2-8aed9ac46a3a"))
+			(uuid "801494ae-34ee-4e30-ab4b-680d69fbae60"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2614,13 +2614,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "8f1747b0-dd4f-4bf3-8806-4a4e5b6b515b"))
+		(uuid "79cd76ec-ab52-4d4d-8437-8ca31b0d8551"))
 	(label "RL_V+"
 		(at 182.87999999999997 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "2704c36f-355e-40c0-b359-86912dc73817"))
+		(uuid "d04f176b-6ed8-4440-9bd3-03afbfa1fad5"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 187.95999999999998 157.48 0)
@@ -2658,9 +2658,9 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "037c13be-9e35-4e6d-a9f8-f97367ec38f1"))
+			(uuid "1d1bccb0-4346-4c27-80a7-0ae2df24655d"))
 		(pin "2"
-			(uuid "de219792-66f2-4bdc-8d1a-b15ed79d9d15"))
+			(uuid "3339276e-4210-458b-b86d-c47d12d7c0fb"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
@@ -2672,13 +2672,13 @@
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "ec879a18-d267-42bf-8f6b-9ac6998815ca"))
+		(uuid "1c828428-5e9e-4d2d-b971-472bbe517d9d"))
 	(label "RR_V+"
 		(at 233.67999999999998 160.01999999999998 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "0e56b5ca-a3e1-4c3f-bb32-1e877dee0a71"))
+		(uuid "d571c61a-76d5-45da-92f0-adf9e5b508e3"))
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 238.76 157.48 0)
@@ -2716,17 +2716,17 @@
 					(size 1.27 1.27))
 				(hide yes)))
 		(pin "1"
-			(uuid "fd98cab1-d4c8-4411-923b-4823d439d95b"))
+			(uuid "4690f2bb-7983-4e7a-bc48-7523fc31fb51"))
 		(pin "2"
-			(uuid "99b81a10-d77c-445e-af65-640349f0728b"))
+			(uuid "54fd5883-a0ba-4324-b9bd-a72abb6f0de6"))
 		(instances
 			(project "Luca_power_distribution_four_leg"
 				(path "/ca74617c-2248-49c8-bb05-fbb62ad7d0d2"
 					(reference "J15")
 					(unit 1)))))
-	(text "ENGINEERING REVISION - NOT FOR FABRICATION\nJ3 = SERIES SWITCH LOOP; J12-J15 = INDIVIDUAL LEG POWER\n5A leg fuses provisional. Adapter V+ must not join leg positives."
+	(text "REV B - VALIDATION PROTOTYPE / PCBA QUOTE\nJ3 = SERIES SWITCH LOOP; J12-J15 = 5A LEG POWER\nF2/F5 = 1A. F7/J10/J11 DNP. Adapter V+ must not join leg positives."
 		(at 145 193 0)
 		(effects
 			(font
 				(size 1.27 1.27)))
-		(uuid "2a0a66ee-99d2-4eac-a00b-a4cc00f08c64")))
+		(uuid "35778ed2-2ccb-4c73-a6c0-65ba059be06d")))

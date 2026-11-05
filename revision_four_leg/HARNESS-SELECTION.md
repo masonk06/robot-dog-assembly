@@ -22,7 +22,7 @@ Lengths below are design maximums, not measurements of the robot.
 | Battery to J1 | 12 AWG | 250 mm each for positive and ground |
 | J3 external series contact loop | 12 AWG | 250 mm outgoing plus 250 mm returning |
 | Each PCB leg output to local distribution | 16 AWG | 400 mm each for positive and ground |
-| Relay coil and panel switch | 22 AWG | 500 mm each conductor; separately fused at source |
+| Relay coil and panel switch | 22 AWG | 500 mm each conductor; separately fused at source with selected 2 A MINI fuse |
 
 At 20 C, using nominal copper resistance of 5.21 mOhm/m (12 AWG) and
 13.17 mOhm/m (16 AWG), the battery cable pair drops approximately 0.052 V at
@@ -53,12 +53,14 @@ This relay is not a battery undervoltage cutoff or certified emergency stop.
 
 Panel toggle selection: **C&K 7101SYZQE**, SPDT; use common and one throw as
 ON/OFF for the coil only. Insulate the unused terminal. Protect the coil/control
-feed with a **1 A inline fuse immediately at its fused-positive source**.
-Select the inline holder and fuse with a verified DC breaking capacity adequate
-for the battery fault source; that holder/fuse part is not finalized here.
+feed with a **2 A inline MINI fuse immediately at its fused-positive source**:
+Littelfuse 0297002.L in 0FHM0001ZXJ holder. This replaces the earlier unspecified
+1 A control fuse selection. Overall battery fault-source coordination remains a
+prototype-validation item. Use a correctly rated insulated splice from the
+external 12 AWG fused feed; do not clamp 12 AWG plus 22 AWG into one J3 terminal.
 
 Relay normally-open power contacts bridge J3 pins 1 and 2 only when energized.
-J3 pin 1 supplies the control branch through its separate 1 A fuse; the coil
+J3 pin 1's external feed supplies the control branch through its separate 2 A fuse; the coil
 returns to common ground. Follow the actual relay terminal diagram/markings;
 do not infer coil or contact terminal positions from socket wire colours.
 Both J3 terminals are POSITIVE; neither is a ground terminal.
@@ -74,22 +76,25 @@ manufacturer's 4.6 mm rear-to-pin-row offset. Verify the purchased part at 1:1.
 
 ## Protection and release gates
 
-**20 A mini-blade main fuse is a coordination target, not an approved BOM value.**
+**20 A mini-blade main fuse is the revision B prototype selection:**
+Littelfuse 0297020.WXNV in the existing Keystone holder. This selects a physical
+part for prototype procurement; powered-use/fault coordination is not approved.
 The existing Keystone 3568 holder is rated 30 A. Do not substitute a 5 A main
 fuse or increase its rating to accommodate all-servo stalls. Common copper,
 connector and fuse time/current performance need coordination at this target.
 
-Retain Bel 0680H5000-05 5 A slow-blow leg selections as provisional only.
+Retain Bel 0680H5000-05 5 A slow-blow leg selections for the prototype.
 An 8.1 A leg stall is 162% of fuse rating. Independent overload shutdown and
 startup measurements are needed; the fuse is not established as stall
-protection. Adapter, auxiliary and Pi branch ratings also remain provisional
-until their loads and downstream conductors are verified. A DC voltage rating
+protection. Revision B selects 1 A Bel 0680H1000-05 fuses for adapter and AUX;
+the Pi branch is DNP. These still require startup/load validation. A DC voltage rating
 alone is not a breaking-capacity verification.
 
 Outstanding: shared-copper thermal/pulse limits and neckdowns; measured startup
 and stall shutdown behavior; branch-wire/servo-contact ratings; battery fault
-current versus fuse interruption; physical XT60 mating part/polarity; Pi buck
-selection and USB-C implementation; actual harness fit and powered load tests.
+current versus fuse interruption; actual battery polarity/mating fit; actual
+harness fit and powered load tests. The revision B XT60 PCB drawing and the
+external 5 V AUX buck selection are documented in the current README/package.
 Do not deliberately short the LiPo to measure fault current.
 
 ## Manufacturer references

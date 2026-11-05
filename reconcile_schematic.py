@@ -5,6 +5,7 @@ ROOT=Path(__file__).parent
 OUT=ROOT/'revision_four_leg'
 LIB=Path(r'C:\Program Files\KiCad\10.0\share\kicad\footprints')
 SCHEM=Path(r'C:\Users\mmbec\Documents\self_balancing_robot\self_balancing_robot_v2\Luca\Luca_power_distribution\Luca_power_distribution.kicad_sch')
+if (OUT/'Luca_power_distribution_four_leg.kicad_sch').exists():SCHEM=OUT/'Luca_power_distribution_four_leg.kicad_sch'
 pcb=OUT/'Luca_power_distribution_four_leg.kicad_pcb'
 b=p.LoadBoard(str(pcb))
 source=(ROOT/'extend_four_leg.py').read_text(encoding='utf-8')

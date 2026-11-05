@@ -1,0 +1,26 @@
+Please quote prototype PCB fabrication plus assembly for this revision B design.
+Please identify your economical minimum assembly quantity; no paid order is
+authorized by this document.
+
+PCB: FR-4, 2 layers, 1.6mm, 2oz finished copper both sides, 88.5 x 60mm.
+Assembly: 18 PCB parts, including bottom-side F5 and 11 through-hole parts.
+F7, J10 and J11 are DNP. Mounting holes H1-H4 are not components.
+
+Please source the exact MPNs in BOM_FULL_QUOTE.csv. Blank LCSC codes require
+Global Sourcing/consignment review, especially the Bel 0680H fuses, Keystone
+3568 holder, and Phoenix terminals. Please report anything you cannot source;
+do not substitute fuse families, connector variants, or footprints.
+
+Please confirm CPL centroid/rotation alignment against the top/bottom assembly
+drawings and CENTROID_DATUM_REVIEW.csv, including J1 polarity and F5 bottom-side
+placement. J1 is a PCB-mount XT60PW-M with deliberate 8.6mm body overhang; its
+updated supplier drawing is included. Please confirm tooling/handling clearance.
+
+F1 is a blade-fuse HOLDER. The separate 20A blade fuse is not a PCB-placement
+row. Quote it as a separate loose/insertion item if available; otherwise it will
+be sourced and inserted after unpowered inspection.
+
+The chassis-mounted AUX buck, external relay/switch, robot harnesses, NodeMCU,
+IMU, servo cables, battery, and independent Pi supply are not PCB-assembly items.
+This is a validation prototype, not an instruction to perform powered LiPo or
+short-circuit testing at the assembly factory.

@@ -1,0 +1,7 @@
+﻿Item,Manufacturer,Manufacturer Part Number,Quantity,Notes
+Main blade fuse,Littelfuse,0297020.WXNV,1,20A MINI 32VDC; insert in F1 holder after inspection. Prototype selection; thermal/fault coordination remains unverified.
+External AUX buck,Pololu,D24V10F5 / 2831,1,"Fixed 5V, typical 1A, 5.1-36V input; chassis mounted. Achievable current depends on temperature and input voltage."
+Switch relay,Panasonic,CB1a-R-12V / ACB33221,1,Normally open contacts in J3 series loop; matching rated socket required.
+Panel toggle,C&K,7101SYZQE,1,Coil control only; use common and one throw.
+Relay-control fuse,Littelfuse,0297002.L,1,2A MINI 32VDC. Replaces the earlier unspecified 1A inline selection; protect 22AWG control wiring at its source.
+Relay-control inline holder,Littelfuse,0FHM0001ZXJ,1,"MINI inline holder, 14AWG leads. Fuse is separate. Source at external fused-positive splice, not by forcing two unlike wires into J3."

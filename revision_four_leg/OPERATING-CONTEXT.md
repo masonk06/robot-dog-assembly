@@ -54,11 +54,12 @@ does not establish its manufacturer, family or current rating:
 https://docs.waveshare.com/ST3215_Servo/FAQ
 https://www.waveshare.com/wiki/ST3215_Servo
 
-The preferred review direction remains a 16 AWG leg feeder to local power
-distribution and short separate power tails to each servo, preserving serial
-DATA continuity. Do not approve aggregate motor power through the first small
-connector without verified ratings. No harness or PCB change has been made
-solely on the basis of this new context.
+The user subsequently selected one-ended power injection into each existing
+three-servo daisy chain, retaining a 5 A leg fuse and expecting less than 5 A
+per leg during walking based on training/gait data. Preserve that selected
+configuration. Separate power tails are an alternative, not the selected
+harness. Expected walking current does not establish fault current or prove
+connector capacity. No servo cable has been physically modified by this work.
 
 ## 150 mm lead calculation (copper only)
 

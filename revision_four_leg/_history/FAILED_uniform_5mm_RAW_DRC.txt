@@ -1,0 +1,234 @@
+** Drc report for Luca_power_distribution_four_leg.kicad_pcb **
+** Created on 2026-11-04T22:00:23 **
+** Report includes: Errors, Warnings **
+
+** Found 54 DRC violations **
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(148.2500 mm, 89.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.5000 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation (rule 'Review clearance' clearance 0.2000 mm; actual 0.1882 mm)
+    Rule: Review clearance; error
+    @(140.7500 mm, 82.2500 mm): Track [/SERVO_V+] on F.Cu, length 1.0000 mm
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(140.7500 mm, 85.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+    @(137.2500 mm, 88.7500 mm): Track [/VBAT_RAW] on F.Cu, length 7.7500 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(141.0000 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(147.5000 mm, 89.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(141.0000 mm, 86.0000 mm): Track [/SERVO_V+] on F.Cu, length 0.3536 mm
+    @(137.2500 mm, 88.7500 mm): Track [/VBAT_RAW] on F.Cu, length 7.7500 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(141.0450 mm, 86.0000 mm): Track [/SERVO_V+] on F.Cu, length 0.0450 mm
+    @(137.2500 mm, 88.7500 mm): Track [/VBAT_RAW] on F.Cu, length 7.7500 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.0000 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+    @(147.7500 mm, 89.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+    @(147.2500 mm, 89.7500 mm): Track [/SERVO_V+] on F.Cu, length 1.0000 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.0000 mm, 82.2500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation (rule 'Review clearance' clearance 0.2000 mm; actual 0.1231 mm)
+    Rule: Review clearance; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.7500 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation (rule 'Review clearance' clearance 0.2000 mm; actual 0.1500 mm)
+    Rule: Review clearance; error
+    @(140.5000 mm, 85.7500 mm): Track [/SERVO_V+] on F.Cu, length 1.0000 mm
+    @(137.2500 mm, 88.7500 mm): Track [/VBAT_RAW] on F.Cu, length 7.7500 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.2500 mm, 82.2500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(130.2500 mm, 85.2500 mm): Track [/SERVO_V+] on F.Cu, length 13.4350 mm
+    @(137.2500 mm, 88.7500 mm): Track [/VBAT_RAW] on F.Cu, length 7.7500 mm
+[clearance]: Clearance violation (rule 'Review clearance' clearance 0.2000 mm; actual 0.0659 mm)
+    Rule: Review clearance; error
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+    @(148.5000 mm, 89.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.2500 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.5000 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation (rule 'Review clearance' clearance 0.2000 mm; actual 0.0389 mm)
+    Rule: Review clearance; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.5000 mm, 82.2500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation (rule 'Review clearance' clearance 0.2000 mm; actual 0.1500 mm)
+    Rule: Review clearance; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(140.7500 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 1.0000 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+    @(148.0000 mm, 89.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation (rule 'Review clearance' clearance 0.2000 mm; actual 0.1231 mm)
+    Rule: Review clearance; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.7500 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(140.5000 mm, 84.7500 mm): Via [/SERVO_V+] on F.Cu - B.Cu
+    @(137.2500 mm, 88.7500 mm): Track [/VBAT_RAW] on F.Cu, length 7.7500 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(140.7500 mm, 80.7500 mm): Via [/SERVO_V+] on F.Cu - B.Cu
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(140.5000 mm, 86.7500 mm): Via [/SERVO_V+] on F.Cu - B.Cu
+    @(137.2500 mm, 88.7500 mm): Track [/VBAT_RAW] on F.Cu, length 7.7500 mm
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(146.2500 mm, 89.7500 mm): Via [/SERVO_V+] on F.Cu - B.Cu
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and /SERVO_V+)
+    Local override; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(141.2500 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation (rule 'Review clearance' clearance 0.2000 mm; actual 0.1500 mm)
+    Rule: Review clearance; error
+    @(137.2500 mm, 88.7500 mm): Track [/VBAT_RAW] on F.Cu, length 7.7500 mm
+    @(140.5000 mm, 85.7500 mm): Track [/SERVO_V+] on F.Cu, length 1.0000 mm
+[clearance]: Clearance violation (rule 'Review clearance' clearance 0.2000 mm; actual 0.1500 mm)
+    Rule: Review clearance; error
+    @(137.5000 mm, 80.7500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(140.7500 mm, 81.7500 mm): Track [/SERVO_V+] on F.Cu, length 1.0000 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and GND)
+    Local override; error
+    @(152.2500 mm, 102.5000 mm): Track [/VBAT_RAW] on F.Cu, length 0.3536 mm
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+[shorting_items]: Items shorting two nets (nets /SERVO_V+ and /VBAT_RAW)
+    Local override; error
+    @(141.0450 mm, 86.0000 mm): Pad 1 [/SERVO_V+] of F2 on F.Cu
+    @(142.5000 mm, 89.7500 mm): Track [/VBAT_RAW] on F.Cu, length 4.2500 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and GND)
+    Local override; error
+    @(152.5000 mm, 103.2500 mm): Track [/VBAT_RAW] on F.Cu, length 0.3536 mm
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and GND)
+    Local override; error
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+    @(144.0000 mm, 95.5000 mm): PTH pad 2 [GND] of C2
+[shorting_items]: Items shorting two nets (nets GND and /VBAT_RAW)
+    Local override; error
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+    @(152.0000 mm, 102.0000 mm): Track [/VBAT_RAW] on F.Cu, length 7.4246 mm
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and GND)
+    Local override; error
+    @(146.5000 mm, 94.0000 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(144.0000 mm, 95.5000 mm): PTH pad 2 [GND] of C2
+[shorting_items]: Items shorting two nets (nets /VBAT_RAW and GND)
+    Local override; error
+    @(146.7500 mm, 96.7500 mm): Track [/VBAT_RAW] on F.Cu, length 2.5000 mm
+    @(144.0000 mm, 95.5000 mm): PTH pad 2 [GND] of C2
+[shorting_items]: Items shorting two nets (nets GND and /VBAT_RAW)
+    Local override; error
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+    @(152.2500 mm, 103.0000 mm): Track [/VBAT_RAW] on F.Cu, length 0.5000 mm
+[shorting_items]: Items shorting two nets (nets GND and /VBAT_RAW)
+    Local override; error
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+    @(152.5000 mm, 109.5000 mm): Track [/VBAT_RAW] on F.Cu, length 6.2500 mm
+[shorting_items]: Items shorting two nets (nets GND and /VBAT_RAW)
+    Local override; error
+    @(144.0000 mm, 95.5000 mm): PTH pad 2 [GND] of C2
+    @(146.7500 mm, 94.2500 mm): Track [/VBAT_RAW] on F.Cu, length 0.3536 mm
+[shorting_items]: Items shorting two nets (nets GND and /VBAT_RAW)
+    Local override; error
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+    @(152.0000 mm, 102.2500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(152.2500 mm, 102.5000 mm): Track [/VBAT_RAW] on F.Cu, length 0.3536 mm
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(142.5000 mm, 89.7500 mm): Track [/VBAT_RAW] on F.Cu, length 4.2500 mm
+    @(141.0450 mm, 86.0000 mm): Pad 1 [/SERVO_V+] of F2 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(152.5000 mm, 103.2500 mm): Track [/VBAT_RAW] on F.Cu, length 0.3536 mm
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(152.0000 mm, 102.0000 mm): Track [/VBAT_RAW] on F.Cu, length 7.4246 mm
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(152.0000 mm, 102.0000 mm): Track [/VBAT_RAW] on F.Cu, length 7.4246 mm
+    @(144.0000 mm, 95.5000 mm): PTH pad 2 [GND] of C2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+    @(141.0450 mm, 86.0000 mm): Pad 1 [/SERVO_V+] of F2 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(146.5000 mm, 93.7500 mm): Track [/VBAT_RAW] on F.Cu, length 5.6569 mm
+    @(144.0000 mm, 95.5000 mm): PTH pad 2 [GND] of C2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(146.5000 mm, 94.0000 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(144.0000 mm, 95.5000 mm): PTH pad 2 [GND] of C2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(146.7500 mm, 96.7500 mm): Track [/VBAT_RAW] on F.Cu, length 2.5000 mm
+    @(144.0000 mm, 95.5000 mm): PTH pad 2 [GND] of C2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(152.2500 mm, 103.0000 mm): Track [/VBAT_RAW] on F.Cu, length 0.5000 mm
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(146.7500 mm, 94.2500 mm): Track [/VBAT_RAW] on F.Cu, length 0.3536 mm
+    @(144.0000 mm, 95.5000 mm): PTH pad 2 [GND] of C2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(152.5000 mm, 109.5000 mm): Track [/VBAT_RAW] on F.Cu, length 6.2500 mm
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(152.0000 mm, 102.2500 mm): Track [/VBAT_RAW] on F.Cu, length 0.2500 mm
+    @(149.0800 mm, 104.0000 mm): PTH pad 4 [GND] of J7
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

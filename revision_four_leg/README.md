@@ -1,5 +1,16 @@
 # Luca four-leg engineering revision — NOT FOR FABRICATION
 
+## Current 5 A leg configuration and copper review
+
+The user selected the existing three-servo daisy chain with a 5 A fuse per leg.
+See `OPERATING-CONTEXT.md` and `FUSE-AND-COPPER-REVIEW.md`. Shared positive and
+ground routes now include 4 mm sections where clearance permits; constrained
+sections and layer transitions remain. Individual fused leg traces stay 3 mm.
+`power-path-screen.json` provides a reproducible resistance screen, with explicit
+model limits. The 5 A value is retained; protection/thermal approval remains open.
+Pi/camera use an independent supply, so populate neither F7 nor an external Pi
+buck in this assembly; leave J10/J11 unused. Existing Pi circuitry is preserved.
+
 ## Harness and J3 update — 2026-11-04
 
 See `HARNESS-SELECTION.md` for the selected 12 AWG battery/switch wiring,
@@ -122,7 +133,8 @@ servo current; Pi current also passes F1 but bypasses J3.
 One leg: 2.7 A rated-current sum, 8.1 A simultaneous stall-current sum. Four legs:
 10.8 A rated sum, 32.4 A stall sum. Actual gait/startup waveforms are not measured.
 
-**5 A slow-blow is not approved.** 8.1 A is 162% of 5 A, in the manufacturer's
+**5 A slow-blow is retained by user selection; electrical approval is open.**
+8.1 A is 162% of 5 A, in the manufacturer's
 cautioned 100–200% sustained-overload range. Bel's maximum 120 s at 200% and
 average curves do not establish safe clearing at 162%. Verify the branch harness,
 trace temperature, allowable fault duration, ambient derating and worst-case

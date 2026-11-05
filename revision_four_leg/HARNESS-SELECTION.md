@@ -31,10 +31,12 @@ approximately 0.085 V at 8.1 A, or 0.028 V at 2.7 A. These calculations exclude
 contacts, fuses, PCB copper, splices, and the original servo leads. Hot copper
 has higher resistance. Wire gauge alone does not establish system ampacity.
 
-Distribute each leg's power locally into three short servo tails. Do not route
-the whole 8.1 A through the first small three-pin servo connector unless that
-connector and cable are independently rated for it. Retain DATA continuity and
-servo IDs. Keep the four fused positive rails separate, including from adapter
+The user's selected harness is a 16 AWG feeder injecting power at the start of
+each three-servo daisy chain, retaining its 150 mm 22 AWG links and a 5 A leg
+fuse. Expected walking load is below 5 A per leg, as a user-supplied design
+assumption; this is not a measured fault-current ceiling. The first connector
+carries the aggregate leg current and remains a ratings/temperature check.
+Retain DATA continuity and servo IDs. Keep the four fused positive rails separate, including from adapter
 V+. Use the dedicated ground returns; avoid additional thin inter-leg ground
 links carrying parallel motor-return current. Check DATA backfeed with one leg
 unpowered before commissioning.

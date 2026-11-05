@@ -1,0 +1,20 @@
+Please quote the replacement REV C 1OZ validation prototype, not revision B.
+PCB: FR4, 2 layers, 1.6mm, 1oz copper BOTH faces, 88.5x60mm final outline.
+Placement is TOP ONLY: all 7 SMT plus 11 through-hole parts. F5 is on top now.
+Please quote Economic PCBA if parts/service eligibility permits, otherwise
+Standard. Identify the economical prototype quantity; no paid order is
+authorized by this document.
+
+Match exact MPNs, including Bel 0680H fuses, Phoenix terminals and Keystone
+3568 holder. Blank C-codes require sourcing/consignment confirmation. No silent
+substitutions or omissions. F7/J10/J11 are DNP; H1-H4 are holes.
+
+Please confirm CPL centroid/model rotation against the REV C drawing and datum
+review. J1 is a PCB-mount XT60PW-M with deliberate 8.6mm overhang; rails, tabs
+and depaneling tooling must clear it. Its supplier mechanical drawing is included.
+J1 pad1 is GND, pad2 positive. Do not bridge J3.
+
+F1 BOM entry is the fuse HOLDER. The separate 20A blade fuse is not a placement
+item; quote loose/manual insertion separately if available, otherwise it will
+be inserted after unpowered inspection. No robot harness/module installation
+or powered LiPo/short-circuit testing is requested through this assembly file.

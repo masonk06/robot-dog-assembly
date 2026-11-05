@@ -1,0 +1,31 @@
+{
+  "release": "REV C - 1OZ - VALIDATION PROTOTYPE / PCBA QUOTE ONLY",
+  "copper_oz_per_side": 1,
+  "populated_sides": [
+    "Top"
+  ],
+  "pcb_sha256": "0667e37a8a5a957d6ace6d026485f7134c33592821242f51f5962eaf75743397",
+  "schematic_sha256": "ff13f35ff1e69bbfece6c4b91bf7f5cab7f3cb4ee27ca6787472d20d315586bd",
+  "populated_components": 18,
+  "smd_components": 7,
+  "through_hole_components": 11,
+  "dnp": [
+    "F7",
+    "J10",
+    "J11"
+  ],
+  "CPL_status": "Centroids exported; JLC library-model placement/orientation review required before paid order",
+  "sourcing_status": "Exact Bel, Keystone and Phoenix parts require sourcing/consignment confirmation; no silent substitutions",
+  "fabrication_files": {
+    "Luca_power_distribution_four_leg-NPTH.drl": "b031b83f275b94275fe778289a1ef5979a3f0bb07a9dd867110534a8a93ffd74",
+    "Luca_power_distribution_four_leg-PTH.drl": "4614d885b6d3ce792a3936e5b8be6796b1362827666682d1c507eedb0b975631",
+    "Luca_power_distribution_four_leg-B_Cu.gbl": "f555642dcdb55e0f7c83bb92684599468b8283ddfa16769bf569c3cda163ede0",
+    "Luca_power_distribution_four_leg-B_Mask.gbs": "1ebc6082ebed0f545238376952613cc516654cbcf3e5e964ec617f610ad58e5a",
+    "Luca_power_distribution_four_leg-B_Silkscreen.gbo": "5ff6deef600338e87da39e819b29a8ccd74ff209ef82d5672431dc30c300b03f",
+    "Luca_power_distribution_four_leg-Edge_Cuts.gm1": "c1fa7e70c66f9c2a2f5a2952a2bb11c8d5b4afe421c2a15f28fa1e2776a9a2fa",
+    "Luca_power_distribution_four_leg-F_Cu.gtl": "5fa60a472b94d863f476d1b8d4d40bbabb380e64d5a92a230161d2cf51dbbfae",
+    "Luca_power_distribution_four_leg-F_Mask.gts": "ed5ebc7bd93f4529bdfc5091b013ec475124b456cd24939e0a9a862ed6360c56",
+    "Luca_power_distribution_four_leg-F_Silkscreen.gto": "11688a467e35a517de0d106dd4f4836431c968746f0990e86cf06cf99e7991a7"
+  },
+  "package_validation": "Passed: source/audit hashes, 9 fabrication files, 18 BOM/CPL refs, all-top population, DNP exclusion"
+}

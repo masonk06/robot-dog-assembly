@@ -1,0 +1,301 @@
+(footprint "AMASS_XT60PW_M_ReinforcedTabs"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "AMASS XT60PW-M; C98732 2025V0 drawing model XT60PW-M30.G.Y.T; 2.9mm holes; 0.8x1.9mm slots; reinforced annular rings. Pad1 negative, pad2 positive.")
+	(tags "RC Connector XT60")
+	(property "Reference" "J1"
+		(at 2.1 4.25 0)
+		(layer "F.SilkS")
+		(uuid "51f70dcc-6b17-4f78-a98f-874c7e27c03b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "XT60PW-M"
+		(at 3.6 4 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1b454641-5537-4c40-987f-a480c29c050b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fcc2d013-7da7-4778-b807-5784f1bd11ed")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bc59d82d-16ec-4a20-a91c-a744c55d92a8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.65 -16.85)
+		(end -4.65 2.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "56eddbd4-3bfe-49a5-a4b3-82d9711c9cc0")
+	)
+	(fp_line
+		(start -4.65 -16.85)
+		(end 11.85 -16.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0f191606-548c-4a7c-96b7-c1162ce6a2de")
+	)
+	(fp_line
+		(start 11.85 -16.85)
+		(end 11.85 2.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fe9cfb21-a208-455d-a7fb-ae771901f6d4")
+	)
+	(fp_line
+		(start 11.85 2.55)
+		(end -4.65 2.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "60517b56-1530-4c4d-bee0-31cf243d993c")
+	)
+	(fp_line
+		(start -4.26 -16.46)
+		(end -4.26 -2.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6368e55e-c244-4c71-a101-2cb6bd4d8cb1")
+	)
+	(fp_line
+		(start -4.26 -16.46)
+		(end 11.46 -16.46)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a6a3b933-319c-442c-af21-bd4752a0c2db")
+	)
+	(fp_line
+		(start -4.15 -16.35)
+		(end -4.15 -2.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "54308fdf-3af5-4325-945c-52c6db299f3a")
+	)
+	(fp_line
+		(start -4.15 -16.35)
+		(end 11.35 -16.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ad39e633-1122-4cc7-bce9-3a4cdfcf0b0b")
+	)
+	(fp_line
+		(start -0.15 1.85)
+		(end 7.35 1.85)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c62eeb34-3a37-4ba1-a186-a4a2d1045c3a")
+	)
+	(fp_line
+		(start 2.31 1.96)
+		(end 6.05 1.96)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b4d9b8e3-a1d0-4b3b-8b31-14671ecd1e51")
+	)
+	(fp_line
+		(start 11.35 -16.35)
+		(end 11.35 -2.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0af34f7c-797b-48ec-a875-576425930f54")
+	)
+	(fp_line
+		(start 11.46 -16.46)
+		(end 11.46 -2.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "87ec6786-340d-4dc0-8d29-cde820d26d6d")
+	)
+	(fp_arc
+		(start -2.266806 1.372958)
+		(mid -3.727162 -0.126139)
+		(end -4.26 -2.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3f1fe92e-3690-4284-932c-69af8778788f")
+	)
+	(fp_arc
+		(start -0.15 1.85)
+		(mid -2.978427 0.678427)
+		(end -4.15 -2.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ecf56910-5764-44ef-a504-53ed8aa99c18")
+	)
+	(fp_arc
+		(start 11.35 -2.15)
+		(mid 10.178427 0.678427)
+		(end 7.35 1.85)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9644dd34-5409-467d-9aff-3bf5d617ce49")
+	)
+	(fp_arc
+		(start 11.46 -2.15)
+		(mid 10.653852 0.294722)
+		(end 8.551648 1.780413)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f8daf6a4-203b-4911-854a-3e3568f44a7d")
+	)
+	(fp_text user "-"
+		(at -2.8 2.5 0)
+		(layer "F.Fab")
+		(uuid "39c99895-cb6f-4095-90d9-85f8b04301c7")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 3.6 -3.6 0)
+		(layer "F.Fab")
+		(uuid "7f124ec7-7cfa-4002-8671-b034ddf08dca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "+"
+		(at 9.5 2.5 0)
+		(layer "F.Fab")
+		(uuid "43f8b519-7f9e-4127-9bff-59473b9622e2")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" thru_hole rect
+		(at -3.15 -6)
+		(size 1.4 2.5)
+		(drill oval 0.8 1.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "539dbbda-b818-4fdc-9d08-5c84d99bba8f")
+	)
+	(pad "" thru_hole rect
+		(at 10.35 -6)
+		(size 1.4 2.5)
+		(drill oval 0.8 1.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "66b5c0e3-21d7-41ef-a6c5-6cabae13c604")
+	)
+	(pad "1" thru_hole roundrect
+		(at 0 0)
+		(size 4.4 4.4)
+		(drill 2.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "5c436d54-9199-48a5-895b-6743d515766e")
+	)
+	(pad "2" thru_hole circle
+		(at 7.2 0)
+		(size 4.4 4.4)
+		(drill 2.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9928266e-12de-4ef5-ba41-1bd9d38048d8")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT60PW-M_1x02_P7.20mm_Horizontal.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

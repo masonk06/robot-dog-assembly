@@ -9,6 +9,7 @@ __pycache__/
 .idea/
 Thumbs.db
 Desktop.ini
+*.kicad_prl
 
 # Local environments, credentials, and generated training output.
 .venv/

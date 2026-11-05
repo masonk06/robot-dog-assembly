@@ -1,0 +1,23 @@
+{
+  "revision": "C - 1oz validation prototype",
+  "derived_from": "revision_four_leg revision B",
+  "source_pcb_sha256": "acfee817ec17145ef2280d3d5900889b217c752501364a71d6f13e7c2988632f",
+  "moved_parts": {
+    "F1": [
+      151,
+      110
+    ],
+    "J3": [
+      161.5,
+      95
+    ],
+    "F5": [
+      130,
+      78
+    ]
+  },
+  "copper_um": 35,
+  "populated_assembly_sides": [
+    "Top"
+  ]
+}

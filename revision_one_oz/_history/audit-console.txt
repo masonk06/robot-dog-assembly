@@ -1,0 +1,42 @@
+{
+  "status": "REV C 1OZ VALIDATION PROTOTYPE / PCBA QUOTE",
+  "pcb_sha256": "0667e37a8a5a957d6ace6d026485f7134c33592821242f51f5962eaf75743397",
+  "checks": {
+    "all_circuit_pin_nets_preserved": true,
+    "J3_series_loop": true,
+    "battery_connector_polarity": true,
+    "all_populated_parts_top": true,
+    "Pi_parts_DNP": true,
+    "FL_separately_fused": true,
+    "FL_5A_fuse": true,
+    "FL_wide_output_with_short_escape": true,
+    "FR_separately_fused": true,
+    "FR_5A_fuse": true,
+    "FR_wide_output_with_short_escape": true,
+    "RL_separately_fused": true,
+    "RL_5A_fuse": true,
+    "RL_wide_output_with_short_escape": true,
+    "RR_separately_fused": true,
+    "RR_5A_fuse": true,
+    "RR_wide_output_with_short_escape": true,
+    "/VBAT_RAW_duplicated_6mm_bus": true,
+    "/VBAT_FUSED_duplicated_6mm_bus": true,
+    "16_large_servo_trunk_stitches": true,
+    "servo_trunk_duplicated_6mm": true,
+    "original_mounting_holes_preserved": true,
+    "filled_ground_both_faces": true,
+    "6mm_sampled_ground_corridor_to_each_leg": true
+  },
+  "ground_corridor_screen": {
+    "grid_mm": 0.5,
+    "sampled_diameter_mm": 6,
+    "circle_sample_degrees": 15,
+    "results": {
+      "J12": true,
+      "J13": true,
+      "J14": true,
+      "J15": true
+    },
+    "limitations": "Geometry sampling only; excludes holes/pad annuli, detailed sheet-current sharing, plating and thermal behavior."
+  }
+}

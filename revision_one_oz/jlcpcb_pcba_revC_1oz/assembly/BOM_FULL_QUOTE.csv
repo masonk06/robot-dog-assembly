@@ -1,0 +1,11 @@
+﻿Comment,Designator,Footprint,LCSC Part #,Manufacturer,Manufacturer Part Number,Quantity,Description
+UPW1E471MPD,C1,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,C433175,Nichicon,UPW1E471MPD,1,470uF 25V 105C radial D10x16 P5mm
+CL21B104KBCNNNC,C2,Capacitor_SMD:C_0805_2012Metric,C1711,Samsung Electro-Mechanics,CL21B104KBCNNNC,1,100nF 50V X7R 10% 0805
+3568,F1,Fuse:Fuseholder_Blade_Mini_Keystone_3568,,Keystone Electronics,3568,1,MINI blade fuse holder ONLY; insert separate 20A fuse after inspection
+0680H1000-05,"F2,F5",Luca_Review:Bel_0680H_2410_Recommended,,Bel Fuse,0680H1000-05,2,1A slow-blow 125VDC 2410
+0680H5000-05,"F8,F9,F10,F11",Luca_Review:Bel_0680H_2410_Recommended,,Bel Fuse,0680H5000-05,4,5A slow-blow 125VDC 2410
+XT60PW-M,J1,Luca_Review:AMASS_XT60PW_M_ReinforcedTabs,C98732,Changzhou Amass Electronics,XT60PW-M,1,PCB mount right-angle XT60 male; verify 2025V0 XT60PW-M30.G.Y.T drawing
+1715721,"J2,J5","TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",,Phoenix Contact,1715721,2,MKDS 1.5/2-5.08 2-pin terminal
+1868076,J3,Luca_Review:Phoenix_MKDS5_2_7.62_1868076,,Phoenix Contact,1868076,1,MKDS 5/2-7.62 high-current switch-loop terminal
+1715747,J7,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal",,Phoenix Contact,1715747,1,MKDS 1.5/4-5.08 external AUX buck interface
+XT30UPB-M,"J12,J13,J14,J15",Connector_AMASS:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical,C428721,Changzhou Amass Electronics,XT30UPB-M,4,Vertical PCB XT30; pad1 negative pad2 positive

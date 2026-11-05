@@ -1,0 +1,95 @@
+{
+  "pcb_sha256": "0667e37a8a5a957d6ace6d026485f7134c33592821242f51f5962eaf75743397",
+  "copper_um": 35.0,
+  "model": "Shortest resistance along explicit track centerlines; 0.035mm copper, 20C. Pad spreading, via barrels, solder, fuse, contacts and harness excluded. Parallel touching copper not merged except endpoints/pads. Ground-zone sheet resistance excluded. Screening only; not a current or temperature approval.",
+  "paths": [
+    {
+      "net": "/VBAT_RAW",
+      "from": "J1.2",
+      "to": "F1.1",
+      "track_length_mm": 11.222,
+      "minimum_track_width_mm": 6.0,
+      "track_resistance_milliohm_20C": 0.921
+    },
+    {
+      "net": "/VBAT_FUSED",
+      "from": "F1.2",
+      "to": "J3.1",
+      "track_length_mm": 15.011,
+      "minimum_track_width_mm": 6.0,
+      "track_resistance_milliohm_20C": 1.232
+    },
+    {
+      "leg": "FL",
+      "net": "/SERVO_V+",
+      "from": "J3.2",
+      "to": "F8.1",
+      "track_length_mm": 13.925,
+      "minimum_track_width_mm": 2.6,
+      "track_resistance_milliohm_20C": 1.304
+    },
+    {
+      "leg": "FL",
+      "net": "/FL_V+",
+      "from": "F8.2",
+      "to": "J12.2",
+      "track_length_mm": 19.549,
+      "minimum_track_width_mm": 2.6,
+      "track_resistance_milliohm_20C": 2.222
+    },
+    {
+      "leg": "FR",
+      "net": "/SERVO_V+",
+      "from": "J3.2",
+      "to": "F9.1",
+      "track_length_mm": 6.425,
+      "minimum_track_width_mm": 2.6,
+      "track_resistance_milliohm_20C": 0.688
+    },
+    {
+      "leg": "FR",
+      "net": "/FR_V+",
+      "from": "F9.2",
+      "to": "J13.2",
+      "track_length_mm": 19.549,
+      "minimum_track_width_mm": 2.6,
+      "track_resistance_milliohm_20C": 2.222
+    },
+    {
+      "leg": "RL",
+      "net": "/SERVO_V+",
+      "from": "J3.2",
+      "to": "F10.1",
+      "track_length_mm": 16.925,
+      "minimum_track_width_mm": 2.6,
+      "track_resistance_milliohm_20C": 1.55
+    },
+    {
+      "leg": "RL",
+      "net": "/RL_V+",
+      "from": "F10.2",
+      "to": "J14.2",
+      "track_length_mm": 19.549,
+      "minimum_track_width_mm": 2.6,
+      "track_resistance_milliohm_20C": 2.222
+    },
+    {
+      "leg": "RR",
+      "net": "/SERVO_V+",
+      "from": "J3.2",
+      "to": "F11.1",
+      "track_length_mm": 24.425,
+      "minimum_track_width_mm": 2.6,
+      "track_resistance_milliohm_20C": 2.166
+    },
+    {
+      "leg": "RR",
+      "net": "/RR_V+",
+      "from": "F11.2",
+      "to": "J15.2",
+      "track_length_mm": 19.549,
+      "minimum_track_width_mm": 2.6,
+      "track_resistance_milliohm_20C": 2.222
+    }
+  ]
+}

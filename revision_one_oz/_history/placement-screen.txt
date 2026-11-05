@@ -1,0 +1,117 @@
+** Drc report for Luca_power_distribution_four_leg.kicad_pcb **
+** Created on 2026-11-04T22:56:33 **
+** Report includes: Errors, Warnings **
+
+** Found 15 DRC violations **
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error
+    @(133.8800 mm, 118.6725 mm): Footprint J10
+    @(151.0000 mm, 110.0000 mm): Footprint F1
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(151.0000 mm, 113.4000 mm): PTH pad 1 [/VBAT_RAW] of F1
+    @(133.8800 mm, 118.6725 mm): Footprint J10
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error
+    @(133.8400 mm, 104.0000 mm): Footprint J7
+    @(151.0000 mm, 110.0000 mm): Footprint F1
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(168.1200 mm, 95.5000 mm): Via [/SERVO_V+] on F.Cu - B.Cu
+    @(169.1200 mm, 95.0000 mm): PTH pad 2 [/SERVO_V+] of J3
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(170.1200 mm, 95.5000 mm): Via [/SERVO_V+] on F.Cu - B.Cu
+    @(169.1200 mm, 95.0000 mm): PTH pad 2 [/SERVO_V+] of J3
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(168.1200 mm, 95.5000 mm): Via [/SERVO_V+] on F.Cu - B.Cu
+    @(169.1200 mm, 95.0000 mm): PTH pad 2 [/SERVO_V+] of J3
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(170.1200 mm, 95.5000 mm): Via [/SERVO_V+] on F.Cu - B.Cu
+    @(169.1200 mm, 95.0000 mm): PTH pad 2 [/SERVO_V+] of J3
+[lib_footprint_mismatch]: Footprint 'Bel_0680H_2410_Recommended' does not match copy in library 'Luca_Review'
+    Local override; warning
+    @(140.0000 mm, 124.0000 mm): Footprint F7
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(147.8600 mm, 108.2300 mm): Segment of F1 on F.Silkscreen
+    @(131.2200 mm, 113.3525 mm): Segment of J10 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(147.8600 mm, 115.1700 mm): Segment of F1 on F.Silkscreen
+    @(151.7800 mm, 113.3525 mm): Segment of J10 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(151.7400 mm, 98.6800 mm): Segment of J7 on F.Silkscreen
+    @(164.0600 mm, 108.2300 mm): Segment of F1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(147.8600 mm, 108.2300 mm): Segment of F1 on F.Silkscreen
+    @(151.7400 mm, 108.7200 mm): Segment of J7 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(131.2200 mm, 113.3525 mm): Segment of J10 on F.Silkscreen
+    @(151.0000 mm, 113.4000 mm): PTH pad 1 [/VBAT_RAW] of F1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(151.7800 mm, 113.3525 mm): Segment of J10 on F.Silkscreen
+    @(151.0000 mm, 113.4000 mm): PTH pad 1 [/VBAT_RAW] of F1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(151.7400 mm, 108.7200 mm): Segment of J7 on F.Silkscreen
+    @(151.0000 mm, 110.0000 mm): PTH pad 1 [/VBAT_RAW] of F1
+
+** Found 10 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(127.5450 mm, 78.0000 mm): Pad 1 [/SERVO_V+] of F5 on F.Cu
+    @(141.0450 mm, 86.0000 mm): Pad 1 [/SERVO_V+] of F2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(141.0450 mm, 86.0000 mm): Pad 1 [/SERVO_V+] of F2 on F.Cu
+    @(141.8000 mm, 95.5000 mm): Pad 1 [/SERVO_V+] of C2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(141.0450 mm, 86.0000 mm): Pad 1 [/SERVO_V+] of F2 on F.Cu
+    @(157.5000 mm, 79.0000 mm): PTH pad 1 [/SERVO_V+] of C1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(157.5000 mm, 79.0000 mm): PTH pad 1 [/SERVO_V+] of C1
+    @(168.1200 mm, 86.5000 mm): Via [/SERVO_V+] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(121.4200 mm, 118.5000 mm): PTH pad 1 [Net-(J10-Pin_3)] of J11
+    @(144.0400 mm, 118.6725 mm): PTH pad 3 [Net-(J10-Pin_3)] of J10
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(133.8800 mm, 118.6725 mm): PTH pad 1 [Net-(J10-Pin_1)] of J10
+    @(137.5450 mm, 124.0000 mm): Pad 2 [Net-(J10-Pin_1)] of F7 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.4550 mm, 124.0000 mm): Pad 1 [/VBAT_FUSED] of F7 on B.Cu
+    @(160.9200 mm, 113.4000 mm): Track [/VBAT_FUSED] on B.Cu, length 3.4000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(123.4200 mm, 91.0000 mm): PTH pad 1 [/SERVO] of J2
+    @(145.9550 mm, 86.0000 mm): Pad 2 [/SERVO] of F2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.4550 mm, 78.0000 mm): Pad 2 [Net-(J7-Pin_1)] of F5 on F.Cu
+    @(133.8400 mm, 104.0000 mm): PTH pad 1 [Net-(J7-Pin_1)] of J7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(121.4550 mm, 104.1725 mm): PTH pad 1 [Net-(J5-Pin_1)] of J5
+    @(144.0000 mm, 104.0000 mm): PTH pad 3 [Net-(J5-Pin_1)] of J7
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

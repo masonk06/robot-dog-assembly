@@ -129,7 +129,8 @@ for index,f in enumerate(footprints):
  sym.append([A('instances'),[A('project'),'Luca_power_distribution_four_leg',[A('path'),'/'+rootid,[A('reference'),ref],[A('unit'),A(1)]]]])
  path=p.KIID_PATH();path.push_back(p.KIID(rootid));path.push_back(p.KIID(sid))
  sch.append(sym);f.SetPath(path);records.append({'ref':ref,'value':value,'pins':npins,'footprint':fpid,'dnp':f.IsDNP()})
-sch.append([A('text'),'REV B - VALIDATION PROTOTYPE / PCBA QUOTE\nJ3 = SERIES SWITCH LOOP; J12-J15 = 5A LEG POWER\nF2/F5 = 1A. F7/J10/J11 DNP. Adapter V+ must not join leg positives.',[A('at'),A(145),A(193),A(0)],copy.deepcopy(fonts),[A('uuid'),uid()]])
+revision_title='REV C - 1OZ VALIDATION PROTOTYPE / PCBA QUOTE' if OUT.name=='revision_one_oz' else 'REV B - VALIDATION PROTOTYPE / PCBA QUOTE'
+sch.append([A('text'),revision_title+'\nJ3 = SERIES SWITCH LOOP; J12-J15 = 5A LEG POWER\nF2/F5 = 1A. F7/J10/J11 DNP. Adapter V+ must not join leg positives.',[A('at'),A(145),A(193),A(0)],copy.deepcopy(fonts),[A('uuid'),uid()]])
 (OUT/'Luca_power_distribution_four_leg.kicad_sch').write_text(dump(sch)+'\n',encoding='utf-8')
 p.SaveBoard(str(pcb),b)
 (OUT/'pin_manifest.json').write_text(json.dumps(records,indent=2),encoding='utf-8')

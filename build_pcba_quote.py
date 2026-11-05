@@ -1,9 +1,10 @@
 """Build a revision-locked prototype fabrication + PCBA quotation package."""
 from pathlib import Path
-import csv, hashlib, json, shutil, subprocess, zipfile
+import csv, hashlib, json, shutil, subprocess, zipfile, sys
 import pcbnew as p
-ROOT=Path(__file__).parent;src=ROOT/'revision_four_leg'
-out=src/'jlcpcb_pcba_revB';out.mkdir(exist_ok=True)
+ROOT=Path(__file__).parent;src=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else ROOT/'revision_four_leg'
+one_oz=src.name=='revision_one_oz';tag='RevC_1oz' if one_oz else 'RevB'
+out=src/('jlcpcb_pcba_revC_1oz' if one_oz else 'jlcpcb_pcba_revB');out.mkdir(exist_ok=True)
 pcb=src/'Luca_power_distribution_four_leg.kicad_pcb';sch=pcb.with_suffix('.kicad_sch')
 cli=Path(r'C:\Program Files\KiCad\10.0\bin\kicad-cli.exe')
 def run(*args):subprocess.run([str(cli),*map(str,args)],check=True)
@@ -13,7 +14,7 @@ gerbers=out/'gerbers';drills=out/'drills';assembly=out/'assembly'
 for d in (gerbers,drills,assembly):d.mkdir(exist_ok=True)
 run('pcb','export','gerbers','--output',str(gerbers)+'/', '--layers','F.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,B.SilkS,Edge.Cuts','--subtract-soldermask','--check-zones',pcb)
 run('pcb','export','drill','--output',str(drills)+'/', '--format','excellon','--drill-origin','absolute','--excellon-units','mm','--excellon-separate-th','--generate-report',pcb)
-run('pcb','export','gerbers','--output',str(assembly/'paste')+'/', '--layers','F.Paste,B.Paste',pcb)
+run('pcb','export','gerbers','--output',str(assembly/'paste')+'/', '--layers','F.Paste' if one_oz else 'F.Paste,B.Paste',pcb)
 for side,layers in [('TOP','F.Fab,F.SilkS,Edge.Cuts'),('BOTTOM','B.Fab,B.SilkS,Edge.Cuts')]:
     args=['pcb','export','pdf','--output',assembly/('ASSEMBLY_'+side+'.pdf'),'--layers',layers,'--mode-single','--sketch-pads-on-fab-layers','--crossout-DNP-footprints-on-fab-layers','--black-and-white','--no-property-popups']
     if side=='BOTTOM':args.append('--mirror')
@@ -56,10 +57,10 @@ csvwrite(assembly/'CENTROID_DATUM_REVIEW.csv',['Designator','KiCad origin X mm',
 assert len(placements)==18
 fabrication=[q for q in gerbers.iterdir() if q.suffix!='.gbrjob']+[q for q in drills.iterdir() if q.suffix=='.drl']
 assert len(fabrication)==9,[q.name for q in fabrication]
-with zipfile.ZipFile(out/'Luca_RevB_FAB_PROTOTYPE.zip','w',zipfile.ZIP_DEFLATED) as z:
+with zipfile.ZipFile(out/('Luca_'+tag+'_FAB_PROTOTYPE.zip'),'w',zipfile.ZIP_DEFLATED) as z:
     for q in sorted(fabrication):z.write(q,q.name)
 for name in ('DRC.txt','ERC.txt','topology-and-ground-audit.json','power-path-screen.json','pcba_parts.json','FUSE-AND-COPPER-REVIEW.md','OPERATING-CONTEXT.md','HARNESS-SELECTION.md'):
     shutil.copy2(src/name,out/name)
-manifest={'release':'REV B - VALIDATION PROTOTYPE / PCBA QUOTE ONLY','pcb_sha256':hashlib.sha256(pcb.read_bytes()).hexdigest(),'schematic_sha256':hashlib.sha256(sch.read_bytes()).hexdigest(),'populated_components':18,'smd_components':7,'through_hole_components':11,'dnp':parts['dnp'],'CPL_status':'Centroids exported; JLC library-model placement/orientation review required before paid order','sourcing_status':'Exact Bel, Keystone and Phoenix parts require sourcing/consignment confirmation; no silent substitutions','fabrication_files':{q.name:hashlib.sha256(q.read_bytes()).hexdigest() for q in sorted(fabrication)}}
+manifest={'release':('REV C - 1OZ' if one_oz else 'REV B')+' - VALIDATION PROTOTYPE / PCBA QUOTE ONLY','copper_oz_per_side':1 if one_oz else 2,'populated_sides':['Top'] if one_oz else ['Top','Bottom'],'pcb_sha256':hashlib.sha256(pcb.read_bytes()).hexdigest(),'schematic_sha256':hashlib.sha256(sch.read_bytes()).hexdigest(),'populated_components':18,'smd_components':7,'through_hole_components':11,'dnp':parts['dnp'],'CPL_status':'Centroids exported; JLC library-model placement/orientation review required before paid order','sourcing_status':'Exact Bel, Keystone and Phoenix parts require sourcing/consignment confirmation; no silent substitutions','fabrication_files':{q.name:hashlib.sha256(q.read_bytes()).hexdigest() for q in sorted(fabrication)}}
 (out/'RELEASE-MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print('Built',out)

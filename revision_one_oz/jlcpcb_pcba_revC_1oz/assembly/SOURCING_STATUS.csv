@@ -1,0 +1,11 @@
+﻿Designator,Manufacturer Part Number,LCSC Part #,Status
+C1,UPW1E471MPD,C433175,LCSC catalog identity found; JLC assembly eligibility/stock to confirm
+C2,CL21B104KBCNNNC,C1711,JLC assembly catalog verified; live matching still required
+F1,3568,,Global sourcing/consignment quote required; no substitute without review
+"F2,F5",0680H1000-05,,Global sourcing/consignment quote required; no substitute without review
+"F8,F9,F10,F11",0680H5000-05,,Global sourcing/consignment quote required; no substitute without review
+J1,XT60PW-M,C98732,JLC wave/manual assembly catalog verified; supplied mechanical revision must match
+"J2,J5",1715721,,Global sourcing/consignment quote required; no substitute without review
+J3,1868076,,Global sourcing/consignment quote required; no substitute without review
+J7,1715747,,Global sourcing/consignment quote required; no substitute without review
+"J12,J13,J14,J15",XT30UPB-M,C428721,JLC catalog identity found; live assembly matching required

@@ -1,0 +1,24 @@
+{
+  "revision": "C - 1oz copper, all-top population, validation prototype / assembly quote",
+  "parts": [
+    {"refs":["C1"],"manufacturer":"Nichicon","mpn":"UPW1E471MPD","comment":"470uF 25V 105C radial D10x16 P5mm","lcsc":"C433175","sourcing":"LCSC catalog identity found; JLC assembly eligibility/stock to confirm"},
+    {"refs":["C2"],"manufacturer":"Samsung Electro-Mechanics","mpn":"CL21B104KBCNNNC","comment":"100nF 50V X7R 10% 0805","lcsc":"C1711","sourcing":"JLC assembly catalog verified; live matching still required"},
+    {"refs":["F1"],"manufacturer":"Keystone Electronics","mpn":"3568","comment":"MINI blade fuse holder ONLY; insert separate 20A fuse after inspection","lcsc":"","sourcing":"Global sourcing/consignment quote required; no substitute without review"},
+    {"refs":["F2","F5"],"manufacturer":"Bel Fuse","mpn":"0680H1000-05","comment":"1A slow-blow 125VDC 2410","lcsc":"","sourcing":"Global sourcing/consignment quote required; no substitute without review"},
+    {"refs":["F8","F9","F10","F11"],"manufacturer":"Bel Fuse","mpn":"0680H5000-05","comment":"5A slow-blow 125VDC 2410","lcsc":"","sourcing":"Global sourcing/consignment quote required; no substitute without review"},
+    {"refs":["J1"],"manufacturer":"Changzhou Amass Electronics","mpn":"XT60PW-M","comment":"PCB mount right-angle XT60 male; verify 2025V0 XT60PW-M30.G.Y.T drawing","lcsc":"C98732","sourcing":"JLC wave/manual assembly catalog verified; supplied mechanical revision must match"},
+    {"refs":["J2","J5"],"manufacturer":"Phoenix Contact","mpn":"1715721","comment":"MKDS 1.5/2-5.08 2-pin terminal","lcsc":"","sourcing":"Global sourcing/consignment quote required; no substitute without review"},
+    {"refs":["J3"],"manufacturer":"Phoenix Contact","mpn":"1868076","comment":"MKDS 5/2-7.62 high-current switch-loop terminal","lcsc":"","sourcing":"Global sourcing/consignment quote required; no substitute without review"},
+    {"refs":["J7"],"manufacturer":"Phoenix Contact","mpn":"1715747","comment":"MKDS 1.5/4-5.08 external AUX buck interface","lcsc":"","sourcing":"Global sourcing/consignment quote required; no substitute without review"},
+    {"refs":["J12","J13","J14","J15"],"manufacturer":"Changzhou Amass Electronics","mpn":"XT30UPB-M","comment":"Vertical PCB XT30; pad1 negative pad2 positive","lcsc":"C428721","sourcing":"JLC catalog identity found; live assembly matching required"}
+  ],
+  "dnp":["F7","J10","J11"],
+  "external":[
+    {"item":"Main blade fuse","manufacturer":"Littelfuse","mpn":"0297020.WXNV","quantity":1,"notes":"20A MINI 32VDC; insert in F1 holder after inspection. Prototype selection; thermal/fault coordination remains unverified."},
+    {"item":"External AUX buck","manufacturer":"Pololu","mpn":"D24V10F5 / 2831","quantity":1,"notes":"Fixed 5V, typical 1A, 5.1-36V input; chassis mounted. Achievable current depends on temperature and input voltage."},
+    {"item":"Switch relay","manufacturer":"Panasonic","mpn":"CB1a-R-12V / ACB33221","quantity":1,"notes":"Normally open contacts in J3 series loop; matching rated socket required."},
+    {"item":"Panel toggle","manufacturer":"C&K","mpn":"7101SYZQE","quantity":1,"notes":"Coil control only; use common and one throw."},
+    {"item":"Relay-control fuse","manufacturer":"Littelfuse","mpn":"0297002.L","quantity":1,"notes":"2A MINI 32VDC. Replaces the earlier unspecified 1A inline selection; protect 22AWG control wiring at its source."},
+    {"item":"Relay-control inline holder","manufacturer":"Littelfuse","mpn":"0FHM0001ZXJ","quantity":1,"notes":"MINI inline holder, 14AWG leads. Fuse is separate. Source at external fused-positive splice, not by forcing two unlike wires into J3."}
+  ]
+}

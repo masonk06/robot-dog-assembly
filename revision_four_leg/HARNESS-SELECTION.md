@@ -1,5 +1,12 @@
 # Selected harness design — 2026-11-04
 
+Latest user operating details and telemetry limitations are recorded in
+`OPERATING-CONTEXT.md`: walking only, 150 mm 22 AWG servo leads, AUX for
+NodeMCU ESP32S/MPU6050, and a completely independent Pi/camera power source.
+The retained Pi branch is unused in this assembly; omit F7 and the external
+Pi buck, and leave J10/J11 unconnected. This is an assembly designation, not
+a deletion of the existing circuit or a newly released manufacturing BOM.
+
 These are design selections for the existing four-leg revision, not a claim of
 completed thermal, fault-interruption, or robot testing. Do not order the earlier
 prototype ZIP as the updated design: its J3 connector is now superseded.

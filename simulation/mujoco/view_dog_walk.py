@@ -118,6 +118,7 @@ def show(model, data):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--viewer", action="store_true", help="open the looping MuJoCo gait preview")
+    parser.add_argument("--model", type=Path, default=MODEL_PATH, help="MuJoCo XML to preview")
     parser.add_argument("--lift-mm", type=float, default=10.0, help="swing lift in millimetres (default: 10)")
     parser.add_argument("--stride-mm", type=float, default=15.0, help="fore-aft foot stroke in millimetres (default: 15)")
     args = parser.parse_args()
@@ -126,7 +127,7 @@ def main():
     ik.SWING_HEIGHT_M = args.lift_mm / 1000
     global STRIDE_M
     STRIDE_M = args.stride_mm / 1000
-    model = mujoco.MjModel.from_xml_path(str(MODEL_PATH))
+    model = mujoco.MjModel.from_xml_path(str(args.model.resolve()))
     data = mujoco.MjData(model)
     validate(model, data)
     if args.viewer:

@@ -1,0 +1,43 @@
+{
+  "chassis_bounds_mm": [
+    [
+      -70.0,
+      -89.90000152587,
+      0.0
+    ],
+    [
+      160.0,
+      89.90000152588,
+      50.15
+    ]
+  ],
+  "foot_shifts_m": {
+    "front_left": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "front_right": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rear_left": [
+      0.06000000000000001,
+      0.0,
+      0.0
+    ],
+    "rear_right": [
+      0.06000000000000001,
+      0.0,
+      0.0
+    ]
+  },
+  "total_provisional_mass_kg": 1.9229999999999998,
+  "limitations": [
+    "Original inertias retained; 1546g measurement inclusion unresolved.",
+    "Electronics placement and masses not yet calibrated.",
+    "Front hip-pitch hinges corrected +30 mm to match servo-local rear pivots; attachment fit requires review.",
+    "Chassis collision is a conservative box, not a detailed mesh."
+  ]
+}

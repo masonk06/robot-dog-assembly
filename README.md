@@ -6,6 +6,7 @@ learning, an ESP32-S3 servo/IMU receiver, and a Raspberry Pi ROS 2 bridge.
 
 ## Start here
 
+- [Project showcase](docs/SHOWCASE.md)
 - [Current project status](docs/STATUS.md)
 - [Current CAD and print parts](cad/README.md)
 - [Hardware safety and calibration](hardware/GETTING_DOG_RUNNING.md)
@@ -43,3 +44,12 @@ The chassis/electronics mass distribution remains provisional. Existing
 policies and simulation results are useful references, not approval for
 unsupported dynamic walking. The active engineering priority is reliable
 telemetry, calibration, slow supported testing, and a robust crawl policy.
+
+## Sim-to-real showcase
+
+![Luca simulation and supported hardware replay side by side](docs/sim-to-real/simulation-vs-real.gif)
+
+The left panel is the policy joint-target reference; the right panel is Luca
+following that reference during a supported hardware test. See the
+[showcase](docs/SHOWCASE.md) for videos, evidence boundaries, and the current
+engineering milestones.

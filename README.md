@@ -27,17 +27,6 @@ learning, an ESP32-S3 servo/IMU receiver, and a Raspberry Pi ROS 2 bridge.
 | `docs/sim-to-real/` | Representative simulation-versus-supported-hardware media. |
 | `revision_one_oz/` | Current power-distribution PCB source and ordering reference. |
 
-## Clone on a laptop or Pi
-
-```bash
-git clone https://github.com/masonk06/robot-dog-assembly.git
-cd robot-dog-assembly
-```
-
-For Windows MuJoCo preview, see the P2S model README. For Raspberry Pi ROS 2,
-see the bridge README. Do not send servo motion commands until the physical
-calibration and supported-test steps are complete.
-
 ## Current boundary
 
 The chassis/electronics mass distribution remains provisional. Existing

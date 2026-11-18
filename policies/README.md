@@ -1,29 +1,18 @@
-# Preserved policy checkpoints
+# Selected PPO policies
 
-Useful milestones are backed up with normalization and evaluation reports,
-independently of W&B retention. sources/RUN.zip holds the exact training source;
-catalog.json records provenance and checksums.
+Only two checkpoints are kept in the active repository. Each folder includes
+the Stable-Baselines3 policy, observation normalization state and evaluation
+metadata needed to reproduce its corresponding simulation playback.
 
-| Folder | Steps | Role |
-| --- | ---: | --- |
-| original-v7 | 8192 | First gait approved by the user |
-| tracking-baseline | 448352 | Approved tracking-weight 1.25 continuation |
-| best-distance | 9516896 | Highest recorded distance, about 16.02 cm / 20 s |
-| latest-long-run | 16570208 | Latest saved, about 15.75 cm / 20 s |
+| Folder | Role |
+| --- | --- |
+| `tracking-baseline/` | Early conservative policy used as a stable reference. |
+| `latest-long-run/` | Latest retained long-run simulation checkpoint. |
 
-These are residual controllers around a programmed gait. Results describe the
-saved simulated trials, not full-body hardware validation.
+These policies are residual controllers around a programmed gait and were
+trained with a fixed observation contract. Do not add IMU/contact inputs to a
+checkpoint at runtime—changing input dimensions requires training or adapting
+a new policy.
 
-In a Newton-capable environment, from the repository root:
-
-```bash
-python simulation/rl/play.py policies/best-distance --source simulation/mujoco
-```
-
-The checked-in MJCF matches the saved models after normalizing line endings.
-The catalog records both raw historical and LF-normalized checksums; source
-archives preserve the exact historical bytes. The current compatible
-implementation preserves the observation contract; extract the matching source
-archive for exact historical software. Only load trusted policy/normalization
-files, which contain serialized Python objects. Continue with train_cuda.py
---resume and an explicit --source; new runs save separately.
+Use them only in simulation or supported diagnostic replay after checking the
+calibration and safety documentation in `hardware/`.

@@ -1,31 +1,18 @@
-# Mechanical design
+# Active Luca CAD
 
-| Assembly | Meaning |
-| --- | --- |
-| `RoboDog - Knee Housing Connections.f3d` | Latest export, 2026-10-25: all knee housings grouped with knee-pitch parts and boots; output discs grouped with upper links |
-| `Recovered Fusion/RoboDog - FRAME V2 + boots.f3d` | Recovered 2026-10-22 assembly before housing edits |
-| `RoboDog.f3d` | Earlier snapshot; does not include the latest edits |
-| `RoboDog_geometry_backup.f3d` | Historical geometry backup |
+This directory intentionally contains only the current printable and editable
+design files. Earlier frame studies stay out of the published project so a new
+clone starts with the hardware that is relevant now.
 
-The latest export is a work in progress: the front-left motion test showed the housing following the foot, but the pivot remained near the hip. All knee pivots and motion ranges require review.
+## Active parts
 
-## Assets
+- `frame_p2s_camera_insert/` — current P2S chassis, camera insert, Raspberry
+  Pi tray, perfboard carrier, and Waveshare adapter mounting options. The
+  `RoboDog_P2S_Camera_Onshape.step` assembly is the main editable reference.
+- `luca_enclosure/` — printable enclosure and assembly exports.
+- `retaining_electronics_trays/` and `velcro_trays/` — current alternatives
+  for retaining the perfboard, Pi, and Waveshare adapter.
+- `luca_test_stand/` — supported-test stand used for safe calibration/replay.
 
-- `source/`: originally supplied STL meshes.
-- `revision_sources/`: revised frame, boot, and split servo geometry.
-- `solid_sources/`: converted STEP parts.
-- `positioned_parts/` and `robot_dog_layout.*`: earlier conceptual layouts.
-- `front_rear_leg_variants/`: installation references, not new printable designs.
-- `RoboDog_placements.json`: earlier saved transforms used by the simulator.
-- `placements.json`: conceptual assumptions, not measured mechanical truth.
-- `robot_dog_meshes_for_hpc.zip`: original HPC transfer snapshot.
-
-Fusion scripts run inside Fusion's Python environment. Conversion tools require OpenCascade Python bindings (`OCP`), separate from simulator dependencies. `RoboDog_original_import_script.py` is archival and retains paths to an older workspace.
-
-JSON reports, logs, and images describe the revisions that generated them; they do not certify the latest assembly.
-# Frame V3 packaging
-
-The newer [frame_v3](frame_v3/README.md) folder contains a separate printable
-electronics-packaging revision, build source, previews and validation results.
-It does not replace the existing simulation's joint geometry or the preserved
-Fusion knee-housing assembly.
+CAD units are millimetres. The MuJoCo P2S preview currently derives its chassis
+mesh from `frame_p2s_camera_insert/Chassis.stl`.

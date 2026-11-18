@@ -35,3 +35,18 @@ checkpoints/
 # versioned; these console captures are not portable project artifacts.
 hardware/*_stdout.log
 hardware/*_stderr.log
+
+# The workstation keeps earlier CAD studies locally.  The repository publishes
+# only the active P2S chassis and the current support/electronics print parts.
+/cad/*
+!/cad/README.md
+!/cad/frame_p2s_camera_insert/
+!/cad/frame_p2s_camera_insert/**
+!/cad/luca_enclosure/
+!/cad/luca_enclosure/**
+!/cad/luca_test_stand/
+!/cad/luca_test_stand/**
+!/cad/retaining_electronics_trays/
+!/cad/retaining_electronics_trays/**
+!/cad/velcro_trays/
+!/cad/velcro_trays/**

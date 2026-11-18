@@ -7,6 +7,14 @@
 #include <stdlib.h>
 #include <Wire.h>
 
+#if defined(CONFIG_IDF_TARGET_ESP32S3)
+constexpr int IMU_SDA_PIN = 8;
+constexpr int IMU_SCL_PIN = 9;
+#else
+constexpr int IMU_SDA_PIN = 21;
+constexpr int IMU_SCL_PIN = 22;
+#endif
+
 HardwareSerial bus(2);
 uint16_t lower[12] = {0}, upper[12] = {0}, lastGoal[12] = {0};
 bool armed = false;
@@ -34,7 +42,7 @@ bool imuWrite(uint8_t reg, uint8_t value) {
   return Wire.endTransmission(true) == 0;
 }
 void setupImu() {
-  Wire.begin(21, 22, 100000); Wire.setTimeOut(5);
+  Wire.begin(IMU_SDA_PIN, IMU_SCL_PIN, 100000); Wire.setTimeOut(5);
   for (uint8_t address : {uint8_t(0x68), uint8_t(0x69)}) {
     imuAddress = address; uint8_t id = 0;
     if (!imuRead(0x75, &id, 1) || (id != 0x68 && id != 0x70)) continue;
@@ -239,7 +247,10 @@ void loop() {
   }
   if (armed && uint32_t(millis() - lastCommand) > WATCHDOG_MS) { Serial.println("ERR,WATCHDOG"); stopAll(); }
   monitor();
-  if (imuStreaming && armed && uint32_t(millis() - lastImuStream) >= 50 && Serial.availableForWrite() >= 90) {
+  // IMU streaming is intentionally a disarmed-only diagnostic feature.  Keeping
+  // it available in this state lets the Pi/ROS bridge observe the robot without
+  // enabling servo torque or accepting motion commands.
+  if (imuStreaming && !armed && uint32_t(millis() - lastImuStream) >= 50 && Serial.availableForWrite() >= 90) {
     lastImuStream = millis(); reportImu();
   }
 }

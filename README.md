@@ -12,6 +12,7 @@ learning, an ESP32-S3 servo/IMU receiver, and a Raspberry Pi ROS 2 bridge.
 - [Hardware safety and calibration](hardware/GETTING_DOG_RUNNING.md)
 - [ROS 2 IMU bridge](ros2/luca_imu_bridge/README.md)
 - [Current MuJoCo model](simulation/mujoco/p2s/README.md)
+- [P2S H100 quasi-static crawl](simulation/p2s_crawl/README.md)
 - [Policy catalog](policies/README.md)
 - [Sim-to-real evidence](docs/sim-to-real/README.md)
 

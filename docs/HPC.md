@@ -30,7 +30,7 @@ From the repository root in an active GPU allocation:
 
 ```bash
 python simulation/rl/train_cuda.py \
-  --resume policies/best-distance --source simulation/mujoco \
+  --resume policies/tracking-baseline --source simulation/mujoco \
   --envs 64 --steps 65536 --save-every 32768 --output runs/cuda
 ```
 
@@ -51,3 +51,12 @@ Check the actual job/process before relaunching. Keep policy.zip, normalize.pkl,
 environment.json and matching source together. Do not close a GPU allocation
 before checkpoint/artifact saving completes. Simulator checkpoints do not
 contain real-world calibration.
+
+## Current P2S training run
+
+For the current chassis, use the [P2S quasi-static crawl
+workflow](../simulation/p2s_crawl/README.md), not the historical fast-gait
+command above. It builds a portable source tree from the P2S model, runs a
+CUDA import gate, then trains a slow crawl across several provisional
+centre-of-mass/friction/actuator-response conditions. It preserves the
+existing 60-observation input contract and does not control hardware.

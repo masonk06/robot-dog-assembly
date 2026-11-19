@@ -1,5 +1,9 @@
 # Walking policy and training
 
+For the current P2S chassis, start with the [P2S quasi-static crawl
+workflow](../p2s_crawl/README.md). The historical fast-gait experiments below
+remain source/reference material; they are not the active sim-to-real plan.
+
 The active controller is version 7: a programmed four-beat foot trajectory
 plus learned corrections limited to 0.035 rad (about 2 degrees), filtered over
 0.12 s. Control runs at 50 Hz; physics uses ten 0.002 s substeps. Body -X is
@@ -37,9 +41,9 @@ Install the appropriate pinned environment first; see [HPC](../../docs/HPC.md).
 Only load trusted serialized checkpoint files.
 
 ```bash
-python simulation/rl/play.py policies/best-distance --source simulation/mujoco
+python simulation/rl/play.py policies/tracking-baseline --source simulation/mujoco
 python simulation/rl/train_cuda.py \
-  --resume policies/best-distance --source simulation/mujoco \
+  --resume policies/tracking-baseline --source simulation/mujoco \
   --envs 64 --steps 65536 --save-every 32768 --output runs/cuda
 ```
 
@@ -56,10 +60,9 @@ Training speedups do not establish hardware transfer or better gait quality.
 
 ## Preserved results
 
-[Policies](../../policies/README.md) contains original-v7, tracking-baseline,
-best-distance and latest-long-run. Best distance was about 16.02 cm / 20 s at
-9.52 million steps; performance plateaued in the later long run. Three seeded
-evaluations are a limited benchmark, not a robustness certificate.
+[Policies](../../policies/README.md) contains the conservative tracking
+baseline and the latest retained long-run checkpoint. Historical results are a
+limited simulation benchmark, not a robustness certificate.
 
 The user confirmed rear-left supported open-loop transfer. Full policy
 deployment needs calibrated hardware mappings/limits and real body-state

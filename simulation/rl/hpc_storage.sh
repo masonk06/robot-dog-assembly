@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Source this in the same shell that launches training.
-export DOG_WORK="${DOG_WORK:-/scratch/$USER/robot-dog-rl}"
+export DOG_WORK="${DOG_WORK:-/raid/$USER/robot-dog-rl}"
 if [[ "$DOG_WORK" != /* ]]; then
   echo 'DOG_WORK must be an absolute writable path.' >&2
   return 1

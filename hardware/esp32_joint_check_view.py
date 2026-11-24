@@ -1,4 +1,5 @@
 """Read-only manual direction and conservative endpoint checks through ESP32 CSV."""
+import argparse
 from datetime import datetime
 import hashlib
 import json
@@ -24,16 +25,19 @@ from serial.tools import list_ports
 
 
 class JointCheckView:
-    def __init__(self, root):
+    def __init__(self, root, zero_path=None):
         self.root = root
         root.title('REV 2 • ESP32 directions and limits — corrected front labels • READ ONLY')
         root.geometry('1350x940')
-        self.zero_path = ROOT / 'hardware/calibrations/zero-points-current.json'
+        self.zero_path = (zero_path or ROOT / 'hardware/calibrations/zero-points-current.json').resolve()
+        if not self.zero_path.is_file():
+            raise FileNotFoundError(f'Zero capture not found: {self.zero_path}')
         self.zeros = json.loads(self.zero_path.read_text())
         self.zero_source_sha256 = hashlib.sha256(self.zero_path.read_bytes()).hexdigest()
-        model_path = ROOT / 'simulation/mujoco/robot_dog_v2.xml'
-        assert self.zeros['status'] == 'operator_verified_zero_points_only'
-        assert self.zeros['model_sha256'] == hashlib.sha256(model_path.read_bytes()).hexdigest()
+        # The active P2S model is the visual reference.  The selected zero file
+        # remains pinned by hash in every new capture rather than being silently
+        # promoted to a verified calibration.
+        model_path = ROOT / 'simulation/mujoco/p2s/robot_dog_p2s.xml'
         self.model = mujoco.MjModel.from_xml_path(str(model_path))
         self.names = [name for name, _ in JOINT_IDS]
         self.qadr = {}
@@ -53,7 +57,7 @@ class JointCheckView:
         self.samples = ZeroSamples(); self.latest = {}; self.blocked = set()
         self.events = queue.Queue(); self.stop = threading.Event(); self.worker = None
         self.selected = tk.StringVar(value=self.names[0])
-        self.port = tk.StringVar(value='COM7')
+        self.port = tk.StringVar(value='COM7' if sys.platform == 'win32' else '/dev/ttyACM0')
         self.confirmed = tk.BooleanVar(value=False)
         self.mode = tk.StringVar(value='Directions')
         self.view = tk.StringVar(value='Three-quarter')
@@ -98,8 +102,10 @@ class JointCheckView:
         buttons = ttk.Frame(self.root, padding=8); buttons.pack(fill='x')
         ttk.Button(buttons, text='1. Capture neutral baseline', command=self.baseline).pack(side='left')
         ttk.Button(buttons, text='Show +5°', command=lambda: self.show(5, 'positive')).pack(side='left', padx=5)
+        ttk.Button(buttons, text='Show +15°', command=lambda: self.show(15, 'positive')).pack(side='left', padx=5)
         ttk.Button(buttons, text='Capture positive pose / endpoint', command=lambda: self.capture(True)).pack(side='left')
         ttk.Button(buttons, text='Show −5°', command=lambda: self.show(-5, 'negative')).pack(side='left', padx=5)
+        ttk.Button(buttons, text='Show −15°', command=lambda: self.show(-15, 'negative')).pack(side='left', padx=5)
         ttk.Button(buttons, text='Capture negative pose / endpoint', command=lambda: self.capture(False)).pack(side='left')
         ttk.Button(buttons, text='Save session', command=self.save).pack(side='left', padx=8)
         ttk.Label(self.root, textvariable=self.status, wraplength=1300).pack(fill='x', padx=10, pady=6)
@@ -131,6 +137,9 @@ class JointCheckView:
                 bus.dtr=False; bus.rts=False; bus.port=port
                 with bus:
                     bus.reset_input_buffer()
+                    # Disarmed-only request for read-register telemetry; no
+                    # torque, goal, ID, or EEPROM command exists on this path.
+                    bus.write(b'READSTREAM\n'); bus.flush()
                     pending=bytearray()
                     self.events.put(('status', f'Listening to {port}. Receive-only; no motor commands are sent.'))
                     while not self.stop.is_set():
@@ -269,7 +278,11 @@ class JointCheckView:
 
 
 def main():
-    root=tk.Tk();JointCheckView(root);root.mainloop()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--zeros', type=Path,
+                        help='Reviewed timestamped zero-capture file; default keeps the historical current record.')
+    args = parser.parse_args()
+    root=tk.Tk();JointCheckView(root, args.zeros);root.mainloop()
 
 
 if __name__=='__main__':main()

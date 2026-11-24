@@ -16,10 +16,11 @@ stance legs. The reference has a small weight-shift cue; PPO can correct it.
 
 Run only in simulation. The companion curriculum script creates a source copy
 for every slot, then progressively varies mass-constant base COM, foot/floor
-friction, and conservative controller response proxies. This is scenario-based
-domain randomization across consecutive PPO rollouts; it does not claim every
-GPU world has a different physical robot. Each source copy records the exact
-scenario beside its checkpoint.
+friction, and conservative controller response proxies. The nominal COM is
+8 mm forward in the body frame, with a small fore/aft bracket around that
+assumption. This is scenario-based domain randomization across consecutive PPO
+rollouts; it does not claim every GPU world has a different physical robot.
+Each source copy records the exact scenario beside its checkpoint.
 
 The controller response proxies are not STS3215 measurements. Replace their
 range with supported step-response measurements before approving any policy for

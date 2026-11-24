@@ -11,6 +11,7 @@ import tkinter as tk
 from tkinter import ttk
 import uuid
 from PIL import Image, ImageTk
+import mujoco
 from calibration_io import JOINT_IDS
 from esp32_zero_io import ZeroSamples, parse_servo_csv
 
@@ -26,6 +27,14 @@ class ZeroView:
         root.title('ESP32 • all 12 zero points — READ ONLY')
         root.geometry('1390x870')
         self.old = json.loads((ROOT / 'hardware/display_joint_mapping.json').read_text())
+        self.model_path = ROOT / 'simulation/mujoco/p2s/robot_dog_p2s.xml'
+        self.model = mujoco.MjModel.from_xml_path(str(self.model_path))
+        self.data = mujoco.MjData(self.model)
+        # The active P2S XML uses MuJoCo's default 640-pixel offscreen buffer.
+        self.renderer = mujoco.Renderer(self.model, width=560, height=360)
+        self.camera = mujoco.MjvCamera()
+        self.camera.lookat[:] = [0.0, 0.0, 0.065]
+        self.camera.distance = 0.52
         self.assignments = dict(JOINT_IDS)
         self.names = list(self.assignments)
         self.samples = ZeroSamples()
@@ -35,7 +44,7 @@ class ZeroView:
         self.events = queue.Queue()
         self.stop = threading.Event()
         self.worker = None
-        self.port = tk.StringVar(value='COM7')
+        self.port = tk.StringVar(value='COM7' if sys.platform == 'win32' else '/dev/ttyACM0')
         self.selected = tk.StringVar(value=self.names[0])
         self.sid = tk.StringVar(value=str(self.assignments[self.selected.get()]))
         self.confirmed = tk.BooleanVar(value=False)
@@ -90,12 +99,14 @@ class ZeroView:
         ttk.Label(self.root, textvariable=self.status, wraplength=1350).pack(fill='x', padx=12, pady=12)
 
     def show_reference(self):
-        path = ROOT / 'reports/sim2real/simulation-neutral-reference.png'
-        with Image.open(path) as whole:
-            index = ['Side', 'Front / rear', 'Three-quarter', 'Top'].index(self.view.get())
-            x, y = 20 + (index % 2) * 710, 108 + (index // 2) * 505
-            picture = whole.crop((x, y, x + 700, y + 450)).resize((560, 360))
-        self.photo = ImageTk.PhotoImage(picture)
+        self.data.qpos[:] = self.model.qpos0
+        self.camera.azimuth, self.camera.elevation = {
+            'Side': (90, -8), 'Front / rear': (0, -8),
+            'Three-quarter': (135, -15), 'Top': (90, -89),
+        }[self.view.get()]
+        mujoco.mj_forward(self.model, self.data)
+        self.renderer.update_scene(self.data, camera=self.camera)
+        self.photo = ImageTk.PhotoImage(Image.fromarray(self.renderer.render()))
         self.image_label.configure(image=self.photo)
 
     def select_row(self, _):
@@ -127,8 +138,10 @@ class ZeroView:
                 bus.dtr = False; bus.rts = False; bus.port = port
                 with bus:
                     bus.reset_input_buffer()
+                    # Requests only disarmed servo register reads from the guarded receiver.
+                    bus.write(b'READSTREAM\n'); bus.flush()
                     pending = bytearray()
-                    self.events.put(('status', f'Listening on {port}; receiving only. Requires the combined servo CSV readout sketch.'))
+                    self.events.put(('status', f'Listening on {port}; disarmed register telemetry only.'))
                     while not self.stop.is_set():
                         pending.extend(bus.read(max(1, min(bus.in_waiting, 512))))
                         while b'\n' in pending:
@@ -136,7 +149,7 @@ class ZeroView:
                             line = line.decode('ascii', errors='replace').strip()
                             if line.startswith('# RoboDog'):
                                 self.events.put(('restart', None))
-                            elif line.startswith('servo_error,'):
+                            elif line.startswith(('servo_error,', 'SERVO_ERROR,')):
                                 parts = line.split(',')
                                 try: self.events.put(('error', int(parts[1])))
                                 except (ValueError, IndexError): pass
@@ -176,11 +189,10 @@ class ZeroView:
         if self.path is None:
             folder = ROOT / 'hardware/calibrations'; folder.mkdir(exist_ok=True)
             self.path = folder / f'zeros-{time.strftime("%Y%m%d-%H%M%S")}-{uuid.uuid4().hex[:6]}.json'
-        model = ROOT / 'simulation/mujoco/robot_dog_v2.xml'
         record = dict(status='operator_verified_zero_points_only' if complete else 'incomplete_zero_session',
                       recorded_local=datetime.now().astimezone().isoformat(),
                       transport='ESP32 read-only CSV 115200', port=self.port.get(),
-                      model_sha256=hashlib.sha256(model.read_bytes()).hexdigest(),
+                      model_sha256=hashlib.sha256(self.model_path.read_bytes()).hexdigest(),
                       model_zero_radians=[0.] * 12, joints=self.captures,
                       ready_for_motion=False, direction_calibration_complete=False,
                       travel_limit_calibration_complete=False,
@@ -225,6 +237,7 @@ class ZeroView:
     def close(self):
         self.stop.set()
         if self.worker: self.worker.join(timeout=.5)
+        self.renderer.close()
         self.root.destroy()
 
 

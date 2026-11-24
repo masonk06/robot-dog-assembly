@@ -4,10 +4,11 @@ STS3215 servos connect through a Waveshare Bus Servo Adapter (A) with a 12 V sup
 
 ## Current workflow
 
-October 28 new-frame update: the user corrected the front assembly labels.
-Current physical IDs are FL **4/5/6**, FR **1/2/3**, RL **7/8/9**, RR
-**11/10/12** (roll/pitch/knee). Use `calibration_io.JOINT_IDS` and the new
-`calibrations/zero-points-current.json` for current read-only calibration.
+The front-leg mapping was reconfirmed on November 24, 2026. Current physical
+IDs are FL **4/5/6**, FR **1/2/3**, RL **7/8/9**, RR **11/10/12**
+(roll/pitch/knee). Use `calibration_io.JOINT_IDS`. Earlier zero and limit
+files retain their original labels as historical evidence and must not be used
+for new motion calibration.
 The ESP32 [direction/limit checker](ESP32_DIRECTIONS_LIMITS.md) receives CSV
 through COM7. Historical front-motion scripts, old neutral files, and the
 October 26 rear-left replay below are retained records, not current-frame

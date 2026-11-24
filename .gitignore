@@ -42,6 +42,8 @@ hardware/*_stderr.log
 !/cad/README.md
 !/cad/frame_p2s_camera_insert/
 !/cad/frame_p2s_camera_insert/**
+!/cad/camera_chassis_adapter/
+!/cad/camera_chassis_adapter/**
 !/cad/luca_enclosure/
 !/cad/luca_enclosure/**
 !/cad/luca_test_stand/

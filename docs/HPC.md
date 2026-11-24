@@ -7,16 +7,30 @@ assumption. Python module: python/3.12.
 
 ## Persistent environment
 
-The uploaded project is ~/robot-dog-newton. Its CUDA environment is .venv-cuda
-in persistent home storage. Home quota was 25 GB; disposable Apptainer cache
+The uploaded project is ~/robot-dog-newton. Its CUDA environment is
+~/.venv-cuda-py312 in persistent home storage. Home quota was 25 GB; disposable Apptainer cache
 cleanup freed installation space. Use --no-cache-dir and node /tmp for install
 temporary files if needed. Node-local /scratch does not follow jobs between
-nodes. Keep policies in persistent storage and W&B.
+nodes. Keep policies in persistent storage and W&B. Run the requirements command
+from the repository checkout, not from `~`.
+
+On dgxh-1, `/raid` is the available 25 TiB node-local RAID workspace. Use it
+for this 12-hour allocation's virtual environment, caches, and active run
+files. It is not a shared or persistent filesystem: copy selected checkpoints
+and outputs to backed-up project storage before the allocation ends, and expect
+to recreate the environment if a later job runs on another node.
 
 ```bash
+cd ~/robot-dog-newton
 module load python/3.12
-python -m venv .venv-cuda
-source .venv-cuda/bin/activate
+python --version  # Must report Python 3.12.x before creating the environment.
+export LUCA_FAST="/raid/$USER/luca"
+mkdir -p "$LUCA_FAST/tmp"
+export TMPDIR="$LUCA_FAST/tmp"
+python -m venv "$LUCA_FAST/.venv-cuda-py312"
+source "$LUCA_FAST/.venv-cuda-py312/bin/activate"
+python --version  # Must still report Python 3.12.x.
+python -m pip install --upgrade pip
 python -m pip install --no-cache-dir -r requirements-cuda.txt
 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ```
@@ -54,9 +68,46 @@ contain real-world calibration.
 
 ## Current P2S training run
 
-For the current chassis, use the [P2S quasi-static crawl
+For the current chassis, use the [P2S IK + PPO walking
 workflow](../simulation/p2s_crawl/README.md), not the historical fast-gait
 command above. It builds a portable source tree from the P2S model, runs a
-CUDA import gate, then trains a slow crawl across several provisional
-centre-of-mass/friction/actuator-response conditions. It preserves the
-existing 60-observation input contract and does not control hardware.
+CUDA import gate, then trains a 25 mm-stride, 3-second IK walk with PPO
+residual actions across provisional centre-of-mass and friction scenarios. It
+uses 128 CUDA worlds, preserves the 60-observation input contract, and does
+not control hardware.
+
+## Scoped upload to OSU HPC
+
+The local workspace may contain unrelated CAD and PCB work. Transfer only the
+simulation and HPC documentation patch unless those other changes are also
+intended for the cluster. From this repository on the local machine, create a
+patch after reviewing it:
+
+```powershell
+git diff --check
+git diff -- simulation/p2s_crawl simulation/rl docs/HPC.md > luca-ik-ppo-hpc.patch
+scp .\luca-ik-ppo-hpc.patch YOUR_OSU_USERNAME@YOUR_OSU_HOST:~/
+```
+
+On the OSU login node, update the repository to the same base revision and
+apply the patch only after its dry run succeeds:
+
+```bash
+cd ~/robot-dog-newton
+git pull --ff-only
+git apply --check ~/luca-ik-ppo-hpc.patch
+git apply ~/luca-ik-ppo-hpc.patch
+module load python/3.12
+source .venv-cuda/bin/activate
+```
+
+Then obtain the approved 12-hour GPU allocation and, inside it, launch:
+
+```bash
+cd ~/robot-dog-newton
+bash simulation/p2s_crawl/hpc_run_quasistatic.sh
+```
+
+The launcher performs its CUDA import gate before training and uses W&B online
+logging by default. Copy the selected checkpoint from node-local scratch to
+persistent storage before the allocation ends.

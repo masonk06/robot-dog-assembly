@@ -1,7 +1,7 @@
 # Walking policy and training
 
-For the current P2S chassis, start with the [P2S quasi-static crawl
-workflow](../p2s_crawl/README.md). The historical fast-gait experiments below
+For the current P2S chassis, start with the [P2S IK + PPO walking
+workflow](../p2s_crawl/README.md). The historical gait experiments below
 remain source/reference material; they are not the active sim-to-real plan.
 
 The active controller is version 7: a programmed four-beat foot trajectory

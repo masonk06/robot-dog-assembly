@@ -1,8 +1,8 @@
 """Simulation-only staged COM/friction robustness curriculum for Luca.
 
 Each stage copies the source and applies a mass-constant COM/friction variant,
-then continues PPO with the separate quasi-static crawl task. Inputs are never
-edited and no physical hardware is controlled.
+then continues PPO with an IK walking reference and learned residual actions.
+Inputs are never edited and no physical hardware is controlled.
 """
 import argparse
 import json
@@ -14,11 +14,12 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
-# Negative X is forward in the CAD/body frame.  These deliberately cover a
-# plausible incomplete-prototype range without fitting the temporary chassis.
-SCENARIOS = ((0.000, .80, 1.00, 'baseline'), (-.015, .70, 1.15, 'forward-low-friction'),
-             (+.015, .90, .85, 'rear-high-friction'), (-.015, .90, .85, 'forward-high-friction'),
-             (+.015, .70, 1.15, 'rear-low-friction'))
+# Negative X is forward in the CAD/body frame.  The nominal case is biased
+# 8 mm forward to represent the expected unfinished prototype layout, while
+# the surrounding cases avoid fitting a policy to that assumption as fact.
+SCENARIOS = ((-.008, .80, 'forward-nominal'), (-.015, .70, 'forward-low-friction'),
+             (-.002, .90, 'near-centered-high-friction'), (-.012, .90, 'forward-high-friction'),
+             (+.004, .70, 'slightly-rear-low-friction'))
 
 
 def write_variant(original, output, com_shift_x, friction):
@@ -64,27 +65,36 @@ def main():
     parser.add_argument('--slots', type=int, default=5)
     parser.add_argument('--slot-seconds', type=float, default=3600)
     parser.add_argument('--envs', type=int, default=64)
+    parser.add_argument('--target-speed', type=float, default=.012)
+    parser.add_argument('--cycle-seconds', type=float, default=3.0)
+    parser.add_argument('--stride-m', type=float, default=.025)
     parser.add_argument('--mode', choices=('online', 'offline', 'disabled'), default='online')
     args = parser.parse_args()
     if args.slots < 1 or args.envs < 1 or args.slot_seconds <= 60:
         parser.error('slots/envs must be positive and slot-seconds must exceed 60')
+    if min(args.target_speed, args.cycle_seconds, args.stride_m) <= 0:
+        parser.error('walk target speed, cycle time, and stride must be positive')
     root = args.output / time.strftime('%Y%m%d-%H%M%S')
     root.mkdir(parents=True, exist_ok=False)
     checkpoint, source_base = args.checkpoint.resolve(), args.source.resolve()
     records = []
     for slot in range(args.slots):
-        shift, friction, response_scale, label = SCENARIOS[slot % len(SCENARIOS)]
+        shift, friction, label = SCENARIOS[slot % len(SCENARIOS)]
         source = root / f'source-slot-{slot + 1:02d}-{label}'
         shutil.copytree(source_base, source, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
         write_variant(source / 'robot_dog_v2.xml', source / 'robot_dog_v2.xml', shift, friction)
         metadata = {'slot': slot + 1, 'label': label, 'com_x_shift_m': shift,
                     'friction': friction, 'total_mass_change_kg': 0,
-                    'actuator_response_proxy_scale': response_scale,
-                    'note': 'COM-only variant; response proxy is provisional; simulation-only.'}
+                    'target_speed_m_s': args.target_speed,
+                    'gait_cycle_seconds': args.cycle_seconds,
+                    'reference_stride_m': args.stride_m,
+                    'note': 'COM/friction variant; simulation-only.'}
         (source / 'robustness-scenario.json').write_text(json.dumps(metadata, indent=2))
         output = root / f'slot-{slot + 1:02d}'
         command = [sys.executable, '-u', source / 'train_cuda.py', '--resume', checkpoint,
-                   '--source', source, '--quasistatic-crawl', '--crawl-response-scale', response_scale, '--envs', args.envs,
+                   '--source', source, '--target-speed', args.target_speed,
+                   '--cycle-seconds', args.cycle_seconds, '--stride-m', args.stride_m,
+                   '--envs', args.envs,
                    '--steps', 100000000, '--max-seconds', args.slot_seconds,
                    '--save-every', 1000000, '--eval-episodes', 5, '--eval-seconds', 60,
                    '--mode', args.mode, '--output', output]

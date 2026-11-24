@@ -1,7 +1,8 @@
-"""Read-only ESP32 telemetry mirror for the robot-dog simulation.
+"""Disarmed ESP32 telemetry mirror for the active P2S robot model.
 
-This program never writes to the serial port beyond opening it with DTR/RTS
-disabled. It cannot enable torque, set goals, change IDs, or write EEPROM.
+The only serial bytes this program sends are READSTREAM to request ESP32
+register reads. That command cannot enable torque, set goals, change IDs, or
+write EEPROM.
 """
 from pathlib import Path
 import json
@@ -34,7 +35,7 @@ class LiveMirror:
         root.geometry("1260x790")
         self.zeros = json.loads((ROOT / "hardware/calibrations/zero-points-current.json").read_text())
         self.directions = json.loads((ROOT / "hardware/calibrations/manual-physical-directions-20261028.json").read_text())
-        self.model = mujoco.MjModel.from_xml_path(str(ROOT / "simulation/mujoco/robot_dog_v2.xml"))
+        self.model = mujoco.MjModel.from_xml_path(str(ROOT / "simulation/mujoco/p2s/robot_dog_p2s.xml"))
         self.reference = mujoco.MjData(self.model)
         self.live = mujoco.MjData(self.model)
         self.reference_renderer = mujoco.Renderer(self.model, width=560, height=390)
@@ -44,7 +45,7 @@ class LiveMirror:
         self.camera.distance = 0.52
         self.camera.azimuth = 135
         self.camera.elevation = -15
-        self.port = tk.StringVar(value="COM7")
+        self.port = tk.StringVar(value="COM7" if sys.platform == "win32" else "/dev/ttyACM0")
         self.view = tk.StringVar(value="Three-quarter")
         self.status = tk.StringVar(value="Disconnected. Receive-only: the mirror cannot command the robot.")
         self.events = queue.Queue()
@@ -107,6 +108,9 @@ class LiveMirror:
                 bus.port = port
                 with bus:
                     bus.reset_input_buffer()
+                    # READSTREAM is a disarmed-only ESP32 command. It triggers
+                    # read-register telemetry; it has no torque or goal path.
+                    bus.write(b"READSTREAM\n"); bus.flush()
                     self.events.put(("status", f"Listening to {port}; receive-only CSV telemetry."))
                     pending = bytearray()
                     while not self.stop.is_set():

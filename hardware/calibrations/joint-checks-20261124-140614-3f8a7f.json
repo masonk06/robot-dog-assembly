@@ -1,0 +1,876 @@
+{
+  "status": "manual_joint_checks_incomplete",
+  "recorded_local": "2026-11-24T14:24:09.891301-08:00",
+  "zero_source": "hardware/calibrations/zeros-20261124-140405-ccb662.json",
+  "zero_source_sha256": "14983f4ecb209a7db565fb5c4174d9e77387acc86aacee3af54f5d7e29005fb2",
+  "model_sha256": "473b088d40623c62a18f38abb7bec3570eef54bf8c397bb327aecbd8685b54c4",
+  "transport": "ESP32 CSV 115200, receive only",
+  "joints": {
+    "front_left_hip_roll": {
+      "id": 4,
+      "neutral_ticks": 2077,
+      "baseline": {
+        "id": 4,
+        "sample_ticks": [
+          2082,
+          2082,
+          2082
+        ],
+        "sample_device_us": [
+          84171226,
+          84411238,
+          84651227
+        ],
+        "captured_local": "2026-11-24T14:07:35.379919-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2082,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 4,
+        "sample_ticks": [
+          2043,
+          2043,
+          2043
+        ],
+        "sample_device_us": [
+          123051238,
+          123291225,
+          123531242
+        ],
+        "captured_local": "2026-11-24T14:08:14.323496-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2043,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 4,
+        "sample_ticks": [
+          2102,
+          2102,
+          2102
+        ],
+        "sample_device_us": [
+          153531228,
+          153771244,
+          154011242
+        ],
+        "captured_local": "2026-11-24T14:08:45.063332-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2102,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": -1,
+      "limits_baseline": {
+        "id": 4,
+        "sample_ticks": [
+          2083,
+          2083,
+          2083
+        ],
+        "sample_device_us": [
+          1078731228,
+          1078971228,
+          1079211228
+        ],
+        "captured_local": "2026-11-24T14:24:09.891139-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2083,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      }
+    },
+    "front_left_hip_pitch": {
+      "id": 5,
+      "neutral_ticks": 1756,
+      "baseline": {
+        "id": 5,
+        "sample_ticks": [
+          1744,
+          1744,
+          1744
+        ],
+        "sample_device_us": [
+          265871230,
+          266111234,
+          266351230
+        ],
+        "captured_local": "2026-11-24T14:10:37.216724-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1744,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 5,
+        "sample_ticks": [
+          1848,
+          1848,
+          1848
+        ],
+        "sample_device_us": [
+          280751235,
+          280991235,
+          281231248
+        ],
+        "captured_local": "2026-11-24T14:10:52.282127-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1848,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 5,
+        "sample_ticks": [
+          1617,
+          1617,
+          1618
+        ],
+        "sample_device_us": [
+          306911235,
+          307151235,
+          307391248
+        ],
+        "captured_local": "2026-11-24T14:11:18.128309-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1617,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": 1
+    },
+    "front_left_knee_pitch": {
+      "id": 6,
+      "neutral_ticks": 1823,
+      "baseline": {
+        "id": 6,
+        "sample_ticks": [
+          1823,
+          1823,
+          1823
+        ],
+        "sample_device_us": [
+          328771244,
+          329011226,
+          329251244
+        ],
+        "captured_local": "2026-11-24T14:11:40.222834-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1823,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 6,
+        "sample_ticks": [
+          1710,
+          1710,
+          1710
+        ],
+        "sample_device_us": [
+          382051240,
+          382291228,
+          382531212
+        ],
+        "captured_local": "2026-11-24T14:12:33.512376-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1710,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 6,
+        "sample_ticks": [
+          1922,
+          1922,
+          1922
+        ],
+        "sample_device_us": [
+          415411209,
+          415651207,
+          415891239
+        ],
+        "captured_local": "2026-11-24T14:13:06.718336-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1922,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": -1
+    },
+    "front_right_hip_roll": {
+      "id": 1,
+      "neutral_ticks": 2081,
+      "baseline": {
+        "id": 1,
+        "sample_ticks": [
+          2083,
+          2083,
+          2083
+        ],
+        "sample_device_us": [
+          512511216,
+          512751216,
+          512991248
+        ],
+        "captured_local": "2026-11-24T14:14:43.868854-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2083,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 1,
+        "sample_ticks": [
+          2178,
+          2178,
+          2178
+        ],
+        "sample_device_us": [
+          535311245,
+          535551248,
+          535791216
+        ],
+        "captured_local": "2026-11-24T14:15:06.744470-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2178,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 1,
+        "sample_ticks": [
+          1988,
+          1988,
+          1988
+        ],
+        "sample_device_us": [
+          546111216,
+          546351216,
+          546591235
+        ],
+        "captured_local": "2026-11-24T14:15:17.505184-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1988,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": 1
+    },
+    "front_right_hip_pitch": {
+      "id": 2,
+      "neutral_ticks": 1777,
+      "baseline": {
+        "id": 2,
+        "sample_ticks": [
+          1776,
+          1776,
+          1776
+        ],
+        "sample_device_us": [
+          578531227,
+          578771226,
+          579011244
+        ],
+        "captured_local": "2026-11-24T14:15:49.898789-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1776,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 2,
+        "sample_ticks": [
+          1906,
+          1906,
+          1906
+        ],
+        "sample_device_us": [
+          588371226,
+          588611227,
+          588851240
+        ],
+        "captured_local": "2026-11-24T14:15:59.778477-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1906,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 2,
+        "sample_ticks": [
+          1713,
+          1713,
+          1713
+        ],
+        "sample_device_us": [
+          598211226,
+          598451227,
+          598691244
+        ],
+        "captured_local": "2026-11-24T14:16:09.481864-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1713,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": 1
+    },
+    "front_right_knee_pitch": {
+      "id": 3,
+      "neutral_ticks": 1780,
+      "baseline": {
+        "id": 3,
+        "sample_ticks": [
+          1779,
+          1779,
+          1779
+        ],
+        "sample_device_us": [
+          633031216,
+          633271216,
+          633511248
+        ],
+        "captured_local": "2026-11-24T14:16:44.424674-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1779,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 3,
+        "sample_ticks": [
+          1632,
+          1632,
+          1632
+        ],
+        "sample_device_us": [
+          644311248,
+          644551248,
+          644791216
+        ],
+        "captured_local": "2026-11-24T14:16:55.663944-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1632,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 3,
+        "sample_ticks": [
+          1871,
+          1871,
+          1871
+        ],
+        "sample_device_us": [
+          652711248,
+          652951248,
+          653191216
+        ],
+        "captured_local": "2026-11-24T14:17:04.040044-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1871,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": -1
+    },
+    "rear_left_hip_roll": {
+      "id": 7,
+      "neutral_ticks": 2072,
+      "baseline": {
+        "id": 7,
+        "sample_ticks": [
+          2072,
+          2072,
+          2072
+        ],
+        "sample_device_us": [
+          673191248,
+          673431235,
+          673671235
+        ],
+        "captured_local": "2026-11-24T14:17:24.638785-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2072,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 7,
+        "sample_ticks": [
+          1921,
+          1921,
+          1921
+        ],
+        "sample_device_us": [
+          692151248,
+          692391248,
+          692631248
+        ],
+        "captured_local": "2026-11-24T14:17:43.464022-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1921,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 7,
+        "sample_ticks": [
+          2136,
+          2136,
+          2136
+        ],
+        "sample_device_us": [
+          701271248,
+          701511235,
+          701751248
+        ],
+        "captured_local": "2026-11-24T14:17:52.469302-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2136,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": -1
+    },
+    "rear_left_hip_pitch": {
+      "id": 8,
+      "neutral_ticks": 1703,
+      "baseline": {
+        "id": 8,
+        "sample_ticks": [
+          1702,
+          1702,
+          1702
+        ],
+        "sample_device_us": [
+          713291226,
+          713531240,
+          713771228
+        ],
+        "captured_local": "2026-11-24T14:18:04.656728-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1702,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 8,
+        "sample_ticks": [
+          1557,
+          1557,
+          1557
+        ],
+        "sample_device_us": [
+          725531229,
+          725771228,
+          726011228
+        ],
+        "captured_local": "2026-11-24T14:18:17.005358-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1557,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 8,
+        "sample_ticks": [
+          1751,
+          1751,
+          1751
+        ],
+        "sample_device_us": [
+          734411228,
+          734651228,
+          734891228
+        ],
+        "captured_local": "2026-11-24T14:18:25.619892-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1751,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": -1
+    },
+    "rear_left_knee_pitch": {
+      "id": 9,
+      "neutral_ticks": 1648,
+      "baseline": {
+        "id": 9,
+        "sample_ticks": [
+          1640,
+          1640,
+          1640
+        ],
+        "sample_device_us": [
+          769471248,
+          769711248,
+          769951235
+        ],
+        "captured_local": "2026-11-24T14:19:00.717443-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1640,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 9,
+        "sample_ticks": [
+          1770,
+          1770,
+          1770
+        ],
+        "sample_device_us": [
+          781231233,
+          781471248,
+          781711248
+        ],
+        "captured_local": "2026-11-24T14:19:12.467041-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1770,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 9,
+        "sample_ticks": [
+          1545,
+          1545,
+          1545
+        ],
+        "sample_device_us": [
+          792271231,
+          792511248,
+          792751235
+        ],
+        "captured_local": "2026-11-24T14:19:23.529530-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1545,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": 1
+    },
+    "rear_right_hip_roll": {
+      "id": 11,
+      "neutral_ticks": 2004,
+      "baseline": {
+        "id": 11,
+        "sample_ticks": [
+          2003,
+          2003,
+          2003
+        ],
+        "sample_device_us": [
+          810551231,
+          810791231,
+          811031231
+        ],
+        "captured_local": "2026-11-24T14:19:41.944880-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2003,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 11,
+        "sample_ticks": [
+          1886,
+          1886,
+          1886
+        ],
+        "sample_device_us": [
+          821831248,
+          822071231,
+          822311248
+        ],
+        "captured_local": "2026-11-24T14:19:53.200461-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1886,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 11,
+        "sample_ticks": [
+          2055,
+          2056,
+          2056
+        ],
+        "sample_device_us": [
+          850631235,
+          850871231,
+          851111235
+        ],
+        "captured_local": "2026-11-24T14:20:21.944792-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 2056,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": -1
+    },
+    "rear_right_hip_pitch": {
+      "id": 10,
+      "neutral_ticks": 1835,
+      "baseline": {
+        "id": 10,
+        "sample_ticks": [
+          1835,
+          1835,
+          1835
+        ],
+        "sample_device_us": [
+          865971226,
+          866211228,
+          866451239
+        ],
+        "captured_local": "2026-11-24T14:20:37.153599-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1835,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 10,
+        "sample_ticks": [
+          1992,
+          1992,
+          1992
+        ],
+        "sample_device_us": [
+          874851228,
+          875091239,
+          875331228
+        ],
+        "captured_local": "2026-11-24T14:20:46.036047-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1992,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 10,
+        "sample_ticks": [
+          1685,
+          1685,
+          1685
+        ],
+        "sample_device_us": [
+          885651239,
+          885891226,
+          886131238
+        ],
+        "captured_local": "2026-11-24T14:20:56.993068-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1685,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": 1
+    },
+    "rear_right_knee_pitch": {
+      "id": 12,
+      "neutral_ticks": 1706,
+      "baseline": {
+        "id": 12,
+        "sample_ticks": [
+          1704,
+          1704,
+          1704
+        ],
+        "sample_device_us": [
+          910891208,
+          911131240,
+          911371240
+        ],
+        "captured_local": "2026-11-24T14:21:22.233808-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1704,
+        "operator_confirmed_selected_joint_and_model_zero_pose": true
+      },
+      "direction_verified": true,
+      "limits_verified": false,
+      "positive_direction": {
+        "id": 12,
+        "sample_ticks": [
+          1552,
+          1552,
+          1552
+        ],
+        "sample_device_us": [
+          922411240,
+          922651228,
+          922891228
+        ],
+        "captured_local": "2026-11-24T14:21:33.728681-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1552,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "negative_direction": {
+        "id": 12,
+        "sample_ticks": [
+          1862,
+          1862,
+          1862
+        ],
+        "sample_device_us": [
+          933451228,
+          933691229,
+          933931228
+        ],
+        "captured_local": "2026-11-24T14:21:44.727815-08:00",
+        "torque_reported_off": true,
+        "position_mode": true,
+        "servo_status": 0,
+        "direction_verified": false,
+        "limits_verified": false,
+        "measured_ticks": 1862,
+        "operator_confirmed_selected_joint_and_reference_direction": true
+      },
+      "sign": -1
+    }
+  },
+  "margin_ticks": 25,
+  "direction_calibration_complete": true,
+  "travel_limit_calibration_complete": false,
+  "ready_for_motion": false,
+  "scope": "Operator-confirmed manual directions and static endpoints with other joints near neutral; no powered or coupled-pose validation"
+}

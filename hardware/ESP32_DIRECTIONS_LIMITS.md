@@ -30,10 +30,10 @@ joint or move into contact/cable tension.
    readings with torque OFF, position mode and clear status. Other legs need
    not match their neutral pose for this direction-only check. It preserves
    the saved zero; it does not redefine it.
-2. Click **Show +5°**. Watch the highlighted simulated movement. Gently move
+2. Click **Show +5°** or **Show +15°**. Watch the highlighted simulated movement. Gently move
    the matching real joint a few degrees in the same model-positive direction.
    Hold it still, check the confirmation box, then Capture positive pose.
-3. Return through zero. Click **Show −5°**, move gently in that model-negative
+3. Return through zero. Click **Show −5°** or **Show −15°**, move gently in that model-negative
    direction, hold still, confirm and Capture negative pose.
 4. Both raw encoder changes must be clear and opposite. The tool infers sign
    +1 if model-positive motion increases ticks, or -1 if it decreases ticks.

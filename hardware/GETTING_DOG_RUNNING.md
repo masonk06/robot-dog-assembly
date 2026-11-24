@@ -9,7 +9,7 @@ This is the current practical sequence for the new frame and NodeMCU ESP32S. It 
 - Never power the ESP32 or MPU board from the 12 V servo supply.
 - Keep an accessible physical power cutoff. Do not work near pinching joints.
 
-Current physical IDs, in model joint order:
+Current physical IDs, in robot-centric model joint order (reconfirmed November 24, 2026):
 
 | Leg | Hip roll | Hip pitch | Knee pitch |
 | --- | ---: | ---: | ---: |
@@ -49,7 +49,7 @@ If a joint mirrors backward, stop and correct the direction record before any fu
 
 1. The live mirror matches all 12 physical joints.
 2. Each joint has conservative non-wrapping encoder endpoints with clearance from hard stops and frame interference.
-3. A dedicated ESP32 command transport exists with explicit arm/start/stop, fresh feedback, target bounds, and a communication watchdog. The current CSV sketch is telemetry-only and is **not** this transport.
+3. The guarded ESP32 receiver provides explicit arm/start/stop, fresh feedback, target bounds, and a communication watchdog. Its disarmed-only `READSTREAM` command supplies register telemetry for the Pi calibration views; it never enables torque or sends a target.
 4. The robot is secured with feet clear and a person can reach the physical cutoff.
 5. Start with a tiny, one-joint or one-supported-leg reference motion. Do not send a full walking policy first.
 

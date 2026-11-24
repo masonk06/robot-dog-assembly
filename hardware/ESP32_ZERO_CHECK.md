@@ -6,16 +6,17 @@ Run from the project directory:
 .venv\Scripts\python.exe hardware\esp32_zero_view.py
 ```
 
-The window starts disconnected and never sends serial commands, motor goals,
-torque changes or EEPROM writes. It passively reads the combined sketch's
-115200-baud servo CSV. Close Arduino Serial Monitor or another app that owns
+The window starts disconnected and sends only the guarded receiver's
+disarmed-only `READSTREAM` request. That request performs servo-register
+reads; it cannot send motor goals, enable torque, change IDs or write EEPROM.
+Close Arduino Serial Monitor or another app that owns
 the ESP32 port before clicking Connect. The direct Waveshare USB calibration
 viewer is a different protocol and is not the window to use for this route.
 
-The current compatible read-only sketch is
-`imu_servo_readout/imu_servo_readout.ino`, NodeMCU-32S, UART RX16/TX17 to the
-Waveshare in mode A. Uploading is not automatic. If there are only IMU lines,
-legacy text or NO DATA, verify which sketch is installed rather than treating
+The current compatible sketch is `esp32_gait_receiver/esp32_gait_receiver.ino`
+on the ESP32-S3, UART RX16/TX17 to the Waveshare in mode A. Uploading is not
+automatic. If there are only IMU lines, legacy text or NO DATA, verify which
+sketch is installed rather than treating
 missing positions or torque state as zeros. Do not force a joint to move
 while torque is ON or unknown; this program cannot turn it off.
 
@@ -26,7 +27,7 @@ while torque is ON or unknown; this program cannot turn it off.
    The user confirmed the same leg arrangement on October 28, 2026, which
    does not itself confirm each encoder zero or positive direction.
 3. Start with front-left hip roll, expected ID4 after the user's front-leg
-   label correction on October 28. If physical IDs were moved,
+   label correction on November 24. If physical IDs were moved,
    select the verified physical ID; do not infer it only from the old label.
 4. Place that joint at its model-zero pose and hold it still. Allow about
    four seconds for three samples. This is a stationary manual measurement,

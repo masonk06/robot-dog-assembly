@@ -1,5 +1,9 @@
 # Luca revision C — 1 oz copper prototype
 
+Updated operating plan: the Pi and camera share the robot battery through a
+dedicated external converter. See [Pi assembly change](PI-SHARED-BATTERY.md).
+The release and quote described below retain the earlier F7/J10/J11 DNP status.
+
 This is the current cost-reduced PCB derived from revision B. **Use 1 oz finished
 copper on each side only with this revision's files.** Do not select 1 oz for
 the old revision B layout. Board outline remains 88.5 x 60 mm, with the same

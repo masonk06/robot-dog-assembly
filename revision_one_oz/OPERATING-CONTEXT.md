@@ -13,10 +13,10 @@ Confirmed by the user:
 - AUX supplies a NodeMCU ESP32S development board and MPU6050 module.
   Exact manufacturer/revision and breakout-board input-power details remain
   to be checked before selecting the regulator connection.
-- Pi and camera use a completely separate power source. Preserve the existing
-  Pi interface circuit per the earlier scope instruction, but designate it
-  unused in the intended assembly: leave F7 and the external Pi buck absent,
-  and leave J10/J11 unconnected. Do not combine the two supplies' positive rails.
+- Pi and camera share the robot battery through a dedicated external Pi buck
+  converter, per the user's updated instruction. See PI-SHARED-BATTERY.md for
+  connections and outstanding engineering/assembly work. The released package
+  still marks F7/J10/J11 DNP and requires revision or hand installation.
   If a wired communication link joins Pi and ESP32, review its ground reference
   and USB power/backfeed behavior as part of the harness design.
 - User will design the chassis around the PCB; clearance is not a current

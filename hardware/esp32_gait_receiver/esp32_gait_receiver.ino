@@ -1,5 +1,5 @@
 // Supported robot prototype. USB 115200; servo UART GPIO16/17 at 1 Mbps.
-// Commands: READ; LIMIT,id,min,max; ARM; GOAL,id,ticks; KEEP; STOP.
+// Commands: READ; READSTREAM; READSTOP; LIMIT,id,min,max; ARM; GOAL,id,ticks; KEEP; STOP.
 // LIVE telemetry includes position, target, voltage, temperature, motor load and current.
 // Configuration is volatile. No movement on startup; no EEPROM writes.
 #include <Arduino.h>
@@ -29,6 +29,11 @@ char line[128]; size_t used = 0; bool overflow = false;
 uint8_t imuAddress = 0, imuIdentity = 0;
 bool imuStreaming = false;
 uint32_t lastImuStream = 0;
+// Read-only, disarmed telemetry for the Pi calibration tools.  This does not
+// enable torque or change any servo register.
+bool servoStreaming = false;
+uint32_t lastServoStream = 0;
+uint8_t streamServoId = 1;
 
 bool imuRead(uint8_t reg, uint8_t *data, size_t count) {
   Wire.beginTransmission(imuAddress); Wire.write(reg);
@@ -117,8 +122,19 @@ bool parseInt(const char *s, long &value) {
 }
 int signedLoad(uint16_t raw) { return raw & 0x0400 ? -int(raw & 0x03ff) : int(raw & 0x03ff); }
 int signedCurrent(uint16_t raw) { return raw & 0x8000 ? -int(raw & 0x7fff) : int(raw & 0x7fff); }
+void reportServo(uint8_t id) {
+  uint8_t data[31];
+  if (!readRegs(id, 33, 31, data)) { Serial.printf("SERVO_ERROR,%u,READ_FAILED\n", id); return; }
+  uint16_t raw = uint16_t(data[23]) | (uint16_t(data[24]) << 8);
+  int ticks = (raw & 0x8000) ? -int(raw & 0x7fff) : int(raw);
+  // Matches hardware/esp32_zero_io.py: servo,id,device_us,ticks,V,temp,torque,mode,status.
+  Serial.printf("servo,%u,%lu,%d,%.1f,%u,%u,%u,%u\n", id, (unsigned long)micros(), ticks,
+                data[29] / 10.0f, data[30], data[0], data[7], 0);
+}
 void arm() {
   if (armed) { Serial.println("ERR,ALREADY_ARMED"); return; }
+  // Stop all disarmed diagnostic streams before touching torque state.
+  imuStreaming = false; servoStreaming = false;
   for (int i = 0; i < 12; ++i) if (lower[i] >= upper[i]) { Serial.println("ERR,LIMITS_NOT_CONFIGURED"); return; }
   for (uint8_t id = 1; id <= 12; ++id) {
     uint8_t data[31];
@@ -183,6 +199,12 @@ void handle(char *cmd) {
     imuStreaming = true; Serial.println("OK,IMUSTREAM"); return;
   }
   if (!strcmp(kind, "IMUSTOP")) { imuStreaming = false; Serial.println("OK,IMUSTOP"); return; }
+  if (!strcmp(kind, "READSTREAM")) {
+    if (armed) { Serial.println("ERR,READSTREAM_WHILE_ARMED"); return; }
+    servoStreaming = true; lastServoStream = 0; streamServoId = 1;
+    Serial.println("OK,READSTREAM"); return;
+  }
+  if (!strcmp(kind, "READSTOP")) { servoStreaming = false; Serial.println("OK,READSTOP"); return; }
   if (!strcmp(kind, "READ")) {
     if (armed) { Serial.println("ERR,READ_WHILE_ARMED"); return; }
     for (uint8_t id = 1; id <= 12; ++id) {
@@ -252,5 +274,11 @@ void loop() {
   // enabling servo torque or accepting motion commands.
   if (imuStreaming && !armed && uint32_t(millis() - lastImuStream) >= 50 && Serial.availableForWrite() >= 90) {
     lastImuStream = millis(); reportImu();
+  }
+  // Round-robin register reads make every joint fresh roughly five times per
+  // second.  This path is deliberately unavailable while armed.
+  if (servoStreaming && !armed && uint32_t(millis() - lastServoStream) >= 20 && Serial.availableForWrite() >= 80) {
+    lastServoStream = millis(); reportServo(streamServoId);
+    streamServoId = streamServoId == 12 ? 1 : streamServoId + 1;
   }
 }

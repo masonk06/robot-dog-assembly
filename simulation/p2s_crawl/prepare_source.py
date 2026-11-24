@@ -18,6 +18,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 P2S = ROOT / "simulation" / "mujoco" / "p2s"
 ASSETS = ROOT / "simulation" / "mujoco" / "assets"
+RL = ROOT / "simulation" / "rl"
+TRAINING_SCRIPTS = (
+    "train_cuda.py", "cuda_task.py", "cuda_runner.py", "env.py",
+    "evaluate_cuda.py", "newton_env.py", "newton_batch.py", "play.py",
+)
 
 
 def sha256(path: Path) -> str:
@@ -37,6 +42,8 @@ def prepare(output: Path, replace: bool = False) -> None:
     asset_out = output / "assets"
     shutil.copytree(ASSETS, asset_out)
     shutil.copy2(P2S / "chassis.stl", output / "chassis.stl")
+    for name in TRAINING_SCRIPTS:
+        shutil.copy2(RL / name, output / name)
 
     tree = ET.parse(P2S / "robot_dog_p2s.xml")
     root = tree.getroot()
@@ -50,7 +57,8 @@ def prepare(output: Path, replace: bool = False) -> None:
     model_out = output / "robot_dog_v2.xml"
     tree.write(model_out, encoding="utf-8", xml_declaration=True)
 
-    required = [output / "chassis.stl", model_out, *asset_out.glob("*.stl")]
+    required = [output / "chassis.stl", model_out, *(output / name for name in TRAINING_SCRIPTS),
+                *asset_out.glob("*.stl")]
     missing = [str(path) for path in required if not path.is_file()]
     if missing:
         raise RuntimeError("Prepared source is incomplete: " + ", ".join(missing))
@@ -63,7 +71,7 @@ def prepare(output: Path, replace: bool = False) -> None:
         "limitations": [
             "P2S mass and inertia are provisional.",
             "The final battery, Pi, PDB and enclosure locations are not modeled as final hardware.",
-            "This source is for slow simulation training; it does not authorize unsupported hardware walking.",
+            "This source is for simulation training; it does not authorize unsupported hardware walking.",
         ],
     }
     (output / "p2s-training-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")

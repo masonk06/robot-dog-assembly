@@ -25,7 +25,7 @@ from serial.tools import list_ports
 
 
 class JointCheckView:
-    def __init__(self, root, zero_path=None):
+    def __init__(self, root, zero_path=None, checks_path=None):
         self.root = root
         root.title('REV 2 • ESP32 directions and limits — corrected front labels • READ ONLY')
         root.geometry('1350x940')
@@ -47,6 +47,16 @@ class JointCheckView:
             self.qadr[name] = self.model.jnt_qposadr[joint]
             limits[name] = self.model.jnt_range[joint].tolist()
         self.checks = JointChecks(self.zeros, limits)
+        self.checks_path = checks_path.resolve() if checks_path else None
+        if self.checks_path:
+            previous = json.loads(self.checks_path.read_text())
+            if not previous.get('direction_calibration_complete'):
+                raise ValueError('The supplied direction session is incomplete')
+            for name, record in self.checks.records.items():
+                saved = previous['joints'].get(name, {})
+                if saved.get('id') != record['id'] or not saved.get('direction_verified'):
+                    raise ValueError(f'Direction record does not match current zero mapping: {name}')
+                self.checks.records[name] = saved
         self.renderer = mujoco.Renderer(self.model, width=560, height=320)
         self.data = mujoco.MjData(self.model)
         self.camera = mujoco.MjvCamera()
@@ -281,8 +291,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--zeros', type=Path,
                         help='Reviewed timestamped zero-capture file; default keeps the historical current record.')
+    parser.add_argument('--checks', type=Path,
+                        help='Completed direction session to load before capturing conservative limits.')
     args = parser.parse_args()
-    root=tk.Tk();JointCheckView(root, args.zeros);root.mainloop()
+    root=tk.Tk();JointCheckView(root, args.zeros, args.checks);root.mainloop()
 
 
 if __name__=='__main__':main()

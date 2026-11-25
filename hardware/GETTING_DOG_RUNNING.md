@@ -1,13 +1,34 @@
 # From calibration to the first safe robot test
 
-This is the current practical sequence for the new frame and NodeMCU ESP32S. It intentionally separates **read-only validation** from powered motion.
+This is the current practical sequence for the new frame and ESP32-S3 receiver. It intentionally separates **read-only validation** from powered motion.
 
 ## 1. Hardware baseline
 
 - Servo bus: Waveshare Bus Servo Adapter (A), jumper at **A**, 12 V servo supply, common ground.
-- Controller: NodeMCU ESP32S. Servo UART is GPIO17 TX / GPIO16 RX through the adapter; PC USB is normally COM7 at 115200 baud.
+- Controller: ESP32-S3. Servo UART is GPIO17 TX / GPIO16 RX through the adapter; its USB console is 115200 baud. The verified Pi host path is `/dev/ttyACM0`; a directly connected Windows host will enumerate a different COM port.
 - Never power the ESP32 or MPU board from the 12 V servo supply.
 - Keep an accessible physical power cutoff. Do not work near pinching joints.
+
+### Pi as the control host
+
+The Pi can own the ESP32 USB connection for both telemetry and guarded motion,
+but only **one** process may open `/dev/ttyACM0` at a time. Stop the ROS IMU
+bridge before a servo test; it is intentionally telemetry-only and must never
+be used as a command channel.
+
+The compatible receiver is
+[`esp32_gait_receiver/esp32_gait_receiver.ino`](esp32_gait_receiver/esp32_gait_receiver.ino).
+For the ESP32-S3's Pi-visible USB serial console, build it with hardware CDC
+and CDC-on-boot enabled:
+
+```bash
+arduino-cli compile --fqbn esp32:esp32:esp32s3:USBMode=hwcdc,CDCOnBoot=cdc hardware/esp32_gait_receiver
+arduino-cli upload -p /dev/ttyACM0 --fqbn esp32:esp32:esp32s3:USBMode=hwcdc,CDCOnBoot=cdc hardware/esp32_gait_receiver
+```
+
+After flashing, verify `IMU_STATUS,...` followed by `READY,DISARMED` and use
+`READ`/`READSTREAM` only until the requirements below are met. Flashing and
+booting the receiver do not enable torque or command a servo.
 
 Current physical IDs, in robot-centric model joint order (reconfirmed November 24, 2026):
 

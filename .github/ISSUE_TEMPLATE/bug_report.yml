@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a reproducible software, simulation, firmware, or documentation problem.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include secrets or command a physical robot while collecting this report."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      placeholder: "1. Command or test\n2. Input/configuration\n3. Observed output"
+    validations:
+      required: true
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Hardware involved
+      options: [No hardware interaction, Telemetry only, Supported powered test, Unknown]
+    validations:
+      required: true

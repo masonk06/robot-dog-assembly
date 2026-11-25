@@ -1,0 +1,24 @@
+name: Feature or experiment proposal
+description: Propose a focused improvement or simulation/hardware experiment.
+title: "proposal: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: Describe the user outcome or engineering question.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and affected areas
+      description: Identify CAD, firmware, ROS, simulation, training, or documentation impact.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Hardware safety plan, if applicable
+      description: Include support setup, cutoff, torque state, bounds, feedback, and stop condition.
